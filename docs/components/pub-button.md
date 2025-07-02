@@ -23,7 +23,7 @@ This is a button component.
 ### Properties
 
 | Name | Type   | Default | Description    |Options|
-| ---- | ------ | ------- | -------------- |-- |
+| ---- | ------ | ------- | -------------- | --- |
 | theme  | string | `primary`    | Color Theme |`none`, `primary`, `secondary`, `tertiary`, `success`, `info`, `warning`, `danger`|
 | as | string | `button` | Element to render |`button`, `a`, `div`|
 |type|string|`button`|Button type for input element|`button`, `submit`, `reset`|
