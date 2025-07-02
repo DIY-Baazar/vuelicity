@@ -4,13 +4,16 @@ import { computed } from "vue";
 const props = defineProps({
     type: {
         type: String,
-        default: "button"
+        default: "button",
+        validator(value) {
+            return ["button", "submit", "reset"].includes(value);
+        }
     },
     name: {
         type: String,
         default: ""
     },
-    value: {
+    to: {
         type: String,
         default: ""
     },
@@ -24,7 +27,10 @@ const props = defineProps({
     },
     as: {
         type: String,
-        default: "button"
+        default: "button",
+        validator(value) {
+            return ["button", "a"].includes(value);
+        }
     },
     theme: {
         type: String,
@@ -39,12 +45,14 @@ const props = defineProps({
                 "danger",
                 "warning",
                 "success",
+                "info",
                 "primary-outline",
                 "secondary-outline",
                 "tertiary-outline",
                 "danger-outline",
                 "warning-outline",
                 "success-outline",
+                "info-outline",
                 "skeletal"
             ].includes(value);
         }
@@ -122,16 +130,16 @@ const buttonThemeClassname = computed(() => {
 <template>
     <button
         v-if="as === 'button'"
-        :type="type"
+        :type="props.type"
         :name="name"
-        :value="value"
+        :value="to"
         :disabled="disabled"
         :class="[buttonThemeClassname, className].join(' ')"
         v-bind="$attrs"
     >
         <slot></slot>
     </button>
-    <a v-if="as === 'a'" :href="value" :class="[buttonThemeClassname, className].join(' ')" v-bind="$attrs">
+    <a v-if="as === 'a'" :href="to" :class="[buttonThemeClassname, className].join(' ')" v-bind="$attrs">
         <slot></slot>
     </a>
 </template>

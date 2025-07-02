@@ -2,7 +2,7 @@
 
 ## Setup
 
-This setup assumes your client app is created with Vite and vue-ts template, and you use 'npm link' to link to `my-lib` locally.
+This setup assumes your client app is created with Vite and vue template, and you use 'npm link' to link to `vuelicity` locally.
 
 In your `package.json`, you shall have the dependencies compatible with the following:
 
@@ -15,7 +15,7 @@ In your `package.json`, you shall have the dependencies compatible with the foll
 
 In your `vite.config.js`, you shall configure to dedupe `vue`:
 
-```ts
+```js
 export default defineConfig({
   resolve: {
     dedupe: ['vue'],
@@ -23,9 +23,9 @@ export default defineConfig({
 });
 ```
 
-In your `main.ts`, you shall import the libraries and CSS:
+In your `main.js`, you shall import the libraries and CSS:
 
-```ts
+```js
 import 'vuelicity/dist/vuelicity.css';
 ```
 
