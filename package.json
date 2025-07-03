@@ -1,6 +1,6 @@
 {
     "name": "vuelicity",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "type": "module",
     "license": "MIT",
     "author": "DIY-Baazar",
@@ -14,7 +14,8 @@
         "src",
         "dist"
     ],
-    "module": "./dist/vuelicity.es.js",
+    "main": "./dist/vuelicity.umd.cjs",
+    "module": "./dist/vuelicity.js",
     "exports": {
         ".": {
             "import": "./dist/vuelicity.js",
@@ -42,5 +43,9 @@
     "repository": {
         "type": "git",
         "url": "git+https://github.com/DIY-Baazar/vuelicity.git"
+    },
+    "engines": {
+        "node": ">=18.x",
+        "npm": ">=10.x"
     }
 }
