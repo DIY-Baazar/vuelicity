@@ -1,9 +1,10 @@
 {
     "name": "vuelicity",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "type": "module",
     "license": "MIT",
-    "author": "DIY-Baazar",
+    "author": "diy-baazar",
+    "private": false,
     "scripts": {
         "build": "rimraf dist && vite build",
         "docs:dev": "vitepress dev docs",
@@ -14,13 +15,18 @@
         "src",
         "dist"
     ],
-    "module": "./dist/vuelicity.es.js",
+    "main": "./dist/vuelicity.umd.cjs",
+    "module": "./dist/vuelicity.js",
     "exports": {
         ".": {
-            "import": "./dist/vuelicity.es.js"
-        }
+            "import": "./dist/vuelicity.js",
+            "require": "./dist/vuelicity.umd.cjs"
+        },
+        "./index.css": "./dist/index.css"
     },
     "devDependencies": {
+        "@tailwindcss/postcss": "^4.1.11",
+        "@tailwindcss/vite": "^4.1.11",
         "@vitejs/plugin-vue": "^6.0.0",
         "autoprefixer": "^10.4.21",
         "postcss": "^8.5.6",
@@ -29,12 +35,18 @@
         "vitepress": "^1.6.3"
     },
     "peerDependencies": {
-        "@tailwindcss/vite": "^4.1.11",
-        "tailwindcss": "^4.1.11",
-        "vue": "^3.5.17"
+        "tailwindcss": "^4",
+        "vue": "^3.5.x"
+    },
+    "dependencies": {
+        "tailwindcss": "^4.1.11"
     },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/DIY-Baazar/vuelicity.git"
+    },
+    "engines": {
+        "node": ">=18.x",
+        "npm": ">=10.x"
     }
 }
