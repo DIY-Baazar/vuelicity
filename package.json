@@ -4,6 +4,7 @@
     "type": "module",
     "license": "MIT",
     "author": "DIY-Baazar",
+    "private": false,
     "scripts": {
         "build": "rimraf dist && vite build",
         "docs:dev": "vitepress dev docs",
