@@ -10,11 +10,11 @@ export default defineConfig({
         vue(),
     ],
     build: {
+        cssCodeSplit: true,
+        target: "esnext",
         lib: {
             entry: path.resolve(__dirname, './src/index.js'),
             name: "vuelicity",
-            formats: ['es'],
-            fileName: format => `vuelicity.${format}.js`
         },
         rollupOptions:{
             external: ['vue'],
@@ -32,5 +32,6 @@ export default defineConfig({
         alias: {
             "@": path.resolve(__dirname, "./src"),
         },
+        dedupe: ['vue'],
     },
 });

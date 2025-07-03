@@ -1,5 +1,5 @@
 <template>
-  <PubButton>Click me!</PubButton>
+  <pub-button>Click me!</pub-button>
 </template>
 
 <script setup>

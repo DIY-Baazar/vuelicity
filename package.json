@@ -17,8 +17,10 @@
     "module": "./dist/vuelicity.es.js",
     "exports": {
         ".": {
-            "import": "./dist/vuelicity.es.js"
-        }
+            "import": "./dist/vuelicity.js",
+            "require": "./dist/vuelicity.umd.cjs"
+        },
+        "./index.css": "./dist/index.css"
     },
     "devDependencies": {
         "@vitejs/plugin-vue": "^6.0.0",
@@ -29,9 +31,13 @@
         "vitepress": "^1.6.3"
     },
     "peerDependencies": {
+        "tailwindcss": "^4",
+        "vue": "^3.5.x"
+    },
+    "dependencies": {
+        "@tailwindcss/postcss": "^4.1.11",
         "@tailwindcss/vite": "^4.1.11",
-        "tailwindcss": "^4.1.11",
-        "vue": "^3.5.17"
+        "tailwindcss": "^4.1.11"
     },
     "repository": {
         "type": "git",

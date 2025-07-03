@@ -28,6 +28,13 @@ export default {
                 ],
             }
         ],
+        socialLinks: [
+            { icon: 'github', link: 'https://github.com/DIY-Baazar/vuelicity' },
+        ],
+        footer: {
+            message: 'Released under the MIT License.',
+            copyright: `Copyright © ${new Date().getFullYear()} DIY Baazar.`,
+        },
     },
     vite: {
         resolve: {

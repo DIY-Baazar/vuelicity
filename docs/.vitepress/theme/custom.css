@@ -1,5 +1,11 @@
-.demo-container {
-    border: 1px solid lightgrey;
-    border-radius: 5px;
-    padding: 10px 20px;
-}
+/* .vitepress/theme/custom.css */
+@layer theme, base, components, utilities;
+
+@import "tailwindcss/theme.css" layer(theme) source(none);
+@import "tailwindcss/utilities.css";
+@import 'vuelicity/styles/main.css';
+@import "./clear.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@source '../../../';

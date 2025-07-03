@@ -12,9 +12,9 @@ This is a button component.
 
 ## Example Usage
 
-<DemoContainer>
-  <Basic/>
-</DemoContainer>
+<demo-container>
+  <basic/>
+</demo-container>
 
 <<< @/components/demo/PubButton/Basic.vue
 
