@@ -6,7 +6,7 @@ export default {
     title: 'Vuelicity',
     description: 'Vuelicity is a collection of UI components for Vue 3 using Tailwind CSS 4.',
     head: [
-        ['link', { rel: 'icon', href: '/images/favicon.ico' }]
+        ['link', { rel: 'icon', href: '/vuelicity/images/favicon.ico' }]
     ],
     themeConfig: {
         logo: '/images/logo.png',

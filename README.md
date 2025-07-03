@@ -19,7 +19,7 @@ Vuelicity is a collection of UI components for Vue 3, built with the power and f
 
 For full documentation and live examples of all components, please visit our documentation website. The documentation source is located in the `/docs` directory of this repository and is built with VitePress.
 
-*Link to live documentation to be added here.*
+Visit [https://diy-baazar.github.io/vuelicity](https://diy-baazar.github.io/vuelicity) for the latest documentation.
 
 ## Installation
 
