@@ -1,130 +1,42 @@
-<script setup>
-import { computed } from "vue";
+<script lang="ts" setup>
+import { computed, toRefs } from "vue";
 
-const props = defineProps({
-    type: {
-        type: String,
-        default: "button",
-        validator(value) {
-            return ["button", "submit", "reset"].includes(value);
-        }
-    },
-    name: {
-        type: String,
-        default: ""
-    },
-    to: {
-        type: String,
-        default: ""
-    },
-    disabled: {
-        type: Boolean,
-        default: false
-    },
-    className: {
-        type: String,
-        default: ""
-    },
-    as: {
-        type: String,
-        default: "button",
-        validator(value) {
-            return ["button", "a"].includes(value);
-        }
-    },
-    theme: {
-        type: String,
-        default: "primary",
-        validator(value) {
-            return [
-                "none",
-                "default",
-                "primary",
-                "secondary",
-                "tertiary",
-                "danger",
-                "warning",
-                "success",
-                "info",
-                "primary-outline",
-                "secondary-outline",
-                "tertiary-outline",
-                "danger-outline",
-                "warning-outline",
-                "success-outline",
-                "info-outline",
-                "skeletal"
-            ].includes(value);
-        }
-    },
-    rounded: {
-        type: String,
-        default: "none",
-        validator(value) {
-            return ["none", "sm", "md", "lg", "xl", "2xl", "3xl", "full"].includes(value);
-        }
-    }
+import type { ButtonRounded, ButtonSize, ButtonTheme, ButtonType } from "./types";
+import { useButtonClasses } from "./utils";
+
+interface ButtonProps {
+    theme: ButtonTheme;
+    type: ButtonType;
+    name: string;
+    to: string;
+    disabled: boolean;
+    class: string;
+    outline: boolean;
+    skeleton: boolean;
+    loading: boolean;
+    size: ButtonSize;
+    rounded: ButtonRounded;
+    as: "button" | "a";
+}
+
+const props = withDefaults(defineProps<ButtonProps>(), {
+    theme: "primary",
+    type: "button",
+    name: "",
+    to: "#",
+    disabled: false,
+    class: "",
+    outline: false,
+    skeleton: false,
+    loading: false,
+    size: "md",
+    rounded: "none",
+    as: "button"
 });
 
-const buttonThemeClassname = computed(() => {
-    const baseClassname = `rounded-${
-        props.rounded
-    } px-0.5 md:px-2.5 py-0.5 flex items-center justify-center gap-1 shadow-${
-        props.theme === "none" ? "none" : "sm"
-    } focus:outline-none focus:ring-2 focus:ring-opacity-50`;
-    let themeClassname = "";
+const buttonClasses = computed(() => useButtonClasses(toRefs(props)));
 
-    switch (props.theme) {
-        case "none":
-            themeClassname = "bg-transparent hover:bg-gray-200 text-dark p-0";
-            break;
-        case "primary":
-            themeClassname = "bg-primary focus:ring-primary hover:bg-primary-dark text-white";
-            break;
-        case "secondary":
-            themeClassname = "bg-secondary focus:ring-secondary hover:bg-secondary-dark text-white";
-            break;
-        case "tertiary":
-            themeClassname = "bg-tertiary focus:ring-tertiary hover:bg-tertiary-dark text-white";
-            break;
-        case "danger":
-            themeClassname = "bg-danger focus:ring-danger hover:bg-danger-dark text-white";
-            break;
-        case "warning":
-            themeClassname = "bg-warning focus:ring-warning hover:bg-warning-dark text-white";
-            break;
-        case "success":
-            themeClassname = "bg-success focus:ring-success hover:bg-success-dark text-white";
-            break;
-        case "primary-outline":
-            themeClassname = "border border-primary  text-primary focus:ring-primary hover:bg-primary hover:text-white";
-            break;
-        case "secondary-outline":
-            themeClassname =
-                "border border-secondary text-secondary focus:ring-secondary hover:bg-secondary hover:text-white";
-            break;
-        case "tertiary-outline":
-            themeClassname =
-                "border border-tertiary text-tertiary focus:ring-tertiary hover:bg-tertiary hover:text-white";
-            break;
-        case "danger-outline":
-            themeClassname = "border border-danger text-danger focus:ring-danger hover:bg-danger hover:text-white";
-            break;
-        case "warning-outline":
-            themeClassname = "border border-warning text-warning focus:ring-warning hover:bg-warning hover:text-white";
-            break;
-        case "success-outline":
-            themeClassname = "border border-success text-success focus:ring-success hover:bg-success hover:text-white";
-            break;
-        case "skeletal":
-            themeClassname = "bg-gray-400 animate-pulse border-light border-t-2 cursor-not-allowed";
-            break;
-        default:
-            themeClassname = "bg-light hover:bg-gray-200 text-dark";
-    }
-
-    return [baseClassname, themeClassname, props.disabled ? "opacity-50 cursor-not-allowed" : ""].join(" ");
-});
+const wrapperClasses = computed(() => buttonClasses.value.wrapperClasses);
 </script>
 
 <template>
@@ -134,12 +46,12 @@ const buttonThemeClassname = computed(() => {
         :name="name"
         :value="to"
         :disabled="disabled"
-        :class="[buttonThemeClassname, className].join(' ')"
+        :class="wrapperClasses"
         v-bind="$attrs"
     >
         <slot></slot>
     </button>
-    <a v-if="as === 'a'" :href="to" :class="[buttonThemeClassname, className].join(' ')" v-bind="$attrs">
+    <a v-if="as === 'a'" :href="to" :class="wrapperClasses" v-bind="$attrs">
         <slot></slot>
     </a>
 </template>

@@ -7,6 +7,8 @@
     "private": false,
     "scripts": {
         "build": "rimraf dist && vite build",
+        "build:types": "vue-tsc --declaration --emitDeclarationOnly && tsc-alias -p tsconfig.json",
+        "prod": "npm run build && npm run build:types",
         "docs:dev": "vitepress dev docs",
         "docs:build": "vitepress build docs",
         "docs:serve": "vitepress serve docs"
@@ -17,8 +19,10 @@
     ],
     "main": "./dist/vuelicity.umd.cjs",
     "module": "./dist/vuelicity.js",
+    "types": "./dist/index.d.ts",
     "exports": {
         ".": {
+            "types": "./dist/index.d.ts",
             "import": "./dist/vuelicity.js",
             "require": "./dist/vuelicity.umd.cjs"
         },
@@ -28,18 +32,23 @@
         "@tailwindcss/postcss": "^4.1.11",
         "@tailwindcss/vite": "^4.1.11",
         "@vitejs/plugin-vue": "^6.0.0",
+        "@vue/tsconfig": "^0.7.0",
         "autoprefixer": "^10.4.21",
         "postcss": "^8.5.6",
         "rimraf": "^6.0.1",
+        "tsc-alias": "^1.8.16",
+        "typescript": "^5.8.3",
         "vite": "^7.0.0",
-        "vitepress": "^1.6.3"
+        "vitepress": "^1.6.3",
+        "vue-tsc": "^3.0.1"
     },
     "peerDependencies": {
         "tailwindcss": "^4",
         "vue": "^3.5.x"
     },
     "dependencies": {
-        "tailwindcss": "^4.1.11"
+        "postcss-prefix-selector": "^2.1.1",
+        "tailwindcss": "^4"
     },
     "repository": {
         "type": "git",
