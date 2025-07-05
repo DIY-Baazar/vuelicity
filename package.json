@@ -6,9 +6,9 @@
     "author": "diy-baazar",
     "private": false,
     "scripts": {
-        "build": "rimraf dist && vite build",
+        "build:package": "rimraf dist && vite build",
         "build:types": "vue-tsc --declaration --emitDeclarationOnly && tsc-alias -p tsconfig.json",
-        "prod": "npm run build && npm run build:types",
+        "build": "npm run build:package && npm run build:types",
         "docs:dev": "vitepress dev docs",
         "docs:build": "vitepress build docs",
         "docs:serve": "vitepress serve docs"

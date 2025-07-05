@@ -1,6 +1,6 @@
 import type { App } from "vue";
 
-import components from "./components";
+import * as components from "./components";
 
 const install = (app: App) => {
     Object.values(components).forEach((component: any) => {
