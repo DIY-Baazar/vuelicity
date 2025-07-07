@@ -1,3 +1,1 @@
-import PubButton from "./PubButton/PubButton.vue";
-
-export { PubButton };
+export { default as PubButton } from "./PubButton/PubButton.vue";

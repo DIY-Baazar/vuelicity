@@ -11,26 +11,56 @@ const buttonThemeClasses: ButtonClassMap<ButtonTheme> = {
         secondary: "bg-secondary focus:ring-secondary text-white",
         tertiary: "bg-tertiary focus:ring-tertiary text-white",
         danger: "bg-danger focus:ring-danger text-white",
-        warning: "bg-warning focus:ring-warning text-white",
+        warning: "bg-warning focus:ring-warning text-black",
         success: "bg-success focus:ring-success text-white",
         info: "bg-info focus:ring-info text-white",
-        light: "bg-light text-gray-800",
-        dark: "bg-dark text-gray-200"
+        light: "bg-light text-dark",
+        dark: "bg-dark text-white"
     },
     hover: {
-        none: "hover:bg-gray-200 hover:text-dark",
-        default: "hover:bg-gray-200 hover:text-dark",
-        primary: "hover:bg-primary-dark hover:text-white",
-        secondary: "hover:bg-secondary-dark hover:text-white",
-        tertiary: "hover:bg-tertiary-dark hover:text-white",
-        danger: "hover:bg-danger-dark hover:text-white",
-        warning: "hover:bg-warning-dark hover:text-white",
-        success: "hover:bg-success-dark hover:text-white",
-        info: "hover:bg-info-dark hover:text-white",
-        light: "hover:bg-gray-200 hover:text-dark",
-        dark: "hover:bg-gray-800 hover:text-white"
+        none: "hover:bg-gray-200 hover:text-black",
+        default: "hover:bg-gray-200 hover:text-black",
+        primary: "hover:bg-primary-dark hover:text-gray-200",
+        secondary: "hover:bg-secondary-dark hover:text-gray-200",
+        tertiary: "hover:bg-tertiary-dark hover:text-gray-200",
+        danger: "hover:bg-danger-dark hover:text-gray-200",
+        warning: "hover:bg-warning-dark hover:text-gray-800",
+        success: "hover:bg-success-dark hover:text-gray-200",
+        info: "hover:bg-info-dark hover:text-gray-200",
+        light: "hover:bg-gray-200 hover:text-gray-800",
+        dark: "hover:bg-gray-800 hover:text-gray-200"
     }
 };
+
+const buttonOutlineThemeClasses: ButtonClassMap<ButtonTheme> = {
+    default: {
+        none: "bg-transparent text-dark p-0",
+        default: "border-light focus:ring-light text-light",
+        primary: "border-primary focus:ring-primary text-primary",
+        secondary: "border-secondary focus:ring-secondary text-secondary",
+        tertiary: "border-tertiary focus:ring-tertiary text-tertiary",
+        danger: "border-danger focus:ring-danger text-danger",
+        warning: "border-warning focus:ring-warning text-warning",
+        success: "border-success focus:ring-success text-success",
+        info: "border-info focus:ring-info text-info",
+        light: "border-light focus:ring-light text-light",
+        dark: "border-dark focus:ring-dark text-dark"
+    },
+    hover: {
+        none: "hover:bg-gray-200 hover:text-black",
+        default: "hover:bg-light hover:text-dark",
+        primary: "hover:bg-primary-dark hover:text-gray-200",
+        secondary: "hover:bg-secondary-dark hover:text-gray-200",
+        tertiary: "hover:bg-tertiary-dark hover:text-gray-200",
+        danger: "hover:bg-danger-dark hover:text-gray-200",
+        warning: "hover:bg-warning-dark hover:text-gray-800",
+        success: "hover:bg-success-dark hover:text-gray-200",
+        info: "hover:bg-info-dark hover:text-gray-200",
+        light: "hover:bg-gray-200 hover:text-gray-800",
+        dark: "hover:bg-gray-800 hover:text-gray-200"
+    }
+};
+
 
 const buttonSizeClasses: Record<ButtonSize, string> = {
     xs: "text-xs px-2 py-1",
@@ -56,13 +86,14 @@ interface UseButtonClassesProps {
     size: Ref<ButtonSize>;
     rounded: Ref<ButtonRounded>;
     class: Ref<string>;
+    outline: Ref<boolean>;
 }
 
 export function useButtonClasses(props: UseButtonClassesProps): { wrapperClasses: string; spanClasses: string } {
     const slots = useSlots();
     const wrapperClasses = [
-        buttonThemeClasses.default[props.theme.value],
-        buttonThemeClasses.hover[props.theme.value],
+        props.outline.value ? buttonOutlineThemeClasses.default[props.theme.value] : buttonThemeClasses.default[props.theme.value],
+        props.outline.value ? buttonOutlineThemeClasses.hover[props.theme.value] : buttonThemeClasses.hover[props.theme.value],
         buttonSizeClasses[props.size.value],
         buttonRoundedClasses[props.rounded.value],
         props.class.value

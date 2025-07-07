@@ -3,20 +3,33 @@ title: PubButton Component
 ---
 
 <script setup>
-import Basic from './demo/PubButton/Basic.vue';
+import Theme from './demo/PubButton/Theme.vue';
+import Outline from './demo/PubButton/Outline.vue';
 </script>
 
 # PubButton
 
 This is a button component.
 
-## Example Usage
+## Theme Usage
+
+There are a number of themes available for the button, including `'none'`, `'default'`, `'primary'`, `'secondary'`, `'tertiary'`, `'danger'`, `'warning'`, `'success'`, `'info'`, `'light'`, `'dark'`. Below is a demo of each theme.
 
 <demo-container>
-  <basic/>
+  <Theme/>
 </demo-container>
 
-<<< @/components/demo/PubButton/Basic.vue
+<<< @/components/demo/PubButton/Theme.vue
+
+## Outline Usage
+
+The `outline` prop can be used to add an outline style to the button.
+
+<demo-container>
+  <Outline/>
+</demo-container>
+
+<<< @/components/demo/PubButton/Outline.vue
 
 ## Reference
 
@@ -24,18 +37,18 @@ This is a button component.
 
 | Name | Type | Default | Description | Options |
 | :--- | :--- | :--- | :--- | :--- |
-| `as` | `string` | `'button'` | The HTML element to render. | `'button'`, `'a'` |
-| `class` | `string` | `''` | Additional CSS classes to apply. | |
-| `disabled` | `boolean` | `false` | Whether the button is disabled. | `true`, `false` |
-| `loading` | `boolean` | `false` | Whether the button is in a loading state. | `true`, `false` |
-| `name` | `string` | `''` | The name attribute for the button. | |
-| `outline` | `boolean` | `false` | Whether to use the outline style. | `true`, `false` |
-| `rounded` | `string` | `'none'` | The border radius of the button. | `'none'`, `'sm'`, `'md'`, `'lg'`, `'xl'`, `'2xl'`, `'3xl'`, `'full'` |
-| `size` | `string` | `'md'` | The size of the button. | `'xs'`, `'sm'`, `'md'`, `'lg'`, `'xl'` |
-| `skeleton` | `boolean` | `false` | Whether to display a skeleton loader. | `true`, `false` |
-| `theme` | `string` | `'primary'` | The color theme of the button. | `'none'`, `'default'`, `'primary'`, `'secondary'`, `'tertiary'`, `'danger'`, `'warning'`, `'success'`, `'info'`, `'light'`, `'dark'` |
-| `to` | `string` | `'#'` | The href for the link when `as` is `'a'`. | |
-| `type` | `string` | `'button'` | The type attribute for the button. | `'button'`, `'submit'`, `'reset'` |
+| theme | String | `'primary'` | The color theme of the button. | `'none'`, `'default'`, `'primary'`, `'secondary'`, `'tertiary'`, `'danger'`, `'warning'`, `'success'`, `'info'`, `'light'`, `'dark'` |
+| outline | Boolean | `false` | Whether to use the outline style. | `true`, `false` |
+| as | String | `'button'` | The HTML element to render. | `'button'`, `'a'` |
+| class | String | `''` | Additional CSS classes to apply. | |
+| disabled | Boolean | `false` | Whether the button is disabled. | `true`, `false` |
+| loading | Boolean | `false` | Whether the button is in a loading state. | `true`, `false` |
+| name | String | `''` | The name attribute for the button. | |
+| rounded | String | `'none'` | The border radius of the button. | `'none'`, `'sm'`, `'md'`, `'lg'`, `'xl'`, `'2xl'`, `'3xl'`, `'full'` |
+| size | String | `'md'` | The size of the button. | `'xs'`, `'sm'`, `'md'`, `'lg'`, `'xl'` |
+| skeleton | Boolean | `false` | Whether to display a skeleton loader. | `true`, `false` |
+| `to` | String | `'#'` | The href for the link when `as` is `'a'`. | |
+| `type` | String | `'button'` | The type attribute for the button. | `'button'`, `'submit'`, `'reset'` |
 
 ### Slots
 

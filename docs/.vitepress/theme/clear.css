@@ -139,9 +139,3 @@ textarea {
 .DocSearch {
     --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
-
-.demo-container {
-    border: 1px solid var(--vp-c-default-2);
-    border-radius: 5px;
-    padding: 10px 20px;
-}

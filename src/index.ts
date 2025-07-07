@@ -1,13 +1,13 @@
 import type { App } from "vue";
-
 import * as components from "./components";
+import "./styles/main.css";
 
-const install = (app: App) => {
+export const install = (app: App): void => {
     Object.values(components).forEach((component: any) => {
-        app.component(component.name, component);
+        if (component?.name) {
+            app.component(component.name, component);
+        }
     });
 };
-
-export default install;
 
 export * from "./components";
