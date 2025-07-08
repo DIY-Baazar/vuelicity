@@ -12,4 +12,4 @@ export type ButtonTheme =
     | "dark";
 export type ButtonType = "button" | "submit" | "reset";
 export type ButtonSize = "xs" | "sm" | "md" | "lg" | "xl";
-export type ButtonRounded = "none" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "full";
+export type ButtonRounded = "none" | "sm" | "md" | "lg" | "xl" | "full";

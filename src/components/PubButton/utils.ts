@@ -76,8 +76,6 @@ const buttonRoundedClasses: Record<ButtonRounded, string> = {
     md: "rounded-md",
     lg: "rounded-lg",
     xl: "rounded-xl",
-    "2xl": "rounded-2xl",
-    "3xl": "rounded-3xl",
     full: "rounded-full"
 };
 
@@ -96,7 +94,7 @@ export function useButtonClasses(props: UseButtonClassesProps): { wrapperClasses
         props.outline.value ? buttonOutlineThemeClasses.hover[props.theme.value] : buttonThemeClasses.hover[props.theme.value],
         buttonSizeClasses[props.size.value],
         buttonRoundedClasses[props.rounded.value],
-        props.class.value
+        props.class.value,
     ].join(" ");
     const spanClasses = slots.default ? "inline-flex items-center" : "flex items-center";
     return { wrapperClasses, spanClasses };

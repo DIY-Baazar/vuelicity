@@ -20,7 +20,7 @@ interface ButtonProps {
 }
 
 const props = withDefaults(defineProps<ButtonProps>(), {
-    theme: "primary",
+    theme: "default",
     type: "button",
     name: "",
     to: "#",
@@ -45,13 +45,13 @@ const wrapperClasses = computed(() => buttonClasses.value.wrapperClasses);
         :type="props.type"
         :name="name"
         :value="to"
-        :disabled="disabled"
+        :disabled="props.disabled"
         :class="wrapperClasses"
         v-bind="$attrs"
     >
         <slot></slot>
     </button>
-    <a v-if="as === 'a'" :href="to" :class="wrapperClasses" v-bind="$attrs">
+    <a v-if="as === 'a'" :href="to" :disabled="props.disabled" :class="wrapperClasses" v-bind="$attrs">
         <slot></slot>
     </a>
 </template>
