@@ -61,7 +61,6 @@ const buttonOutlineThemeClasses: ButtonClassMap<ButtonTheme> = {
     }
 };
 
-
 const buttonSizeClasses: Record<ButtonSize, string> = {
     xs: "text-xs px-2 py-1",
     sm: "text-sm px-3 py-1.5",
@@ -86,17 +85,30 @@ interface UseButtonClassesProps {
     class: Ref<string>;
     outline: Ref<boolean>;
     disabled: Ref<boolean>;
+    loading: Ref<boolean>;
+    skeleton: Ref<boolean>;
 }
 
 export function useButtonClasses(props: UseButtonClassesProps): { wrapperClasses: string; spanClasses: string } {
     const slots = useSlots();
+    const themeClasses = [
+        props.skeleton.value
+            ? "animate-pulse bg-gray-200 text-transparent rounded-md cursor-not-allowed"
+            : [
+                  props.outline.value
+                      ? buttonOutlineThemeClasses.default[props.theme.value]
+                      : buttonThemeClasses.default[props.theme.value],
+                  props.outline.value
+                      ? buttonOutlineThemeClasses.hover[props.theme.value]
+                      : buttonThemeClasses.hover[props.theme.value]
+              ].join(" ")
+    ];
     const wrapperClasses = [
-        props.outline.value ? buttonOutlineThemeClasses.default[props.theme.value] : buttonThemeClasses.default[props.theme.value],
-        props.outline.value ? buttonOutlineThemeClasses.hover[props.theme.value] : buttonThemeClasses.hover[props.theme.value],
+        ...themeClasses,
         buttonSizeClasses[props.size.value],
         buttonRoundedClasses[props.rounded.value],
-        props.disabled.value ? "cursor-not-allowed opacity-50" : "",
-        props.class.value,
+        props.disabled.value || props.loading.value ? "cursor-not-allowed opacity-50" : "",
+        props.class.value
     ].join(" ");
     const spanClasses = slots.default ? "inline-flex items-center" : "flex items-center";
     return { wrapperClasses, spanClasses };
