@@ -85,6 +85,7 @@ interface UseButtonClassesProps {
     rounded: Ref<ButtonRounded>;
     class: Ref<string>;
     outline: Ref<boolean>;
+    disabled: Ref<boolean>;
 }
 
 export function useButtonClasses(props: UseButtonClassesProps): { wrapperClasses: string; spanClasses: string } {
@@ -94,6 +95,7 @@ export function useButtonClasses(props: UseButtonClassesProps): { wrapperClasses
         props.outline.value ? buttonOutlineThemeClasses.hover[props.theme.value] : buttonThemeClasses.hover[props.theme.value],
         buttonSizeClasses[props.size.value],
         buttonRoundedClasses[props.rounded.value],
+        props.disabled.value ? "cursor-not-allowed opacity-50" : "",
         props.class.value,
     ].join(" ");
     const spanClasses = slots.default ? "inline-flex items-center" : "flex items-center";

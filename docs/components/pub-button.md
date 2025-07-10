@@ -8,6 +8,7 @@ import Outline from './demo/PubButton/Outline.vue';
 import Rounded from './demo/PubButton/Rounded.vue';
 import Size from './demo/PubButton/Size.vue';
 import Disabled from './demo/PubButton/Disabled.vue';
+import LoadingSkeleton from './demo/PubButton/LoadingSkeleton.vue';
 </script>
 
 # PubButton
@@ -63,6 +64,16 @@ The `disabled` prop can be used to disable the button.
 </demo-container>
 
 <<< @/components/demo/PubButton/Disabled.vue
+
+## Props - `loading` and `skeleton` Usage
+
+The `loading` prop can be used to display a loading state. The `skeleton` prop can be used to display a skeleton loader.
+
+<demo-container>
+  <LoadingSkeleton/>
+</demo-container>
+
+<<< @/components/demo/PubButton/LoadingSkeleton.vue
 
 ## Reference
 
