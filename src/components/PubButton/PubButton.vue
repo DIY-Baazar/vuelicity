@@ -44,7 +44,6 @@ const wrapperClasses = computed(() => buttonClasses.value.wrapperClasses);
         v-if="as === 'button'"
         :type="props.type"
         :name="name"
-        :value="to"
         :disabled="props.disabled"
         :class="wrapperClasses"
         v-bind="$attrs"

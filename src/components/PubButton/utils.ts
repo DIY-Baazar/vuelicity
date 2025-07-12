@@ -93,7 +93,7 @@ export function useButtonClasses(props: UseButtonClassesProps): { wrapperClasses
     const slots = useSlots();
     const themeClasses = [
         props.skeleton.value
-            ? "animate-pulse bg-gray-200 text-transparent rounded-md cursor-not-allowed"
+            ? "animate-pulse bg-gray-200 dark:bg-gray-500 text-transparent rounded-md cursor-not-allowed"
             : [
                   props.outline.value
                       ? buttonOutlineThemeClasses.default[props.theme.value]
