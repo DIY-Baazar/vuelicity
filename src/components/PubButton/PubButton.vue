@@ -25,7 +25,6 @@ const props = withDefaults(defineProps<ButtonProps>(), {
     name: "",
     to: "#",
     disabled: false,
-    class: "",
     outline: false,
     skeleton: false,
     loading: false,
@@ -42,15 +41,15 @@ const wrapperClasses = computed(() => buttonClasses.value.wrapperClasses);
 <template>
     <button
         v-if="as === 'button'"
-        :type="props.type"
+        :type="type"
         :name="name"
-        :disabled="props.disabled"
+        :disabled="disabled"
         :class="wrapperClasses"
         v-bind="$attrs"
     >
         <slot></slot>
     </button>
-    <a v-if="as === 'a'" :href="to" :disabled="props.disabled" :class="wrapperClasses" v-bind="$attrs">
+    <a v-if="as === 'a'" :href="to" :aria-disabled="disabled" :class="wrapperClasses" v-bind="$attrs">
         <slot></slot>
     </a>
 </template>
