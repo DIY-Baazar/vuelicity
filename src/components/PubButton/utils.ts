@@ -34,7 +34,7 @@ const buttonThemeClasses: ButtonClassMap<ButtonTheme> = {
 
 const buttonOutlineThemeClasses: ButtonClassMap<ButtonTheme> = {
     default: {
-        none: "bg-transparent text-dark p-0",
+        none: "border border-gray-400 bg-transparent text-dark p-0",
         default: "border-light focus:ring-light text-light",
         primary: "border-primary focus:ring-primary text-primary",
         secondary: "border-secondary focus:ring-secondary text-secondary",
