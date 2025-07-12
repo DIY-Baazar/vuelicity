@@ -11,11 +11,13 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: read
+      contents: write # ✅ Needed to push back to repo
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # required to push tags/commits
 
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -23,6 +25,23 @@ jobs:
           node-version: 20
           registry-url: https://registry.npmjs.org/
           cache: npm
+
+      - name: Extract version from tag
+        id: get_version
+        run: |
+          echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_ENV
+
+      - name: Update package.json version
+        run: |
+          npm pkg set version=$VERSION
+          echo "Updated package.json to version $VERSION"
+
+      - name: Commit updated package.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "chore: set version to $VERSION from tag"
+          git push origin HEAD
 
       - name: Install dependencies
         run: npm ci
