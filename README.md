@@ -1,9 +1,12 @@
 # Vuelicity
 
-![Vuelicity Logo](./docs/public/images/logo_text.png)
-
-[![npm version](https://img.shields.io/npm/v/vuelicity.svg)](https://www.npmjs.com/package/vuelicity)
-[![license](https://img.shields.io/npm/l/vuelicity.svg)](https://github.com/DIY-Baazar/vuelicity/blob/main/LICENSE)
+<div align="center">
+<p><img alt="Vuelicity Logo" width="350" src="./docs/public/images/logo_text.png"/></p>
+<p>
+<a href="https://www.npmjs.com/package/vuelicity"><img src="https://img.shields.io/npm/v/vuelicity.svg" alt="npm version"></a>
+<a href="https://github.com/DIY-Baazar/vuelicity/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/vuelicity.svg" alt="license"></a>
+</p>
+</div>
 
 Vuelicity is a collection of UI components for Vue 3, built with the power and flexibility of Tailwind CSS 4. It's designed to be simple, customizable, and a joy for developers to use.
 
