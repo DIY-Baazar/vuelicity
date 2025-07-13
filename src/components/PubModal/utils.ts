@@ -39,15 +39,23 @@ interface UseModalClassesProps {
     size: Ref<ModalSize>;
     position: Ref<ModalPosition>;
     zIndex: Ref<ModalZIndex>;
+    overlayBlur: Ref<boolean>;
+    scrollable: Ref<boolean>;
 }
 
 export function useModalClasses(props: UseModalClassesProps): {
     wrapperClasses: string;
     spanClasses: string;
 } {
-    const wrapperClasses = [modalZIndexClasses[props.zIndex.value]].join(" ");
+    const wrapperClasses = [
+        modalZIndexClasses[props.zIndex.value],
+        props.overlayBlur.value ? "backdrop-blur bg-gray-900/20" : "bg-gray-900/50"
+    ].join(" ");
 
-    const spanClasses = [modalSizeClasses[props.size.value], modalPositionClasses[props.position.value]].join(" ");
+    const spanClasses = [
+        modalSizeClasses[props.size.value],
+        modalPositionClasses[props.position.value],
+    ].join(" ");
 
     return { wrapperClasses, spanClasses };
 }

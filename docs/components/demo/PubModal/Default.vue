@@ -14,6 +14,19 @@
                 <p class="text-sm text-gray-500">
                     We recommend updating to version <strong>2.3.4</strong> at your earliest convenience.
                 </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti quidem placeat rem repudiandae
+                    excepturi qui. Fuga explicabo facilis, voluptatibus quisquam fugiat saepe odit provident, corrupti
+                    aperiam eos nostrum repellendus sequi! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tempore quia eum dolorem neque. Perspiciatis, facere, tenetur esse impedit maiores nostrum
+                    cupiditate atque itaque nam velit eos ipsam omnis ratione delectus doloremque commodi soluta animi,
+                    corrupti magnam iusto optio odit! Harum optio iste dolore minus esse illum consectetur, vel rerum,
+                    ipsam molestias maxime quod repudiandae laborum temporibus facilis et dolores. Quae illo earum
+                    aliquam nulla ex ut dignissimos voluptatibus accusamus, laboriosam repudiandae corporis, natus quis,
+                    aut corrupti alias sint facere assumenda repellat ipsam nihil. Dolore cupiditate veniam similique
+                    alias delectus consectetur consequuntur explicabo ratione ad asperiores, saepe doloremque velit,
+                    harum omnis!
+                </p>
             </div>
         </template>
         <template #footer>
