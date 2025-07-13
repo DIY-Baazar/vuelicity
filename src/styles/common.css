@@ -1,0 +1,4 @@
+.pub-icon {
+    @apply text-2xl;
+    @apply text-gray-700;
+}

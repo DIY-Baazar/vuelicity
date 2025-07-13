@@ -2,6 +2,7 @@
 import { computed, toRefs } from "vue";
 import type { ModalPosition, ModalSize, ModalZIndex } from "./types";
 import { useModalClasses } from "./utils";
+import PubButton from "../PubButton/PubButton.vue";
 
 interface ModalProps {
     position: ModalPosition;
@@ -69,6 +70,10 @@ const spanClasses = computed(() => modalClasses.value.spanClasses);
                     class="flex items-center justify-between p-2"
                 >
                     <slot name="header"></slot>
+                    <pub-button size="sm" theme="none" @click="emit('close')">
+                        <span class="pub-icon">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </pub-button>
                 </div>
                 <!-- Modal body -->
                 <div

@@ -5,7 +5,7 @@ export type ButtonClassMap<T extends string> = { hover: Record<T, string>; defau
 
 const buttonThemeClasses: ButtonClassMap<ButtonTheme> = {
     default: {
-        none: "bg-transparent text-dark p-0",
+        none: "bg-transparent text-dark",
         default: "bg-light text-dark",
         primary: "bg-primary focus:ring-primary text-white",
         secondary: "bg-secondary focus:ring-secondary text-white",
@@ -34,7 +34,7 @@ const buttonThemeClasses: ButtonClassMap<ButtonTheme> = {
 
 const buttonOutlineThemeClasses: ButtonClassMap<ButtonTheme> = {
     default: {
-        none: "border border-gray-400 bg-transparent text-dark p-0",
+        none: "bg-transparent text-dark p-0",
         default: "border-light focus:ring-light text-light",
         primary: "border-primary focus:ring-primary text-primary",
         secondary: "border-secondary focus:ring-secondary text-secondary",
@@ -82,11 +82,10 @@ interface UseButtonClassesProps {
     theme: Ref<ButtonTheme>;
     size: Ref<ButtonSize>;
     rounded: Ref<ButtonRounded>;
-    class: Ref<string>;
-    outline: Ref<boolean>;
-    disabled: Ref<boolean>;
-    loading: Ref<boolean>;
-    skeleton: Ref<boolean>;
+    outline: Ref<boolean|undefined>;
+    disabled: Ref<boolean|undefined>;
+    loading: Ref<boolean|undefined>;
+    skeleton: Ref<boolean|undefined>;
 }
 
 export function useButtonClasses(props: UseButtonClassesProps): { wrapperClasses: string; spanClasses: string } {
@@ -108,8 +107,8 @@ export function useButtonClasses(props: UseButtonClassesProps): { wrapperClasses
         buttonSizeClasses[props.size.value],
         buttonRoundedClasses[props.rounded.value],
         props.disabled.value || props.loading.value ? "cursor-not-allowed opacity-50" : "",
-        props.class.value
+        props.theme.value === "none" ? "border-0": "border",
     ].join(" ");
-    const spanClasses = [slots.default ? "inline-flex" : "flex", "items-center gap-2 border"].join(" ");
+    const spanClasses = ["flex", "items-center gap-2"].join(" ");
     return { wrapperClasses, spanClasses };
 }
