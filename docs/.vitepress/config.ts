@@ -1,4 +1,6 @@
 import { resolve } from "path";
+import components from "./components";
+
 
 export default {
     lang: "en-IN",
@@ -22,7 +24,7 @@ export default {
             },
             {
                 text: "Components",
-                items: [{ text: "PubButton", link: "/components/pub-button" }]
+                items: components.component_toc
             }
         ],
         socialLinks: [{ icon: "github", link: "https://github.com/DIY-Baazar/vuelicity" }],
@@ -37,6 +39,9 @@ export default {
                 vuelicity: resolve(__dirname, "../../src")
             },
             dedupe: ["vue"] // avoid error when using dependencies that also use Vue
+        },
+        server: {
+            port: 5051
         }
     }
 };

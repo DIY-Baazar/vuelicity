@@ -110,6 +110,6 @@ export function useButtonClasses(props: UseButtonClassesProps): { wrapperClasses
         props.disabled.value || props.loading.value ? "cursor-not-allowed opacity-50" : "",
         props.class.value
     ].join(" ");
-    const spanClasses = slots.default ? "inline-flex items-center" : "flex items-center";
+    const spanClasses = [slots.default ? "inline-flex" : "flex", "items-center gap-2 border"].join(" ");
     return { wrapperClasses, spanClasses };
 }
