@@ -1,5 +1,5 @@
 import { useSlots, type Ref } from "vue";
-import type { ModalPosition, ModalSize } from "./types";
+import type { ModalPosition, ModalSize, ModalZIndex } from "./types";
 
 const modalSizeClasses: Record<ModalSize, string> = {
     xs: "max-w-xs",
@@ -27,20 +27,27 @@ const modalPositionClasses: Record<ModalPosition, string> = {
     "bottom-end": "self-end justify-self-end"
 };
 
+const modalZIndexClasses: Record<ModalZIndex, string> = {
+    10: "z-10",
+    20: "z-20",
+    30: "z-30",
+    40: "z-40",
+    50: "z-50"
+};
+
 interface UseModalClassesProps {
     size: Ref<ModalSize>;
     position: Ref<ModalPosition>;
+    zIndex: Ref<ModalZIndex>;
 }
 
-export function useModalClasses(props: UseModalClassesProps): { wrapperClasses: string; spanClasses: string } {
-    const slots = useSlots();
+export function useModalClasses(props: UseModalClassesProps): {
+    wrapperClasses: string;
+    spanClasses: string;
+} {
+    const wrapperClasses = [modalZIndexClasses[props.zIndex.value]].join(" ");
 
-    const wrapperClasses = [
-        modalSizeClasses[props.size.value],
-        modalPositionClasses[props.position.value],
-        "relative w-full bg-white shadow"
-    ].join(" ");
+    const spanClasses = [modalSizeClasses[props.size.value], modalPositionClasses[props.position.value]].join(" ");
 
-    const spanClasses = [slots.header ? "" : "pt-0"].join(" ");
     return { wrapperClasses, spanClasses };
 }
