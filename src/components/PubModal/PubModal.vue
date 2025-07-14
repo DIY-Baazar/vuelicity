@@ -3,6 +3,7 @@ import { computed, toRefs } from "vue";
 import type { ModalPosition, ModalSize, ModalZIndex } from "./types";
 import { useModalClasses } from "./utils";
 import PubButton from "../PubButton/PubButton.vue";
+import PubIcon from "../PubIcon/PubIcon.vue";
 
 interface ModalProps {
     position: ModalPosition;
@@ -71,7 +72,7 @@ const spanClasses = computed(() => modalClasses.value.spanClasses);
                 >
                     <slot name="header"></slot>
                     <pub-button size="sm" theme="none" @click="emit('close')">
-                        <span class="pub-icon">&times;</span>
+                        <pub-icon size="sm" name="close" />
                         <span class="sr-only">Close</span>
                     </pub-button>
                 </div>
