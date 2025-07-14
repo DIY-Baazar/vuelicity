@@ -6,6 +6,10 @@ const component_toc = [
     {
         text: "PubModal",
         link: "/components/pub-modal"
+    },
+    {
+        text: "PubIcon",
+        link: "/components/pub-icon"
     }
 ];
 
