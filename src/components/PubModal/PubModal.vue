@@ -72,7 +72,7 @@ const spanClasses = computed(() => modalClasses.value.spanClasses);
                 >
                     <slot name="header"></slot>
                     <pub-button size="sm" theme="none" @click="emit('close')">
-                        <pub-icon size="sm" name="close" />
+                        <pub-icon theme="dark" size="sm" name="close" />
                         <span class="sr-only">Close</span>
                     </pub-button>
                 </div>
