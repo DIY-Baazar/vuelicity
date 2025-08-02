@@ -35,7 +35,7 @@ The icon can be themed using the `theme` prop.
 
 ### Spin, Flip, Rotate, and Mirror
 
-The icon can be 
+The icon can be animated or transformed.
 <demo-container>
 <SpinFlip/>
 </demo-container>
