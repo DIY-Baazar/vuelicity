@@ -4,12 +4,16 @@ const component_toc = [
         link: "/components/pub-button"
     },
     {
+        text: "PubIcon",
+        link: "/components/pub-icon"
+    },
+    {
         text: "PubModal",
         link: "/components/pub-modal"
     },
     {
-        text: "PubIcon",
-        link: "/components/pub-icon"
+        text: "PubNavbar",
+        link: "/components/pub-navbar"
     }
 ];
 
