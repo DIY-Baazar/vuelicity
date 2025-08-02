@@ -52,7 +52,7 @@ The icon can be
 | size | String | `'md'` | The size of the icon. | `'xs'`, `'sm'`, `'md'`, `'lg'`, `'xl'` |
 | theme | String | `'default'` | The color theme of the icon. | `'none'`, `'default'`, `'primary'`, `'secondary'`, `'tertiary'`, `'danger'`, `'warning'`, `'success'`, `'info'`, `'light'`, `'dark'` |
 | name | String | `''` | The name of the icon. | Refer to the [icon list](#icons) below. |
-|rotate | String | `''` | The rotation of the icon. | `'0'`, `'45'`, `'90'`, `'135'`, `'180'`, `'225'`, `'270'`, `'315'` |
+|rotate | Boolean | `false` | Whether to rotate the icon 90 degrees. | `true`, `false` |
 |flip | Boolean | `false` | Whether to flip the icon horizontally. | `true`, `false` |
 |spin | Boolean | `false` | Whether to spin the icon. | `true`, `false` |
 |pulse | Boolean | `false` | Whether to pulse the icon. | `true`, `false` |
