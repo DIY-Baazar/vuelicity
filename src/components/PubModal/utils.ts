@@ -1,4 +1,4 @@
-import { useSlots, type Ref } from "vue";
+import { type Ref } from "vue";
 import type { ModalPosition, ModalSize, ModalZIndex } from "./types";
 
 const modalSizeClasses: Record<ModalSize, string> = {
