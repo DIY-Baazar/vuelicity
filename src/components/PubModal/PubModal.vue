@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, toRefs } from "vue";
+import { computed, onMounted, ref, toRefs, type Ref } from "vue";
 import type { ModalPosition, ModalSize, ModalZIndex } from "./types";
 import { useModalClasses } from "./utils";
 import PubButton from "../PubButton/PubButton.vue";
@@ -11,11 +11,12 @@ interface ModalProps {
     isOpen: boolean;
     zIndex: ModalZIndex;
     class: string;
-    persistent: boolean;
-    notEscapeClose: boolean;
-    notClickClose: boolean;
-    overlayBlur: boolean;
-    scrollable: boolean;
+    persistent?: boolean;
+    notEscapeClose?: boolean;
+    notClickClose?: boolean;
+    overlayBlur?: boolean;
+    scrollable?: boolean;
+    focusTrap?: boolean;
 }
 
 const props = withDefaults(defineProps<ModalProps>(), {
@@ -28,7 +29,8 @@ const props = withDefaults(defineProps<ModalProps>(), {
     notEscapeClose: false,
     notClickClose: false,
     overlayBlur: false,
-    scrollable: false
+    scrollable: false,
+    focusTrap: false,
 });
 
 const closeWithEsc = () => {
@@ -43,7 +45,18 @@ const clickOutside = () => {
     }
 };
 
+onMounted(() => {
+    if (props.focusTrap) {
+        const focusEle: HTMLElement | null = modalRef.value?.querySelector('button[aria-label="close"]') || modalRef.value;
+        
+        if (focusEle) {
+            focusEle.focus();
+        }
+    }
+});
+
 const emit = defineEmits(["close"]);
+const modalRef: Ref<HTMLElement | null> = ref(null);
 
 const modalClasses = computed(() => useModalClasses(toRefs(props)));
 
@@ -61,6 +74,7 @@ const spanClasses = computed(() => modalClasses.value.spanClasses);
         @click.self="clickOutside"
         role="dialog"
         aria-modal="true"
+        ref="modalRef"
     >
         <div :class="[spanClasses, 'relative w-full p-2']">
             <!-- Modal content -->
@@ -71,7 +85,7 @@ const spanClasses = computed(() => modalClasses.value.spanClasses);
                     class="flex items-center justify-between p-2"
                 >
                     <slot name="header"></slot>
-                    <pub-button size="sm" theme="none" @click="emit('close')">
+                    <pub-button size="sm" theme="none" @click="emit('close')" aria-label="close">
                         <pub-icon theme="dark" size="sm" name="close" />
                         <span class="sr-only">Close</span>
                     </pub-button>

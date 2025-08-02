@@ -1,11 +1,13 @@
 ---
 title: PubModal Component
+description: Documentation for the PubModal component.
 ---
 
 <script setup>
 import Default from './demo/PubModal/Default.vue';
 import Size from './demo/PubModal/Size.vue';
 import Position from './demo/PubModal/Position.vue';
+import FocusTrap from './demo/PubModal/FocusTrap.vue';
 </script>
 
 # PubModal
@@ -67,6 +69,25 @@ import { PubModal } from "vuelicity";
 </script>
 ```
 
+### Props - `focusTrap` Usage
+
+The `focusTrap` prop can be used to enable or disable the focus trap.
+
+<demo-container>
+  <FocusTrap />
+</demo-container>
+
+```vue
+<template>
+  <pub-modal />
+  <pub-modal focus-trap />
+</template>
+
+<script setup>
+import { PubModal } from "vuelicity";
+</script>
+```
+
 ## Reference
 
 ### Properties
@@ -82,6 +103,7 @@ import { PubModal } from "vuelicity";
 | notEscapeClose | Boolean | `false` | Whether the modal should not close when the escape key is pressed. | `true`, `false` |
 | scrollable | Boolean | `false` | Whether the modal should be scrollable. | `true`, `false` |
 | overlayBlur | Boolean | `false` | Whether the modal should have a blurred overlay. | `true`, `false` |
+| focusTrap | Boolean | `true` | Whether the modal should trap focus. | `true`, `false` |
 | class | String | `''` | Additional CSS classes to apply. | |
 
 ### Slots
@@ -91,3 +113,9 @@ import { PubModal } from "vuelicity";
 | default | Default slot |
 | header | Header slot |
 | footer | Footer slot |
+
+### Events
+
+| Name | Description |
+| ---- | ----------- |
+| close | Emitted when the modal is closed. |

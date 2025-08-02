@@ -1,7 +1,7 @@
 <template>
     <pub-button @click="openModal">{{ modalTriggerText }}</pub-button>
 
-    <pub-modal :is-open="isModalOpen" :size="modalSize" :position="modalPosition" @close="closeModal">
+    <pub-modal :is-open="isModalOpen" :size="modalSize" :focus-trap="focusTrap" :position="modalPosition" @close="closeModal">
         <template #header>
             <h3 class="text-lg font-semibold text-gray-900">System Update Notice</h3>
         </template>
@@ -43,6 +43,10 @@ const props = defineProps({
     modalPosition: {
         type: String,
         default: "center"
+    },
+    focusTrap: {
+        type: Boolean,
+        default: true
     }
 });
 
