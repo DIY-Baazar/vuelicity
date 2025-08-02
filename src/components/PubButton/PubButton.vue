@@ -5,18 +5,18 @@ import type { ButtonRounded, ButtonSize, ButtonTheme, ButtonType } from "./types
 import { useButtonClasses } from "./utils";
 
 interface ButtonProps {
-    theme: ButtonTheme;
-    type: ButtonType;
-    name: string;
-    to: string;
-    disabled: boolean;
-    class: string;
-    outline: boolean;
-    skeleton: boolean;
-    loading: boolean;
-    size: ButtonSize;
-    rounded: ButtonRounded;
-    as: "button" | "a";
+    theme?: ButtonTheme;
+    type?: ButtonType;
+    name?: string;
+    to?: string;
+    disabled?: boolean;
+    class?: string;
+    outline?: boolean;
+    skeleton?: boolean;
+    loading?: boolean;
+    size?: ButtonSize;
+    rounded?: ButtonRounded;
+    as?: "button" | "a";
 }
 
 const props = withDefaults(defineProps<ButtonProps>(), {
@@ -36,6 +36,7 @@ const props = withDefaults(defineProps<ButtonProps>(), {
 const buttonClasses = computed(() => useButtonClasses(toRefs(props)));
 
 const wrapperClasses = computed(() => buttonClasses.value.wrapperClasses);
+const spanClasses = computed(() => buttonClasses.value.spanClasses);
 
 const isDisabled = computed(() => props.disabled || props.loading || props.skeleton);
 </script>
@@ -46,12 +47,12 @@ const isDisabled = computed(() => props.disabled || props.loading || props.skele
         :type="type"
         :name="name"
         :disabled="isDisabled"
-        :class="wrapperClasses"
+        :class="[spanClasses, wrapperClasses, props.class]"
         v-bind="$attrs"
     >
         <slot></slot>
     </button>
-    <a v-if="as === 'a'" :href="to" :aria-disabled="isDisabled" :class="wrapperClasses" v-bind="$attrs">
+    <a v-if="as === 'a'" :href="to" :aria-disabled="isDisabled" :class="[spanClasses, wrapperClasses, props.class]" v-bind="$attrs">
         <slot></slot>
     </a>
 </template>
