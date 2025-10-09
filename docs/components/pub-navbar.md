@@ -3,7 +3,8 @@ title: PubNavbar
 description: Documentation for the PubNavbar component.
 ---
 
-<script>
+<script setup>
+import Default from './demo/PubNavbar/Default.vue';
 </script>
 
 # PubNavbar
