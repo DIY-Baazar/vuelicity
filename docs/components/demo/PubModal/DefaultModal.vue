@@ -18,8 +18,8 @@
         </template>
         <template #footer>
             <div class="flex justify-end gap-2">
-                <pub-button theme="secondary" outline @click="closeModal">Later</pub-button>
-                <pub-button theme="primary" @click="closeModal">Update Now</pub-button>
+                <pub-button theme="red" outline @click="closeModal">Later</pub-button>
+                <pub-button theme="blue" @click="closeModal">Update Now</pub-button>
             </div>
         </template>
     </pub-modal>

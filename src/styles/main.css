@@ -3,20 +3,32 @@
 @import "./common.css";
 
 @theme {
-    --color-primary: #3487cb;
-    --color-secondary: #e71861;
+    /* Blue */
+    --color-blue: #3457d5;
+    --color-blue-dark: #4c60a7;
+    --color-blue-light: #6681df;
+    /* Red */
+    --color-red: #ed2939;
+    --color-red-dark: #b4464f;
+    --color-red-light: #f15e6a;
+    /* Green */
+    --color-green: #32cd32;
+    --color-green-dark: #4ba24b;
+    --color-green-light: #65d965;
+    /* Yellow */
+    --color-yellow: #ffed4a;
+    --color-yellow-dark: #e6c300;
+    --color-yellow-light: #fff58a;
+    /* Black */
+    --color-black: #333333;
+
+
     --color-tertiary: #b19acb;
-    --color-success: #29b432;
-    --color-warning: #ffed4a;
     --color-danger: #db3a34;
     --color-light: #fefefe;
     --color-dark: #333333;
     --color-info: #3b82f6;
-    --color-primary-dark: #2a6ca2;
-    --color-secondary-dark: #be144f;
     --color-tertiary-dark: #a183c0;
-    --color-success-dark: #1f8726;
-    --color-warning-dark: #f7de00;
     --color-info-dark: #1d4ed8;
     --color-danger-dark: #ad241f;
     --font-sans: "Open Sans", sans-serif;

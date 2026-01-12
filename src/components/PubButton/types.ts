@@ -1,12 +1,12 @@
 export type ButtonTheme =
     | "none"
     | "default"
-    | "primary"
-    | "secondary"
+    | "blue"
+    | "red"
     | "tertiary"
     | "danger"
-    | "warning"
-    | "success"
+    | "yellow"
+    | "green"
     | "info"
     | "light"
     | "dark";

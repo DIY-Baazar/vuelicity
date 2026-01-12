@@ -17,12 +17,12 @@ const iconSizeClasses: Record<IconSize, string> = {
 
 const iconThemeClasses: Record<IconTheme, string> = {
     default: "text-dark dark:text-white",
-    primary: "text-primary",
-    secondary: "text-secondary",
+    blue: "text-blue",
+    red: "text-red",
     tertiary: "text-tertiary",
     danger: "text-danger",
-    warning: "text-warning",
-    success: "text-success",
+    yellow: "text-yellow",
+    green: "text-green",
     info: "text-info",
     light: "text-light",
     dark: "text-dark"

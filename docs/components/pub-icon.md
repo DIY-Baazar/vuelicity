@@ -50,7 +50,7 @@ The icon can be animated or transformed.
 | Name | Type | Default | Description | Options |
 | :--- | :--- | :--- | :--- | :--- |
 | size | String | `'md'` | The size of the icon. | `'xs'`, `'sm'`, `'md'`, `'lg'`, `'xl'` |
-| theme | String | `'default'` | The color theme of the icon. | `'none'`, `'default'`, `'primary'`, `'secondary'`, `'tertiary'`, `'danger'`, `'warning'`, `'success'`, `'info'`, `'light'`, `'dark'` |
+| theme | String | `'default'` | The color theme of the icon. | `'none'`, `'default'`, `'blue'`, `'red'`, `'tertiary'`, `'danger'`, `'yellow'`, `'green'`, `'info'`, `'light'`, `'dark'` |
 | name | String | `''` | The name of the icon. | Refer to the [icon list](#icons) below. |
 |rotate | Boolean | `false` | Whether to rotate the icon 90 degrees. | `true`, `false` |
 |flip | Boolean | `false` | Whether to flip the icon horizontally. | `true`, `false` |

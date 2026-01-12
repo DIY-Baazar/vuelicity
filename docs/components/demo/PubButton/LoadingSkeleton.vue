@@ -2,7 +2,7 @@
     <pub-button @click="clickProcess" :loading="loading">
         {{ loading ? "Loading..." : "Click Me" }}
     </pub-button>
-    <pub-button theme="primary" :skeleton="skeletal">Success</pub-button>
+    <pub-button theme="blue" :skeleton="skeletal">Green</pub-button>
 </template>
 
 <script setup>

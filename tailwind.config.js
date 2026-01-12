@@ -19,30 +19,30 @@ export default {
                 mono: ["SFMono-Regular", ...defaultTheme.fontFamily.mono]
             },
             colors: {
-                primary: {
-                    light: "#66A7D9",
-                    DEFAULT: "#2C72AC",
-                    dark: "#005A92"
+                blue: {
+                    light: "#6681df",
+                    DEFAULT: "#3457d5",
+                    dark: "#4c60a7"
                 },
-                secondary: {
-                    light: "#FF5B91",
-                    DEFAULT: "#E72064",
-                    dark: "#B21348"
+                red: {
+                    light: "#f15e6a",
+                    DEFAULT: "#ed2939",
+                    dark: "#b4464f"
+                },
+                green: {
+                    light: "#65d965",
+                    DEFAULT: "#32cd32",
+                    dark: "#4ba24b"
+                },
+                yellow: {
+                    light: "#FFF58A",
+                    DEFAULT: "#FFED4A",
+                    dark: "#E6C300"
                 },
                 tertiary: {
                     light: "#A89FB0",
                     DEFAULT: "#70677E",
                     dark: "#4B4452"
-                },
-                success: {
-                    light: "#6EE36A",
-                    DEFAULT: "#29B432",
-                    dark: "#138828"
-                },
-                warning: {
-                    light: "#FFF58A",
-                    DEFAULT: "#FFED4A",
-                    dark: "#E6C300"
                 },
                 danger: {
                     light: "#FF7B74",
