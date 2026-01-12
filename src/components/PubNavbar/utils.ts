@@ -25,8 +25,8 @@ export function useNavbarClasses (props: UseNavbarClassesProps): {
     };
 
     const wrapperClasses = [
-        "border-gray-200",
-        props.sticky.value ? "fixed w-full z-20 top-0 left-0 border-b border-gray-200" : "",
+        "border-gray-200 w-full",
+        props.sticky.value ? "fixed z-20 top-0 left-0 border-b border-gray-200" : "",
         props.rounded.value ? "rounded" : "",
         props.solid.value ? "p-3" : "px-2 sm:px-4 py-2.5",
         themeClasses[props.theme.value][props.solid.value ? "true" : "false"]

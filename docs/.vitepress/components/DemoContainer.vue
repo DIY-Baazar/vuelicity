@@ -1,5 +1,5 @@
 <style lang="scss">
-.demo-container {
+.vp-raw {
     border: 1px solid var(--vp-c-default-2);
     border-radius: 5px;
     padding: 10px 20px;
@@ -8,33 +8,33 @@
     flex-wrap: wrap;
     gap: 0.5rem;
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p {
-        margin: 0;
-        line-height: 1;
-    }
+    // h1,
+    // h2,
+    // h3,
+    // h4,
+    // h5,
+    // h6,
+    // p {
+    //     margin: 0;
+    //     line-height: 1;
+    // }
 
-    a {
-        text-decoration: inherit;
-        color: inherit;
-    }
+    // a {
+    //     text-decoration: inherit;
+    //     color: inherit;
+    // }
 
-    ul,
-    ol {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
+    // ul,
+    // ol {
+    //     list-style: none;
+    //     margin: 0;
+    //     padding: 0;
+    // }
 }
 </style>
 
 <template>
-    <div class="demo-container">
+    <div class="vp-raw">
         <slot></slot>
     </div>
 </template>

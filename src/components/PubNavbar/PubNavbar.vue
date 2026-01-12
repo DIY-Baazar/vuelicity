@@ -3,6 +3,7 @@ import { computed, ref, toRefs } from "vue";
 import { useNavbarClasses } from "./utils";
 import type { PubNavbarProps } from "./types";
 import { useBreakpoints } from "@/composables/useBreakpoints";
+import PubIcon from "@/components/PubIcon/PubIcon.vue";
 
 const { isMobile } = useBreakpoints();
 const isShowMobileMenu = ref(false);
@@ -38,6 +39,7 @@ const isShowMenu = computed(() => (!isMobile)
                 type="button" @click="toggleMobileMenu()">
                 <span class="sr-only">Open main menu</span>
                 <slot name="menu-icon">
+                    <pub-icon theme="dark" size="sm" name="bars" />
                 </slot>
             </button>
 

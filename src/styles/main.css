@@ -19,8 +19,6 @@
     --color-yellow: #ffd700;
     --color-yellow-dark: #dbcc00;
     --color-yellow-light: #ffe449;
-    /* Black */
-    --color-black: #333333;
     /* Cyan */
     --color-cyan: #00CCCC;
     --color-cyan-dark: #009999;
@@ -29,6 +27,12 @@
     --color-magenta: #8D029B;
     --color-magenta-dark: #cc00cc;
     --color-magenta-light: #ff66ff;
+
+    /* Black */
+    --color-black: #333333;
+    /* White */
+    --color-white: #fffffa;
+
 
     --color-light: #fefefa;
     --color-dark: #333333;

@@ -32,7 +32,12 @@ export const iconPathMap: Record<string, string | string[]> = {
     ],
     // Navigations
     // Ecommerce
-    cart: ""
+    cart: "",
+    bars: [
+        "M3 6h18v2H3z",
+        "M3 11h18v2H3z",
+        "M3 16h18v2H3z"
+    ]
 };
 
 const iconAliasMap: Record<string, string> = {
