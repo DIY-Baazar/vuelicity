@@ -3,11 +3,10 @@ export type ButtonTheme =
     | "default"
     | "blue"
     | "red"
-    | "tertiary"
-    | "danger"
     | "yellow"
     | "green"
-    | "info"
+    | "magenta"
+    | "cyan"
     | "light"
     | "dark";
 export type ButtonType = "button" | "submit" | "reset";

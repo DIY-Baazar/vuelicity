@@ -19,11 +19,10 @@ const iconThemeClasses: Record<IconTheme, string> = {
     default: "text-dark dark:text-white",
     blue: "text-blue",
     red: "text-red",
-    tertiary: "text-tertiary",
-    danger: "text-danger",
     yellow: "text-yellow",
     green: "text-green",
-    info: "text-info",
+    magenta: "text-magenta",
+    cyan: "text-cyan",
     light: "text-light",
     dark: "text-dark"
 };

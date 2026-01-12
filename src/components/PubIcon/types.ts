@@ -2,11 +2,10 @@ export type IconTheme =
     | "default"
     | "blue"
     | "red"
-    | "tertiary"
-    | "danger"
     | "yellow"
     | "green"
-    | "info"
+    | "magenta"
+    | "cyan"
     | "light"
     | "dark";
 

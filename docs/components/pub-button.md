@@ -17,7 +17,7 @@ This is a button component.
 
 ## Prop - `theme` Usage
 
-There are a number of themes available for the button, including `'none'`, `'default'`, `'blue'`, `'red'`, `'tertiary'`, `'danger'`, `'yellow'`, `'green'`, `'info'`, `'light'`, `'dark'`. Below is a demo of each theme.
+There are a number of themes available for the button, including `'none'`, `'default'`, `'blue'`, `'red'`, `'yellow'`, `'green'`, `'info'`, `'light'`, `'dark'`. Below is a demo of each theme.
 
 <demo-container>
   <Theme/>
@@ -81,7 +81,7 @@ The `loading` prop can be used to display a loading state. The `skeleton` prop c
 
 | Name | Type | Default | Description | Options |
 | :--- | :--- | :--- | :--- | :--- |
-| theme | String | `'blue'` | The color theme of the button. | `'none'`, `'default'`, `'blue'`, `'red'`, `'tertiary'`, `'danger'`, `'yellow'`, `'green'`, `'info'`, `'light'`, `'dark'` |
+| theme | String | `'blue'` | The color theme of the button. | `'none'`, `'default'`, `'blue'`, `'red'`, `'yellow'`, `'green'`, `'magenta'`, `'cyan'`, `'light'`, `'dark'` |
 | outline | Boolean | `false` | Whether to use the outline style. |  |
 | rounded | String | `'none'` | The border radius of the button. | `'none'`, `'sm'`, `'md'`, `'lg'`, `'xl'`, `'full'` |
 | size | String | `'md'` | The size of the button. | `'xs'`, `'sm'`, `'md'`, `'lg'`, `'xl'` |
@@ -93,6 +93,7 @@ The `loading` prop can be used to display a loading state. The `skeleton` prop c
 | skeleton | Boolean | `false` | Whether to display a skeleton loader. | `true`, `false` |
 | to | String | `'#'` | The href for the link when `as` is `'a'`. | |
 | type | String | `'button'` | The type attribute for the button. | `'button'`, `'submit'`, `'reset'` |
+| linkAttr | String | `'href'` | The attribute to use for the link when `as` is `'a'`. | |
 
 ### Slots
 
