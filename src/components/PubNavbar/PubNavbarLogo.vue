@@ -16,7 +16,7 @@ const componentName = computed(() => {
 </script>
 
 <template>
-    <component :is="componentName" class="flex items-center" :[linkAttr]="link">
+    <component :is="componentName" class="pub-navbar-logo flex items-center" :[linkAttr]="link">
         <img :src="imageUrl" :alt="alt" class="mr-3 h-6 sm:h-10">
         <span class="self-center whitespace-nowrap text-xl font-semibold">
             <slot />

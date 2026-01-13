@@ -16,7 +16,7 @@ const spanClasses = computed(() => menuClasses.value.spanClasses)
 </script>
 
 <template>
-    <div :class="wrapperClasses">
+    <div :class="['pub-navbar-collapse', wrapperClasses]">
         <ul :class="spanClasses">
             <slot name="default" />
         </ul>

@@ -31,7 +31,7 @@ const isShowMenu = computed(() => (!isMobile)
 </script>
 
 <template>
-    <nav :class="[wrapperClasses, props.containerClass]">
+    <nav aria-label="navbar" :class="['pub-navbar', wrapperClasses, props.containerClass]">
         <div :class="[spanClasses, props.class]">
             <slot name="logo" />
 

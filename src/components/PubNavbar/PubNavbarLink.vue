@@ -30,7 +30,7 @@ const linkClasses = computed(() => useNavbarLinkClasses(toRefs(props)));
 
 <template>
     <li>
-        <component :is="componentName" :[linkAttr]="link" :class="linkClasses" @click="handleClick">
+        <component :is="componentName" :[linkAttr]="link" :class="['pub-navbar-link', linkClasses]" @click="handleClick">
             <slot />
         </component>
     </li>

@@ -72,7 +72,7 @@ const spanClasses = computed(() => buttonClasses.value.spanClasses);
     <a v-if="as === 'a'" :href="to" :aria-disabled="isDisabled" :class="[spanClasses, wrapperClasses, props.class]" v-bind="$attrs">
         <slot></slot>
     </a> -->
-    <component :is="componentName" :[linkAttr]="to" :class="[spanClasses, wrapperClasses, props.class]"
+    <component :is="componentName" :[linkAttr]="to" :class="['pub-button', spanClasses, wrapperClasses, props.class]"
         @click="handleClick" v-bind="$attrs">
         <slot />
     </component>
