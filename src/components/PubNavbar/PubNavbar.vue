@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, ref, toRefs } from "vue";
+import { computed, ref, toRefs, useSlots } from "vue";
 import { useNavbarClasses } from "./utils";
 import type { PubNavbarProps } from "./types";
 import { useBreakpoints } from "@/composables/useBreakpoints";
@@ -12,9 +12,10 @@ const toggleMobileMenu = () => {
     isShowMobileMenu.value = !isShowMobileMenu.value;
 };
 
+const slots = useSlots();
 
 const props = withDefaults(defineProps<PubNavbarProps>(), {
-    theme: "light"
+    theme: "default"
 });
 
 const modalClasses = computed(() => useNavbarClasses(toRefs(props)));
@@ -44,6 +45,10 @@ const isShowMenu = computed(() => (!isMobile)
             </button>
 
             <slot :is-show-menu="isShowMenu" name="default" />
+
+            <div v-if="slots['right-side']" class="hidden md:order-2 md:flex">
+                <slot name="right-side" />
+            </div>
         </div>
     </nav>
 </template>

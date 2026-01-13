@@ -11,7 +11,7 @@ import SpinFlip from './demo/PubIcon/SpinFlip.vue';
 
 # PubIcon
 
-This is a icon component.
+This is a icon component that displays a vector graphic icon.
 
 ## Scale
 

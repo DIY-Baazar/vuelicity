@@ -1,4 +1,4 @@
-export type PubNavbarTheme = "light" | "dark";
+export type PubNavbarTheme = "default" | "light" | "dark";
 
 interface PubNavbarProps {
     class: string;

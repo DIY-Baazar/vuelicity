@@ -12,7 +12,7 @@ import FocusTrap from './demo/PubModal/FocusTrap.vue';
 
 # PubModal
 
-This is a modal component.
+This is a modal component that can be used to display content in a modal dialog. It provides various options for customizing the size, position, and behavior of the modal, such as enabling focus trap and persistent behavior.
 
 ## Default Usage
 

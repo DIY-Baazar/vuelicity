@@ -13,7 +13,7 @@ import LoadingSkeleton from './demo/PubButton/LoadingSkeleton.vue';
 
 # PubButton
 
-This is a button component.
+This is a button component that can be used to create buttons with various styles and sizes.
 
 ## Prop - `theme` Usage
 

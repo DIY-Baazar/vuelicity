@@ -21,6 +21,10 @@ export function useNavbarClasses (props: UseNavbarClassesProps): {
         dark: {
             true: "bg-dark",
             false: "bg-gray-800"
+        },
+        default: {
+            true: "bg-light dark:bg-dark",
+            false: "bg-gray-50 dark:bg-gray-800"
         }
     };
 
