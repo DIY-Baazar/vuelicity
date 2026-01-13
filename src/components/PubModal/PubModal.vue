@@ -6,11 +6,11 @@ import PubButton from "../PubButton/PubButton.vue";
 import PubIcon from "../PubIcon/PubIcon.vue";
 
 interface ModalProps {
-    position: ModalPosition;
-    size: ModalSize;
-    isOpen: boolean;
-    zIndex: ModalZIndex;
-    class: string;
+    position?: ModalPosition;
+    size?: ModalSize;
+    isOpen?: boolean;
+    zIndex?: ModalZIndex;
+    class?: string;
     persistent?: boolean;
     notEscapeClose?: boolean;
     notClickClose?: boolean;
