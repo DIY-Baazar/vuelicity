@@ -33,11 +33,11 @@ export const iconPathMap: Record<string, string | string[]> = {
     // Navigations
     // Ecommerce
     cart: "",
-    bars: [
-        "M3 6h18v2H3z",
-        "M3 11h18v2H3z",
-        "M3 16h18v2H3z"
-    ]
+    bars: "M4.5 5.5h15a.5.5 0 0 1 0 1h-15a.5.5 0 0 1 0-1z M4.5 11.5h15a.5.5 0 0 1 0 1h-15a.5.5 0 0 1 0-1z M4.5 17.5h15a.5.5 0 0 1 0 1h-15a.5.5 0 0 1 0-1z",
+    chevron_left: "M13.65 5.95a.5.5 0 0 1 .7.7L9.35 11.65a.5.5 0 0 0 0 .7L14.35 17.35a.5.5 0 0 1-.7.7L8.3 12.7a1 1 0 0 1 0-1.4l5.35-5.35z",
+    chevron_right: "M10.35 5.95a.5.5 0 0 0-.7.7L14.65 11.65a.5.5 0 0 1 0 .7L9.65 17.35a.5.5 0 0 0 .7.7L15.7 12.7a1 1 0 0 0 0-1.4L10.35 5.95z",
+    chevron_up: "M5.95 13.65a.5.5 0 0 0 .7.7L11.65 9.35a.5.5 0 0 1 .7 0l5 5a.5.5 0 0 0 .7-.7L12.7 8.3a1 1 0 0 0-1.4 0L5.95 13.65z",
+    chevron_down: "M5.95 10.35a.5.5 0 0 1 .7-.7L11.65 14.65a.5.5 0 0 0 .7 0l5-5a.5.5 0 0 1 .7.7L12.7 15.7a1 1 0 0 1-1.4 0L5.95 10.35z",
 };
 
 const iconAliasMap: Record<string, string> = {
@@ -55,7 +55,11 @@ const iconAliasMap: Record<string, string> = {
     "circle-plus": "plus_circle",
     "plus-circle": "plus_circle",
     "circle-minus": "minus_circle",
-    "minus-circle": "minus_circle"
+    "minus-circle": "minus_circle",
+    "chevron-left": "chevron_left",
+    "chevron-right": "chevron_right",
+    "chevron-up": "chevron_up",
+    "chevron-down": "chevron_down"
 };
 
 export function getIconBody(name: string): string {

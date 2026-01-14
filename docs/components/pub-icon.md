@@ -74,5 +74,6 @@ The icon can be animated or transformed.
   <DisplayIcon name="minus"/>
   <DisplayIcon name="minus-circle"/>
   <hr/>
-  <DisplayIcon name="cart"/>
+  <DisplayIcon name="bars"/>
+  <DisplayIcon name="chevron-right"/>
 </demo-container>

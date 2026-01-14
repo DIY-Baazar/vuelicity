@@ -23,6 +23,11 @@ interface PaginationProps {
     layout?: PaginationLayout
 }
 
+const emit = defineEmits<{
+    'update:model-value': [page: number]
+    'page-changed': [page: number]
+}>()
+
 const props = withDefaults(defineProps<PaginationProps>(), {
     modelValue: 1,
     totalPages: undefined,
@@ -42,6 +47,37 @@ const props = withDefaults(defineProps<PaginationProps>(), {
     layout: 'pagination'
 });
 
+
+const pageButtonClasses = 'items-center justify-center border';
+
+// Custom Functions
+function setPage(index: number) {
+    emit('update:model-value', index);
+    emit('page-changed', index);
+}
+
+function decreasePage() {
+    emit('update:model-value', props.modelValue - 1);
+    emit('page-changed', props.modelValue - 1);
+}
+
+function increasePage() {
+    emit('update:model-value', props.modelValue + 1);
+    emit('page-changed', props.modelValue + 1);
+}
+
+function goToFirstPage() {
+    emit('update:model-value', 1);
+    emit('page-changed', 1);
+}
+
+function goToLastPage() {
+    emit('update:model-value', computedTotalPages.value);
+    emit('page-changed', computedTotalPages.value);
+}
+
+
+// Computed properties
 const isFirstPage = computed(() => {
     return props.modelValue === 1;
 });
@@ -72,9 +108,8 @@ const pagesToDisplay = computed(() => {
 
     const pageStart = props.modelValue - props.sliceSize > 0 ? props.modelValue - props.sliceSize : 1;
     return Array.from({
-        length: props.modelValue + props.sliceSize - pageStart
+        length: props.modelValue + props.sliceSize - pageStart + 1
     }, (_, i) => pageStart + i);
-
 })
 
 const startCount = computed(() => {
@@ -93,7 +128,7 @@ const totalCount = computed(() => {
 </script>
 
 <template>
-    <nav aria-label="pagination">
+    <nav aria-label="pagination" class="pub-pagination">
         <div v-if="layout == 'table'" class="mb-2 text-gray-700 dark:text-gray-400"
             :class="size == 'lg' ? 'text-base' : 'text-sm'">
             Showing
@@ -108,35 +143,36 @@ const totalCount = computed(() => {
             <slot name="start"></slot>
 
             <slot v-if="showFirstLast" name="first-button" :disabled="isFirstPage">
-                <PubButton :size="size">
-                    <PubIcon v-if="showIcons || $slots['first-icon']" name="chevron-left" />
+                <PubButton :class="pageButtonClasses" :size="size" @click="goToFirstPage">
+                    <PubIcon v-if="showIcons || $slots['first-icon']" name="chevron-left" size="sm" />
                     <template v-if="!hideLabels">{{ firstLabel }}</template>
                 </PubButton>
             </slot>
 
             <slot v-if="!hidePrev" name="prev-button">
-                <PubButton :size="size">
-                    <PubIcon v-if="showIcons || $slots['prev-icon']" name="chevron-left" />
+                <PubButton :class="pageButtonClasses" :size="size" @click="decreasePage" :disabled="isFirstPage">
+                    <PubIcon v-if="showIcons || $slots['prev-icon']" name="chevron-left" size="sm" />
                     <template v-if="!hideLabels">{{ prevLabel }}</template>
                 </PubButton>
             </slot>
 
             <slot name="page-button" :key="index" v-for="index in pagesToDisplay">
-                <PubButton :size="size" :disabled="index === props.modelValue">
+                <PubButton :class="pageButtonClasses" :size="size" :disabled="index === props.modelValue"
+                    @click="setPage(index)">
                     {{ index }}
                 </PubButton>
             </slot>
 
             <slot v-if="!hideNext" name="next-button">
-                <PubButton :size="size">
-                    <PubIcon v-if="showIcons || $slots['next-icon']" name="chevron-right" />
+                <PubButton :class="pageButtonClasses" :size="size" @click="increasePage" :disabled="isLastPage">
+                    <PubIcon v-if="showIcons || $slots['next-icon']" name="chevron-right" size="sm" />
                     <template v-if="!hideLabels">{{ nextLabel }}</template>
                 </PubButton>
             </slot>
 
             <slot v-if="showFirstLast" name="last-button" :disabled="isLastPage">
-                <PubButton :size="size">
-                    <PubIcon v-if="showIcons || $slots['last-icon']" name="chevron-right" />
+                <PubButton :class="pageButtonClasses" @click="goToLastPage" :size="size">
+                    <PubIcon v-if="showIcons || $slots['last-icon']" name="chevron-right" size="sm" />
                     <template v-if="!hideLabels">{{ lastLabel }}</template>
                 </PubButton>
             </slot>
@@ -145,3 +181,11 @@ const totalCount = computed(() => {
         </div>
     </nav>
 </template>
+
+<style lang="scss" scoped>
+.pub-pagination {
+    button:not(:last-child) {
+        border-right: none;
+    }
+}
+</style>
