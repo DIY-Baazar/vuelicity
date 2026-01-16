@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, toRefs } from "vue";
+import { computed, resolveComponent, toRefs } from "vue";
 
 import type { ButtonRounded, ButtonSize, ButtonTheme, ButtonType } from "./types";
 import { useButtonClasses } from "./utils";
@@ -17,6 +17,7 @@ interface ButtonProps {
     size?: ButtonSize;
     rounded?: ButtonRounded;
     as?: "button" | "a";
+    linkAttr?: string;
 }
 
 const props = withDefaults(defineProps<ButtonProps>(), {
@@ -30,29 +31,36 @@ const props = withDefaults(defineProps<ButtonProps>(), {
     loading: false,
     size: "md",
     rounded: "none",
-    as: "button"
+    as: "button",
+    linkAttr: "href",
 });
+
+const componentName = computed(() => {
+    return props.as !== "a" ? resolveComponent(props.as) : "a";
+});
+
+const emit = defineEmits<{ click: [event: Event]; }>();
+
+const isDisabled = computed(() => props.disabled || props.loading || props.skeleton);
+
+const handleClick = (event: Event) => {
+    if (isDisabled.value) {
+        return;
+    }
+    emit('click', event);
+};
+
 
 const buttonClasses = computed(() => useButtonClasses(toRefs(props)));
 
 const wrapperClasses = computed(() => buttonClasses.value.wrapperClasses);
 const spanClasses = computed(() => buttonClasses.value.spanClasses);
 
-const isDisabled = computed(() => props.disabled || props.loading || props.skeleton);
 </script>
 
 <template>
-    <button
-        v-if="as === 'button'"
-        :type="type"
-        :name="name"
-        :disabled="isDisabled"
-        :class="[spanClasses, wrapperClasses, props.class]"
-        v-bind="$attrs"
-    >
-        <slot></slot>
-    </button>
-    <a v-if="as === 'a'" :href="to" :aria-disabled="isDisabled" :class="[spanClasses, wrapperClasses, props.class]" v-bind="$attrs">
-        <slot></slot>
-    </a>
+    <component :is="componentName" :[linkAttr]="to" :class="['pub-button', spanClasses, wrapperClasses, props.class]"
+        @click="handleClick" v-bind="$attrs">
+        <slot />
+    </component>
 </template>

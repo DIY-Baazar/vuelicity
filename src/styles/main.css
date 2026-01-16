@@ -3,22 +3,40 @@
 @import "./common.css";
 
 @theme {
-    --color-primary: #3487cb;
-    --color-secondary: #e71861;
-    --color-tertiary: #b19acb;
-    --color-success: #29b432;
-    --color-warning: #ffed4a;
-    --color-danger: #db3a34;
-    --color-light: #fefefe;
+    /* Blue */
+    --color-blue: #3457d5;
+    --color-blue-dark: #4c60a7;
+    --color-blue-light: #6681df;
+    /* Red */
+    --color-red: #ed2939;
+    --color-red-dark: #b4464f;
+    --color-red-light: #f15e6a;
+    /* Green */
+    --color-green: #32cd32;
+    --color-green-dark: #249324;
+    --color-green-light: #6cdb6c;
+    /* Yellow */
+    --color-yellow: #ffd700;
+    --color-yellow-dark: #dbcc00;
+    --color-yellow-light: #ffe449;
+    /* Cyan */
+    --color-cyan: #00CCCC;
+    --color-cyan-dark: #009999;
+    --color-cyan-light: #49e3e3;
+    /* Magenta */
+    --color-magenta: #8D029B;
+    --color-magenta-dark: #cc00cc;
+    --color-magenta-light: #ff66ff;
+
+    /* Black */
+    --color-black: #333333;
+    /* White */
+    --color-white: #fffffa;
+
+
+    --color-light: #fefefa;
     --color-dark: #333333;
-    --color-info: #3b82f6;
-    --color-primary-dark: #2a6ca2;
-    --color-secondary-dark: #be144f;
-    --color-tertiary-dark: #a183c0;
-    --color-success-dark: #1f8726;
-    --color-warning-dark: #f7de00;
-    --color-info-dark: #1d4ed8;
-    --color-danger-dark: #ad241f;
+
     --font-sans: "Open Sans", sans-serif;
     --font-serif: "Montserrat", serif;
     --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;

@@ -1,12 +1,11 @@
 export type IconTheme =
     | "default"
-    | "primary"
-    | "secondary"
-    | "tertiary"
-    | "danger"
-    | "warning"
-    | "success"
-    | "info"
+    | "blue"
+    | "red"
+    | "yellow"
+    | "green"
+    | "magenta"
+    | "cyan"
     | "light"
     | "dark";
 

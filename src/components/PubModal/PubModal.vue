@@ -6,11 +6,11 @@ import PubButton from "../PubButton/PubButton.vue";
 import PubIcon from "../PubIcon/PubIcon.vue";
 
 interface ModalProps {
-    position: ModalPosition;
-    size: ModalSize;
-    isOpen: boolean;
-    zIndex: ModalZIndex;
-    class: string;
+    position?: ModalPosition;
+    size?: ModalSize;
+    isOpen?: boolean;
+    zIndex?: ModalZIndex;
+    class?: string;
     persistent?: boolean;
     notEscapeClose?: boolean;
     notClickClose?: boolean;
@@ -67,7 +67,7 @@ const spanClasses = computed(() => modalClasses.value.spanClasses);
 <template>
     <!-- Modal background -->
     <div
-        :class="[wrapperClasses, 'fixed inset-0 transition-opacity duration-300 ease-in grid']"
+        :class="['pub-modal', wrapperClasses, 'fixed inset-0 transition-opacity duration-300 ease-in grid']"
         v-if="props.isOpen"
         tabindex="0"
         @keyup.esc="closeWithEsc"

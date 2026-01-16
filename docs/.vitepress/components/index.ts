@@ -14,7 +14,11 @@ const component_toc = [
     {
         text: "PubNavbar",
         link: "/components/pub-navbar"
-    }
+    },
+    {
+        text: "PubPagination",
+        link: "/components/pub-pagination"
+    },
 ];
 
 export default { component_toc };
