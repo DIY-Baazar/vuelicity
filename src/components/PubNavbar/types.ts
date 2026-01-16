@@ -1,7 +1,7 @@
 export type PubNavbarTheme = "default" | "light" | "dark";
 
 interface PubNavbarProps {
-    class: string;
+    class?: string;
     containerClass?: string;
     sticky?: boolean;
     rounded?: boolean;
