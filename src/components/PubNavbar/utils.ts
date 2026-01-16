@@ -53,11 +53,11 @@ export function useNavbarCollapseClasses (props: UseNavbarCollapseClassesProps) 
     return { wrapperClasses, spanClasses };
 }
 
-interface UsePubNavbarLinkProps {
+interface UseNavbarLinkProps {
     isActive?: Ref<boolean>;
 }
 
-export function useNavbarLinkClasses (props: UsePubNavbarLinkProps) {
+export function useNavbarLinkClasses (props: UseNavbarLinkProps) {
     const currentPageClasses = 'bg-blue md:bg-transparent text-white md:text-blue';
     const defaultStateClasses = 'text-gray-700 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue';
     const defaultClasses = 'block py-2 pr-4 pl-3 rounded md:p-0';

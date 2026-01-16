@@ -29,7 +29,7 @@ This is a navbar component which can be used to display a navigation menu in a h
 
 <<< @/components/demo/PubNavbar/Solid.vue
 
-## Navbar with dropdown
+<!-- ## Navbar with dropdown
 
 ## Multi-level dropdown
 
@@ -37,7 +37,7 @@ This is a navbar component which can be used to display a navigation menu in a h
 
 ## Navbar with submenu
 
-## Navbar with search
+## Navbar with search -->
 
 ## Navbar with action button
 
@@ -47,9 +47,9 @@ This is a navbar component which can be used to display a navigation menu in a h
 
 <<< @/components/demo/PubNavbar/WithCTA.vue
 
-## Language dropdown
+<!-- ## Language dropdown
 
-## User menu dropdown
+## User menu dropdown -->
 
 ## Reference
 
