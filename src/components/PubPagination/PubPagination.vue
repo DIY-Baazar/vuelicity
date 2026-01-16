@@ -191,11 +191,3 @@ const totalCount = computed(() => {
         </div>
     </nav>
 </template>
-
-<style lang="scss" scoped>
-/*.pub-pagination {
-    button:not(:last-child) {
-        border-right: none;
-    }
-}*/
-</style>
