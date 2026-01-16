@@ -6,6 +6,7 @@ title: PubIcon Component
 import Size from './demo/PubIcon/Size.vue';
 import Theme from './demo/PubIcon/Theme.vue';
 import DisplayIcon from './demo/PubIcon/DisplayIcon.vue';
+import SearchIcon from './demo/PubIcon/SearchIcon.vue';
 import SpinFlip from './demo/PubIcon/SpinFlip.vue';
 </script>
 
@@ -47,33 +48,19 @@ The icon can be animated or transformed.
 
 ### Properties
 
-| Name | Type | Default | Description | Options |
-| :--- | :--- | :--- | :--- | :--- |
-| size | String | `'md'` | The size of the icon. | `'xs'`, `'sm'`, `'md'`, `'lg'`, `'xl'` |
-| theme | String | `'default'` | The color theme of the icon. | `'default'`, `'blue'`, `'red'`, `'yellow'`, `'green'`, `'magenta'`, `'cyan'`, `'light'`, `'dark'` |
-| name | String | `''` | The name of the icon. | Refer to the [icon list](#icons) below. |
-|rotate | Boolean | `false` | Whether to rotate the icon 90 degrees. | `true`, `false` |
-|flip | Boolean | `false` | Whether to flip the icon horizontally. | `true`, `false` |
-|spin | Boolean | `false` | Whether to spin the icon. | `true`, `false` |
-|pulse | Boolean | `false` | Whether to pulse the icon. | `true`, `false` |
-| class | String | `''` | Additional CSS classes to apply. | |
+| Name   | Type    | Default     | Description                            | Options                                                                                           |
+| :----- | :------ | :---------- | :------------------------------------- | :------------------------------------------------------------------------------------------------ |
+| size   | String  | `'md'`      | The size of the icon.                  | `'xs'`, `'sm'`, `'md'`, `'lg'`, `'xl'`                                                            |
+| theme  | String  | `'default'` | The color theme of the icon.           | `'default'`, `'blue'`, `'red'`, `'yellow'`, `'green'`, `'magenta'`, `'cyan'`, `'light'`, `'dark'` |
+| name   | String  | `''`        | The name of the icon.                  | Refer to the [icon list](#icons) below.                                                           |
+| rotate | Boolean | `false`     | Whether to rotate the icon 90 degrees. | `true`, `false`                                                                                   |
+| flip   | Boolean | `false`     | Whether to flip the icon horizontally. | `true`, `false`                                                                                   |
+| spin   | Boolean | `false`     | Whether to spin the icon.              | `true`, `false`                                                                                   |
+| pulse  | Boolean | `false`     | Whether to pulse the icon.             | `true`, `false`                                                                                   |
+| class  | String  | `''`        | Additional CSS classes to apply.       |                                                                                                   |
 
 ### Icons
 
 <demo-container>
-  <DisplayIcon name="alert"/>
-  <DisplayIcon name="alert-circle"/>
-  <DisplayIcon name="close"/>
-  <DisplayIcon name="close-circle"/>
-  <DisplayIcon name="check"/>
-  <DisplayIcon name="check-circle"/>
-  <DisplayIcon name="info"/>
-  <DisplayIcon name="info-circle"/>
-  <DisplayIcon name="plus"/>
-  <DisplayIcon name="plus-circle"/>
-  <DisplayIcon name="minus"/>
-  <DisplayIcon name="minus-circle"/>
-  <hr/>
-  <DisplayIcon name="bars"/>
-  <DisplayIcon name="chevron-right"/>
+    <SearchIcon/>
 </demo-container>

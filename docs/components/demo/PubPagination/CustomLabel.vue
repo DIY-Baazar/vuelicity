@@ -1,6 +1,5 @@
 <template>
-    <pub-pagination v-model="currentPage" :total-items="100" />
-    <pub-pagination v-model="currentPage" :total-items="100" size="md" />
+    <pub-pagination v-model="currentPage" :total-pages="100" prev-label="<<<" next-label=">>>" />
 </template>
 
 <script lang="ts" setup>

@@ -34,7 +34,18 @@
 </style>
 
 <template>
-    <div class="vp-raw">
+    <div :class="`vp-raw flex flex-${flexType} gap-3`">
         <slot></slot>
     </div>
 </template>
+
+
+<script lang="ts" setup>
+interface DCProps {
+    flexType?: 'col' | 'row';
+}
+
+const props = withDefaults(defineProps<DCProps>(), {
+    flexType: 'row'
+});
+</script>

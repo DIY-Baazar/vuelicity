@@ -1,4 +1,4 @@
-import { ref, computed, onMounted, onUnmounted } from 'vue';
+import { ref, computed, onMounted, onUnmounted } from "vue";
 
 // In Tailwind CSS v4, `tailwindcss/resolveConfig` is no longer available.
 // Since the project uses default breakpoints, we can define them here directly.
@@ -9,7 +9,7 @@ const breakpoints = {
     md: 768,
     lg: 1024,
     xl: 1280,
-    '2xl': 1536,
+    "2xl": 1536,
 };
 
 type BreakpointKey = keyof typeof breakpoints;
@@ -26,10 +26,10 @@ type BreakpointKey = keyof typeof breakpoints;
  *   // do mobile-specific stuff
  * }
  */
-export function useBreakpoints () {
+export function useBreakpoints() {
     // A ref to hold the current window width.
     // We check for `window` to ensure it's not run on the server (SSR).
-    const windowWidth = ref(typeof window !== 'undefined' ? window.innerWidth : 0);
+    const windowWidth = ref(typeof window !== "undefined" ? window.innerWidth : 0);
 
     const onResize = () => {
         windowWidth.value = window.innerWidth;
@@ -37,10 +37,10 @@ export function useBreakpoints () {
 
     // Add and remove the resize event listener.
     onMounted(() => {
-        window.addEventListener('resize', onResize, { passive: true });
+        window.addEventListener("resize", onResize, { passive: true });
     });
     onUnmounted(() => {
-        window.removeEventListener('resize', onResize);
+        window.removeEventListener("resize", onResize);
     });
 
     // Helper functions to create computed properties
@@ -53,14 +53,16 @@ export function useBreakpoints () {
     };
 
     const between = (min: BreakpointKey, max: BreakpointKey) => {
-        return computed(() => windowWidth.value >= breakpoints[min] && windowWidth.value < breakpoints[max]);
+        return computed(
+            () => windowWidth.value >= breakpoints[min] && windowWidth.value < breakpoints[max]
+        );
     };
 
     // Create convenient computed properties for your breakpoints.
     // We'll define 'mobile' as anything smaller than the 'md' breakpoint (768px).
-    const isMobile = smaller('md');
-    const isTablet = between('md', 'lg');
-    const isDesktop = greater('lg');
+    const isMobile = smaller("md");
+    const isTablet = between("md", "lg");
+    const isDesktop = greater("lg");
 
     return { isMobile, isTablet, isDesktop, smaller, greater, between };
 }
