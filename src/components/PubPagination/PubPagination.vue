@@ -91,27 +91,35 @@ const isLastPage = computed(() => {
 const computedTotalPages = computed(() => props.totalPages ? props.totalPages : Math.ceil(props.totalItems / props.pageSize));
 
 const pagesToDisplay = computed(() => {
-    if (props.layout === 'navigation') return []
-    if (props.layout === 'table') return []
+    if (props.layout !== 'pagination') return [];
 
-    if (computedTotalPages.value <= props.sliceSize * 2 + 1) {
-        return Array.from({ length: computedTotalPages.value }, (_, i) => i + 1);
+    const total = computedTotalPages.value;
+    const current = props.modelValue;
+    const slice = props.sliceSize;
+    const range = [];
+
+    if (total <= (slice * 2) + 1) {
+        for (let i = 1; i <= total; i++) {
+            range.push(i);
+        }
+        return range;
     }
 
-    if (props.modelValue <= props.sliceSize) {
-        return Array.from({ length: Math.abs(props.sliceSize - props.modelValue) + props.sliceSize + props.modelValue + 1 }, (_, i) => i + 1);
+    let startPage = Math.max(1, current - slice);
+    let endPage = Math.min(total, current + slice);
+
+    if (current - slice <= 1) {
+        endPage = Math.min(total, (slice * 2) + 1);
     }
 
-    if (props.modelValue >= computedTotalPages.value - props.sliceSize) {
-        return Array.from({
-            length: computedTotalPages.value - Math.abs(computedTotalPages.value - props.sliceSize * 2) + 1
-        }, (_, i) => Math.abs(computedTotalPages.value - props.sliceSize * 2) + i);
+    if (current + slice >= total) {
+        startPage = Math.max(1, total - (slice * 2));
     }
 
-    const pageStart = props.modelValue - props.sliceSize > 0 ? props.modelValue - props.sliceSize : 1;
-    return Array.from({
-        length: props.modelValue + props.sliceSize - pageStart + 1
-    }, (_, i) => pageStart + i);
+    for (let i = startPage; i <= endPage; i++) {
+        range.push(i);
+    }
+    return range;
 })
 
 const startCount = computed(() => {
