@@ -11,7 +11,8 @@
         "build": "npm run build:package && npm run build:types",
         "docs:dev": "vitepress dev docs",
         "docs:build": "vitepress build docs",
-        "docs:serve": "vitepress serve docs"
+        "docs:serve": "vitepress serve docs",
+        "create:component": "node scripts/create_component.js"
     },
     "files": [
         "src",
