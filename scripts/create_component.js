@@ -42,7 +42,7 @@ import { computed, toRefs } from "vue";
 </script>
 
 <template>
-<div class="${componentName}"></div>
+<div class="${toDashConstantCase(componentName)}"></div>
 </template>
     `,
 );
