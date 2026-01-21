@@ -7,14 +7,14 @@ const buttonThemeClasses: ButtonClassMap<ButtonTheme> = {
     default: {
         none: "bg-transparent text-dark",
         default: "bg-light text-dark",
-        blue: "bg-blue focus:ring-blue text-white",
-        red: "bg-red focus:ring-red text-white",
-        yellow: "bg-yellow focus:ring-yellow text-black",
-        green: "bg-green focus:ring-green text-white",
-        magenta: "bg-magenta focus:ring-magenta text-white",
-        cyan: "bg-cyan focus:ring-cyan text-white",
-        light: "bg-light text-dark",
-        dark: "bg-dark text-white"
+        blue: "border-blue bg-blue focus:ring-blue text-white",
+        red: "border-red bg-red focus:ring-red text-white",
+        yellow: "border-yellow bg-yellow focus:ring-yellow text-black",
+        green: "border-green bg-green focus:ring-green text-white",
+        magenta: "border-magenta bg-magenta focus:ring-magenta text-white",
+        cyan: "border-cyan bg-cyan focus:ring-cyan text-white",
+        light: "border-light bg-light text-dark",
+        dark: "border-dark bg-dark text-white"
     },
     hover: {
         none: "hover:bg-gray-200 hover:text-black",

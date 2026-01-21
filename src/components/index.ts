@@ -6,3 +6,4 @@ export { default as  PubNavbarLogo } from "./PubNavbar/PubNavbarLogo.vue";
 export { default as  PubNavbarCollapse } from "./PubNavbar/PubNavbarCollapse.vue";
 export { default as  PubNavbarLink } from "./PubNavbar/PubNavbarLink.vue";
 export { default as PubPagination } from "./PubPagination/PubPagination.vue";
+export { default as PubButtonGroup } from "./PubButtonGroup/PubButtonGroup.vue";

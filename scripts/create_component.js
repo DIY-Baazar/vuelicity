@@ -62,6 +62,7 @@ description: Documentation for the ${componentName} component.
 `,
 );
 
+// Writing into the component file index
 const componentFile = join(__dirname, "..", "docs", ".vitepress", "components", "index.ts");
 
 const componentsContent = fs
@@ -84,5 +85,17 @@ fs.writeFileSync(
 export default { component_toc };
     `,
 );
+
+// Writing into the component export
+const componentExportFile = join(componentsDir, "index.ts");
+const componentExportContent =  fs
+    .readdirSync(componentsDir)
+    .filter((file) => fs.statSync(join(componentsDir, file)).isDirectory())
+    .map(
+        (component) => `export { default as ${component} } from "./${component}/${component}";`,
+    )
+    .join("\n");
+
+fs.writeFileSync(componentExportFile, componentExportContent);
 
 console.log(`Component ${componentName} created successfully!`);
