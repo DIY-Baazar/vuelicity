@@ -34,12 +34,14 @@ interface UseIconClassesProps {
     flip: Ref<boolean | undefined>;
     spin: Ref<boolean | undefined>;
     mirror: Ref<boolean | undefined>;
+    aschild: Ref<boolean | undefined>;
 }
 
 export function useIconClasses(props: UseIconClassesProps): string {
     const wrapperClasses = [
-        props.size.value ? iconSizeClasses[props.size.value] : "",
-        props.theme.value ? iconThemeClasses[props.theme.value] : "",
+        "inline-block",
+        props.size.value ? iconSizeClasses[props.aschild.value ? "sm" : props.size.value] : "",
+        props.theme.value ? iconThemeClasses[props.aschild.value ? "light" : props.theme.value] : "",
         props.rotate.value ? "rotate-90" : "",
         props.flip.value ? "scale-x-[-1]" : "",
         props.spin.value ? "animate-spin" : "",

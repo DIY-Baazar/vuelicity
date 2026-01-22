@@ -13,6 +13,7 @@ interface IconProps {
     flip?: boolean;
     spin?: boolean;
     mirror?: boolean;
+    aschild?: boolean;
 }
 
 const props = withDefaults(defineProps<IconProps>(), {
@@ -22,7 +23,8 @@ const props = withDefaults(defineProps<IconProps>(), {
     rotate: false,
     flip: false,
     spin: false,
-    mirror: false
+    mirror: false,
+    aschild: false,
 });
 
 const iconClasses = computed(() => useIconClasses(toRefs(props)));

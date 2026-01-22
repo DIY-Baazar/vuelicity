@@ -9,6 +9,7 @@ import Rounded from './demo/PubButton/Rounded.vue';
 import Size from './demo/PubButton/Size.vue';
 import Disabled from './demo/PubButton/Disabled.vue';
 import LoadingSkeleton from './demo/PubButton/LoadingSkeleton.vue';
+import WithIcon from './demo/PubButton/WithIcon.vue';
 </script>
 
 # PubButton
@@ -17,7 +18,7 @@ This is a button component that can be used to create buttons with various style
 
 ## Prop - `theme` Usage
 
-There are a number of themes available for the button, including `'none'`, `'default'`, `'blue'`, `'red'`, `'yellow'`, `'green'`, `'info'`, `'light'`, `'dark'`. Below is a demo of each theme.
+There are a number of themes available for the button, including `'none'`, `'default'`, `'blue'`, `'red'`, `'yellow'`, `'green'`, `'magenta'`, `'cyan'`, `'light'`, `'dark'`. Below is a demo of each theme.
 
 <demo-container>
   <Theme/>
@@ -75,13 +76,21 @@ The `loading` prop can be used to display a loading state. The `skeleton` prop c
 
 <<< @/components/demo/PubButton/LoadingSkeleton.vue
 
+## Buttons with icon
+
+<demo-container>
+  <WithIcon/>
+</demo-container>
+
+<<< @/components/demo/PubButton/WithIcon.vue
+
 ## Reference
 
 ### Properties
 
 | Name | Type | Default | Description | Options |
 | :--- | :--- | :--- | :--- | :--- |
-| theme | String | `'blue'` | The color theme of the button. | `'none'`, `'default'`, `'blue'`, `'red'`, `'yellow'`, `'green'`, `'magenta'`, `'cyan'`, `'light'`, `'dark'` |
+| theme | String | `'default'` | The color theme of the button. | `'none'`, `'default'`, `'blue'`, `'red'`, `'yellow'`, `'green'`, `'magenta'`, `'cyan'`, `'light'`, `'dark'` |
 | outline | Boolean | `false` | Whether to use the outline style. |  |
 | rounded | String | `'none'` | The border radius of the button. | `'none'`, `'sm'`, `'md'`, `'lg'`, `'xl'`, `'full'` |
 | size | String | `'md'` | The size of the button. | `'xs'`, `'sm'`, `'md'`, `'lg'`, `'xl'` |
@@ -100,3 +109,5 @@ The `loading` prop can be used to display a loading state. The `skeleton` prop c
 | Name | Description |
 | ---- | ----------- |
 | default | Default slot |
+| prepend | Slot for content before the default slot |
+| append | Slot for content after the default slot |

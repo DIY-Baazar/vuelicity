@@ -61,6 +61,12 @@ const spanClasses = computed(() => buttonClasses.value.spanClasses);
 <template>
     <component :is="componentName" :[linkAttr]="to" :class="['pub-button', spanClasses, wrapperClasses, props.class]"
         @click="handleClick" v-bind="$attrs">
+        <span class="mr-1 inline-flex items-center" v-if="$slots.prepend">
+            <slot name="prepend" />
+        </span>
         <slot />
+        <span class="ml-1 inline-flex items-center" v-if="$slots.append">
+            <slot name="append" />
+        </span>
     </component>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <pub-button-group>
+  <pub-button-group rounded>
     <pub-button>Button Default</pub-button>
     <pub-button theme="blue">Button Blue</pub-button>
     <pub-button theme="green">Button Green</pub-button>
