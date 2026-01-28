@@ -65,6 +65,14 @@ const buttonSizeClasses: Record<ButtonSize, string> = {
     xl: "text-base px-6 py-3"
 };
 
+const buttonSquareSizeClasses: Record<ButtonSize, string> = {
+    xs: 'text-xs p-1',
+    sm: 'text-sm p-1.5',
+    md: 'text-sm p-2',
+    lg: 'text-base p-2.5',
+    xl: 'text-base p-3',
+};
+
 const buttonRoundedClasses: Record<ButtonRounded, string> = {
     none: "rounded-none",
     sm: "rounded-sm",
@@ -78,10 +86,11 @@ interface UseButtonClassesProps {
     theme: Ref<ButtonTheme>;
     size: Ref<ButtonSize>;
     rounded: Ref<ButtonRounded>;
-    outline: Ref<boolean|undefined>;
-    disabled: Ref<boolean|undefined>;
-    loading: Ref<boolean|undefined>;
-    skeleton: Ref<boolean|undefined>;
+    outline: Ref<boolean | undefined>;
+    disabled: Ref<boolean | undefined>;
+    loading: Ref<boolean | undefined>;
+    skeleton: Ref<boolean | undefined>;
+    square: Ref<boolean>;
 }
 
 export function useButtonClasses(props: UseButtonClassesProps): { wrapperClasses: string; spanClasses: string } {
@@ -90,20 +99,20 @@ export function useButtonClasses(props: UseButtonClassesProps): { wrapperClasses
         props.skeleton.value
             ? "animate-pulse bg-gray-200 dark:bg-gray-500 text-transparent rounded-md cursor-not-allowed"
             : [
-                  props.outline.value
-                      ? buttonOutlineThemeClasses.default[props.theme.value]
-                      : buttonThemeClasses.default[props.theme.value],
-                  props.outline.value
-                      ? buttonOutlineThemeClasses.hover[props.theme.value]
-                      : buttonThemeClasses.hover[props.theme.value]
-              ].join(" ")
+                props.outline.value
+                    ? buttonOutlineThemeClasses.default[props.theme.value]
+                    : buttonThemeClasses.default[props.theme.value],
+                props.outline.value
+                    ? buttonOutlineThemeClasses.hover[props.theme.value]
+                    : buttonThemeClasses.hover[props.theme.value]
+            ].join(" ")
     ];
     const wrapperClasses = [
         ...themeClasses,
-        buttonSizeClasses[props.size.value],
+        props.square.value ? buttonSquareSizeClasses[props.size.value] : buttonSizeClasses[props.size.value],
         buttonRoundedClasses[props.rounded.value],
         props.disabled.value || props.loading.value ? "cursor-not-allowed opacity-50" : "",
-        props.theme.value === "none" ? "border-0": "border",
+        props.theme.value === "none" ? "border-0" : "border",
     ].join(" ");
     const spanClasses = ["flex", "items-center gap-2"].join(" ");
     return { wrapperClasses, spanClasses };

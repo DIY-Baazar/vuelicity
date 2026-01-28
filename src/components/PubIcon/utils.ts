@@ -41,7 +41,7 @@ export function useIconClasses(props: UseIconClassesProps): string {
     const wrapperClasses = [
         "inline-block",
         props.size.value ? iconSizeClasses[props.aschild.value ? "sm" : props.size.value] : "",
-        props.theme.value ? iconThemeClasses[props.aschild.value ? "light" : props.theme.value] : "",
+        props.theme.value && !props.aschild.value ? iconThemeClasses[props.theme.value] : "",
         props.rotate.value ? "rotate-90" : "",
         props.flip.value ? "scale-x-[-1]" : "",
         props.spin.value ? "animate-spin" : "",

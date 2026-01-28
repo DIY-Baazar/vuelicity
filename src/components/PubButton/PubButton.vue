@@ -16,6 +16,7 @@ interface ButtonProps {
     loading?: boolean;
     size?: ButtonSize;
     rounded?: ButtonRounded;
+    square?: boolean;
     as?: "button" | "a";
     linkAttr?: string;
 }
@@ -29,6 +30,7 @@ const props = withDefaults(defineProps<ButtonProps>(), {
     outline: false,
     skeleton: false,
     loading: false,
+    square: false,
     size: "md",
     rounded: "none",
     as: "button",

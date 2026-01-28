@@ -33,6 +33,7 @@ export const iconPathMap: Record<string, string | string[]> = {
 
     // Ecommerce
     cart: "M1 4.5a.5.5 0 0 1 0-1h3.3a.5.5 0 0 1 .49.42l1.73 11.58H19.5a1.5 1.5 0 0 0 1.44-1.44l2-8a1.5 1.5 0 0 0-1.44-1.56H6.9a.5.5 0 0 1 0-1h14.6a2.5 2.5 0 0 1 2.44 2.56l-2 8A2.5 2.5 0 0 1 19.5 16.5H6.2a.5.5 0 0 1-.5-.43L4 4.5H1z M8.5 18.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm9 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z",
+    love_fill: "M12 21.35l-1.45-1.45C5.4 14.75 2 11.6 2 7.5 2 4.46 4.46 2 7.5 2c1.93 0 3.68 1.03 4.5 2.5C12.82 3.03 14.57 2 16.5 2 19.54 2 22 4.46 22 7.5c0 4.1-3.4 7.25-8.55 12.4L12 21.35z",
 
     // Navigations
     bars: "M4.5 5.5h15a.5.5 0 0 1 0 1h-15a.5.5 0 0 1 0-1z M4.5 11.5h15a.5.5 0 0 1 0 1h-15a.5.5 0 0 1 0-1z M4.5 17.5h15a.5.5 0 0 1 0 1h-15a.5.5 0 0 1 0-1z",
@@ -48,6 +49,8 @@ export const iconPathMap: Record<string, string | string[]> = {
     arrow_down: "M13 15V4a1 1 0 0 0-2 0v11H8.5a.5.5 0 0 0-.4.8l3 4.8a1 1 0 0 0 1.8 0l3-4.8a.5.5 0 0 0-.4-.8H13z",
     arrow_right: "M15 13H4a1 1 0 0 1 0-2h11V8.5a.5.5 0 0 1 .8-.4l4.8 3a1 1 0 0 1 0 1.8l-4.8 3a.5.5 0 0 1-.8-.4V13z",
     arrow_left: "M9 11h11a1 1 0 0 1 0 2H9v2.5a.5.5 0 0 1-.8.4l-4.8-3a1 1 0 0 1 0-1.8l4.8-3a.5.5 0 0 1 .8.4V11z",
+    download: "M12 3a.5.5 0 0 1 .5.5v11.8l3.15-3.15a.5.5 0 0 1 .7.7l-4 4a.5.5 0 0 1-.7 0l-4-4a.5.5 0 0 1 .7-.7L11.5 15.3V3.5a.5.5 0 0 1 .5-.5z M5 20.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5z",
+    upload: "M12 18a.5.5 0 0 1-.5-.5V5.7L8.35 8.85a.5.5 0 0 1-.7-.7l4-4a.5.5 0 0 1 .7 0l4 4a.5.5 0 0 1-.7.7L12.5 5.7v11.8a.5.5 0 0 1-.5.5z M5 20.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5z",
 };
 
 const iconAliasMap: Record<string, string> = {
@@ -78,6 +81,9 @@ const iconAliasMap: Record<string, string> = {
     "arrow-down": "arrow_down",
     "arrow-right": "arrow_right",
     "arrow-left": "arrow_left",
+    "love-fill": "love_fill",
+    "heart-fill": "love_fill",
+    "heart": "love"
 };
 
 export const iconsList = Object.keys(iconPathMap);

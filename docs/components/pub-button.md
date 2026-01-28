@@ -10,6 +10,7 @@ import Size from './demo/PubButton/Size.vue';
 import Disabled from './demo/PubButton/Disabled.vue';
 import LoadingSkeleton from './demo/PubButton/LoadingSkeleton.vue';
 import WithIcon from './demo/PubButton/WithIcon.vue';
+import Icon from './demo/PubButton/Icon.vue';
 </script>
 
 # PubButton
@@ -84,6 +85,16 @@ The `loading` prop can be used to display a loading state. The `skeleton` prop c
 
 <<< @/components/demo/PubButton/WithIcon.vue
 
+<!-- ## Button with label  -->
+
+## Icon buttons
+
+<demo-container>
+    <Icon/>
+</demo-container>
+
+<<< @/components/demo/PubButton/Icon.vue
+
 ## Reference
 
 ### Properties
@@ -94,6 +105,7 @@ The `loading` prop can be used to display a loading state. The `skeleton` prop c
 | outline | Boolean | `false` | Whether to use the outline style. |  |
 | rounded | String | `'none'` | The border radius of the button. | `'none'`, `'sm'`, `'md'`, `'lg'`, `'xl'`, `'full'` |
 | size | String | `'md'` | The size of the button. | `'xs'`, `'sm'`, `'md'`, `'lg'`, `'xl'` |
+| square | Boolean | `false` | Whether to render the button as a square. | |
 | as | String | `'button'` | The HTML element to render. | `'button'`, `'a'` |
 | class | String | `''` | Additional CSS classes to apply. | |
 | disabled | Boolean | `false` | Whether the button is disabled. |  |
