@@ -45,3 +45,15 @@ description: Documentation for the PubButtonGroup component.
 <<< @/components/demo/PubButtonGroup/WithIcon.vue
 
 ## Reference
+
+### Properties
+
+| Name | Type | Default | Description | Options |
+| :--- | :--- | :--- | :--- | :--- |
+| rounded | Boolean | `false` | Whether to apply rounded corners to the button group. | `true`, `false` |
+
+### Slots
+
+| Name | Description |
+| ---- | ----------- |
+| default | Default slot for buttons |
