@@ -3,7 +3,7 @@ title: PubButton Component
 ---
 
 <script setup>
-import Theme from './demo/PubButton/Theme.vue';
+import Default from './demo/PubButton/Default.vue';
 import Outline from './demo/PubButton/Outline.vue';
 import Rounded from './demo/PubButton/Rounded.vue';
 import Size from './demo/PubButton/Size.vue';
@@ -17,15 +17,17 @@ import Icon from './demo/PubButton/Icon.vue';
 
 This is a button component that can be used to create buttons with various styles and sizes.
 
-## Prop - `theme` Usage
+## Default buttons
+
+### Prop - `theme` Usage
 
 There are a number of themes available for the button, including `'none'`, `'default'`, `'blue'`, `'red'`, `'yellow'`, `'green'`, `'magenta'`, `'cyan'`, `'light'`, `'dark'`. Below is a demo of each theme.
 
 <demo-container>
-  <Theme/>
+  <Default/>
 </demo-container>
 
-<<< @/components/demo/PubButton/Theme.vue
+<<< @/components/demo/PubButton/Default.vue
 
 ## Prop - `outline` Usage
 

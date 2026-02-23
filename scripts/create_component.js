@@ -2,7 +2,7 @@ import fs from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 import { stdin as input, stdout as output } from "node:process";
-import * as readline from 'node:readline/promises';
+import * as readline from "node:readline/promises";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -88,12 +88,13 @@ export default { component_toc };
 
 // Writing into the component export
 const componentExportFile = join(componentsDir, "index.ts");
-const componentExportContent =  fs
-    .readdirSync(componentsDir)
-    .filter((file) => fs.statSync(join(componentsDir, file)).isDirectory())
-    .map(
-        (component) => `export { default as ${component} } from "./${component}/${component}";`,
-    )
+const componentExportContent = fs
+    .readdirSync(componentsDir, { recursive: true })
+    .filter((file) => file.endsWith(".vue") && !file.startsWith("_"))
+    .map((file) => {
+        return { file, component: file.replace(".vue", "").split("/").pop() };
+    })
+    .map(({ file, component }) => `export { default as ${component} } from "./${file}";`)
     .join("\n");
 
 fs.writeFileSync(componentExportFile, componentExportContent);

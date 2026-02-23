@@ -1,5 +1,9 @@
 const component_toc = [
     {
+        text: "PubBadge",
+        link: "/components/pub-badge"
+    },
+    {
         text: "PubButton",
         link: "/components/pub-button"
     },

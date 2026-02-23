@@ -37,9 +37,7 @@ const props = withDefaults(defineProps<ButtonProps>(), {
     linkAttr: "href",
 });
 
-const componentName = computed(() => {
-    return props.as !== "a" ? resolveComponent(props.as) : "a";
-});
+const componentName = computed(() => (props.as !== "a" ? resolveComponent(props.as) : "a"));
 
 const emit = defineEmits<{ click: [event: Event]; }>();
 

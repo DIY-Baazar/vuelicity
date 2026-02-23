@@ -3,10 +3,13 @@ import type { ButtonRounded, ButtonSize, ButtonTheme } from "./types";
 
 export type ButtonClassMap<T extends string> = { hover: Record<T, string>; default: Record<T, string> };
 
+const defaultSpanButtonClasses = "flex items-center gap-2";
+const skletonButtonClasses = "animate-pulse bg-gray-200 dark:bg-gray-500 text-transparent rounded-md cursor-not-allowed";
+
 const buttonThemeClasses: ButtonClassMap<ButtonTheme> = {
     default: {
-        none: "bg-transparent text-dark",
-        default: "bg-light text-dark",
+        none: "bg-transparent text-grey-900",
+        default: "bg-grey-100 text-grey-900",
         blue: "border-blue bg-blue focus:ring-blue text-white",
         red: "border-red bg-red focus:ring-red text-white",
         yellow: "border-yellow bg-yellow focus:ring-yellow text-black",
@@ -17,16 +20,16 @@ const buttonThemeClasses: ButtonClassMap<ButtonTheme> = {
         dark: "border-dark bg-dark text-white"
     },
     hover: {
-        none: "hover:bg-gray-200 hover:text-black",
-        default: "hover:bg-gray-200 hover:text-black",
-        blue: "hover:bg-blue-dark hover:text-gray-200",
-        red: "hover:bg-red-dark hover:text-gray-200",
-        yellow: "hover:bg-yellow-dark hover:text-gray-800",
-        green: "hover:bg-green-dark hover:text-gray-200",
-        magenta: "hover:bg-magenta-dark hover:text-gray-200",
-        cyan: "hover:bg-cyan-dark hover:text-gray-200",
-        light: "hover:bg-gray-200 hover:text-gray-800",
-        dark: "hover:bg-gray-800 hover:text-gray-200"
+        none: "hover:bg-grey-200 hover:text-black",
+        default: "hover:bg-grey-200 hover:text-black",
+        blue: "hover:bg-blue-600 hover:text-grey-200",
+        red: "hover:bg-red-600 hover:text-grey-200",
+        yellow: "hover:bg-yellow-600 hover:text-grey-800",
+        green: "hover:bg-green-600 hover:text-grey-200",
+        magenta: "hover:bg-magenta-600 hover:text-grey-200",
+        cyan: "hover:bg-cyan-600 hover:text-grey-200",
+        light: "hover:bg-grey-200 hover:text-grey-800",
+        dark: "hover:bg-grey-600 hover:text-grey-200"
     }
 };
 
@@ -40,18 +43,18 @@ const buttonOutlineThemeClasses: ButtonClassMap<ButtonTheme> = {
         green: "border-green focus:ring-green text-green",
         magenta: "border-magenta focus:ring-magenta text-magenta",
         cyan: "border-cyan focus:ring-cyan text-cyan",
-        light: "border-light focus:ring-light text-light",
+        light: "border-grey-500 focus:ring-light text-grey-500",
         dark: "border-dark focus:ring-dark text-dark"
     },
     hover: {
         none: "hover:bg-gray-200 hover:text-black",
         default: "hover:bg-light hover:text-dark",
-        blue: "hover:bg-blue-dark hover:text-gray-200",
-        red: "hover:bg-red-dark hover:text-gray-200",
-        yellow: "hover:bg-yellow-dark hover:text-gray-800",
-        green: "hover:bg-green-dark hover:text-gray-200",
-        magenta: "hover:bg-magenta-dark hover:text-gray-200",
-        cyan: "hover:bg-cyan-dark hover:text-gray-200",
+        blue: "hover:bg-blue-600 hover:text-gray-200",
+        red: "hover:bg-red-600 hover:text-gray-200",
+        yellow: "hover:bg-yellow-600 hover:text-gray-800",
+        green: "hover:bg-green-600 hover:text-gray-200",
+        magenta: "hover:bg-magenta-600 hover:text-gray-200",
+        cyan: "hover:bg-cyan-600 hover:text-gray-200",
         light: "hover:bg-gray-200 hover:text-gray-800",
         dark: "hover:bg-gray-800 hover:text-gray-200"
     }
@@ -97,7 +100,7 @@ export function useButtonClasses(props: UseButtonClassesProps): { wrapperClasses
     const slots = useSlots();
     const themeClasses = [
         props.skeleton.value
-            ? "animate-pulse bg-gray-200 dark:bg-gray-500 text-transparent rounded-md cursor-not-allowed"
+            ? skletonButtonClasses
             : [
                 props.outline.value
                     ? buttonOutlineThemeClasses.default[props.theme.value]
@@ -114,6 +117,6 @@ export function useButtonClasses(props: UseButtonClassesProps): { wrapperClasses
         props.disabled.value || props.loading.value ? "cursor-not-allowed opacity-50" : "",
         props.theme.value === "none" ? "border-0" : "border",
     ].join(" ");
-    const spanClasses = ["flex", "items-center gap-2"].join(" ");
+    const spanClasses = [defaultSpanButtonClasses].join(" ");
     return { wrapperClasses, spanClasses };
 }
