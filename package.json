@@ -60,5 +60,5 @@
         "node": ">=18.x",
         "npm": ">=10.x"
     },
-    "homepage": "https://diy-baazar.github.io/vuelicity/"
+    "homepage": "https://vuelicity.diybaazar.com/"
 }
