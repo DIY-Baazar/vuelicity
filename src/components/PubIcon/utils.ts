@@ -2,6 +2,7 @@ import { type Ref } from "vue";
 import type { IconSize, IconTheme } from "./types";
 
 const iconSizeClasses: Record<IconSize, string> = {
+    "2xs": "w-2 h-2",
     xs: "w-4 h-4",
     sm: "w-6 h-6",
     md: "w-8 h-8",
@@ -37,10 +38,10 @@ interface UseIconClassesProps {
     aschild: Ref<boolean | undefined>;
 }
 
-export function useIconClasses(props: UseIconClassesProps): string {
+export function useIconClasses (props: UseIconClassesProps): string {
     const wrapperClasses = [
         "inline-block",
-        props.size.value ? iconSizeClasses[props.aschild.value ? "sm" : props.size.value] : "",
+        props.size.value ? iconSizeClasses[props.size.value]: "",
         props.theme.value && !props.aschild.value ? iconThemeClasses[props.theme.value] : "",
         props.rotate.value ? "rotate-90" : "",
         props.flip.value ? "scale-x-[-1]" : "",

@@ -19,17 +19,33 @@ const badgeSizeClasses: Record<BadgeSize, string> = {
     xs: "px-1 py-0.5 text-xs",
     sm: "px-2 py-1 text-sm",
     md: "px-4 py-2 text-md"
-}
+};
+
+const badgeBorderedClasses: Record<BadgeTheme, string> = {
+    default: "border-light",
+    red: "border-red-100",
+    blue: "border-blue-100",
+    yellow: "border-yellow-100",
+    green: "border-green-100",
+    magenta: "border-magenta-100",
+    cyan: "border-cyan-100",
+    light: "border-grey-100",
+    dark: "border-grey-800",
+};
 
 interface UseBadgeClassesProps {
     theme: Ref<BadgeTheme>;
     size: Ref<BadgeSize>;
+    bordered: Ref<boolean>;
+    rounded: Ref<boolean>;
 }
 
-export function useBadgeClasses(props: UseBadgeClassesProps) {
+export function useBadgeClasses (props: UseBadgeClassesProps) {
     return [
         defaultBadgeClasses,
         badgeThemeClasses[props.theme.value],
-        badgeSizeClasses[props.size.value]
-    ].join(" ")
+        badgeSizeClasses[props.size.value],
+        props.bordered.value ? "border border-1" + badgeBorderedClasses[props.theme.value] : "",
+        props.rounded.value ? "rounded-full": ""
+    ].join(" ");
 }

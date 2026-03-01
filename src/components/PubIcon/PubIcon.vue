@@ -17,7 +17,7 @@ interface IconProps {
 }
 
 const props = withDefaults(defineProps<IconProps>(), {
-    size: "md",
+    size: "sm",
     theme: "default",
     class: "",
     rotate: false,

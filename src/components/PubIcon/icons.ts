@@ -34,6 +34,7 @@ export const iconPathMap: Record<string, string | string[]> = {
     // Ecommerce
     cart: "M1 4.5a.5.5 0 0 1 0-1h3.3a.5.5 0 0 1 .49.42l1.73 11.58H19.5a1.5 1.5 0 0 0 1.44-1.44l2-8a1.5 1.5 0 0 0-1.44-1.56H6.9a.5.5 0 0 1 0-1h14.6a2.5 2.5 0 0 1 2.44 2.56l-2 8A2.5 2.5 0 0 1 19.5 16.5H6.2a.5.5 0 0 1-.5-.43L4 4.5H1z M8.5 18.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm9 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z",
     love_fill: "M12 21.35l-1.45-1.45C5.4 14.75 2 11.6 2 7.5 2 4.46 4.46 2 7.5 2c1.93 0 3.68 1.03 4.5 2.5C12.82 3.03 14.57 2 16.5 2 19.54 2 22 4.46 22 7.5c0 4.1-3.4 7.25-8.55 12.4L12 21.35z",
+    sun: "M12 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7zm0 1a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9z M11.5 2.5a.5.5 0 0 1 1 0v2a.5.5 0 0 1-1 0v-2z M11.5 19.5a.5.5 0 0 1 1 0v2a.5.5 0 0 1-1 0v-2z M21.5 11.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1h2z M4.5 11.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1h2z M18.4 4.9a.5.5 0 0 1 .7.7l-1.4 1.4a.5.5 0 0 1-.7-.7l1.4-1.4z M5.6 17.7a.5.5 0 0 1 .7.7l-1.4 1.4a.5.5 0 0 1-.7-.7l1.4-1.4z M19.1 18.4a.5.5 0 0 1-.7.7l-1.4-1.4a.5.5 0 0 1 .7-.7l1.4 1.4z M4.9 5.6a.5.5 0 0 1 .7-.7l1.4 1.4a.5.5 0 0 1-.7.7l-1.4-1.4z",
 
     // Navigations
     bars: "M4.5 5.5h15a.5.5 0 0 1 0 1h-15a.5.5 0 0 1 0-1z M4.5 11.5h15a.5.5 0 0 1 0 1h-15a.5.5 0 0 1 0-1z M4.5 17.5h15a.5.5 0 0 1 0 1h-15a.5.5 0 0 1 0-1z",
@@ -83,12 +84,13 @@ const iconAliasMap: Record<string, string> = {
     "arrow-left": "arrow_left",
     "love-fill": "love_fill",
     "heart-fill": "love_fill",
-    "heart": "love"
+    "heart": "love",
+    "light-mode": "sun",
 };
 
 export const iconsList = Object.keys(iconPathMap);
 
-export function getIconBody(name: string): string {
+export function getIconBody (name: string): string {
     const iconPath = iconPathMap[iconAliasMap[name] || name] || "";
     if (iconPath) {
         if (Array.isArray(iconPath)) {
