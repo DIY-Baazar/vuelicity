@@ -16,16 +16,15 @@ const themeColors = {
     grey: "#666666"
 };
 
-function generateScale(hex) {
+function generateScale (hex) {
     // target lightness values for 100..900 (tuned)
     const lightness = [97, 90, 80, 70, 60, 50, 40, 30, 20];
     // Use LCH to preserve hue/chroma better across shades
     const c = chroma(hex).lch();
-    const hue = c[2] === 0 ? chroma(hex).hsl()[0] : chroma(hex).hsl()[0] || 200;
-    const chromaVal = c[1] || 50;
+    const chromaVal = c[1]; // Don't fallback to 50  
+    const hue = c[2]; // Use LCH hue directly  
 
     return lightness.map((L) => {
-        // create color from LCH (L, C, H). Clamp values.
         const col = chroma.lch(L, chromaVal, hue);
         return col.hex();
     });

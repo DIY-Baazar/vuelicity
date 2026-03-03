@@ -1,4 +1,4 @@
-import { type Ref, useSlots } from "vue";
+import { type Ref } from "vue";
 import type { BadgeSize, BadgeTheme } from "./types";
 
 const defaultBadgeClasses = "rounded flex items-center gap-2";

@@ -83,7 +83,7 @@ fs.writeFileSync(
 ];
 
 export default { component_toc };
-    `,
+`,
 );
 
 // Writing into the component export

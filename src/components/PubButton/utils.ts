@@ -1,10 +1,10 @@
 import { type Ref, useSlots } from "vue";
 import type { ButtonRounded, ButtonSize, ButtonTheme } from "./types";
 
-export type ButtonClassMap<T extends string> = { hover: Record<T, string>; default: Record<T, string> };
+export type ButtonClassMap<T extends string> = { hover: Record<T, string>; default: Record<T, string>; };
 
 const defaultSpanButtonClasses = "flex items-center gap-2";
-const skletonButtonClasses = "animate-pulse bg-gray-200 dark:bg-gray-500 text-transparent rounded-md cursor-not-allowed";
+const skeletonButtonClasses = "animate-pulse bg-gray-200 dark:bg-gray-500 text-transparent rounded-md cursor-not-allowed";
 
 const buttonThemeClasses: ButtonClassMap<ButtonTheme> = {
     default: {
@@ -96,11 +96,11 @@ interface UseButtonClassesProps {
     square: Ref<boolean>;
 }
 
-export function useButtonClasses(props: UseButtonClassesProps): { wrapperClasses: string; spanClasses: string } {
+export function useButtonClasses (props: UseButtonClassesProps): { wrapperClasses: string; spanClasses: string; } {
     const slots = useSlots();
     const themeClasses = [
         props.skeleton.value
-            ? skletonButtonClasses
+            ? skeletonButtonClasses
             : [
                 props.outline.value
                     ? buttonOutlineThemeClasses.default[props.theme.value]

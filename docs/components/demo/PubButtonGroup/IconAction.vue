@@ -2,7 +2,7 @@
     <pub-button-group>
         <pub-button theme="blue" outline>
             <template #prepend>
-                <PubIcon name="download" aschild />
+                <pub-icon name="download" aschild />
             </template>
             Download
         </pub-button>
