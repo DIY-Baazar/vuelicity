@@ -45,7 +45,7 @@ export function useBadgeClasses (props: UseBadgeClassesProps) {
         defaultBadgeClasses,
         badgeThemeClasses[props.theme.value],
         badgeSizeClasses[props.size.value],
-        props.bordered.value ? "border border-1" + badgeBorderedClasses[props.theme.value] : "",
+        props.bordered.value ? "border " + badgeBorderedClasses[props.theme.value] : "",
         props.rounded.value ? "rounded-full": ""
     ].join(" ");
 }
