@@ -4,11 +4,12 @@ import type { BadgeTheme, BadgeSize } from "./types";
 import { useBadgeClasses } from "./utils";
 
 interface BadgeProps {
-    theme?: BadgeTheme,
-    size?: BadgeSize,
-    href?: string | null,
-    bordered?: boolean,
+    theme?: BadgeTheme;
+    size?: BadgeSize;
+    href?: string | null;
+    bordered?: boolean;
     rounded?: boolean;
+    class?: string;
 }
 
 const props = withDefaults(defineProps<BadgeProps>(), {
@@ -26,7 +27,7 @@ const componentName = computed(() => (props.href ? 'a' : 'span'));
 </script>
 
 <template>
-    <component :is="componentName" :class="['pub-badge', wrapperClasses]" :href="href">
+    <component :is="componentName" :class="['pub-badge', wrapperClasses, props.class]" :href="href">
         <slot name="icon"></slot>
         <slot></slot>
     </component>

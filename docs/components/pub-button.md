@@ -10,6 +10,7 @@ import Size from './demo/PubButton/Size.vue';
 import Disabled from './demo/PubButton/Disabled.vue';
 import LoadingSkeleton from './demo/PubButton/LoadingSkeleton.vue';
 import WithIcon from './demo/PubButton/WithIcon.vue';
+import WithLabel from './demo/PubButton/WithLabel.vue';
 import Icon from './demo/PubButton/Icon.vue';
 </script>
 
@@ -29,7 +30,8 @@ There are a number of themes available for the button, including `'none'`, `'def
 
 <<< @/components/demo/PubButton/Default.vue
 
-## Prop - `outline` Usage
+## Outline buttons
+### Prop - `outline` Usage
 
 The `outline` prop can be used to add an outline style to the button.
 
@@ -39,7 +41,8 @@ The `outline` prop can be used to add an outline style to the button.
 
 <<< @/components/demo/PubButton/Outline.vue
 
-## Prop - `rounded` Usage
+## Pill buttons
+### Prop - `rounded` Usage
 
 The `rounded` prop can be used to add rounded corners to the button.
 
@@ -49,7 +52,8 @@ The `rounded` prop can be used to add rounded corners to the button.
 
 <<< @/components/demo/PubButton/Rounded.vue
 
-## Prop - `size` Usage
+## Button sizes
+### Prop - `size` Usage
 
 The `size` prop can be used to adjust the size of the button.
 
@@ -59,7 +63,8 @@ The `size` prop can be used to adjust the size of the button.
 
 <<< @/components/demo/PubButton/Size.vue
 
-## Prop - `disabled` Usage
+## Disabled Buttons
+### Prop - `disabled` Usage
 
 The `disabled` prop can be used to disable the button.
 
@@ -69,7 +74,8 @@ The `disabled` prop can be used to disable the button.
 
 <<< @/components/demo/PubButton/Disabled.vue
 
-## Props - `loading` and `skeleton` Usage
+## Button with loading state
+### Props - `loading` and `skeleton` Usage
 
 The `loading` prop can be used to display a loading state. The `skeleton` prop can be used to display a skeleton loader.
 
@@ -87,7 +93,13 @@ The `loading` prop can be used to display a loading state. The `skeleton` prop c
 
 <<< @/components/demo/PubButton/WithIcon.vue
 
-<!-- ## Button with label  -->
+## Button with label 
+
+<demo-container>
+    <WithLabel/>
+</demo-container>
+
+<<< @/components/demo/PubButton/WithLabel.vue
 
 ## Icon buttons
 
