@@ -1,5 +1,5 @@
 ---
-title: PubBadge
+title: PubBadge Component
 description: Documentation for the PubBadge component.
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: PubButton Component
+description: Documentation for the PubButton component.
 ---
 
 <script setup>
