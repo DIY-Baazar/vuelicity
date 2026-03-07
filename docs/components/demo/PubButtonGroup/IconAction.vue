@@ -1,13 +1,10 @@
 <template>
     <pub-button-group>
         <pub-button theme="blue" outline>
-            <template #prepend>
-                <pub-icon name="download" aschild />
-            </template>
-            Download
+            Save Book
         </pub-button>
         <pub-button theme="blue" outline>
-            456k
+            <pub-icon name="bookmark" aschild />
         </pub-button>
     </pub-button-group>
 </template>

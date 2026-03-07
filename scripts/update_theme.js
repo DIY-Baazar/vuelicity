@@ -28,7 +28,7 @@ function generateScale (hex) {
         let col = chroma.lch(L, chromaVal, hue);
         // If the color is out of sRGB gamut, get the closest in-gamut color
         if (col.clipped()) {
-            col = col.unclipped();
+            col = chroma.lch(L, chromaVal * 0.9, hue);
         }
         return col.hex();
     });

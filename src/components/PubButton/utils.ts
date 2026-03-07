@@ -36,7 +36,7 @@ const buttonThemeClasses: ButtonClassMap<ButtonTheme> = {
 const buttonOutlineThemeClasses: ButtonClassMap<ButtonTheme> = {
     default: {
         none: "bg-transparent text-dark p-0",
-        default: "border-light focus:ring-light text-light",
+        default: "border-grey focus:ring-grey text-grey",
         blue: "border-blue focus:ring-blue text-blue",
         red: "border-red focus:ring-red text-red",
         yellow: "border-yellow focus:ring-yellow text-yellow",
@@ -48,10 +48,10 @@ const buttonOutlineThemeClasses: ButtonClassMap<ButtonTheme> = {
     },
     hover: {
         none: "hover:bg-gray-200 hover:text-black",
-        default: "hover:bg-light hover:text-dark",
+        default: "hover:bg-grey hover:text-grey-200",
         blue: "hover:bg-blue-600 hover:text-gray-200",
         red: "hover:bg-red-600 hover:text-gray-200",
-        yellow: "hover:bg-yellow-600 hover:text-gray-800",
+        yellow: "hover:bg-yellow-600 hover:text-gray-200",
         green: "hover:bg-green-600 hover:text-gray-200",
         magenta: "hover:bg-magenta-600 hover:text-gray-200",
         cyan: "hover:bg-cyan-600 hover:text-gray-200",
