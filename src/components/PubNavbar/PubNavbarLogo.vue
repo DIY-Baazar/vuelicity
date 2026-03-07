@@ -4,7 +4,7 @@ import type { PubNavbarLogoProps } from "./types";
 
 const props = withDefaults(defineProps<PubNavbarLogoProps>(), {
     link: "/",
-    imageUrl: "/vuelicity/images/logo.png",
+    imageUrl: "/images/logo.png",
     alt: "Logo",
     as: "a",
     linkAttr: "href",

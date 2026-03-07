@@ -1,5 +1,6 @@
 ---
 title: PubIcon Component
+description: Documentation for the PubIcon component.
 ---
 
 <script setup>

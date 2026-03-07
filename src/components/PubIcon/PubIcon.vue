@@ -1,11 +1,18 @@
+<style lang="css">
+.icon-solid{
+    
+}
+</style>
+
 <script lang="ts" setup>
 import { computed, toRefs } from "vue";
-import type { IconSize, IconTheme } from "./types";
+import type { IconSize, IconTheme, IconType } from "./types";
 import { useIconClasses } from "./utils";
 import { getIconBody } from "./icons";
 
 interface IconProps {
     name: string;
+    type?: IconType;
     size?: IconSize;
     theme?: IconTheme;
     class?: string;
@@ -13,16 +20,19 @@ interface IconProps {
     flip?: boolean;
     spin?: boolean;
     mirror?: boolean;
+    aschild?: boolean;
 }
 
 const props = withDefaults(defineProps<IconProps>(), {
-    size: "md",
+    size: "sm",
+    type: "solid",
     theme: "default",
     class: "",
     rotate: false,
     flip: false,
     spin: false,
-    mirror: false
+    mirror: false,
+    aschild: false,
 });
 
 const iconClasses = computed(() => useIconClasses(toRefs(props)));

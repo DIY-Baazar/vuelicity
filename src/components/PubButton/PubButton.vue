@@ -16,6 +16,7 @@ interface ButtonProps {
     loading?: boolean;
     size?: ButtonSize;
     rounded?: ButtonRounded;
+    square?: boolean;
     as?: "button" | "a";
     linkAttr?: string;
 }
@@ -29,15 +30,14 @@ const props = withDefaults(defineProps<ButtonProps>(), {
     outline: false,
     skeleton: false,
     loading: false,
+    square: false,
     size: "md",
     rounded: "none",
     as: "button",
     linkAttr: "href",
 });
 
-const componentName = computed(() => {
-    return props.as !== "a" ? resolveComponent(props.as) : "a";
-});
+const componentName = computed(() => (props.as !== "a" ? resolveComponent(props.as) : "a"));
 
 const emit = defineEmits<{ click: [event: Event]; }>();
 
@@ -61,6 +61,12 @@ const spanClasses = computed(() => buttonClasses.value.spanClasses);
 <template>
     <component :is="componentName" :[linkAttr]="to" :class="['pub-button', spanClasses, wrapperClasses, props.class]"
         @click="handleClick" v-bind="$attrs">
+        <span class="mr-1 inline-flex items-center" v-if="$slots.prepend">
+            <slot name="prepend" />
+        </span>
         <slot />
+        <span class="ml-1 inline-flex items-center" v-if="$slots.append">
+            <slot name="append" />
+        </span>
     </component>
 </template>

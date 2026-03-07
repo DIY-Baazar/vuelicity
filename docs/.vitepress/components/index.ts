@@ -1,7 +1,15 @@
 const component_toc = [
     {
+        text: "PubBadge",
+        link: "/components/pub-badge"
+    },
+    {
         text: "PubButton",
         link: "/components/pub-button"
+    },
+    {
+        text: "PubButtonGroup",
+        link: "/components/pub-button-group"
     },
     {
         text: "PubIcon",
@@ -18,7 +26,8 @@ const component_toc = [
     {
         text: "PubPagination",
         link: "/components/pub-pagination"
-    },
+    }
 ];
 
 export default { component_toc };
+    

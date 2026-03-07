@@ -3,36 +3,98 @@
 @import "./common.css";
 
 @theme {
-    /* Blue */
+    /* Themes */
+
+    /* blue shades */
+    --color-blue-100: #e9e9ff;
+    --color-blue-200: #d4d6ff;
+    --color-blue-300: #b6baff;
+    --color-blue-400: #989fff;
+    --color-blue-500: #3457d5;
+    --color-blue-600: #536bed;
+    --color-blue-700: #2c53d0;
+    --color-blue-800: #083da8;
+    --color-blue-900: #00288d;
     --color-blue: #3457d5;
-    --color-blue-dark: #4c60a7;
-    --color-blue-light: #6681df;
-    /* Red */
+    
+    /* red shades */
+    --color-red-100: #ffbfb2;
+    --color-red-200: #ffab9f;
+    --color-red-300: #ff8e85;
+    --color-red-400: #ff716b;
+    --color-red-500: #ed2939;
+    --color-red-600: #e72135;
+    --color-red-700: #be0625;
+    --color-red-800: #9f0011;
+    --color-red-900: #800000;
     --color-red: #ed2939;
-    --color-red-dark: #b4464f;
-    --color-red-light: #f15e6a;
-    /* Green */
+    
+    /* green shades */
+    --color-green-100: #97ff85;
+    --color-green-200: #82fd72;
+    --color-green-300: #4fe248;
+    --color-green-400: #25c62a;
+    --color-green-500: #32cd32;
+    --color-green-600: #008c00;
+    --color-green-700: #007200;
+    --color-green-800: #005800;
+    --color-green-900: #003f00;
     --color-green: #32cd32;
-    --color-green-dark: #249324;
-    --color-green-light: #6cdb6c;
-    /* Yellow */
+    
+    /* yellow shades */
+    --color-yellow-100: #fff453;
+    --color-yellow-200: #ffe03e;
+    --color-yellow-300: #e8c418;
+    --color-yellow-400: #caa900;
+    --color-yellow-500: #ffd700;
+    --color-yellow-600: #8e7500;
+    --color-yellow-700: #725d00;
+    --color-yellow-800: #594500;
+    --color-yellow-900: #442f00;
     --color-yellow: #ffd700;
-    --color-yellow-dark: #dbcc00;
-    --color-yellow-light: #ffe449;
-    /* Cyan */
-    --color-cyan: #00CCCC;
-    --color-cyan-dark: #009999;
-    --color-cyan-light: #49e3e3;
-    /* Magenta */
-    --color-magenta: #8D029B;
-    --color-magenta-dark: #cc00cc;
-    --color-magenta-light: #ff66ff;
+    
+    /* cyan shades */
+    --color-cyan-100: #87ffff;
+    --color-cyan-200: #5af8f8;
+    --color-cyan-300: #30dbdb;
+    --color-cyan-400: #26bebd;
+    --color-cyan-500: #00cccc;
+    --color-cyan-600: #008788;
+    --color-cyan-700: #006e6f;
+    --color-cyan-800: #005556;
+    --color-cyan-900: #003d3f;
+    --color-cyan: #00cccc;
+    
+    /* magenta shades */
+    --color-magenta-100: #ffceff;
+    --color-magenta-200: #ffbaff;
+    --color-magenta-300: #ff9eff;
+    --color-magenta-400: #f77cf3;
+    --color-magenta-500: #8b008b;
+    --color-magenta-600: #bd44ba;
+    --color-magenta-700: #a0259f;
+    --color-magenta-800: #7e0c7e;
+    --color-magenta-900: #630065;
+    --color-magenta: #8b008b;
+    
+    /* grey shades */
+    --color-grey-100: #f6f6f6;
+    --color-grey-200: #e2e2e2;
+    --color-grey-300: #c6c6c6;
+    --color-grey-400: #ababab;
+    --color-grey-500: #666666;
+    --color-grey-600: #777777;
+    --color-grey-700: #5e5e5e;
+    --color-grey-800: #474747;
+    --color-grey-900: #303030;
+    --color-grey: #666666;
+    
+    /* \Themes */
 
     /* Black */
     --color-black: #333333;
     /* White */
     --color-white: #fffffa;
-
 
     --color-light: #fefefa;
     --color-dark: #333333;

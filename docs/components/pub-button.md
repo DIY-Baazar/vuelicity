@@ -1,31 +1,38 @@
 ---
 title: PubButton Component
+description: Documentation for the PubButton component.
 ---
 
 <script setup>
-import Theme from './demo/PubButton/Theme.vue';
+import Default from './demo/PubButton/Default.vue';
 import Outline from './demo/PubButton/Outline.vue';
 import Rounded from './demo/PubButton/Rounded.vue';
 import Size from './demo/PubButton/Size.vue';
 import Disabled from './demo/PubButton/Disabled.vue';
 import LoadingSkeleton from './demo/PubButton/LoadingSkeleton.vue';
+import WithIcon from './demo/PubButton/WithIcon.vue';
+import WithLabel from './demo/PubButton/WithLabel.vue';
+import Icon from './demo/PubButton/Icon.vue';
 </script>
 
 # PubButton
 
 This is a button component that can be used to create buttons with various styles and sizes.
 
-## Prop - `theme` Usage
+## Default buttons
 
-There are a number of themes available for the button, including `'none'`, `'default'`, `'blue'`, `'red'`, `'yellow'`, `'green'`, `'info'`, `'light'`, `'dark'`. Below is a demo of each theme.
+### Prop - `theme` Usage
+
+There are a number of themes available for the button, including `'none'`, `'default'`, `'blue'`, `'red'`, `'yellow'`, `'green'`, `'magenta'`, `'cyan'`, `'light'`, `'dark'`. Below is a demo of each theme.
 
 <demo-container>
-  <Theme/>
+  <Default/>
 </demo-container>
 
-<<< @/components/demo/PubButton/Theme.vue
+<<< @/components/demo/PubButton/Default.vue
 
-## Prop - `outline` Usage
+## Outline buttons
+### Prop - `outline` Usage
 
 The `outline` prop can be used to add an outline style to the button.
 
@@ -35,7 +42,8 @@ The `outline` prop can be used to add an outline style to the button.
 
 <<< @/components/demo/PubButton/Outline.vue
 
-## Prop - `rounded` Usage
+## Pill buttons
+### Prop - `rounded` Usage
 
 The `rounded` prop can be used to add rounded corners to the button.
 
@@ -45,7 +53,8 @@ The `rounded` prop can be used to add rounded corners to the button.
 
 <<< @/components/demo/PubButton/Rounded.vue
 
-## Prop - `size` Usage
+## Button sizes
+### Prop - `size` Usage
 
 The `size` prop can be used to adjust the size of the button.
 
@@ -55,7 +64,8 @@ The `size` prop can be used to adjust the size of the button.
 
 <<< @/components/demo/PubButton/Size.vue
 
-## Prop - `disabled` Usage
+## Disabled Buttons
+### Prop - `disabled` Usage
 
 The `disabled` prop can be used to disable the button.
 
@@ -65,7 +75,8 @@ The `disabled` prop can be used to disable the button.
 
 <<< @/components/demo/PubButton/Disabled.vue
 
-## Props - `loading` and `skeleton` Usage
+## Button with loading state
+### Props - `loading` and `skeleton` Usage
 
 The `loading` prop can be used to display a loading state. The `skeleton` prop can be used to display a skeleton loader.
 
@@ -75,16 +86,41 @@ The `loading` prop can be used to display a loading state. The `skeleton` prop c
 
 <<< @/components/demo/PubButton/LoadingSkeleton.vue
 
+## Buttons with icon
+
+<demo-container>
+  <WithIcon/>
+</demo-container>
+
+<<< @/components/demo/PubButton/WithIcon.vue
+
+## Button with label 
+
+<demo-container>
+    <WithLabel/>
+</demo-container>
+
+<<< @/components/demo/PubButton/WithLabel.vue
+
+## Icon buttons
+
+<demo-container>
+    <Icon/>
+</demo-container>
+
+<<< @/components/demo/PubButton/Icon.vue
+
 ## Reference
 
 ### Properties
 
 | Name | Type | Default | Description | Options |
 | :--- | :--- | :--- | :--- | :--- |
-| theme | String | `'blue'` | The color theme of the button. | `'none'`, `'default'`, `'blue'`, `'red'`, `'yellow'`, `'green'`, `'magenta'`, `'cyan'`, `'light'`, `'dark'` |
+| theme | String | `'default'` | The color theme of the button. | `'none'`, `'default'`, `'blue'`, `'red'`, `'yellow'`, `'green'`, `'magenta'`, `'cyan'`, `'light'`, `'dark'` |
 | outline | Boolean | `false` | Whether to use the outline style. |  |
 | rounded | String | `'none'` | The border radius of the button. | `'none'`, `'sm'`, `'md'`, `'lg'`, `'xl'`, `'full'` |
 | size | String | `'md'` | The size of the button. | `'xs'`, `'sm'`, `'md'`, `'lg'`, `'xl'` |
+| square | Boolean | `false` | Whether to render the button as a square. | |
 | as | String | `'button'` | The HTML element to render. | `'button'`, `'a'` |
 | class | String | `''` | Additional CSS classes to apply. | |
 | disabled | Boolean | `false` | Whether the button is disabled. |  |
@@ -100,3 +136,5 @@ The `loading` prop can be used to display a loading state. The `skeleton` prop c
 | Name | Description |
 | ---- | ----------- |
 | default | Default slot |
+| prepend | Slot for content before the default slot |
+| append | Slot for content after the default slot |
