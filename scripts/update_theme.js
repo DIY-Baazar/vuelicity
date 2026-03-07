@@ -25,7 +25,11 @@ function generateScale (hex) {
     const hue = c[2]; // Use LCH hue directly  
 
     return lightness.map((L) => {
-        const col = chroma.lch(L, chromaVal, hue);
+        let col = chroma.lch(L, chromaVal, hue);
+        // If the color is out of sRGB gamut, get the closest in-gamut color
+        if (col.clipped()) {
+            col = col.unclipped();
+        }
         return col.hex();
     });
 }
