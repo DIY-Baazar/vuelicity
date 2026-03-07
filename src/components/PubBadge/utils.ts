@@ -22,15 +22,15 @@ const badgeSizeClasses: Record<BadgeSize, string> = {
 };
 
 const badgeBorderedClasses: Record<BadgeTheme, string> = {
-    default: "border-light",
-    red: "border-red-100",
-    blue: "border-blue-100",
-    yellow: "border-yellow-100",
-    green: "border-green-100",
-    magenta: "border-magenta-100",
-    cyan: "border-cyan-100",
-    light: "border-grey-100",
-    dark: "border-grey-800",
+    default: "border-grey-800",
+    red: "border-red-800",
+    blue: "border-blue-800",
+    yellow: "border-yellow-800",
+    green: "border-green-800",
+    magenta: "border-magenta-800",
+    cyan: "border-cyan-800",
+    light: "border-grey-800",
+    dark: "border-grey-100",
 };
 
 interface UseBadgeClassesProps {
