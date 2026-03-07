@@ -50,7 +50,7 @@ description: Documentation for the PubButtonGroup component.
 
 | Name | Type | Default | Description | Options |
 | :--- | :--- | :--- | :--- | :--- |
-| rounded | Boolean | `false` | Whether to apply rounded corners to the button group. | `true`, `false` |
+| rounded | Boolean | `false` | Whether to apply rounded corners to the button group. |  |
 
 ### Slots
 

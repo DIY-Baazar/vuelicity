@@ -112,11 +112,11 @@ This is a pagination component which can be used to paginate through a list of i
 | nextLabel     | String  | `'Next'`       | The label for the next button.                              |                                           |
 | firstLabel    | String  | `'First'`      | The label for the first button.                             |                                           |
 | lastLabel     | String  | `'Last'`       | The label for the last button.                              |                                           |
-| showIcons     | Boolean | `false`        | Whether to show icons for navigation buttons.               | `true`, `false`                           |
-| showFirstLast | Boolean | `false`        | Whether to show first and last page buttons.                | `true`, `false`                           |
-| hidePrev      | Boolean | `false`        | Whether to hide the previous button.                        | `true`, `false`                           |
-| hideNext      | Boolean | `false`        | Whether to hide the next button.                            | `true`, `false`                           |
-| hideLabels    | Boolean | `false`        | Whether to hide the labels for navigation buttons.          | `true`, `false`                           |
+| showIcons     | Boolean | `false`        | Whether to show icons for navigation buttons.               |                            |
+| showFirstLast | Boolean | `false`        | Whether to show first and last page buttons.                |                            |
+| hidePrev      | Boolean | `false`        | Whether to hide the previous button.                        |                            |
+| hideNext      | Boolean | `false`        | Whether to hide the next button.                            |                            |
+| hideLabels    | Boolean | `false`        | Whether to hide the labels for navigation buttons.          |                            |
 | layout        | String  | `'pagination'` | The layout style of the pagination.                         | `'pagination'`, `'navigation'`, `'table'` |
 
 ### Slots

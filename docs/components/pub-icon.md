@@ -54,10 +54,10 @@ The icon can be animated or transformed.
 | size   | String  | `'md'`      | The size of the icon.                  | `'xs'`, `'sm'`, `'md'`, `'lg'`, `'xl'`                                                            |
 | theme  | String  | `'default'` | The color theme of the icon.           | `'default'`, `'blue'`, `'red'`, `'yellow'`, `'green'`, `'magenta'`, `'cyan'`, `'light'`, `'dark'` |
 | name   | String  | `''`        | The name of the icon.                  | Refer to the [icon list](#icons) below.                                                           |
-| rotate | Boolean | `false`     | Whether to rotate the icon 90 degrees. | `true`, `false`                                                                                   |
-| flip   | Boolean | `false`     | Whether to flip the icon horizontally. | `true`, `false`                                                                                   |
-| spin   | Boolean | `false`     | Whether to spin the icon.              | `true`, `false`                                                                                   |
-| pulse  | Boolean | `false`     | Whether to pulse the icon.             | `true`, `false`                                                                                   |
+| rotate | Boolean | `false`     | Whether to rotate the icon 90 degrees. |                                                                                    |
+| flip   | Boolean | `false`     | Whether to flip the icon horizontally. |                                                                                    |
+| spin   | Boolean | `false`     | Whether to spin the icon.              |                                                                                    |
+| pulse  | Boolean | `false`     | Whether to pulse the icon.             |                                                                                    |
 | class  | String  | `''`        | Additional CSS classes to apply.       |                                                                                                   |
 
 ### Icons

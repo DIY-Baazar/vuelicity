@@ -124,9 +124,9 @@ The `loading` prop can be used to display a loading state. The `skeleton` prop c
 | as | String | `'button'` | The HTML element to render. | `'button'`, `'a'` |
 | class | String | `''` | Additional CSS classes to apply. | |
 | disabled | Boolean | `false` | Whether the button is disabled. |  |
-| loading | Boolean | `false` | Whether the button is in a loading state. | `true`, `false` |
+| loading | Boolean | `false` | Whether the button is in a loading state. |  |
 | name | String | `''` | The name attribute for the button. | |
-| skeleton | Boolean | `false` | Whether to display a skeleton loader. | `true`, `false` |
+| skeleton | Boolean | `false` | Whether to display a skeleton loader. |  |
 | to | String | `'#'` | The href for the link when `as` is `'a'`. | |
 | type | String | `'button'` | The type attribute for the button. | `'button'`, `'submit'`, `'reset'` |
 | linkAttr | String | `'href'` | The attribute to use for the link when `as` is `'a'`. | |

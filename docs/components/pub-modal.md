@@ -97,13 +97,13 @@ import { PubModal } from "vuelicity";
 | size | String | `'md'` | The size of the modal. | `'xs'`, `'sm'`, `'md'`, `'lg'`, `'xl'`, `'2xl'`, `'3xl'`, `'4xl'`, `'5xl'` |
 | position | String | `'center'` | The position of the modal. | `'top-start'`, `'top-center'`, `'top-end'`, `'center-start'`, `'center'`, `'center-end'`, `'bottom-start'`, `'bottom-center'`, `'bottom-end'` |
 | zIndex | Number | `40` | The z-index of the modal. | `10`, `20`, `30`, `40`, `50` |
-| isOpen | Boolean | `false` | Whether the modal is open. | `true`, `false` |
-| persistent | Boolean | `false` | Whether the modal should be persistent. | `true`, `false` |
-| notClickClose | Boolean | `false` | Whether the modal should not close when clicked outside. | `true`, `false` |
-| notEscapeClose | Boolean | `false` | Whether the modal should not close when the escape key is pressed. | `true`, `false` |
-| scrollable | Boolean | `false` | Whether the modal should be scrollable. | `true`, `false` |
-| overlayBlur | Boolean | `false` | Whether the modal should have a blurred overlay. | `true`, `false` |
-| focusTrap | Boolean | `true` | Whether the modal should trap focus. | `true`, `false` |
+| isOpen | Boolean | `false` | Whether the modal is open. |  |
+| persistent | Boolean | `false` | Whether the modal should be persistent. |  |
+| notClickClose | Boolean | `false` | Whether the modal should not close when clicked outside. |  |
+| notEscapeClose | Boolean | `false` | Whether the modal should not close when the escape key is pressed. |  |
+| scrollable | Boolean | `false` | Whether the modal should be scrollable. |  |
+| overlayBlur | Boolean | `false` | Whether the modal should have a blurred overlay. |  |
+| focusTrap | Boolean | `true` | Whether the modal should trap focus. |  |
 | class | String | `''` | Additional CSS classes to apply. | |
 
 ### Slots
