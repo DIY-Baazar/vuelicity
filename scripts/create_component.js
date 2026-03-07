@@ -68,6 +68,7 @@ const componentFile = join(__dirname, "..", "docs", ".vitepress", "components", 
 const componentsContent = fs
     .readdirSync(componentsDir)
     .filter((file) => fs.statSync(join(componentsDir, file)).isDirectory())
+    .sort() // Ensure alphabetical order
     .map(
         (component) => `{
         text: "${component}",
@@ -75,22 +76,20 @@ const componentsContent = fs
     }`,
     )
     .join(",\n    ");
-
 fs.writeFileSync(
     componentFile,
     `const component_toc = [
     ${componentsContent}
 ];
-
 export default { component_toc };
 `,
 );
-
 // Writing into the component export
 const componentExportFile = join(componentsDir, "index.ts");
 const componentExportContent = fs
     .readdirSync(componentsDir, { recursive: true })
     .filter((file) => file.endsWith(".vue") && !file.startsWith("_"))
+    .sort() // Ensure alphabetical order
     .map((file) => {
         return { file, component: file.replace(".vue", "").split("/").pop() };
     })
