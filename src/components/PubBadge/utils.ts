@@ -18,7 +18,7 @@ const badgeThemeClasses: Record<BadgeTheme, string> = {
 const badgeSizeClasses: Record<BadgeSize, string> = {
     xs: "px-1 py-0.5 text-xs",
     sm: "px-2 py-1 text-sm",
-    md: "px-4 py-2 text-md"
+    md: "px-4 py-2 text-base"
 };
 
 const badgeBorderedClasses: Record<BadgeTheme, string> = {
