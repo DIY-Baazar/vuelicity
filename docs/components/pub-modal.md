@@ -4,10 +4,10 @@ description: Documentation for the PubModal component.
 ---
 
 <script setup>
-import Default from './demo/PubModal/Default.vue';
-import Size from './demo/PubModal/Size.vue';
-import Position from './demo/PubModal/Position.vue';
-import FocusTrap from './demo/PubModal/FocusTrap.vue';
+import Default from './PubModal/Default.vue';
+import Size from './PubModal/Size.vue';
+import Position from './PubModal/Position.vue';
+import FocusTrap from './PubModal/FocusTrap.vue';
 </script>
 
 # PubModal
@@ -20,7 +20,7 @@ This is a modal component that can be used to display content in a modal dialog.
   <Default/>
 </demo-container>
 
-<<< @/components/demo/PubModal/Default.vue
+<<< @/components//PubModal/Default.vue
 
 ## Props - `size` Usage
 

@@ -4,10 +4,10 @@ description: Documentation for the PubButtonGroup component.
 ---
 
 <script setup>
-    import Default from "./demo/PubButtonGroup/Default.vue";
-    import Rounded from "./demo/PubButtonGroup/Rounded.vue";
-    import IconAction from "./demo/PubButtonGroup/IconAction.vue";
-    import WithIcon from "./demo/PubButtonGroup/WithIcon.vue";
+    import Default from "./PubButtonGroup/Default.vue";
+    import Rounded from "./PubButtonGroup/Rounded.vue";
+    import IconAction from "./PubButtonGroup/IconAction.vue";
+    import WithIcon from "./PubButtonGroup/WithIcon.vue";
 </script>
 
 # PubButtonGroup
@@ -18,7 +18,7 @@ description: Documentation for the PubButtonGroup component.
   <Default/>
 </demo-container>
 
-<<< @/components/demo/PubButtonGroup/Default.vue
+<<< @/components//PubButtonGroup/Default.vue
 
 ## Rounded Button Group
 
@@ -26,7 +26,7 @@ description: Documentation for the PubButtonGroup component.
   <Rounded/>
 </demo-container>
 
-<<< @/components/demo/PubButtonGroup/Rounded.vue
+<<< @/components//PubButtonGroup/Rounded.vue
 
 ## Button Group Icon Action
 
@@ -34,7 +34,7 @@ description: Documentation for the PubButtonGroup component.
   <IconAction/>
 </demo-container>
 
-<<< @/components/demo/PubButtonGroup/IconAction.vue
+<<< @/components//PubButtonGroup/IconAction.vue
 
 ## Button Group Icons
 
@@ -42,7 +42,7 @@ description: Documentation for the PubButtonGroup component.
   <WithIcon/>
 </demo-container>
 
-<<< @/components/demo/PubButtonGroup/WithIcon.vue
+<<< @/components//PubButtonGroup/WithIcon.vue
 
 ## Reference
 

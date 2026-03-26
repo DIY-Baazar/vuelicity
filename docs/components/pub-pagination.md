@@ -4,14 +4,14 @@ description: Documentation for PubPagination.
 ---
 
 <script setup>
-import Default from './demo/PubPagination/Default.vue';
-import WithIcons from './demo/PubPagination/WithIcons.vue';
-import CustomLen from './demo/PubPagination/CustomLen.vue';
-import PrevNext from './demo/PubPagination/PrevNext.vue';
-import PrevNextIcon from './demo/PubPagination/PrevNextIcon.vue';
-import FirstLast from './demo/PubPagination/FirstLast.vue';
-import Table from './demo/PubPagination/Table.vue';
-import CustomLabel from './demo/PubPagination/CustomLabel.vue';
+import Default from './PubPagination/Default.vue';
+import WithIcons from './PubPagination/WithIcons.vue';
+import CustomLen from './PubPagination/CustomLen.vue';
+import PrevNext from './PubPagination/PrevNext.vue';
+import PrevNextIcon from './PubPagination/PrevNextIcon.vue';
+import FirstLast from './PubPagination/FirstLast.vue';
+import Table from './PubPagination/Table.vue';
+import CustomLabel from './PubPagination/CustomLabel.vue';
 </script>
 
 # PubPagination
@@ -24,7 +24,7 @@ This is a pagination component which can be used to paginate through a list of i
     <Default/>
 </demo-container>
 
-<<< @/components/demo/PubPagination/Default.vue
+<<< @/components//PubPagination/Default.vue
 
 ## Pagination with icons
 
@@ -32,7 +32,7 @@ This is a pagination component which can be used to paginate through a list of i
     <WithIcons/>
 </demo-container>
 
-<<< @/components/demo/PubPagination/WithIcons.vue
+<<< @/components//PubPagination/WithIcons.vue
 
 ## Custom length pagination
 
@@ -40,7 +40,7 @@ This is a pagination component which can be used to paginate through a list of i
     <CustomLen/>
 </demo-container>
 
-<<< @/components/demo/PubPagination/CustomLen.vue
+<<< @/components//PubPagination/CustomLen.vue
 
 ## Previous and Next
 
@@ -48,7 +48,7 @@ This is a pagination component which can be used to paginate through a list of i
     <PrevNext/>
 </demo-container>
 
-<<< @/components/demo/PubPagination/PrevNext.vue
+<<< @/components//PubPagination/PrevNext.vue
 
 ## Previous and Next with icons
 
@@ -56,7 +56,7 @@ This is a pagination component which can be used to paginate through a list of i
     <PrevNextIcon/>
 </demo-container>
 
-<<< @/components/demo/PubPagination/PrevNextIcon.vue
+<<< @/components//PubPagination/PrevNextIcon.vue
 
 ## First and Last
 
@@ -64,7 +64,7 @@ This is a pagination component which can be used to paginate through a list of i
     <FirstLast/>
 </demo-container>
 
-<<< @/components/demo/PubPagination/FirstLast.vue
+<<< @/components//PubPagination/FirstLast.vue
 
 ## Table data pagination
 
@@ -72,7 +72,7 @@ This is a pagination component which can be used to paginate through a list of i
     <Table/>
 </demo-container>
 
-<<< @/components/demo/PubPagination/Table.vue
+<<< @/components//PubPagination/Table.vue
 
 ## Pagination with custom labels
 
@@ -80,7 +80,7 @@ This is a pagination component which can be used to paginate through a list of i
     <CustomLabel/>
 </demo-container>
 
-<<< @/components/demo/PubPagination/CustomLabel.vue
+<<< @/components//PubPagination/CustomLabel.vue
 
 <!--
 ## Table pagination with icons

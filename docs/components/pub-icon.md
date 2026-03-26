@@ -4,11 +4,11 @@ description: Documentation for the PubIcon component.
 ---
 
 <script setup>
-import Size from './demo/PubIcon/Size.vue';
-import Theme from './demo/PubIcon/Theme.vue';
-import DisplayIcon from './demo/PubIcon/DisplayIcon.vue';
-import SearchIcon from './demo/PubIcon/SearchIcon.vue';
-import SpinFlip from './demo/PubIcon/SpinFlip.vue';
+import Size from './PubIcon/Size.vue';
+import Theme from './PubIcon/Theme.vue';
+import DisplayIcon from './PubIcon/DisplayIcon.vue';
+import SearchIcon from './PubIcon/SearchIcon.vue';
+import SpinFlip from './PubIcon/SpinFlip.vue';
 </script>
 
 # PubIcon
@@ -23,7 +23,7 @@ The icon can be scaled using the `size` prop.
   <Size/>
 </demo-container>
 
-<<< @/components/demo/PubIcon/Size.vue
+<<< @/components//PubIcon/Size.vue
 
 ### Theme
 
@@ -33,7 +33,7 @@ The icon can be themed using the `theme` prop.
   <Theme/>
 </demo-container>
 
-<<< @/components/demo/PubIcon/Theme.vue
+<<< @/components//PubIcon/Theme.vue
 
 ### Spin, Flip, Rotate, and Mirror
 
@@ -42,7 +42,7 @@ The icon can be animated or transformed.
 <SpinFlip/>
 </demo-container>
 
-<<< @/components/demo/PubIcon/SpinFlip.vue
+<<< @/components//PubIcon/SpinFlip.vue
 
 
 ## Reference
