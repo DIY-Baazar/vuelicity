@@ -24,7 +24,7 @@ This is a pagination component which can be used to paginate through a list of i
     <Default/>
 </demo-container>
 
-<<< @/components//PubPagination/Default.vue
+<<< @/components/PubPagination/Default.vue
 
 ## Pagination with icons
 
@@ -32,7 +32,7 @@ This is a pagination component which can be used to paginate through a list of i
     <WithIcons/>
 </demo-container>
 
-<<< @/components//PubPagination/WithIcons.vue
+<<< @/components/PubPagination/WithIcons.vue
 
 ## Custom length pagination
 
@@ -40,7 +40,7 @@ This is a pagination component which can be used to paginate through a list of i
     <CustomLen/>
 </demo-container>
 
-<<< @/components//PubPagination/CustomLen.vue
+<<< @/components/PubPagination/CustomLen.vue
 
 ## Previous and Next
 
@@ -48,7 +48,7 @@ This is a pagination component which can be used to paginate through a list of i
     <PrevNext/>
 </demo-container>
 
-<<< @/components//PubPagination/PrevNext.vue
+<<< @/components/PubPagination/PrevNext.vue
 
 ## Previous and Next with icons
 
@@ -56,7 +56,7 @@ This is a pagination component which can be used to paginate through a list of i
     <PrevNextIcon/>
 </demo-container>
 
-<<< @/components//PubPagination/PrevNextIcon.vue
+<<< @/components/PubPagination/PrevNextIcon.vue
 
 ## First and Last
 
@@ -64,7 +64,7 @@ This is a pagination component which can be used to paginate through a list of i
     <FirstLast/>
 </demo-container>
 
-<<< @/components//PubPagination/FirstLast.vue
+<<< @/components/PubPagination/FirstLast.vue
 
 ## Table data pagination
 
@@ -72,7 +72,7 @@ This is a pagination component which can be used to paginate through a list of i
     <Table/>
 </demo-container>
 
-<<< @/components//PubPagination/Table.vue
+<<< @/components/PubPagination/Table.vue
 
 ## Pagination with custom labels
 
@@ -80,7 +80,7 @@ This is a pagination component which can be used to paginate through a list of i
     <CustomLabel/>
 </demo-container>
 
-<<< @/components//PubPagination/CustomLabel.vue
+<<< @/components/PubPagination/CustomLabel.vue
 
 <!--
 ## Table pagination with icons

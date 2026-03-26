@@ -23,7 +23,7 @@ The icon can be scaled using the `size` prop.
   <Size/>
 </demo-container>
 
-<<< @/components//PubIcon/Size.vue
+<<< @/components/PubIcon/Size.vue
 
 ### Theme
 
@@ -33,7 +33,7 @@ The icon can be themed using the `theme` prop.
   <Theme/>
 </demo-container>
 
-<<< @/components//PubIcon/Theme.vue
+<<< @/components/PubIcon/Theme.vue
 
 ### Spin, Flip, Rotate, and Mirror
 
@@ -42,7 +42,7 @@ The icon can be animated or transformed.
 <SpinFlip/>
 </demo-container>
 
-<<< @/components//PubIcon/SpinFlip.vue
+<<< @/components/PubIcon/SpinFlip.vue
 
 
 ## Reference

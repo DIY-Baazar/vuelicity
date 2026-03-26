@@ -19,7 +19,7 @@ This is a navbar component which can be used to display a navigation menu in a h
   <Default/>
 </demo-container>
 
-<<< @/components//PubNavbar/Default.vue
+<<< @/components/PubNavbar/Default.vue
 
 ## Solid background
 
@@ -27,7 +27,7 @@ This is a navbar component which can be used to display a navigation menu in a h
   <Solid/>
 </demo-container>
 
-<<< @/components//PubNavbar/Solid.vue
+<<< @/components/PubNavbar/Solid.vue
 
 <!-- ## Navbar with dropdown
 
@@ -45,7 +45,7 @@ This is a navbar component which can be used to display a navigation menu in a h
     <WithCTA/>
 </demo-container>
 
-<<< @/components//PubNavbar/WithCTA.vue
+<<< @/components/PubNavbar/WithCTA.vue
 
 <!-- ## Language dropdown
 

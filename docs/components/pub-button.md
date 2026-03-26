@@ -29,7 +29,7 @@ There are a number of themes available for the button, including `'none'`, `'def
   <Default/>
 </demo-container>
 
-<<< @/components//PubButton/Default.vue
+<<< @/components/PubButton/Default.vue
 
 ## Outline buttons
 ### Prop - `outline` Usage
@@ -40,7 +40,7 @@ The `outline` prop can be used to add an outline style to the button.
   <Outline/>
 </demo-container>
 
-<<< @/components//PubButton/Outline.vue
+<<< @/components/PubButton/Outline.vue
 
 ## Pill buttons
 ### Prop - `rounded` Usage
@@ -51,7 +51,7 @@ The `rounded` prop can be used to add rounded corners to the button.
   <Rounded/>
 </demo-container>
 
-<<< @/components//PubButton/Rounded.vue
+<<< @/components/PubButton/Rounded.vue
 
 ## Button sizes
 ### Prop - `size` Usage
@@ -62,7 +62,7 @@ The `size` prop can be used to adjust the size of the button.
   <Size/>
 </demo-container>
 
-<<< @/components//PubButton/Size.vue
+<<< @/components/PubButton/Size.vue
 
 ## Disabled Buttons
 ### Prop - `disabled` Usage
@@ -73,7 +73,7 @@ The `disabled` prop can be used to disable the button.
   <Disabled/>
 </demo-container>
 
-<<< @/components//PubButton/Disabled.vue
+<<< @/components/PubButton/Disabled.vue
 
 ## Button with loading state
 ### Props - `loading` and `skeleton` Usage
@@ -84,7 +84,7 @@ The `loading` prop can be used to display a loading state. The `skeleton` prop c
   <LoadingSkeleton/>
 </demo-container>
 
-<<< @/components//PubButton/LoadingSkeleton.vue
+<<< @/components/PubButton/LoadingSkeleton.vue
 
 ## Buttons with icon
 
@@ -92,7 +92,7 @@ The `loading` prop can be used to display a loading state. The `skeleton` prop c
   <WithIcon/>
 </demo-container>
 
-<<< @/components//PubButton/WithIcon.vue
+<<< @/components/PubButton/WithIcon.vue
 
 ## Button with label 
 
@@ -100,7 +100,7 @@ The `loading` prop can be used to display a loading state. The `skeleton` prop c
     <WithLabel/>
 </demo-container>
 
-<<< @/components//PubButton/WithLabel.vue
+<<< @/components/PubButton/WithLabel.vue
 
 ## Icon buttons
 
@@ -108,7 +108,7 @@ The `loading` prop can be used to display a loading state. The `skeleton` prop c
     <Icon/>
 </demo-container>
 
-<<< @/components//PubButton/Icon.vue
+<<< @/components/PubButton/Icon.vue
 
 ## Reference
 

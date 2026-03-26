@@ -20,7 +20,7 @@ This is a modal component that can be used to display content in a modal dialog.
   <Default/>
 </demo-container>
 
-<<< @/components//PubModal/Default.vue
+<<< @/components/PubModal/Default.vue
 
 ## Props - `size` Usage
 
