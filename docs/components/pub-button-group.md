@@ -18,7 +18,7 @@ description: Documentation for the PubButtonGroup component.
   <Default/>
 </demo-container>
 
-<<< @/components//PubButtonGroup/Default.vue
+<<< @/components/PubButtonGroup/Default.vue
 
 ## Rounded Button Group
 
