@@ -4,13 +4,13 @@ description: Documentation for the PubBadge component.
 ---
 
 <script setup>
-import Default from './demo/PubBadge/Default.vue';
-import Size from './demo/PubBadge/Size.vue';
-import Bordered from './demo/PubBadge/Bordered.vue';
-import Rounded from './demo/PubBadge/Rounded.vue';
-import AsLink from './demo/PubBadge/AsLink.vue';
-import WithIcon from './demo/PubBadge/WithIcon.vue';
-import Icon from './demo/PubBadge/Icon.vue';
+import Default from './PubBadge/Default.vue';
+import Size from './PubBadge/Size.vue';
+import Bordered from './PubBadge/Bordered.vue';
+import Rounded from './PubBadge/Rounded.vue';
+import AsLink from './PubBadge/AsLink.vue';
+import WithIcon from './PubBadge/WithIcon.vue';
+import Icon from './PubBadge/Icon.vue';
 </script>
 
 # PubBadge
@@ -27,7 +27,7 @@ The `theme` prop can be used to change the color of the badge.
     <Default />
 </demo-container>
 
-<<< @/components/demo/PubBadge/Default.vue
+<<< @/components/PubBadge/Default.vue
 
 ## Large badges
 
@@ -39,7 +39,7 @@ The `size` prop can be used to change the size of the badge.
     <Size />
 </demo-container>
 
-<<< @/components/demo/PubBadge/Size.vue
+<<< @/components/PubBadge/Size.vue
 
 ## Bordered badges
 
@@ -51,7 +51,7 @@ The `bordered` prop can be used to add a border to the badge.
     <Bordered />
 </demo-container>
 
-<<< @/components/demo/PubBadge/Bordered.vue
+<<< @/components/PubBadge/Bordered.vue
 
 ## Rounded badges
 
@@ -63,7 +63,7 @@ The `rounded` prop can be used to add rounded corners to the badge.
     <Rounded />
 </demo-container>
 
-<<< @/components/demo/PubBadge/Rounded.vue
+<<< @/components/PubBadge/Rounded.vue
 
 ## Badges as links
 
@@ -75,7 +75,7 @@ The `href` prop can be used to make the badge a link.
     <AsLink />
 </demo-container>
 
-<<< @/components/demo/PubBadge/AsLink.vue
+<<< @/components/PubBadge/AsLink.vue
 
 ## Badges with icons
 
@@ -87,7 +87,7 @@ The `icon` slot can be used to add an icon to the badge.
     <WithIcon />
 </demo-container>
 
-<<< @/components/demo/PubBadge/WithIcon.vue
+<<< @/components/PubBadge/WithIcon.vue
 
 ## Badges with only icon
 
@@ -95,7 +95,7 @@ The `icon` slot can be used to add an icon to the badge.
     <Icon />
 </demo-container>
 
-<<< @/components/demo/PubBadge/Icon.vue
+<<< @/components/PubBadge/Icon.vue
 
 ## Reference
 

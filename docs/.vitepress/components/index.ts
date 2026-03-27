@@ -12,6 +12,10 @@ const component_toc = [
         link: "/components/pub-button-group"
     },
     {
+        text: "PubCard",
+        link: "/components/pub-card"
+    },
+    {
         text: "PubIcon",
         link: "/components/pub-icon"
     },
@@ -28,6 +32,4 @@ const component_toc = [
         link: "/components/pub-pagination"
     }
 ];
-
 export default { component_toc };
-    

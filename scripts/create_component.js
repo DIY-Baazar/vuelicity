@@ -8,13 +8,13 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const prefix = "Pub";
 
-function createDir(path) {
+function createDir (path) {
     if (!fs.existsSync(path)) {
         fs.mkdirSync(path, { recursive: true });
     }
 }
 
-function toDashConstantCase(string) {
+function toDashConstantCase (string) {
     return string
         .replace(/([a-z0-9])([A-Z])/g, "$1-$2") // Insert dash between lowercase/number and uppercase
         .toLowerCase();
@@ -91,7 +91,7 @@ const componentExportContent = fs
     .filter((file) => file.endsWith(".vue") && !file.startsWith("_"))
     .sort() // Ensure alphabetical order
     .map((file) => {
-        return { file, component: file.replace(".vue", "").split("/").pop() };
+        return { file: file.replace(/\\/g, "/"), component: file.replace(".vue", "").replace(/\\/g, "/").split("/").pop() };
     })
     .map(({ file, component }) => `export { default as ${component} } from "./${file}";`)
     .join("\n");

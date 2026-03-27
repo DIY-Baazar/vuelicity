@@ -4,15 +4,15 @@ description: Documentation for the PubButton component.
 ---
 
 <script setup>
-import Default from './demo/PubButton/Default.vue';
-import Outline from './demo/PubButton/Outline.vue';
-import Rounded from './demo/PubButton/Rounded.vue';
-import Size from './demo/PubButton/Size.vue';
-import Disabled from './demo/PubButton/Disabled.vue';
-import LoadingSkeleton from './demo/PubButton/LoadingSkeleton.vue';
-import WithIcon from './demo/PubButton/WithIcon.vue';
-import WithLabel from './demo/PubButton/WithLabel.vue';
-import Icon from './demo/PubButton/Icon.vue';
+import Default from './PubButton/Default.vue';
+import Outline from './PubButton/Outline.vue';
+import Rounded from './PubButton/Rounded.vue';
+import Size from './PubButton/Size.vue';
+import Disabled from './PubButton/Disabled.vue';
+import LoadingSkeleton from './PubButton/LoadingSkeleton.vue';
+import WithIcon from './PubButton/WithIcon.vue';
+import WithLabel from './PubButton/WithLabel.vue';
+import Icon from './PubButton/Icon.vue';
 </script>
 
 # PubButton
@@ -29,7 +29,7 @@ There are a number of themes available for the button, including `'none'`, `'def
   <Default/>
 </demo-container>
 
-<<< @/components/demo/PubButton/Default.vue
+<<< @/components/PubButton/Default.vue
 
 ## Outline buttons
 ### Prop - `outline` Usage
@@ -40,7 +40,7 @@ The `outline` prop can be used to add an outline style to the button.
   <Outline/>
 </demo-container>
 
-<<< @/components/demo/PubButton/Outline.vue
+<<< @/components/PubButton/Outline.vue
 
 ## Pill buttons
 ### Prop - `rounded` Usage
@@ -51,7 +51,7 @@ The `rounded` prop can be used to add rounded corners to the button.
   <Rounded/>
 </demo-container>
 
-<<< @/components/demo/PubButton/Rounded.vue
+<<< @/components/PubButton/Rounded.vue
 
 ## Button sizes
 ### Prop - `size` Usage
@@ -62,7 +62,7 @@ The `size` prop can be used to adjust the size of the button.
   <Size/>
 </demo-container>
 
-<<< @/components/demo/PubButton/Size.vue
+<<< @/components/PubButton/Size.vue
 
 ## Disabled Buttons
 ### Prop - `disabled` Usage
@@ -73,7 +73,7 @@ The `disabled` prop can be used to disable the button.
   <Disabled/>
 </demo-container>
 
-<<< @/components/demo/PubButton/Disabled.vue
+<<< @/components/PubButton/Disabled.vue
 
 ## Button with loading state
 ### Props - `loading` and `skeleton` Usage
@@ -84,7 +84,7 @@ The `loading` prop can be used to display a loading state. The `skeleton` prop c
   <LoadingSkeleton/>
 </demo-container>
 
-<<< @/components/demo/PubButton/LoadingSkeleton.vue
+<<< @/components/PubButton/LoadingSkeleton.vue
 
 ## Buttons with icon
 
@@ -92,7 +92,7 @@ The `loading` prop can be used to display a loading state. The `skeleton` prop c
   <WithIcon/>
 </demo-container>
 
-<<< @/components/demo/PubButton/WithIcon.vue
+<<< @/components/PubButton/WithIcon.vue
 
 ## Button with label 
 
@@ -100,7 +100,7 @@ The `loading` prop can be used to display a loading state. The `skeleton` prop c
     <WithLabel/>
 </demo-container>
 
-<<< @/components/demo/PubButton/WithLabel.vue
+<<< @/components/PubButton/WithLabel.vue
 
 ## Icon buttons
 
@@ -108,7 +108,7 @@ The `loading` prop can be used to display a loading state. The `skeleton` prop c
     <Icon/>
 </demo-container>
 
-<<< @/components/demo/PubButton/Icon.vue
+<<< @/components/PubButton/Icon.vue
 
 ## Reference
 

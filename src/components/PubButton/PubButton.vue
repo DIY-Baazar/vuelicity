@@ -51,11 +51,7 @@ const handleClick = (event: Event) => {
 };
 
 
-const buttonClasses = computed(() => useButtonClasses(toRefs(props)));
-
-const wrapperClasses = computed(() => buttonClasses.value.wrapperClasses);
-const spanClasses = computed(() => buttonClasses.value.spanClasses);
-
+const { wrapperClasses, spanClasses } = useButtonClasses(toRefs(props));
 </script>
 
 <template>

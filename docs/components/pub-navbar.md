@@ -4,9 +4,9 @@ description: Documentation for the PubNavbar component.
 ---
 
 <script setup>
-import Default from './demo/PubNavbar/Default.vue';
-import Solid from './demo/PubNavbar/Solid.vue';
-import WithCTA from './demo/PubNavbar/WithCTA.vue';
+import Default from './PubNavbar/Default.vue';
+import Solid from './PubNavbar/Solid.vue';
+import WithCTA from './PubNavbar/WithCTA.vue';
 </script>
 
 # PubNavbar
@@ -19,7 +19,7 @@ This is a navbar component which can be used to display a navigation menu in a h
   <Default/>
 </demo-container>
 
-<<< @/components/demo/PubNavbar/Default.vue
+<<< @/components/PubNavbar/Default.vue
 
 ## Solid background
 
@@ -27,7 +27,7 @@ This is a navbar component which can be used to display a navigation menu in a h
   <Solid/>
 </demo-container>
 
-<<< @/components/demo/PubNavbar/Solid.vue
+<<< @/components/PubNavbar/Solid.vue
 
 <!-- ## Navbar with dropdown
 
@@ -45,7 +45,7 @@ This is a navbar component which can be used to display a navigation menu in a h
     <WithCTA/>
 </demo-container>
 
-<<< @/components/demo/PubNavbar/WithCTA.vue
+<<< @/components/PubNavbar/WithCTA.vue
 
 <!-- ## Language dropdown
 
