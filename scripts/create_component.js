@@ -91,7 +91,7 @@ const componentExportContent = fs
     .filter((file) => file.endsWith(".vue") && !file.startsWith("_"))
     .sort() // Ensure alphabetical order
     .map((file) => {
-        return { file: file.replace("\\", "/"), component: file.replace(".vue", "").replace("\\", "/").split("/").pop() };
+        return { file: file.replace(/\\/g, "/"), component: file.replace(".vue", "").replace(/\\/g, "/").split("/").pop() };
     })
     .map(({ file, component }) => `export { default as ${component} } from "./${file}";`)
     .join("\n");
