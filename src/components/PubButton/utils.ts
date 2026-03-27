@@ -1,4 +1,4 @@
-import { type Ref, useSlots } from "vue";
+import { type Ref, useSlots, computed } from "vue";
 import type { ButtonRounded, ButtonSize, ButtonTheme } from "./types";
 
 export type ButtonClassMap<T extends string> = { hover: Record<T, string>; default: Record<T, string>; };
@@ -96,27 +96,34 @@ interface UseButtonClassesProps {
     square: Ref<boolean>;
 }
 
-export function useButtonClasses (props: UseButtonClassesProps): { wrapperClasses: string; spanClasses: string; } {
+export function useButtonClasses (props: UseButtonClassesProps): { wrapperClasses: Ref<string>; spanClasses: Ref<string>; } {
     const slots = useSlots();
-    const themeClasses = [
-        props.skeleton.value
-            ? skeletonButtonClasses
-            : [
-                props.outline.value
-                    ? buttonOutlineThemeClasses.default[props.theme.value]
-                    : buttonThemeClasses.default[props.theme.value],
-                props.outline.value
-                    ? buttonOutlineThemeClasses.hover[props.theme.value]
-                    : buttonThemeClasses.hover[props.theme.value]
-            ].join(" ")
-    ];
-    const wrapperClasses = [
-        ...themeClasses,
-        props.square.value ? buttonSquareSizeClasses[props.size.value] : buttonSizeClasses[props.size.value],
-        buttonRoundedClasses[props.rounded.value],
-        props.disabled.value || props.loading.value ? "cursor-not-allowed opacity-50" : "",
-        props.theme.value === "none" ? "border-0" : "border",
-    ].join(" ");
-    const spanClasses = [defaultSpanButtonClasses].join(" ");
+    const wrapperClasses = computed(() => {
+        const themeClasses = [
+            props.skeleton.value
+                ? skeletonButtonClasses
+                : [
+                    props.outline.value
+                        ? buttonOutlineThemeClasses.default[props.theme.value]
+                        : buttonThemeClasses.default[props.theme.value],
+                    props.outline.value
+                        ? buttonOutlineThemeClasses.hover[props.theme.value]
+                        : buttonThemeClasses.hover[props.theme.value]
+                ].join(" ")
+        ];
+
+        return [
+            ...themeClasses,
+            props.square.value ? buttonSquareSizeClasses[props.size.value] : buttonSizeClasses[props.size.value],
+            buttonRoundedClasses[props.rounded.value],
+            props.disabled.value || props.loading.value ? "cursor-not-allowed opacity-50" : "",
+            props.theme.value === "none" ? "border-0" : "border",
+        ].join(" ");
+    });
+
+    const spanClasses = computed(() => {
+        return [defaultSpanButtonClasses].join(" ");
+    });
+    
     return { wrapperClasses, spanClasses };
 }
