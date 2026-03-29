@@ -1,7 +1,7 @@
 <template>
     <pub-card
       img-alt="Desk"
-      img-src="https://flowbite.com/docs/images/blog/image-1.jpg"
+      img-src="/public/images/image003.jpg"
       variant="image"
       class="w-md"
     >
