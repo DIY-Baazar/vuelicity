@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { computed, resolveComponent, toRefs } from "vue";
-import type { PubNavbarLinkProps } from "./types";
+import type { NavbarLinkProps } from "./types";
 import { useNavbarLinkClasses } from "./utils";
 
-const props = withDefaults(defineProps<PubNavbarLinkProps>(), {
+const props = withDefaults(defineProps<NavbarLinkProps>(), {
     link: '/',
     isActive: false,
     as: 'a',

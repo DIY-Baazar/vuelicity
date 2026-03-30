@@ -1,12 +1,12 @@
 import type { Ref } from "vue";
-import type { PubNavbarTheme } from "./types";
+import type { NavbarTheme } from "./types";
 
 
 interface UseNavbarClassesProps {
     sticky: Ref<boolean>;
     rounded: Ref<boolean>;
     solid: Ref<boolean>;
-    theme: Ref<PubNavbarTheme>;
+    theme: Ref<NavbarTheme>;
 }
 
 export function useNavbarClasses (props: UseNavbarClassesProps): {

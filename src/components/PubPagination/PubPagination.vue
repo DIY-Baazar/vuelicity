@@ -1,28 +1,9 @@
 <script lang="ts" setup>
 import { computed } from "vue";
-import type { PaginationLayout, PaginationSize } from "./types";
+import type { PaginationProps } from "./types";
 import { UsePaginationButtonClasses, UseNavigationButtonClasses } from "./utils"
 import PubIcon from "@/components/PubIcon/PubIcon.vue";
 import PubButton from "@/components/PubButton/PubButton.vue";
-
-interface PaginationProps {
-    modelValue?: number
-    totalPages?: number
-    pageSize?: number
-    totalItems?: number
-    size?: PaginationSize
-    sliceSize?: number
-    prevLabel?: string
-    nextLabel?: string
-    firstLabel?: string
-    lastLabel?: string
-    showIcons?: boolean
-    showFirstLast?: boolean
-    hidePrev?: boolean
-    hideNext?: boolean
-    hideLabels?: boolean
-    layout?: PaginationLayout
-}
 
 const emit = defineEmits<{
     'update:model-value': [page: number]

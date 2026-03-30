@@ -1,23 +1,9 @@
 <script lang="ts" setup>
 import { computed, onMounted, ref, toRefs, type Ref } from "vue";
-import type { ModalPosition, ModalSize, ModalZIndex } from "./types";
+import type { ModalProps } from "./types";
 import { useModalClasses } from "./utils";
 import PubButton from "../PubButton/PubButton.vue";
 import PubIcon from "../PubIcon/PubIcon.vue";
-
-interface ModalProps {
-    position?: ModalPosition;
-    size?: ModalSize;
-    isOpen?: boolean;
-    zIndex?: ModalZIndex;
-    class?: string;
-    persistent?: boolean;
-    notEscapeClose?: boolean;
-    notClickClose?: boolean;
-    overlayBlur?: boolean;
-    scrollable?: boolean;
-    focusTrap?: boolean;
-}
 
 const props = withDefaults(defineProps<ModalProps>(), {
     position: "center",

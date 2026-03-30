@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import { computed, resolveComponent } from "vue";
-import type { PubNavbarLogoProps } from "./types";
+import type { NavbarLogoProps } from "./types";
 
-const props = withDefaults(defineProps<PubNavbarLogoProps>(), {
+const props = withDefaults(defineProps<NavbarLogoProps>(), {
     link: "/",
     imageUrl: "/images/logo.png",
     alt: "Logo",

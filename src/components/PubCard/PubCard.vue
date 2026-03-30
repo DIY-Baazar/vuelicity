@@ -1,16 +1,7 @@
 <script lang="ts" setup>
 import { computed, toRefs } from "vue";
-import type { CardVariant } from "./types";
+import type { CardProps } from "./types";
 import { useCardClasses } from "./utils";
-
-interface CardProps {
-    href?: string;
-    imgAlt?: string;
-    imgSrc?: string;
-    variant?: CardVariant;
-    class?: string;
-}
-
 
 const props = withDefaults(defineProps<CardProps>(), {
     href: "",
