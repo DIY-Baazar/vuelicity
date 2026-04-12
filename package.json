@@ -52,6 +52,7 @@
     },
     "dependencies": {
         "postcss-prefix-selector": "^2.1.1",
+        "tailwind-merge": "^3.5.0",
         "tailwindcss": "^4"
     },
     "repository": {

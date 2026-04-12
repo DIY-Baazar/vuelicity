@@ -1,14 +1,10 @@
 <script lang="ts" setup>
-import { computed, toRefs } from "vue";
+import type { ButtonGroupProps } from "./types";
 
-interface PubButtonGroupProps {
-    rounded?: boolean;
-}
-
-const props = withDefaults(defineProps<PubButtonGroupProps>(
+const props = withDefaults(defineProps<ButtonGroupProps>(
 ), {
     rounded: false,
-})
+});
 </script>
 
 <template>

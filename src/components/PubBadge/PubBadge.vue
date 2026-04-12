@@ -1,16 +1,7 @@
 <script lang="ts" setup>
 import { computed, toRefs, useSlots } from "vue";
-import type { BadgeTheme, BadgeSize } from "./types";
+import type { BadgeProps } from "./types";
 import { useBadgeClasses } from "./utils";
-
-interface BadgeProps {
-    theme?: BadgeTheme;
-    size?: BadgeSize;
-    href?: string | null;
-    bordered?: boolean;
-    rounded?: boolean;
-    class?: string;
-}
 
 const props = withDefaults(defineProps<BadgeProps>(), {
     theme: "default",

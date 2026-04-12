@@ -10,3 +10,12 @@ export type BadgeTheme =
     | "dark";
 
 export type BadgeSize = "xs" | "sm" | "md";
+
+export interface BadgeProps {
+    theme?: BadgeTheme;
+    size?: BadgeSize;
+    href?: string | null;
+    bordered?: boolean;
+    rounded?: boolean;
+    class?: string;
+};

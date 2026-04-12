@@ -1,33 +1,14 @@
 <script lang="ts" setup>
 import { computed } from "vue";
-import type { PaginationLayout, PaginationSize } from "./types";
-import { UsePaginationButtonClasses, UseNavigationButtonClasses } from "./utils"
+import type { PaginationProps } from "./types";
+import { UsePaginationButtonClasses, UseNavigationButtonClasses } from "./utils";
 import PubIcon from "@/components/PubIcon/PubIcon.vue";
 import PubButton from "@/components/PubButton/PubButton.vue";
 
-interface PaginationProps {
-    modelValue?: number
-    totalPages?: number
-    pageSize?: number
-    totalItems?: number
-    size?: PaginationSize
-    sliceSize?: number
-    prevLabel?: string
-    nextLabel?: string
-    firstLabel?: string
-    lastLabel?: string
-    showIcons?: boolean
-    showFirstLast?: boolean
-    hidePrev?: boolean
-    hideNext?: boolean
-    hideLabels?: boolean
-    layout?: PaginationLayout
-}
-
 const emit = defineEmits<{
-    'update:model-value': [page: number]
-    'page-changed': [page: number]
-}>()
+    'update:model-value': [page: number];
+    'page-changed': [page: number];
+}>();
 
 const props = withDefaults(defineProps<PaginationProps>(), {
     modelValue: 1,
@@ -49,31 +30,31 @@ const props = withDefaults(defineProps<PaginationProps>(), {
 });
 
 
-const pageButtonClasses = computed(() => UsePaginationButtonClasses(props));
-const navButtonClasses = computed(() => UseNavigationButtonClasses(props));
+const pageButtonClasses = UsePaginationButtonClasses(props);
+const navButtonClasses = UseNavigationButtonClasses(props);
 
 // Custom Functions
-function setPage(index: number) {
+function setPage (index: number) {
     emit('update:model-value', index);
     emit('page-changed', index);
 }
 
-function decreasePage() {
+function decreasePage () {
     emit('update:model-value', props.modelValue - 1);
     emit('page-changed', props.modelValue - 1);
 }
 
-function increasePage() {
+function increasePage () {
     emit('update:model-value', props.modelValue + 1);
     emit('page-changed', props.modelValue + 1);
 }
 
-function goToFirstPage() {
+function goToFirstPage () {
     emit('update:model-value', 1);
     emit('page-changed', 1);
 }
 
-function goToLastPage() {
+function goToLastPage () {
     emit('update:model-value', computedTotalPages.value);
     emit('page-changed', computedTotalPages.value);
 }
@@ -120,7 +101,7 @@ const pagesToDisplay = computed(() => {
         range.push(i);
     }
     return range;
-})
+});
 
 const startCount = computed(() => {
     return (props.modelValue - 1) * props.pageSize + 1;
@@ -139,14 +120,14 @@ const totalCount = computed(() => {
 
 <template>
     <nav aria-label="pagination" class="pub-pagination">
-        <div v-if="layout == 'table'" class="mb-2 text-gray-700 dark:text-gray-400"
+        <div v-if="layout == 'table'" class="mb-2 text-gray-700"
             :class="size == 'lg' ? 'text-base' : 'text-sm'">
             Showing
-            <span class="font-semibold text-gray-900 dark:text-white">{{ startCount }}</span>
+            <span class="font-semibold text-gray-900">{{ startCount }}</span>
             to
-            <span class="font-semibold text-gray-900 dark:text-white">{{ endCount }}</span>
+            <span class="font-semibold text-gray-900">{{ endCount }}</span>
             of
-            <span class="font-semibold text-gray-900 dark:text-white">{{ totalCount }}</span>
+            <span class="font-semibold text-gray-900">{{ totalCount }}</span>
         </div>
 
         <div class="inline-flex" :class="size == 'lg' && 'text-base h-10'">

@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { computed, toRefs } from "vue";
-import type { PubNavbarCollapseProps } from "./types";
+import type { NavbarCollapseProps } from "./types";
 import { useNavbarCollapseClasses } from "./utils";
 
 
-const props = withDefaults(defineProps<PubNavbarCollapseProps>(), {
+const props = withDefaults(defineProps<NavbarCollapseProps>(), {
     isShowMenu: false,
 });
 

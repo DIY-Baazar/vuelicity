@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { computed, ref, toRefs, useSlots } from "vue";
 import { useNavbarClasses } from "./utils";
-import type { PubNavbarProps } from "./types";
+import type { NavbarProps } from "./types";
 import { useBreakpoints } from "@/composables/useBreakpoints";
 import PubIcon from "@/components/PubIcon/PubIcon.vue";
 
@@ -14,7 +14,7 @@ const toggleMobileMenu = () => {
 
 const slots = useSlots();
 
-const props = withDefaults(defineProps<PubNavbarProps>(), {
+const props = withDefaults(defineProps<NavbarProps>(), {
     theme: "default"
 });
 

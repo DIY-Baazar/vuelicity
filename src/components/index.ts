@@ -1,6 +1,10 @@
+export { default as PubAccordion } from "./PubAccordion/PubAccordion.vue";
+export { default as PubAccordionContent } from "./PubAccordion/PubAccordionContent.vue";
+export { default as PubAccordionHeader } from "./PubAccordion/PubAccordionHeader.vue";
+export { default as PubAccordionPanel } from "./PubAccordion/PubAccordionPanel.vue";
 export { default as PubBadge } from "./PubBadge/PubBadge.vue";
-export { default as PubButton } from "./PubButton/PubButton.vue";
 export { default as PubButtonGroup } from "./PubButtonGroup/PubButtonGroup.vue";
+export { default as PubButton } from "./PubButton/PubButton.vue";
 export { default as PubCard } from "./PubCard/PubCard.vue";
 export { default as PubIcon } from "./PubIcon/PubIcon.vue";
 export { default as PubModal } from "./PubModal/PubModal.vue";

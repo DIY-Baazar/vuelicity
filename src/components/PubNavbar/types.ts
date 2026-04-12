@@ -1,15 +1,15 @@
-export type PubNavbarTheme = "default" | "light" | "dark";
+export type NavbarTheme = "default" | "light" | "dark";
 
-interface PubNavbarProps {
+interface NavbarProps {
     class?: string;
     containerClass?: string;
     sticky?: boolean;
     rounded?: boolean;
     solid?: boolean;
-    theme?: PubNavbarTheme;
+    theme?: NavbarTheme;
 }
 
-interface PubNavbarLogoProps {
+interface NavbarLogoProps {
     link?: string;
     imageUrl?: string;
     alt?: string;
@@ -17,11 +17,11 @@ interface PubNavbarLogoProps {
     linkAttr?: string;
 }
 
-interface PubNavbarCollapseProps {
+interface NavbarCollapseProps {
     isShowMenu: boolean;
 }
 
-interface PubNavbarLinkProps {
+interface NavbarLinkProps {
     link?: string;
     isActive?: boolean;
     as?: string;
@@ -29,4 +29,4 @@ interface PubNavbarLinkProps {
     disabled?: boolean;
 }
 
-export type { PubNavbarLogoProps, PubNavbarProps, PubNavbarCollapseProps, PubNavbarLinkProps };
+export type { NavbarLogoProps, NavbarProps, NavbarCollapseProps, NavbarLinkProps };

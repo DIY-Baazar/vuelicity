@@ -1,25 +1,8 @@
 <script lang="ts" setup>
 import { computed, resolveComponent, toRefs } from "vue";
 
-import type { ButtonRounded, ButtonSize, ButtonTheme, ButtonType } from "./types";
+import type { ButtonProps } from "./types";
 import { useButtonClasses } from "./utils";
-
-interface ButtonProps {
-    theme?: ButtonTheme;
-    type?: ButtonType;
-    name?: string;
-    to?: string;
-    disabled?: boolean;
-    class?: string;
-    outline?: boolean;
-    skeleton?: boolean;
-    loading?: boolean;
-    size?: ButtonSize;
-    rounded?: ButtonRounded;
-    square?: boolean;
-    as?: "button" | "a";
-    linkAttr?: string;
-}
 
 const props = withDefaults(defineProps<ButtonProps>(), {
     theme: "default",
