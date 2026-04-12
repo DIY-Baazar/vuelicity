@@ -1,7 +1,9 @@
 <template>
     <pub-accordion>
         <pub-accordion-panel>
-            <pub-accordion-header>What is PehliBazar?</pub-accordion-header>
+            <pub-accordion-header class="hover:bg-blue-200 hover:text-blue-900" activeClass="bg-blue-100 text-blue-900">
+                What is PehliBazar?
+            </pub-accordion-header>
             <pub-accordion-content>
                 <p class="mb-2 text-gray-500">
                     PehliBazar is a premier online marketplace dedicated to bringing you the finest selection of local
@@ -14,7 +16,9 @@
             </pub-accordion-content>
         </pub-accordion-panel>
         <pub-accordion-panel>
-            <pub-accordion-header>How can I track my order?</pub-accordion-header>
+            <pub-accordion-header class="hover:bg-blue-200 hover:text-blue-900" activeClass="bg-blue-100 text-blue-900">
+                How can I track my order?
+            </pub-accordion-header>
             <pub-accordion-content>
                 <p class="mb-2 text-gray-500">
                     Tracking your order is easy! Once your package is dispatched, you will receive a confirmation email
@@ -28,7 +32,9 @@
             </pub-accordion-content>
         </pub-accordion-panel>
         <pub-accordion-panel>
-            <pub-accordion-header>What is your return policy?</pub-accordion-header>
+            <pub-accordion-header class="hover:bg-blue-200 hover:text-blue-900" activeClass="bg-blue-100 text-blue-900">
+                What is your return policy?
+            </pub-accordion-header>
             <pub-accordion-content>
                 <p class="mb-2 text-gray-500">
                     At PehliBazar, we want you to be completely satisfied with your purchase. If for any reason you are

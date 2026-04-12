@@ -1,5 +1,5 @@
 <template>
-    <pub-accordion>
+    <pub-accordion collapsed>
         <pub-accordion-panel>
             <pub-accordion-header>What is PehliBazar?</pub-accordion-header>
             <pub-accordion-content>
@@ -44,5 +44,5 @@
 </template>
 
 <script setup>
-import { PubAccordion, PubAccordionPanel, PubAccordionHeader, PubAccordionContent } from "vuelicity";
+import { PubAccordion, PubAccordionContent, PubAccordionHeader, PubAccordionPanel } from "vuelicity";
 </script>
