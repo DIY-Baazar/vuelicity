@@ -4,6 +4,10 @@ const component_toc = [
         link: "/components/pub-accordion"
     },
     {
+        text: "PubAlert",
+        link: "/components/pub-alert"
+    },
+    {
         text: "PubBadge",
         link: "/components/pub-badge"
     },
