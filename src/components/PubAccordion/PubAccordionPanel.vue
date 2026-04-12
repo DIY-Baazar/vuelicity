@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, inject, onMounted, provide, ref, watch } from "vue";
+import { computed, inject, onMounted, ref, useId, watch } from "vue";
 import type { AccordionPanel, AccordionPanelProps, AccordionState } from "./types";
 
 const props = withDefaults(defineProps<AccordionPanelProps>(), {
@@ -9,7 +9,7 @@ const props = withDefaults(defineProps<AccordionPanelProps>(), {
 const accordionState = ref();
 
 const panelRef = ref<HTMLDivElement>();
-const panelId = Math.random().toString(36).slice(2);
+const panelId = useId();
 
 const accordionPanelState = computed(() =>
     accordionState.value ? accordionState.value.panels.find((panel: AccordionPanel) => panel.id === panelId) : null

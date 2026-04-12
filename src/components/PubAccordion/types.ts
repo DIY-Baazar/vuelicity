@@ -56,35 +56,6 @@ interface AccordionPanelState extends AccordionPanelProps {
     order: number;
 }
 
-interface AccordionStates {
-    [key: string]: AccordionState;
-}
-
-interface GetAccordionStateAttributes {
-    element: Ref<HTMLElement | undefined>;
-}
-
-interface GetAccordionState {
-    (attributes: GetAccordionStateAttributes): AccordionState | null;
-}
-
-interface GetAccordionPanelStateAttributes {
-    accordionState: Ref<AccordionState>;
-    panelId: string;
-}
-
-interface GetAccordionPanelState {
-    ({ accordionState, panelId }: GetAccordionPanelStateAttributes): AccordionPanel | null;
-}
-
-interface UseAccordionState {
-    (accordionId?: string, options?: AccordionProps): {
-        accordionStates: AccordionStates;
-        getAccordionState: GetAccordionState;
-        getAccordionPanelState: GetAccordionPanelState;
-    };
-}
-
 export type {
     AccordionContentProps,
     AccordionHeaderProps,
@@ -93,10 +64,6 @@ export type {
     AccordionProps,
     AccordionState,
     AccordionPanelState,
-    AccordionStates,
-    GetAccordionPanelState,
-    GetAccordionState,
-    UseAccordionState,
     UseAccordionClassesProps,
     UseAccordionHeaderClassesProps,
     UseAccordionContentClassesProps,

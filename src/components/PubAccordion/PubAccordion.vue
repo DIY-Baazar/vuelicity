@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { toRefs, provide } from "vue";
-import type { AccordionProps } from "./types";
+import { toRefs, provide, useId, reactive } from "vue";
+import type { AccordionPanelState, AccordionProps } from "./types";
 import { useAccordionClasses } from "./utils";
 
 const props = withDefaults(defineProps<AccordionProps>(), {
@@ -12,7 +12,14 @@ const props = withDefaults(defineProps<AccordionProps>(), {
 
 const { accordionClasses } = useAccordionClasses(toRefs(props));
 
-const accordionId = Math.random().toString(36).slice(2);
+const accordionId = useId();
+const accordionState = reactive({
+    ...props,
+    id: accordionId,
+    panels: [] as AccordionPanelState[]
+});
+
+provide("accordionState", { accordionState });
 
 provide("accordionState", {
     accordionState: {
