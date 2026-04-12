@@ -1,14 +1,14 @@
 <script lang="ts" setup>
 import { computed } from "vue";
 import type { PaginationProps } from "./types";
-import { UsePaginationButtonClasses, UseNavigationButtonClasses } from "./utils"
+import { UsePaginationButtonClasses, UseNavigationButtonClasses } from "./utils";
 import PubIcon from "@/components/PubIcon/PubIcon.vue";
 import PubButton from "@/components/PubButton/PubButton.vue";
 
 const emit = defineEmits<{
-    'update:model-value': [page: number]
-    'page-changed': [page: number]
-}>()
+    'update:model-value': [page: number];
+    'page-changed': [page: number];
+}>();
 
 const props = withDefaults(defineProps<PaginationProps>(), {
     modelValue: 1,
@@ -30,31 +30,31 @@ const props = withDefaults(defineProps<PaginationProps>(), {
 });
 
 
-const pageButtonClasses = computed(() => UsePaginationButtonClasses(props));
-const navButtonClasses = computed(() => UseNavigationButtonClasses(props));
+const pageButtonClasses = UsePaginationButtonClasses(props);
+const navButtonClasses = UseNavigationButtonClasses(props);
 
 // Custom Functions
-function setPage(index: number) {
+function setPage (index: number) {
     emit('update:model-value', index);
     emit('page-changed', index);
 }
 
-function decreasePage() {
+function decreasePage () {
     emit('update:model-value', props.modelValue - 1);
     emit('page-changed', props.modelValue - 1);
 }
 
-function increasePage() {
+function increasePage () {
     emit('update:model-value', props.modelValue + 1);
     emit('page-changed', props.modelValue + 1);
 }
 
-function goToFirstPage() {
+function goToFirstPage () {
     emit('update:model-value', 1);
     emit('page-changed', 1);
 }
 
-function goToLastPage() {
+function goToLastPage () {
     emit('update:model-value', computedTotalPages.value);
     emit('page-changed', computedTotalPages.value);
 }
@@ -101,7 +101,7 @@ const pagesToDisplay = computed(() => {
         range.push(i);
     }
     return range;
-})
+});
 
 const startCount = computed(() => {
     return (props.modelValue - 1) * props.pageSize + 1;

@@ -1,5 +1,5 @@
 <template>
-    <pub-card img-alt="Desk" img-src="/public/images/image001.jpg" variant="horizontal"
+    <pub-card img-alt="Desk" img-src="/images/image001.jpg" variant="horizontal"
         class="w-lg">
         <div class="p-5">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">

@@ -1,7 +1,7 @@
 <template>
     <pub-card
       img-alt="Desk"
-      img-src="/public/images/image003.jpg"
+      img-src="/images/image003.jpg"
       variant="image"
       class="w-md"
     >
