@@ -120,14 +120,14 @@ const totalCount = computed(() => {
 
 <template>
     <nav aria-label="pagination" class="pub-pagination">
-        <div v-if="layout == 'table'" class="mb-2 text-gray-700 dark:text-gray-400"
+        <div v-if="layout == 'table'" class="mb-2 text-gray-700"
             :class="size == 'lg' ? 'text-base' : 'text-sm'">
             Showing
-            <span class="font-semibold text-gray-900 dark:text-white">{{ startCount }}</span>
+            <span class="font-semibold text-gray-900">{{ startCount }}</span>
             to
-            <span class="font-semibold text-gray-900 dark:text-white">{{ endCount }}</span>
+            <span class="font-semibold text-gray-900">{{ endCount }}</span>
             of
-            <span class="font-semibold text-gray-900 dark:text-white">{{ totalCount }}</span>
+            <span class="font-semibold text-gray-900">{{ totalCount }}</span>
         </div>
 
         <div class="inline-flex" :class="size == 'lg' && 'text-base h-10'">
