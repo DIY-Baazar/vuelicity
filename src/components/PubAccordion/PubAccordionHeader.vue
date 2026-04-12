@@ -9,15 +9,12 @@ const props = withDefaults(defineProps<AccordionHeaderProps>(), {
     class: ""
 });
 
-const headerRef = ref<HTMLDivElement>();
-const panelId = computed(
-    () => (headerRef.value && (headerRef.value.closest("[data-panel-id]") as HTMLElement))?.dataset.panelId
-);
+const panelId = inject<string>("panelId")!;
 
 const accordionState = ref();
 
 const accordionPanelState = computed(() =>
-    accordionState.value?.panels.find((panel: AccordionPanel) => panel.id === panelId.value)
+    accordionState.value?.panels.find((panel: AccordionPanel) => panel.id === panelId)
 );
 
 const { wrapperClasses, actionClasses } = useAccordionHeaderClasses(accordionState, accordionPanelState, toRefs(props));
@@ -29,16 +26,16 @@ onMounted(() => {
 
 const togglePanel = () => {
     if (!accordionPanelState.value) return;
-
-    accordionPanelState.value.isVisible = !accordionPanelState.value.isVisible;
+    
     if (accordionState.value.persistent) {
+        accordionPanelState.value.isVisible = !accordionPanelState.value.isVisible;
         return;
     }
 
     const currentPanelVisibility = accordionPanelState.value.isVisible;
     accordionState.value.panels.forEach((panel: AccordionPanel) => {
-        if (panel.id === panelId.value) {
-            panel.isVisible = currentPanelVisibility;
+        if (panel.id === panelId) {
+            panel.isVisible = !currentPanelVisibility;
         } else {
             panel.isVisible = false;
         }
@@ -47,7 +44,7 @@ const togglePanel = () => {
 </script>
 
 <template>
-    <div ref="headerRef" class="pub-accordion-header">
+    <div class="pub-accordion-header">
         <button type="button" :class="wrapperClasses" @click="togglePanel">
             <slot />
             <pub-icon name="chevron-down" :class="actionClasses" />

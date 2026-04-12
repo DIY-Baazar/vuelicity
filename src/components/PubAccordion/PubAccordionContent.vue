@@ -8,14 +8,11 @@ const props = withDefaults(defineProps<AccordionContentProps>(), {
     activeClass: ""
 });
 
-const contentRef = ref<HTMLDivElement>();
-const panelId = computed(
-    () => (contentRef.value && (contentRef.value.closest("[data-panel-id]") as HTMLElement))?.dataset.panelId
-);
+const panelId = inject<string>("panelId")!;
 
 const accordionState = ref();
 const accordionPanelState = computed(() =>
-    accordionState.value?.panels.find((panel: AccordionPanelState) => panel.id === panelId.value)
+    accordionState.value?.panels.find((panel: AccordionPanelState) => panel.id === panelId)
 );
 
 const { contentClasses } = useAccordionContentClasses(accordionState, accordionPanelState, toRefs(props));

@@ -1,18 +1,21 @@
 <script lang="ts" setup>
-import { computed, inject, onMounted, ref, useId, watch } from "vue";
-import type { AccordionPanel, AccordionPanelProps, AccordionState } from "./types";
+import { computed, inject, onMounted, provide, useId, watch } from "vue";
+import type { AccordionPanel, AccordionPanelProps, AccordionPanelState, AccordionState } from "./types";
 
 const props = withDefaults(defineProps<AccordionPanelProps>(), {
     activeClass: ""
 });
 
-const accordionState = ref();
+const { accordionState, registerPanel } = inject<{
+    accordionState: AccordionState;
+    registerPanel: (panel: AccordionPanelState) => void;
+}>("accordionState")!;
 
-const panelRef = ref<HTMLDivElement>();
 const panelId = useId();
+provide("panelId", panelId);
 
 const accordionPanelState = computed(() =>
-    accordionState.value ? accordionState.value.panels.find((panel: AccordionPanel) => panel.id === panelId) : null
+    accordionState.panels.find((panel: AccordionPanelState) => panel.id === panelId)
 );
 
 const isVisible = computed(() => accordionPanelState.value?.isVisible);
@@ -31,25 +34,21 @@ watch(isVisible, (value) => {
 });
 
 onMounted(() => {
-    const { accordionState: newAccordionState } = inject<{ accordionState: AccordionState }>("accordionState")!;
-    accordionState.value = newAccordionState;
+    const panelOrder = accordionState.panels.length;
 
-    const panelIdx =
-        panelRef.value && panelRef.value.parentElement
-            ? Array.from(panelRef.value.parentElement.children).indexOf(panelRef.value)
-            : 0;
-
-    accordionState.value.panels.push({
+    const panel: AccordionPanel = {
         ...props,
         id: panelId,
-        isVisible: (panelIdx === 0 && !accordionState.value.collapsed) || false,
-        order: panelIdx
-    });
+        isVisible: (panelOrder === 0 && !accordionState.collapsed) || false,
+        order: panelOrder
+    };
+
+    registerPanel(panel);
 });
 </script>
 
 <template>
-    <div :class="['pub-accordion-panel']" ref="panelRef" :data-panel-id="panelId">
+    <div :class="['pub-accordion-panel']" :data-panel-id="panelId">
         <slot />
     </div>
 </template>

@@ -19,15 +19,11 @@ const accordionState = reactive({
     panels: [] as AccordionPanelState[]
 });
 
-provide("accordionState", { accordionState });
+const registerPanel = (panel: AccordionPanelState) => {
+    accordionState.panels.push(panel);
+}
 
-provide("accordionState", {
-    accordionState: {
-        ...props,
-        id: accordionId,
-        panels: []
-    }
-});
+provide("accordionState", { accordionState, registerPanel });
 </script>
 
 <template>
