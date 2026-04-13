@@ -27,6 +27,8 @@ This is an accordion component that can be used to display content in an accordi
 
 ### Prop - `persistent` Usage
 
+The `persistent` prop can be used to keep the items open when another item is clicked.
+
 <demo-container>
     <Persistent />
 </demo-container>
@@ -37,6 +39,8 @@ This is an accordion component that can be used to display content in an accordi
 
 ### Prop - `flushed` Usage
 
+The `flushed` prop can be used to remove the default background-color and rounded corners.
+
 <demo-container>
     <Flushed />
 </demo-container>
@@ -46,6 +50,8 @@ This is an accordion component that can be used to display content in an accordi
 ## Initially collapsed
 
 ### Prop - `collapsed` Usage
+
+The `collapsed` prop can be used to collapse the accordion to the first open item.
 
 <demo-container>
     <Collapsed />
