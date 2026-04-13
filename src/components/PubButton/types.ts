@@ -1,3 +1,5 @@
+import type { ClassInput } from "@/types/global";
+
 export type ButtonTheme =
     | "none"
     | "default"
@@ -18,7 +20,7 @@ export interface ButtonProps {
     name?: string;
     to?: string;
     disabled?: boolean;
-    class?: string;
+    class?: ClassInput;
     outline?: boolean;
     skeleton?: boolean;
     loading?: boolean;

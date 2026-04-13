@@ -8,6 +8,10 @@ description: Documentation for the PubAlert component.
     import WithIcon from './PubAlert/WithIcon.vue';
     import Bordered from './PubAlert/Bordered.vue';
     import WithList from './PubAlert/WithList.vue';
+    import Accented from './PubAlert/Accented.vue';
+    import Dismissible from './PubAlert/Dismissible.vue';
+    import Additional from './PubAlert/Additional.vue';
+    import Announcement from './PubAlert/Announcement.vue';
 </script>
 
 # PubAlert
@@ -60,10 +64,59 @@ The `bordered` prop can be used to add a border to the alert.
 
 ## Border accent
 
+<demo-container>
+    <Accented />
+</demo-container>
+
+<<< @/components/PubAlert/Accented.vue
+
 ## Dismissible alerts
+
+<demo-container>
+    <Dismissible />
+</demo-container>
+
+<<< @/components/PubAlert/Dismissible.vue
 
 ## Additional content
 
+<demo-container>
+    <Additional />
+</demo-container>
+
+<<< @/components/PubAlert/Additional.vue
+
 ## Announcements alerts
 
+<demo-container>
+    <Announcement />
+</demo-container>
+
+<<< @/components/PubAlert/Announcement.vue
+
 ## Reference
+
+### Properties
+
+| Name        | Type    | Default  | Description                                | Options                                            |
+| :---------- | :------ | :------- | :----------------------------------------- | :------------------------------------------------- |
+| theme       | String  | `'blue'` | The color theme of the alert.              | `'blue'`, `'red'`, `'yellow'`, `'green'`, `'dark'` |
+| dismissible | Boolean | `false`  | Whether the alert is dismissible.          |                                                    |
+| bordered    | Boolean | `false`  | Whether to add a border to the alert.      |                                                    |
+| showIcon    | Boolean | `false`  | Whether to display an icon in the alert.   |                                                    |
+| duration    | Number  | `5000`   | The duration of the alert in milliseconds. |                                                    |
+
+### Slots
+
+| Name         | Description                     |
+| ------------ | ------------------------------- |
+| default      | The main content of the alert.  |
+| icon         | Slot for a custom icon.         |
+| close-button | Slot for a custom close button. |
+| title        | Slot for a custom title.        |
+
+### Events
+
+| Name  | Description                       |
+| ----- | --------------------------------- |
+| close | Emitted when the alert is closed. |

@@ -1,13 +1,14 @@
 import { useMergeClasses } from "@/composables/useMergeClasses";
-import { computed, type Ref } from "vue";
+import { computed, normalizeClass, useSlots, type Ref } from "vue";
 import type { AlertTheme } from "./types";
+import type { ClassRef } from "@/types/global";
 
 interface UseAlertClassesProps {
     theme: Ref<AlertTheme>;
     bordered: Ref<boolean>;
     showIcon: Ref<boolean>;
-    closable: Ref<boolean>;
-    hasTitle: Ref<boolean>;
+    dismissible: Ref<boolean>;
+    class: ClassRef;
 }
 
 const defaultAlertClasses = "p-4 gap-3 text-sm rounded-lg";
@@ -26,7 +27,7 @@ const alertBorderedClasses: Record<AlertTheme, string> = {
     dark: "border-grey-800"
 };
 
-const defaultCloseButtonClasses = "ml-auto -mr-1.5 -my-1.5 rounded-lg focus:ring-2 p-1.5 inline-flex h-8 w-8";
+const defaultCloseButtonClasses = "ml-auto -mr-1.5 -my-1.5 rounded-lg focus:ring-2 border-0";
 const closeButtonThemeClasses: Record<AlertTheme, string> = {
     blue: "text-blue-500 bg-blue-50 hover:bg-blue-200 focus:ring-blue-400",
     green: "text-green-500 bg-green-50 hover:bg-green-200 focus:ring-green-400",
@@ -37,12 +38,15 @@ const closeButtonThemeClasses: Record<AlertTheme, string> = {
 
 
 export function useAlertClasses (props: UseAlertClassesProps) {
+    const slots = useSlots();
+
     const wrapperClasses = computed(() =>
         useMergeClasses([
             defaultAlertClasses,
             alertThemeClasses[props.theme.value],
             alertBorderedClasses[props.theme.value],
-            (props.showIcon?.value || props.closable?.value) && !props.hasTitle.value ? "flex items-center" : "",
+            normalizeClass(props.class?.value),
+            (props.showIcon?.value || props.dismissible?.value) && !slots.title ? "flex items-center" : "",
             props.bordered?.value ? "border" : "",
         ])
     );
