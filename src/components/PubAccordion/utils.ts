@@ -41,7 +41,7 @@ export function useAccordionHeaderClasses (
             !isLastPanel.value ? "border-b-0" : "",
             isFlushed.value ? flushedAccordionHeaderClasses : defaultAccordionHeaderClasses,
             isPanelVisible.value ? 'text-gray-900' : 'text-gray-500',
-            (isPanelVisible.value && !isFlushed.value) ? 'bg-gray-100 dark:bg-gray-800' : '',
+            (isPanelVisible.value && !isFlushed.value) ? 'bg-gray-100' : '',
             isPanelVisible.value ? props.activeClass.value : "",
             normalizeClass(props.class.value)
         ])
