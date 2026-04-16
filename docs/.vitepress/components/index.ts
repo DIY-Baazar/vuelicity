@@ -8,6 +8,10 @@ const component_toc = [
         link: "/components/pub-alert"
     },
     {
+        text: "PubAvatar",
+        link: "/components/pub-avatar"
+    },
+    {
         text: "PubBadge",
         link: "/components/pub-badge"
     },
