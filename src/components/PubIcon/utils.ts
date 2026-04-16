@@ -17,7 +17,7 @@ const iconSizeClasses: Record<IconSize, string> = {
 };
 
 const iconThemeClasses: Record<IconTheme, string> = {
-    default: "text-dark dark:text-white",
+    default: "text-inherit",
     blue: "text-blue",
     red: "text-red",
     yellow: "text-yellow",
@@ -49,7 +49,7 @@ interface UseIconClassesProps {
 export function useIconClasses (props: UseIconClassesProps): string {
     const wrapperClasses = [
         "inline-block",
-        props.size.value ? iconSizeClasses[props.size.value]: "",
+        props.size.value && !props.aschild.value ? iconSizeClasses[props.size.value]: "",
         props.theme.value && !props.aschild.value ? iconThemeClasses[props.theme.value] : "",
         props.rotate.value ? "rotate-90" : "",
         props.flip.value ? "scale-x-[-1]" : "",

@@ -1,11 +1,11 @@
 export type AvatarSize = "xs" | "sm" | "md" | "lg" | "xl";
 export type AvatarStatus = "online" | "offline" | "away" | "busy";
-export type AvatarStatusPosition = "top" | "right" | "bottom" | "left";
-
+export type AvatarStatusPosition = "top-right" | "top-left" | "bottom-right" | "bottom-left";
+export type AvatarType = "rounded" | "default";
 
 export interface AvatarProps {
     size?: AvatarSize;
-    src?: string;
+    src?: string | null;
     rounded?: boolean;
     bordered?: boolean;
     class?: string;
@@ -15,3 +15,5 @@ export interface AvatarProps {
     initials?: string | null;
     stacked?: boolean;
 }
+
+export type AvatarDotIndicatorPositionClasses = `${AvatarStatusPosition}-${AvatarType}`;

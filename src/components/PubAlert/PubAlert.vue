@@ -40,7 +40,7 @@ function handleClose() {
         <div v-if="visible" v-bind="attrs" :class="['pub-alert', wrapperClasses]" role="alert">
             <div class="flex items-center gap-3">
                 <slot v-if="props.showIcon || slots.icon" name="icon">
-                    <pub-icon name="info-circle" size="xs" aschild />
+                    <pub-icon name="info-circle" size="xs" />
                 </slot>
                 <slot name="title" />
             </div>
@@ -56,7 +56,7 @@ function handleClose() {
                     @click="handleClose"
                 >
                     <span class="sr-only">Dismiss</span>
-                    <pub-icon name="close" size="xs" aschild />
+                    <pub-icon name="close" size="xs" />
                 </pub-button>
             </slot>
         </div>
