@@ -1,13 +1,13 @@
 <template>
-    <pub-badge theme="blue">
+    <pub-badge theme="light">
         <template #icon>
-            <pub-icon name="sun" size="xs" aschild />
+            <pub-icon name="sun" size="xs" />
         </template>
-        Blue
+        Light
     </pub-badge>
     <pub-badge theme="dark">
         <template #icon>
-            <pub-icon name="sun" size="xs" aschild />
+            <pub-icon name="moon" type="outline" size="xs" />
         </template>
         Dark
     </pub-badge>

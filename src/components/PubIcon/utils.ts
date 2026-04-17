@@ -1,5 +1,4 @@
-import { type Ref } from "vue";
-import type { IconSize, IconTheme, IconType } from "./types";
+import type { IconSize, IconTheme, IconType, UseIconClassesProps } from "./types";
 
 const iconSizeClasses: Record<IconSize, string> = {
     "2xs": "w-2 h-2",
@@ -33,17 +32,6 @@ const iconTypeClasses: Record<IconType, string> = {
     "solid": "icon-solid",
     "outline": "icon-outline",
     "duotone": "icon-duotone"
-}
-
-interface UseIconClassesProps {
-    size: Ref<IconSize | undefined>;
-    type: Ref<IconType | undefined>;
-    theme: Ref<IconTheme | undefined>;
-    rotate: Ref<boolean | undefined>;
-    flip: Ref<boolean | undefined>;
-    spin: Ref<boolean | undefined>;
-    mirror: Ref<boolean | undefined>;
-    aschild: Ref<boolean | undefined>;
 }
 
 export function useIconClasses (props: UseIconClassesProps): string {

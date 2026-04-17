@@ -37,7 +37,7 @@ const props = withDefaults(defineProps<IconProps>(), {
 
 const iconClasses = computed(() => useIconClasses(toRefs(props)));
 
-const iconBody = computed(() => getIconBody(props.name));
+const iconBody = computed(() => getIconBody(toRefs(props)));
 </script>
 
 <template>

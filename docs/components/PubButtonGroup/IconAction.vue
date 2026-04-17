@@ -1,10 +1,8 @@
 <template>
     <pub-button-group>
+        <pub-button theme="blue" outline> Save Book </pub-button>
         <pub-button theme="blue" outline>
-            Save Book
-        </pub-button>
-        <pub-button theme="blue" outline>
-            <pub-icon name="bookmark" aschild />
+            <pub-icon name="bookmark" type="outline" />
         </pub-button>
     </pub-button-group>
 </template>
