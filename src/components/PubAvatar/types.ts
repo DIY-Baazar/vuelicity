@@ -16,4 +16,9 @@ export interface AvatarProps {
     stacked?: boolean;
 }
 
+export interface AvatarStackCounterProps {
+    total: number;
+    href: string;
+}
+
 export type AvatarDotIndicatorPositionClasses = `${AvatarStatusPosition}-${AvatarType}`;

@@ -13,11 +13,11 @@ interface UseAvatarClassesProps {
 }
 
 const avatarSizeClasses: Record<AvatarSize, string> = {
-    xs: "w-6 h-6",
-    sm: "w-8 h-8",
-    md: "w-10 h-10",
-    lg: "w-12 h-12",
-    xl: "w-14 h-14"
+    xs: 'w-6 h-6',
+    sm: 'w-8 h-8',
+    md: 'w-10 h-10',
+    lg: 'w-20 h-20',
+    xl: 'w-36 h-36',
 };
 
 const avatarPlaceholderSizes: Record<AvatarSize, string> = {

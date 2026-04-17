@@ -101,15 +101,13 @@ The `icon` slot can be used to add an icon to the badge.
 
 ### Properties
 
-
-| Name  | Type   | Default     | Description                                                          | Options                                                                                           |
-| :---- | :----- | :---------- | :------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------ |
-| theme | String | `'default'` | The color theme of the badge.                                        | `'default'`, `'blue'`, `'red'`, `'yellow'`, `'green'`, `'magenta'`, `'cyan'`, `'light'`, `'dark'` |
-| size  | String | `'xs'`      | The size of the badge.                                               | `'xs'`, `'sm'`, `'md'`                                                                            |
-| href  | String | `null`      | The URL to link to. If provided, the badge renders as an anchor tag. |                                                                                                   |
-| bordered | Boolean | `false` | Whether to add a border to the badge. |  |  
-| rounded | Boolean | `false` | Whether to add rounded corners to the badge. |  |  
-
+| Name     | Type    | Default     | Description                                                          | Options                                                                                           |
+| :------- | :------ | :---------- | :------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------ |
+| theme    | String  | `'default'` | The color theme of the badge.                                        | `'default'`, `'blue'`, `'red'`, `'yellow'`, `'green'`, `'magenta'`, `'cyan'`, `'light'`, `'dark'` |
+| size     | String  | `'xs'`      | The size of the badge.                                               | `'xs'`, `'sm'`, `'md'`                                                                            |
+| href     | String  | `null`      | The URL to link to. If provided, the badge renders as an anchor tag. |                                                                                                   |
+| bordered | Boolean | `false`     | Whether to add a border to the badge.                                |                                                                                                   |
+| rounded  | Boolean | `false`     | Whether to add rounded corners to the badge.                         |                                                                                                   |
 
 ### Slots
 
