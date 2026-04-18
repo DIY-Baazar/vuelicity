@@ -1,12 +1,12 @@
 <template>
     <pub-badge theme="blue">
         <template #icon>
-            <pub-icon name="sun" aschild />
+            <pub-icon name="sun" />
         </template>
     </pub-badge>
     <pub-badge theme="dark">
         <template #icon>
-            <pub-icon name="sun" size="xs" aschild />
+            <pub-icon name="sun" size="xs" />
         </template>
     </pub-badge>
 </template>

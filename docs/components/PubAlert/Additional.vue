@@ -11,7 +11,7 @@
             <div class="flex gap-2">
                 <pub-button theme="green" size="sm" rounded="md">
                     <template #prepend>
-                        <pub-icon name="eye" aschild size="xs" />
+                        <pub-icon name="eye" />
                     </template>
                     View More
                 </pub-button>
@@ -33,7 +33,7 @@
             <div class="flex gap-2">
                 <pub-button theme="red" size="sm" rounded="md">
                     <template #prepend>
-                        <pub-icon name="eye" aschild size="xs" />
+                        <pub-icon name="eye" />
                     </template>
                     View More
                 </pub-button>

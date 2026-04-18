@@ -1,5 +1,4 @@
-import { type Ref } from "vue";
-import type { IconSize, IconTheme, IconType } from "./types";
+import type { IconSize, IconTheme, IconType, UseIconClassesProps } from "./types";
 
 const iconSizeClasses: Record<IconSize, string> = {
     "2xs": "w-2 h-2",
@@ -17,7 +16,7 @@ const iconSizeClasses: Record<IconSize, string> = {
 };
 
 const iconThemeClasses: Record<IconTheme, string> = {
-    default: "text-dark dark:text-white",
+    default: "text-inherit",
     blue: "text-blue",
     red: "text-red",
     yellow: "text-yellow",
@@ -35,21 +34,10 @@ const iconTypeClasses: Record<IconType, string> = {
     "duotone": "icon-duotone"
 }
 
-interface UseIconClassesProps {
-    size: Ref<IconSize | undefined>;
-    type: Ref<IconType | undefined>;
-    theme: Ref<IconTheme | undefined>;
-    rotate: Ref<boolean | undefined>;
-    flip: Ref<boolean | undefined>;
-    spin: Ref<boolean | undefined>;
-    mirror: Ref<boolean | undefined>;
-    aschild: Ref<boolean | undefined>;
-}
-
 export function useIconClasses (props: UseIconClassesProps): string {
     const wrapperClasses = [
         "inline-block",
-        props.size.value ? iconSizeClasses[props.size.value]: "",
+        props.size.value && !props.aschild.value ? iconSizeClasses[props.size.value]: "",
         props.theme.value && !props.aschild.value ? iconThemeClasses[props.theme.value] : "",
         props.rotate.value ? "rotate-90" : "",
         props.flip.value ? "scale-x-[-1]" : "",

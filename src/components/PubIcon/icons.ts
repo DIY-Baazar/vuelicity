@@ -1,3 +1,5 @@
+import type { UseIconClassesProps } from "./types";
+
 export const iconPathMap: Record<string, string | string[]> = {
     // Alert Icons
     close: "M12.8171 12.11L21.5735 20.8664Q21.6084 20.9013 21.6357 20.9422Q21.6631 20.9832 21.6819 21.0287Q21.7008 21.0742 21.7104 21.1225Q21.72 21.1708 21.72 21.22Q21.72 21.2692 21.7104 21.3175Q21.7008 21.3658 21.6819 21.4113Q21.6631 21.4568 21.6357 21.4978Q21.6084 21.5387 21.5735 21.5736Q21.5387 21.6084 21.4978 21.6357Q21.4568 21.6631 21.4113 21.6819Q21.3658 21.7008 21.3175 21.7104Q21.2692 21.72 21.22 21.72Q21.1707 21.72 21.1224 21.7104Q21.0741 21.7008 21.0286 21.6819Q20.9831 21.6631 20.9422 21.6357Q20.9013 21.6084 20.8664 21.5736L12.11 12.8171L3.35355 21.5735Q3.28323 21.6439 3.19134 21.6819Q3.09946 21.72 3 21.72Q2.90054 21.72 2.80866 21.6819Q2.71677 21.6439 2.64645 21.5735Q2.61162 21.5387 2.58426 21.4978Q2.55691 21.4568 2.53806 21.4113Q2.51921 21.3658 2.50961 21.3175Q2.5 21.2692 2.5 21.22Q2.5 21.1707 2.50961 21.1224Q2.51921 21.0741 2.53806 21.0286Q2.55691 20.9831 2.58427 20.9422Q2.61162 20.9013 2.64645 20.8664L11.4029 12.11L2.64645 3.35355Q2.57612 3.28323 2.53806 3.19134Q2.5 3.09946 2.5 3Q2.5 2.90054 2.53806 2.80866Q2.57612 2.71677 2.64645 2.64645Q2.71677 2.57612 2.80866 2.53806Q2.90054 2.5 3 2.5Q3.09946 2.5 3.19134 2.53806Q3.28323 2.57612 3.35355 2.64645L12.11 11.4029L20.8664 2.64645Q20.9013 2.61162 20.9422 2.58426Q20.9832 2.55691 21.0287 2.53806Q21.0742 2.51921 21.1225 2.50961Q21.1708 2.5 21.22 2.5Q21.2692 2.5 21.3175 2.50961Q21.3658 2.51921 21.4113 2.53806Q21.4568 2.55691 21.4978 2.58427Q21.5387 2.61162 21.5736 2.64645Q21.6439 2.71677 21.6819 2.80866Q21.72 2.90054 21.72 3Q21.72 3.09946 21.6819 3.19134Q21.6439 3.28323 21.5736 3.35355L12.8171 12.11Z",
@@ -34,10 +36,16 @@ export const iconPathMap: Record<string, string | string[]> = {
     // Ecommerce
     cart: "M1 4.5a.5.5 0 0 1 0-1h3.3a.5.5 0 0 1 .49.42l1.73 11.58H19.5a1.5 1.5 0 0 0 1.44-1.44l2-8a1.5 1.5 0 0 0-1.44-1.56H6.9a.5.5 0 0 1 0-1h14.6a2.5 2.5 0 0 1 2.44 2.56l-2 8A2.5 2.5 0 0 1 19.5 16.5H6.2a.5.5 0 0 1-.5-.43L4 4.5H1z M8.5 18.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm9 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z",
     love: "M12 21.35l-1.45-1.45C5.4 14.75 2 11.6 2 7.5 2 4.46 4.46 2 7.5 2c1.93 0 3.68 1.03 4.5 2.5C12.82 3.03 14.57 2 16.5 2 19.54 2 22 4.46 22 7.5c0 4.1-3.4 7.25-8.55 12.4L12 21.35z",
-    sun: "M12 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7zm0 1a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9z M11.5 2.5a.5.5 0 0 1 1 0v2a.5.5 0 0 1-1 0v-2z M11.5 19.5a.5.5 0 0 1 1 0v2a.5.5 0 0 1-1 0v-2z M21.5 11.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1h2z M4.5 11.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1h2z M18.4 4.9a.5.5 0 0 1 .7.7l-1.4 1.4a.5.5 0 0 1-.7-.7l1.4-1.4z M5.6 17.7a.5.5 0 0 1 .7.7l-1.4 1.4a.5.5 0 0 1-.7-.7l1.4-1.4z M19.1 18.4a.5.5 0 0 1-.7.7l-1.4-1.4a.5.5 0 0 1 .7-.7l1.4 1.4z M4.9 5.6a.5.5 0 0 1 .7-.7l1.4 1.4a.5.5 0 0 1-.7.7l-1.4-1.4z",
     eye: "M12 5.5c-5 0-9.27 3.11-11 7.5a12.1 12.1 0 0 0 22 0c-1.73-4.39-6-7.5-11-7.5zm0 13a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11zm0-9a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z",
-    
+    user: "M12 10.8a3.6 3.6 0 1 0 0-7.2 3.6 3.6 0 0 0 0 7.2zm-8.4 10.8a8.4 8.4 0 1 1 16.8 0H3.6z",
+    user_circle: [
+        "circle:12:12:9",
+        "M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0z",
+        "M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975"
+    ],
     // Navigations
+    sun: "M12 16.5a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9z M11.5 2.5a.5.5 0 0 1 1 0v2a.5.5 0 0 1-1 0v-2z M11.5 19.5a.5.5 0 0 1 1 0v2a.5.5 0 0 1-1 0v-2z M21.5 11.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1h2z M4.5 11.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1h2z M18.4 4.9a.5.5 0 0 1 .7.7l-1.4 1.4a.5.5 0 0 1-.7-.7l1.4-1.4z M5.6 17.7a.5.5 0 0 1 .7.7l-1.4 1.4a.5.5 0 0 1-.7-.7l1.4-1.4z M19.1 18.4a.5.5 0 0 1-.7.7l-1.4-1.4a.5.5 0 0 1 .7-.7l1.4 1.4z M4.9 5.6a.5.5 0 0 1 .7-.7l1.4 1.4a.5.5 0 0 1-.7.7l-1.4-1.4z",
+    moon: "M12 21a9 9 0 0 1-.5-17.986V3c-.354.966-.5 1.911-.5 3a9 9 0 0 0 9 9c.239 0 .254.018.488 0A9.004 9.004 0 0 1 12 21Z",
     bars: "M4.5 5.5h15a.5.5 0 0 1 0 1h-15a.5.5 0 0 1 0-1z M4.5 11.5h15a.5.5 0 0 1 0 1h-15a.5.5 0 0 1 0-1z M4.5 17.5h15a.5.5 0 0 1 0 1h-15a.5.5 0 0 1 0-1z",
     chevron_left: "M13.65 5.95a.5.5 0 0 1 .7.7L9.35 11.65a.5.5 0 0 0 0 .7L14.35 17.35a.5.5 0 0 1-.7.7L8.3 12.7a1 1 0 0 1 0-1.4l5.35-5.35z",
     chevron_right: "M10.35 5.95a.5.5 0 0 0-.7.7L14.65 11.65a.5.5 0 0 1 0 .7L9.65 17.35a.5.5 0 0 0 .7.7L15.7 12.7a1 1 0 0 0 0-1.4L10.35 5.95z",
@@ -88,26 +96,40 @@ const iconAliasMap: Record<string, string> = {
     // "heart-fill": "love_fill",
     "heart": "love",
     "light-mode": "sun",
+    "dark-mode": "moon",
+    "user-circle": "user_circle",
 };
 
 export const iconsList = Object.keys(iconPathMap);
 
-export function getIconBody (name: string): string {
-    const iconPath = iconPathMap[iconAliasMap[name] || name] || "";
+export function getIconBody (props: UseIconClassesProps): string {
+    const iconPath = iconPathMap[iconAliasMap[props.name.value!] || props.name.value!] || "";
+    let svgFill = "", svgStroke = "", svgStrokeWidth = "", svgOverlapPathStroke = "";
     if (iconPath) {
+        if (props.type.value === "solid") {
+            svgFill = "currentColor";
+            svgStroke = "none";
+            svgStrokeWidth = "0";
+            svgOverlapPathStroke = "white";
+        } else if (props.type.value === "outline") {
+            svgFill = "none";
+            svgStroke = "currentColor";
+            svgStrokeWidth = "1";
+            svgOverlapPathStroke = "currentColor";
+        }
         if (Array.isArray(iconPath)) {
             const iconPaths = iconPath
                 .map((p) => {
                     if (p.startsWith("circle")) {
                         const [_, cx, cy, r] = p.split(":");
-                        return `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="currentColor" stroke-width="1"/>`;
+                        return `<circle cx="${cx}" cy="${cy}" r="${r}" fill="${svgFill}" stroke="${svgStroke}" stroke-width="1"/>`;
                     }
-                    return `<path fill="currentColor" transform="translate(0.5, 0.5)" d="${p}"/>`;
+                    return `<path fill="${svgFill}" stroke="${svgOverlapPathStroke}" transform="translate(0.5, 0.5)" d="${p}"/>`;
                 })
                 .join("");
             return `<g>${iconPaths}</g>`;
         }
-        return `<path fill="currentColor" d="${iconPath}"/>`;
+        return `<path fill="${svgFill}" stroke="${svgStroke}" stroke-width="${svgStrokeWidth}" d="${iconPath}"/>`;
     }
     return "";
 }
