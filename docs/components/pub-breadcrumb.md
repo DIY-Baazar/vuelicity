@@ -65,10 +65,10 @@ The `arrow-icon` and `home-icon` slots can be used to customize the icons used i
 
 #### Properties
 
-| Name | Type   | Default | Description                                      | Options |
-| :--- | :----- | :------ | :----------------------------------------------- | :------ |
-| href | String | `''`    | The URL to navigate to when the link is clicked. |         |
-| icon | String | `''`    | The icon to display next to the link text.       |         |
+| Name | Type    | Default | Description                                      | Options |
+| :--- | :------ | :------ | :----------------------------------------------- | :------ |
+| href | String  | `null`  | The URL to navigate to when the link is clicked. |         |
+| home | Boolean | `false` | The icon to display next to the link text.       |         |
 
 #### Slots
 
