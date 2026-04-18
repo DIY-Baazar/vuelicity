@@ -44,7 +44,7 @@ export const iconPathMap: Record<string, string | string[]> = {
         "M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975"
     ],
     // Navigations
-    sun: "M12 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7zm0 1a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9z M11.5 2.5a.5.5 0 0 1 1 0v2a.5.5 0 0 1-1 0v-2z M11.5 19.5a.5.5 0 0 1 1 0v2a.5.5 0 0 1-1 0v-2z M21.5 11.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1h2z M4.5 11.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1h2z M18.4 4.9a.5.5 0 0 1 .7.7l-1.4 1.4a.5.5 0 0 1-.7-.7l1.4-1.4z M5.6 17.7a.5.5 0 0 1 .7.7l-1.4 1.4a.5.5 0 0 1-.7-.7l1.4-1.4z M19.1 18.4a.5.5 0 0 1-.7.7l-1.4-1.4a.5.5 0 0 1 .7-.7l1.4 1.4z M4.9 5.6a.5.5 0 0 1 .7-.7l1.4 1.4a.5.5 0 0 1-.7.7l-1.4-1.4z",
+    sun: "M12 16.5a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9z M11.5 2.5a.5.5 0 0 1 1 0v2a.5.5 0 0 1-1 0v-2z M11.5 19.5a.5.5 0 0 1 1 0v2a.5.5 0 0 1-1 0v-2z M21.5 11.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1h2z M4.5 11.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1h2z M18.4 4.9a.5.5 0 0 1 .7.7l-1.4 1.4a.5.5 0 0 1-.7-.7l1.4-1.4z M5.6 17.7a.5.5 0 0 1 .7.7l-1.4 1.4a.5.5 0 0 1-.7-.7l1.4-1.4z M19.1 18.4a.5.5 0 0 1-.7.7l-1.4-1.4a.5.5 0 0 1 .7-.7l1.4 1.4z M4.9 5.6a.5.5 0 0 1 .7-.7l1.4 1.4a.5.5 0 0 1-.7.7l-1.4-1.4z",
     moon: "M12 21a9 9 0 0 1-.5-17.986V3c-.354.966-.5 1.911-.5 3a9 9 0 0 0 9 9c.239 0 .254.018.488 0A9.004 9.004 0 0 1 12 21Z",
     bars: "M4.5 5.5h15a.5.5 0 0 1 0 1h-15a.5.5 0 0 1 0-1z M4.5 11.5h15a.5.5 0 0 1 0 1h-15a.5.5 0 0 1 0-1z M4.5 17.5h15a.5.5 0 0 1 0 1h-15a.5.5 0 0 1 0-1z",
     chevron_left: "M13.65 5.95a.5.5 0 0 1 .7.7L9.35 11.65a.5.5 0 0 0 0 .7L14.35 17.35a.5.5 0 0 1-.7.7L8.3 12.7a1 1 0 0 1 0-1.4l5.35-5.35z",
@@ -110,7 +110,7 @@ export function getIconBody (props: UseIconClassesProps): string {
             svgFill = "currentColor";
             svgStroke = "none";
             svgStrokeWidth = "0";
-            svgOverlapPathStroke = "transparent";
+            svgOverlapPathStroke = "white";
         } else if (props.type.value === "outline") {
             svgFill = "none";
             svgStroke = "currentColor";
@@ -124,7 +124,7 @@ export function getIconBody (props: UseIconClassesProps): string {
                         const [_, cx, cy, r] = p.split(":");
                         return `<circle cx="${cx}" cy="${cy}" r="${r}" fill="${svgFill}" stroke="${svgStroke}" stroke-width="1"/>`;
                     }
-                    return `<path fill="${svgFill}" stroke="${svgOverlapPathStroke}" stroke-width="${svgStrokeWidth}" transform="translate(0.5, 0.5)" d="${p}"/>`;
+                    return `<path fill="${svgFill}" stroke="${svgOverlapPathStroke}" transform="translate(0.5, 0.5)" d="${p}"/>`;
                 })
                 .join("");
             return `<g>${iconPaths}</g>`;
