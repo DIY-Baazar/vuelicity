@@ -136,18 +136,18 @@ The `alt` prop can be used to provide alternative text for the avatar.
 
 #### Properties
 
-| Name           | Type    | Default          | Description                                    | Options                                                                                         |
-| :------------- | :------ | :--------------- | :--------------------------------------------- | :---------------------------------------------------------------------------------------------- |
-| src            | String  | `''`             | The source URL for the avatar image.           |                                                                                                 |
-| alt            | String  | `''`             | Alternative text for the avatar image.         |                                                                                                 |
-| size           | String  | `'md'`           | The size of the avatar.                        | `'xs'`, `'sm'`, `'md'`, `'lg'`, `'xl'`                                                          |
-| bordered       | Boolean | `false`          | Whether to add a border to the avatar.         |                                                                                                 |
-| rounded        | Boolean | `false`          | Whether to add rounded corners to the avatar.  |                                                                                                 |
-| initials       | String  | `''`             | Initials to display as a placeholder.          |                                                                                                 |
-| status         | String  | `''`             | The status indicator theme or state.           | `'online'`, `'offline'`, `'busy'`, `'away'`, `'blue'`, `'red'`, `'yellow'`, `'green'`, `'dark'` |
-| statusPosition | String  | `'bottom-right'` | The position of the status indicator.          | `'top-right'`, `'top-left'`, `'bottom-right'`, `'bottom-left'`                                  |
-| stacked        | Boolean | `false`          | Whether the avatar is part of a stacked group. |                                                                                                 |
-| class          | String  | `''`             | Additional CSS classes to apply.               |                                                                                                 |
+| Name           | Type    | Default          | Description                                    | Options                                                        |
+| :------------- | :------ | :--------------- | :--------------------------------------------- | :------------------------------------------------------------- |
+| src            | String  | `''`             | The source URL for the avatar image.           |                                                                |
+| alt            | String  | `''`             | Alternative text for the avatar image.         |                                                                |
+| size           | String  | `'md'`           | The size of the avatar.                        | `'xs'`, `'sm'`, `'md'`, `'lg'`, `'xl'`                         |
+| bordered       | Boolean | `false`          | Whether to add a border to the avatar.         |                                                                |
+| rounded        | Boolean | `false`          | Whether to add rounded corners to the avatar.  |                                                                |
+| initials       | String  | `''`             | Initials to display as a placeholder.          |                                                                |
+| status         | String  | `''`             | The status indicator theme or state.           | `'online'`, `'offline'`, `'busy'`, `'away'`                    |
+| statusPosition | String  | `'bottom-right'` | The position of the status indicator.          | `'top-right'`, `'top-left'`, `'bottom-right'`, `'bottom-left'` |
+| stacked        | Boolean | `false`          | Whether the avatar is part of a stacked group. |                                                                |
+| class          | String  | `''`             | Additional CSS classes to apply.               |                                                                |
 
 #### Slots
 
