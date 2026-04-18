@@ -16,6 +16,10 @@ const component_toc = [
         link: "/components/pub-badge"
     },
     {
+        text: "PubBreadcrumb",
+        link: "/components/pub-breadcrumb"
+    },
+    {
         text: "PubButton",
         link: "/components/pub-button"
     },
