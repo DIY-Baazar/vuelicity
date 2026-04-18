@@ -43,7 +43,10 @@ export const iconPathMap: Record<string, string | string[]> = {
         "M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0z",
         "M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975"
     ],
+    folder: "M13.5 8H4m0-2v13a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1h-5.032a1 1 0 0 1-.768-.36l-1.9-2.28a1 1 0 0 0-.768-.36H5a1 1 0 0 0-1 1Z",
+
     // Navigations
+    home: "M12.848 2.752a1.2 1.2 0 0 0-1.697 0l-8.4 8.4a1.2 1.2 0 0 0 1.697 1.697L4.8 12.497V20.4a1.2 1.2 0 0 0 1.2 1.2h2.4a1.2 1.2 0 0 0 1.2-1.2v-2.4a1.2 1.2 0 0 1 1.2-1.2h2.4a1.2 1.2 0 0 1 1.2 1.2v2.4a1.2 1.2 0 0 0 1.2 1.2h2.4a1.2 1.2 0 0 0 1.2-1.2v-7.903l.352.352a1.2 1.2 0 0 0 1.697-1.697l-8.4-8.4z",
     sun: "M12 16.5a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9z M11.5 2.5a.5.5 0 0 1 1 0v2a.5.5 0 0 1-1 0v-2z M11.5 19.5a.5.5 0 0 1 1 0v2a.5.5 0 0 1-1 0v-2z M21.5 11.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1h2z M4.5 11.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1h2z M18.4 4.9a.5.5 0 0 1 .7.7l-1.4 1.4a.5.5 0 0 1-.7-.7l1.4-1.4z M5.6 17.7a.5.5 0 0 1 .7.7l-1.4 1.4a.5.5 0 0 1-.7-.7l1.4-1.4z M19.1 18.4a.5.5 0 0 1-.7.7l-1.4-1.4a.5.5 0 0 1 .7-.7l1.4 1.4z M4.9 5.6a.5.5 0 0 1 .7-.7l1.4 1.4a.5.5 0 0 1-.7.7l-1.4-1.4z",
     moon: "M12 21a9 9 0 0 1-.5-17.986V3c-.354.966-.5 1.911-.5 3a9 9 0 0 0 9 9c.239 0 .254.018.488 0A9.004 9.004 0 0 1 12 21Z",
     bars: "M4.5 5.5h15a.5.5 0 0 1 0 1h-15a.5.5 0 0 1 0-1z M4.5 11.5h15a.5.5 0 0 1 0 1h-15a.5.5 0 0 1 0-1z M4.5 17.5h15a.5.5 0 0 1 0 1h-15a.5.5 0 0 1 0-1z",
@@ -104,17 +107,17 @@ export const iconsList = Object.keys(iconPathMap);
 
 export function getIconBody (props: UseIconClassesProps): string {
     const iconPath = iconPathMap[iconAliasMap[props.name.value!] || props.name.value!] || "";
-    let svgFill = "", svgStroke = "", svgStrokeWidth = "", svgOverlapPathStroke = "";
+    let svgFill = "", svgStroke = "", svgStrokeWidth = 0, svgOverlapPathStroke = "";
     if (iconPath) {
         if (props.type.value === "solid") {
             svgFill = "currentColor";
             svgStroke = "none";
-            svgStrokeWidth = "0";
+            svgStrokeWidth = 0;
             svgOverlapPathStroke = "white";
         } else if (props.type.value === "outline") {
             svgFill = "none";
             svgStroke = "currentColor";
-            svgStrokeWidth = "1";
+            svgStrokeWidth = props.strokeWidth?.value;
             svgOverlapPathStroke = "currentColor";
         }
         if (Array.isArray(iconPath)) {

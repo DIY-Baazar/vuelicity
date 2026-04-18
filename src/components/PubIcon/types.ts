@@ -25,4 +25,5 @@ export interface UseIconClassesProps {
     spin: Ref<boolean | undefined>;
     mirror: Ref<boolean | undefined>;
     aschild: Ref<boolean | undefined>;
+    strokeWidth: Ref<number>;
 };
