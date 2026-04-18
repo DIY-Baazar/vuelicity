@@ -17,7 +17,7 @@ export function useBreadcrumbClasses (props: UseBreadcrumbClassesProps) {
     const breadcrumbClasses = computed(() => useMergeClasses([breadcrumbDefaultClasses]));
     const breadcrumbWrapperClasses = computed(() => useMergeClasses([
         "flex",
-        props.solid?.value == true ? "px-5 py-3 text-gray-700 border border-gray-200 rounded-lg bg-gray-50" : ""
+        props.solid.value ? "px-5 py-3 text-gray-700 border border-gray-200 rounded-lg bg-gray-50" : ""
     ]));
 
     return {
