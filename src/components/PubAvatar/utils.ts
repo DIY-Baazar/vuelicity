@@ -76,8 +76,8 @@ export function useAvatarClasses (props: UseAvatarClassesProps) {
             avatarPlaceholderWrapperDefaultClasses,
             avatarSizeClasses[props.size.value],
             props.rounded?.value ? "rounded-full" : "rounded",
-            props.src!.value && props.bordered!.value ? "" : avatarPlaceholderWrapperBackgroundClasses,
-            props.bordered!.value ? "overflow-visible" : ""
+            props.src?.value && props.bordered?.value ? "" : avatarPlaceholderWrapperBackgroundClasses,
+            props.bordered?.value ? "overflow-visible" : ""
         ])
     );
 
