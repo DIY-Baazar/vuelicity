@@ -109,8 +109,8 @@ export function getIconBody (props: UseIconClassesProps): string {
         if (props.type.value === "solid") {
             svgFill = "currentColor";
             svgStroke = "none";
-            svgStrokeWidth = "none";
-            svgOverlapPathStroke = "white";
+            svgStrokeWidth = "0";
+            svgOverlapPathStroke = "transparent";
         } else if (props.type.value === "outline") {
             svgFill = "none";
             svgStroke = "currentColor";
