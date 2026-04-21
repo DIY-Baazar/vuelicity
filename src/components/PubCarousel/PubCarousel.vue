@@ -67,7 +67,7 @@ const { wrapperClasses } = useCarouselClasses(toRefs({ ...props, size }));
                 :key="index"
                 :aria-current="index === currentPicture"
                 :class="index === currentPicture ? 'z-30' : 'z-0'"
-                class="size-3 rounded-full"
+                class="absolute inset-0 translate-y-0"
             >
                 <img
                     :src="picture.src"
