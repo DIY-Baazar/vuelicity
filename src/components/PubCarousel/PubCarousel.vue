@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { onMounted, onUnmounted, ref, toRefs } from "vue";  
+import { onMounted, onUnmounted, ref, toRefs } from "vue";
 import type { CarouselProps } from "./types";
 import PubIcon from "@/components/PubIcon/PubIcon.vue";
 import { useCarouselClasses } from "./utils";
@@ -36,7 +36,7 @@ const slideTo = (index: number) => {
 };
 
 const nextPicture = () => {
-    currentPicture.value = props.pictures.length > 0 ? (currentPicture.value + 1) % props.pictures.length : 0;  
+    currentPicture.value = props.pictures.length > 0 ? (currentPicture.value + 1) % props.pictures.length : 0;
     direction.value = "right";
     resetInterval();
 };
@@ -47,13 +47,13 @@ const previousPicture = () => {
     resetInterval();
 };
 
-onMounted(() => {  
-    automaticSlide();  
-});  
+onMounted(() => {
+    automaticSlide();
+});
 
-onUnmounted(() => {  
-    clearInterval(interval.value);  
-}); 
+onUnmounted(() => {
+    clearInterval(interval.value);
+});
 
 const { wrapperClasses } = useCarouselClasses(toRefs({ ...props, size }));
 </script>
@@ -65,8 +65,9 @@ const { wrapperClasses } = useCarouselClasses(toRefs({ ...props, size }));
             <div
                 v-for="(picture, index) in props.pictures"
                 :key="index"
-                :class="index === currentPicture ? 'z-30' : 'z-0'"
-                class="absolute inset-0 translate-y-0"
+                :aria-current="index === currentPicture"
+                :class="index === currentPicture ? 'bg-white' : 'bg-white/50'"
+                class="size-3 rounded-full"
             >
                 <img
                     :src="picture.src"
