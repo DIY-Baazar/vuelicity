@@ -75,7 +75,7 @@ const { wrapperClasses } = useCarouselClasses(toRefs({ ...props, size }));
         <!-- Indicators -->
         <div v-if="!hideIndicators" class="absolute bottom-5 left-1/2 z-30 flex -translate-x-1/2 space-x-3">
             <button
-                v-for="(picture, index) in pictures"
+                v-for="(picture, index) in props.pictures"
                 :key="index"
                 :aria-label="'Slide ' + index"
                 :aria-current="index === currentPicture"
