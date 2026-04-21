@@ -9,5 +9,5 @@ export interface CarouselProps {
     hideControls: boolean;
     slide: boolean;
     interval: number;
-    static: boolean;
+    isStatic: boolean;
 }

@@ -1,6 +1,6 @@
 <template>
     <div class="w-full">
-        <pub-carousel :pictures="pictures" static />
+        <pub-carousel :pictures="pictures" isStatic />
     </div>
 </template>
 

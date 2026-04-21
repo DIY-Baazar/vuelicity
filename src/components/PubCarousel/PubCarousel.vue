@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { onMounted, ref, toRefs } from "vue";
+import { onMounted, onUnmounted, ref, toRefs } from "vue";  
 import type { CarouselProps } from "./types";
 import PubIcon from "@/components/PubIcon/PubIcon.vue";
 import { useCarouselClasses } from "./utils";
@@ -9,7 +9,7 @@ const props = withDefaults(defineProps<CarouselProps>(), {
     hideControls: false,
     slide: false,
     interval: 3000,
-    static: false
+    isStatic: false
 });
 
 const currentPicture = ref(0);
@@ -18,7 +18,7 @@ const interval = ref();
 const size = ref(56);
 
 const automaticSlide = () => {
-    if (!props.static) {
+    if (!props.isStatic) {
         interval.value = setInterval(() => {
             nextPicture();
         }, props.interval);
@@ -36,7 +36,7 @@ const slideTo = (index: number) => {
 };
 
 const nextPicture = () => {
-    currentPicture.value = (currentPicture.value + 1) % props.pictures.length;
+    currentPicture.value = props.pictures.length > 0 ? (currentPicture.value + 1) % props.pictures.length : 0;  
     direction.value = "right";
     resetInterval();
 };
@@ -47,9 +47,13 @@ const previousPicture = () => {
     resetInterval();
 };
 
-onMounted(() => {
-    automaticSlide();
-});
+onMounted(() => {  
+    automaticSlide();  
+});  
+
+onUnmounted(() => {  
+    clearInterval(interval.value);  
+}); 
 
 const { wrapperClasses } = useCarouselClasses(toRefs({ ...props, size }));
 </script>

@@ -72,9 +72,9 @@ The `slide` prop can be used to enable slide animation. The `interval` prop can 
 
 ## Static carousel
 
-### Prop - `static` Usage
+### Prop - `isStatic` Usage
 
-The `static` prop can be used to disable animation.
+The `isStatic` prop can be used to disable animation.
 
 <demo-container>
     <Static />
@@ -91,4 +91,4 @@ The `static` prop can be used to disable animation.
 | slide          | Boolean | `false` | Whether to enable slide animation.       |         |
 | interval       | Number  | `3000`  | The interval between slides.             |         |
 | pictures       | Array   | `[]`    | An array of picture items.               |         |
-| static         | Boolean | `false` | Whether to disable animation.            |         |
+| isStatic       | Boolean | `false` | Whether to disable animation.            |         |
