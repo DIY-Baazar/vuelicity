@@ -66,7 +66,7 @@ const { wrapperClasses } = useCarouselClasses(toRefs({ ...props, size }));
                 v-for="(picture, index) in props.pictures"
                 :key="index"
                 :aria-current="index === currentPicture"
-                :class="index === currentPicture ? 'bg-white' : 'bg-white/50'"
+                :class="index === currentPicture ? 'z-30' : 'z-0'"
                 class="size-3 rounded-full"
             >
                 <img
