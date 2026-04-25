@@ -36,6 +36,10 @@ const component_toc = [
         link: "/components/pub-carousel"
     },
     {
+        text: "PubDropdown",
+        link: "/components/pub-dropdown"
+    },
+    {
         text: "PubIcon",
         link: "/components/pub-icon"
     },

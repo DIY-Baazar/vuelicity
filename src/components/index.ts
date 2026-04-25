@@ -13,6 +13,7 @@ export { default as PubButtonGroup } from "./PubButtonGroup/PubButtonGroup.vue";
 export { default as PubButton } from "./PubButton/PubButton.vue";
 export { default as PubCard } from "./PubCard/PubCard.vue";
 export { default as PubCarousel } from "./PubCarousel/PubCarousel.vue";
+export { default as PubDropdown } from "./PubDropdown/PubDropdown.vue";
 export { default as PubIcon } from "./PubIcon/PubIcon.vue";
 export { default as PubModal } from "./PubModal/PubModal.vue";
 export { default as PubNavbar } from "./PubNavbar/PubNavbar.vue";
