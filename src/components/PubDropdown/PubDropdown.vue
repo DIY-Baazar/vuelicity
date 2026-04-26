@@ -32,7 +32,7 @@ const contentStyles = ref("");
 const placementCalculator: Record<DropdownPlacement, (contentRect: DOMRect, triggerRect: DOMRect) => string> = {
     bottom: (contentRect: DOMRect, triggerRect: DOMRect): string =>
         `bottom: -${contentRect.height + props.offsetDistance}px;` +
-        (props.offsetSkidding > 0 ? `transform: translateX(${triggerRect.width}px);` : ""),
+        (props.offsetSkidding > 0 ? `transform: translateX(${triggerRect.width + props.offsetSkidding}px);` : ""),
     left: (contentRect: DOMRect, triggerRect: DOMRect): string =>
         `left: -${contentRect.width + props.offsetDistance}px;` +
         (props.offsetSkidding > 0 ? `transform: translateY(${triggerRect.height + props.offsetSkidding}px);` : ""),
@@ -41,10 +41,13 @@ const placementCalculator: Record<DropdownPlacement, (contentRect: DOMRect, trig
         (props.offsetSkidding > 0 ? `transform: translateY(${triggerRect.height + props.offsetSkidding}px);` : ""),
     top: (contentRect: DOMRect, triggerRect: DOMRect): string =>
         `top: -${contentRect.height + props.offsetDistance}px;` +
-        (props.offsetSkidding > 0 ? `transform: translateX(${triggerRect.width}px);` : "")
+        (props.offsetSkidding > 0 ? `transform: translateX(${triggerRect.width + props.offsetSkidding}px);` : "")
 };
 
-const handleToggle = () => (isContentVisible.value = !isContentVisible.value);
+const handleToggle = () => {
+    if (props.disabled) return;
+    isContentVisible.value = !isContentVisible.value;
+};
 const handleHide = (event: MouseEvent) => {
     if (props.closeInside) {
         const target = event.target as HTMLElement;
@@ -58,12 +61,9 @@ onClickOutside(dropdownWrapper, () => isContentVisible.value && (isContentVisibl
 const calcPlacement = () => {
     const contentRect = contentWrapper.value?.getBoundingClientRect();
     const triggerRect = triggerWrapper.value?.getBoundingClientRect();
-    contentStyles.value = contentRect && triggerRect ? placementCalculator[props.placement](contentRect, triggerRect) : "";
+    contentStyles.value =
+        contentRect && triggerRect ? placementCalculator[props.placement](contentRect, triggerRect) : "";
 };
-
-// const observer = new MutationObserver(() => {
-//     calcPlacement();
-// });
 
 const emit = defineEmits<{
     show: [];
@@ -78,16 +78,6 @@ watch(isContentVisible, (value: boolean) => {
         emit("hide");
     }
 });
-// watch(contentWrapper, (element) => {
-//     if (element) {
-//         observer.observe(element, {
-//             childList: true,
-//             subtree: true
-//         });
-//     } else {
-//         observer.disconnect();
-//     }
-// });
 
 const transitionName = computed(() => (!props.transition ? `to-${props.placement}` : props.transition));
 
@@ -98,7 +88,7 @@ const { wrapperClasses, contentWrapperClasses, triggerWrapperClasses, triggerApp
 </script>
 
 <template>
-    <div :class="['pub-dropdown', wrapperClasses]" ref="dropdownWrapper">
+    <div :class="wrapperClasses" ref="dropdownWrapper">
         <div :class="triggerWrapperClasses" @click="handleToggle" ref="triggerWrapper">
             <slot name="trigger">
                 <pub-button
