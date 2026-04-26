@@ -10,6 +10,16 @@ export default {
     head: [["link", { rel: "icon", href: "/images/favicon.ico" }]],
     themeConfig: {
         logo: "/images/logo.png",
+        editLink: {
+            pattern: 'https://github.com/DIY-Baazar/vuelicity/edit/main/docs/:path'
+        },
+        lastUpdated: {
+            text: 'Last updated',
+            formatOptions: {
+                dateStyle: 'medium',
+                timeStyle: 'medium'
+            }
+        },
         search: {
             provider: "local"
         },

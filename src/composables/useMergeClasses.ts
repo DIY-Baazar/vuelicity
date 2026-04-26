@@ -1,7 +1,7 @@
 import type { ClassInput } from "@/types/global";
 import { twMerge } from "tailwind-merge";
 
-function normalizeClasses (input: ClassInput): string {
+export function normalizeClasses (input: ClassInput): string {
     if (typeof input === "string") {
         return input.trim();
     }
