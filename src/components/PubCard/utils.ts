@@ -1,9 +1,11 @@
 import { computed, type Ref } from "vue";
 import type { CardVariant } from "./types";
+import type { ClassRef } from "@/types/global";
+import { normalizeClasses } from "@/composables/useMergeClasses";
 
 interface UseCardClassesProps {
     variant: Ref<CardVariant>;
-    class: Ref<string>;
+    class: ClassRef;
     href: Ref<string>;
 }
 
@@ -20,8 +22,8 @@ export function useCardClasses (props: UseCardClassesProps): {
     const cardClasses = computed(() => {
         return [
             cardVariantClasses[props.variant.value],
-            (!props.class.value || !props.class.value.includes("bg-")) ? "bg-white" : "",
-            props.href.value && !props.class.value.includes("hover:") ? "hover:bg-gray-100" : "",
+            (!props.class.value || !normalizeClasses(props.class.value).includes("bg-")) ? "bg-white" : "",
+            props.href.value && !normalizeClasses(props.class.value).includes("hover:") ? "hover:bg-gray-100" : "",
         ].join(" ");
     });
 

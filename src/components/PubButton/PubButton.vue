@@ -42,7 +42,7 @@ const { wrapperClasses, spanClasses } = useButtonClasses(toRefs(props));
     <component
         :is="componentName"
         :[linkAttr]="to"
-        :class="useMergeClasses(['pub-button', spanClasses, wrapperClasses, props.class])"
+        :class="useMergeClasses(['pub-button', spanClasses, wrapperClasses])"
         @click="handleClick"
         v-bind="$attrs"
     >

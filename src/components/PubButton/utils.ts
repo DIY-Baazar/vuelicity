@@ -1,5 +1,7 @@
-import { type Ref, useSlots, computed } from "vue";
+import { type Ref, useSlots, computed, normalizeClass } from "vue";
 import type { ButtonRounded, ButtonSize, ButtonTheme } from "./types";
+import { useMergeClasses } from "@/composables/useMergeClasses";
+import type { ClassRef } from "@/types/global";
 
 export type ButtonClassMap<T extends string> = { hover: Record<T, string>; default: Record<T, string>; };
 
@@ -94,14 +96,15 @@ interface UseButtonClassesProps {
     loading: Ref<boolean | undefined>;
     skeleton: Ref<boolean | undefined>;
     square: Ref<boolean>;
+    class: ClassRef;
 }
 
 export function useButtonClasses (props: UseButtonClassesProps): { wrapperClasses: Ref<string>; spanClasses: Ref<string>; } {
     const slots = useSlots();
     const wrapperClasses = computed(() => {
-        const themeClasses = [
+        const themeClasses =
             props.skeleton.value
-                ? skeletonButtonClasses
+                ? [skeletonButtonClasses]
                 : [
                     props.outline.value
                         ? buttonOutlineThemeClasses.default[props.theme.value]
@@ -109,21 +112,21 @@ export function useButtonClasses (props: UseButtonClassesProps): { wrapperClasse
                     props.outline.value
                         ? buttonOutlineThemeClasses.hover[props.theme.value]
                         : buttonThemeClasses.hover[props.theme.value]
-                ].join(" ")
-        ];
+                ]
+            ;
 
-        return [
+        return useMergeClasses([
             ...themeClasses,
             props.square.value ? buttonSquareSizeClasses[props.size.value] : buttonSizeClasses[props.size.value],
             buttonRoundedClasses[props.rounded.value],
             props.disabled.value || props.loading.value ? "cursor-not-allowed opacity-50" : "",
             props.theme.value === "none" ? "border-0" : "border",
-        ].join(" ");
+        ]);
     });
 
     const spanClasses = computed(() => {
-        return [defaultSpanButtonClasses].join(" ");
+        return useMergeClasses([defaultSpanButtonClasses, normalizeClass(props.class?.value)]);
     });
-    
+
     return { wrapperClasses, spanClasses };
 }

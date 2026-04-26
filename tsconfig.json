@@ -3,10 +3,9 @@
     "compilerOptions": {
         "allowImportingTsExtensions": false,
         "noEmit": false,
-        "baseUrl": ".",
+        // "baseUrl": ".",
         "rootDir": "./src",
         "outDir": "dist",
-        "ignoreDeprecations": "6.0",
         "paths": {
             "@/*": [
                 "./src/*"

@@ -3,8 +3,8 @@ import { computed, nextTick, ref, toRefs, watch } from "vue";
 import { onClickOutside } from "@vueuse/core";
 import type { DropdownPlacement, DropdownProps } from "./types";
 import { useDropdownClasses } from "./utils";
-import PubButton from "../PubButton/PubButton.vue";
-import PubIcon from "../PubIcon/PubIcon.vue";
+import PubButton from "@/components/PubButton/PubButton.vue";
+import PubIcon from "@/components/PubIcon/PubIcon.vue";
 
 const props = withDefaults(defineProps<DropdownProps>(), {
     alignToEnd: false,
