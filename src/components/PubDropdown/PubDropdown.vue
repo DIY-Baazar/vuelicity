@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { computed, nextTick, ref, toRefs, watch } from "vue";
+import { onClickOutside } from "@vueuse/core";
 import type { DropdownPlacement, DropdownProps } from "./types";
 import { useDropdownClasses } from "./utils";
 import PubButton from "../PubButton/PubButton.vue";
@@ -18,26 +19,51 @@ const props = withDefaults(defineProps<DropdownProps>(), {
     triggerClass: "",
     triggerWrapperClass: "",
     duration: 250,
+    offsetDistance: 8,
+    offsetSkidding: 0
 });
 
 const isContentVisible = ref(false);
+const dropdownWrapper = ref<HTMLDivElement>();
+const triggerWrapper = ref<HTMLDivElement>();
 const contentWrapper = ref<HTMLDivElement>();
 const contentStyles = ref("");
-const defaultGapInPx = 8;
 
-const placementCalculator: Record<DropdownPlacement, (rect: DOMRect) => string> = {
-    bottom: (rect: DOMRect): string => `bottom: -${rect.height + defaultGapInPx}px;`,
-    left: (rect: DOMRect): string => `left: -${rect.width + defaultGapInPx}px;`,
-    right: (rect: DOMRect): string => `right: -${rect.width + defaultGapInPx}px;`,
-    top: (rect: DOMRect): string => `top: -${rect.height + defaultGapInPx}px;`
+const placementCalculator: Record<DropdownPlacement, (contentRect: DOMRect, triggerRect: DOMRect) => string> = {
+    bottom: (contentRect: DOMRect, triggerRect: DOMRect): string =>
+        `bottom: -${contentRect.height + props.offsetDistance}px;` +
+        (props.offsetSkidding > 0 ? `transform: translateX(${triggerRect.width}px);` : ""),
+    left: (contentRect: DOMRect, triggerRect: DOMRect): string =>
+        `left: -${contentRect.width + props.offsetDistance}px;` +
+        (props.offsetSkidding > 0 ? `transform: translateY(${triggerRect.height + props.offsetSkidding}px);` : ""),
+    right: (contentRect: DOMRect, triggerRect: DOMRect): string =>
+        `right: -${contentRect.width + props.offsetDistance}px;` +
+        (props.offsetSkidding > 0 ? `transform: translateY(${triggerRect.height + props.offsetSkidding}px);` : ""),
+    top: (contentRect: DOMRect, triggerRect: DOMRect): string =>
+        `top: -${contentRect.height + props.offsetDistance}px;` +
+        (props.offsetSkidding > 0 ? `transform: translateX(${triggerRect.width}px);` : "")
 };
 
 const handleToggle = () => (isContentVisible.value = !isContentVisible.value);
-const handleHide = () => props.closeInside && (isContentVisible.value = false);
-const calcPlacement = () => {
-    const boundingRect = contentWrapper.value?.getBoundingClientRect();
-    contentStyles.value = boundingRect ? placementCalculator[props.placement](boundingRect) : "";
+const handleHide = (event: MouseEvent) => {
+    if (props.closeInside) {
+        const target = event.target as HTMLElement;
+        if (contentWrapper.value && contentWrapper.value.contains(target)) {
+            isContentVisible.value = false;
+        }
+    }
 };
+onClickOutside(dropdownWrapper, () => isContentVisible.value && (isContentVisible.value = false));
+
+const calcPlacement = () => {
+    const contentRect = contentWrapper.value?.getBoundingClientRect();
+    const triggerRect = triggerWrapper.value?.getBoundingClientRect();
+    contentStyles.value = contentRect && triggerRect ? placementCalculator[props.placement](contentRect, triggerRect) : "";
+};
+
+// const observer = new MutationObserver(() => {
+//     calcPlacement();
+// });
 
 const emit = defineEmits<{
     show: [];
@@ -52,6 +78,16 @@ watch(isContentVisible, (value: boolean) => {
         emit("hide");
     }
 });
+// watch(contentWrapper, (element) => {
+//     if (element) {
+//         observer.observe(element, {
+//             childList: true,
+//             subtree: true
+//         });
+//     } else {
+//         observer.disconnect();
+//     }
+// });
 
 const transitionName = computed(() => (!props.transition ? `to-${props.placement}` : props.transition));
 
@@ -62,8 +98,8 @@ const { wrapperClasses, contentWrapperClasses, triggerWrapperClasses, triggerApp
 </script>
 
 <template>
-    <div :class="['pub-dropdown', wrapperClasses]">
-        <div :class="triggerWrapperClasses" @click="handleToggle">
+    <div :class="['pub-dropdown', wrapperClasses]" ref="dropdownWrapper">
+        <div :class="triggerWrapperClasses" @click="handleToggle" ref="triggerWrapper">
             <slot name="trigger">
                 <pub-button
                     :aria-expanded="isContentVisible"

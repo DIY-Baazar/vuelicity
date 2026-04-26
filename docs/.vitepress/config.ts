@@ -14,7 +14,7 @@ export default {
             pattern: 'https://github.com/DIY-Baazar/vuelicity/edit/main/docs/:path'
         },
         lastUpdated: {
-            text: 'Last Updated',
+            text: 'Last updated',
             formatOptions: {
                 dateStyle: 'medium',
                 timeStyle: 'medium'

@@ -17,4 +17,6 @@ export interface DropdownProps {
     triggerClass: ClassInput;
     triggerWrapperClass: ClassInput;
     duration: number;
+    offsetDistance: number;
+    offsetSkidding: number;
 }
