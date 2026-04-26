@@ -13,7 +13,7 @@ interface UseDropdownClassesProps {
     isContentVisible: Ref<boolean>;
 }
 
-const defaultWrapperClasses = 'fwb-dropdown inline-flex relative';
+const defaultWrapperClasses = 'pub-dropdown inline-flex relative';
 const defaultContentWrapperClasses = 'absolute z-10 bg-white rounded shadow-sm dark:bg-gray-700';
 
 const appendRotationClassMap = {
