@@ -14,7 +14,7 @@ interface UseDropdownClassesProps {
 }
 
 const defaultWrapperClasses = 'pub-dropdown inline-flex relative';
-const defaultContentWrapperClasses = 'absolute z-10 bg-white rounded shadow-sm dark:bg-gray-700';
+const defaultContentWrapperClasses = 'absolute z-10 bg-white rounded shadow-sm';
 
 const appendRotationClassMap = {
     bottom: '',
