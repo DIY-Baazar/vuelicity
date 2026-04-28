@@ -7,6 +7,7 @@ description: Documentation for the PubNavbar component.
 import Default from './PubNavbar/Default.vue';
 import Solid from './PubNavbar/Solid.vue';
 import WithCTA from './PubNavbar/WithCTA.vue';
+import WithDropdown from './PubNavbar/WithDropdown.vue';
 </script>
 
 # PubNavbar
@@ -29,7 +30,15 @@ This is a navbar component which can be used to display a navigation menu in a h
 
 <<< @/components/PubNavbar/Solid.vue
 
-<!-- ## Navbar with dropdown
+## Navbar with dropdown
+
+<demo-container>
+    <WithDropdown/>
+</demo-container>
+
+<<< @/components/PubNavbar/WithDropdown.vue
+
+<!-- 
 
 ## Multi-level dropdown
 

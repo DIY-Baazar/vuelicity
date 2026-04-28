@@ -4,12 +4,14 @@ import { onClickOutside } from "@vueuse/core";
 import type { DropdownPlacement, DropdownProps } from "./types";
 import { useDropdownClasses } from "./utils";
 import PubButton from "@/components/PubButton/PubButton.vue";
+import PubNavbarLink from "../PubNavbar/PubNavbarLink.vue";
 import PubIcon from "@/components/PubIcon/PubIcon.vue";
 
 const props = withDefaults(defineProps<DropdownProps>(), {
     alignToEnd: false,
     class: "",
     closeInside: false,
+    type: "button",
     theme: "blue",
     contentWrapperClass: "",
     disabled: false,
@@ -20,7 +22,8 @@ const props = withDefaults(defineProps<DropdownProps>(), {
     triggerWrapperClass: "",
     duration: 250,
     offsetDistance: 8,
-    offsetSkidding: 0
+    offsetSkidding: 0,
+    isActive: false,
 });
 
 const isContentVisible = ref(false);
@@ -91,7 +94,21 @@ const { wrapperClasses, contentWrapperClasses, triggerWrapperClasses, triggerApp
     <div :class="wrapperClasses" ref="dropdownWrapper">
         <div :class="triggerWrapperClasses" @click="handleToggle" ref="triggerWrapper">
             <slot name="trigger">
+                <pub-navbar-link
+                    v-if="type === 'navlink'"
+                    :aria-expanded="isContentVisible"
+                    :disabled="disabled"
+                    aria-haspopup="true"
+                    role="navlink"
+                    as="button"
+                    class="flex items-center"
+                    :is-active="isActive"
+                >
+                    {{ text }}
+                    <pub-icon :class="triggerAppendClass" name="chevron-down" size="xs" />
+                </pub-navbar-link>
                 <pub-button
+                    v-else
                     :aria-expanded="isContentVisible"
                     :theme="theme"
                     :disabled="disabled"

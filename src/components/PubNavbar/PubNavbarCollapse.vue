@@ -1,18 +1,19 @@
 <script setup lang="ts">
-import { computed, toRefs } from "vue";
-import type { NavbarCollapseProps } from "./types";
+import { computed, inject, toRefs } from "vue";
+import type { NavbarState, NavbarCollapseProps } from "./types";
 import { useNavbarCollapseClasses } from "./utils";
-
 
 const props = withDefaults(defineProps<NavbarCollapseProps>(), {
     isShowMenu: false,
+    class: ""
 });
 
-const menuClasses = computed(() => useNavbarCollapseClasses(toRefs(props)));
+const { navbarState } = inject<{ navbarState: NavbarState }>("navbarState")!;
 
-const wrapperClasses = computed(() => menuClasses.value.wrapperClasses);
-const spanClasses = computed(() => menuClasses.value.spanClasses)
-
+const { wrapperClasses, spanClasses } = useNavbarCollapseClasses({
+    ...toRefs(props),
+    noToggleButton: computed(() => navbarState.noToggleButton)
+});
 </script>
 
 <template>

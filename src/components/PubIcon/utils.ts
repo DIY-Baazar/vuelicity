@@ -1,3 +1,5 @@
+import { computed, normalizeClass, type Ref } from 'vue';
+import { useMergeClasses } from "@/composables/useMergeClasses";
 import type { IconSize, IconTheme, IconType, UseIconClassesProps } from "./types";
 
 const iconSizeClasses: Record<IconSize, string> = {
@@ -32,19 +34,22 @@ const iconTypeClasses: Record<IconType, string> = {
     "solid": "icon-solid",
     "outline": "icon-outline",
     "duotone": "icon-duotone"
-}
+};
 
-export function useIconClasses (props: UseIconClassesProps): string {
-    const wrapperClasses = [
+export function useIconClasses (props: UseIconClassesProps): {
+    iconClasses: Ref<string>;
+} {
+    const iconClasses = computed(() => useMergeClasses([
         "inline-block",
-        props.size.value && !props.aschild.value ? iconSizeClasses[props.size.value]: "",
+        props.size.value && !props.aschild.value ? iconSizeClasses[props.size.value] : "",
         props.theme.value && !props.aschild.value ? iconThemeClasses[props.theme.value] : "",
         props.rotate.value ? "rotate-90" : "",
         props.flip.value ? "scale-x-[-1]" : "",
         props.spin.value ? "animate-spin" : "",
         props.mirror.value ? "scale-x-[-1] scale-y-[-1]" : "",
-        props.type.value ? iconTypeClasses[props.type.value] : ""
-    ].join(" ");
+        props.type.value ? iconTypeClasses[props.type.value] : "",
+        normalizeClass(props.class?.value)
+    ]));
 
-    return wrapperClasses;
+    return { iconClasses };
 }

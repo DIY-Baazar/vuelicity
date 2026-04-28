@@ -1,6 +1,6 @@
-import { useMergeClasses, normalizeClasses } from "@/composables/useMergeClasses";
+import { useMergeClasses } from "@/composables/useMergeClasses";
 import type { ClassRef } from "@/types/global";
-import { computed, type Ref } from "vue";
+import { computed, normalizeClass, type Ref } from "vue";
 import type { DropdownAlignment, DropdownPlacement } from "./types";
 
 interface UseDropdownClassesProps {
@@ -39,17 +39,17 @@ export const useDropdownClasses = (props: UseDropdownClassesProps) => {
     const wrapperClasses = computed(() => useMergeClasses([
         defaultWrapperClasses,
         props.isContentVisible.value ? 'open' : '',
-        normalizeClasses(props.class.value)
+        normalizeClass(props.class.value)
     ]));
 
     const contentWrapperClasses = computed(() => useMergeClasses([
         defaultContentWrapperClasses,
         contentWrapperAlignmentClasses[alignment],
-        normalizeClasses(props.contentWrapperClass.value),
+        normalizeClass(props.contentWrapperClass.value),
     ]));
 
     const triggerWrapperClasses = computed(() => useMergeClasses([
-        normalizeClasses(props.triggerWrapperClass.value),
+        normalizeClass(props.triggerWrapperClass.value),
     ]));
 
     const triggerAppendClass = computed(() =>

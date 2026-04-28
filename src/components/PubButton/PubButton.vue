@@ -19,7 +19,7 @@ const props = withDefaults(defineProps<ButtonProps>(), {
     rounded: "none",
     as: "button",
     linkAttr: "href",
-    class: "",
+    class: ""
 });
 
 const componentName = computed(() => (props.as !== "a" ? resolveComponent(props.as) : "a"));
@@ -42,7 +42,7 @@ const { wrapperClasses, spanClasses } = useButtonClasses(toRefs(props));
     <component
         :is="componentName"
         :[linkAttr]="to"
-        :class="useMergeClasses(['pub-button', spanClasses, wrapperClasses])"
+        :class="useMergeClasses(['pub-button', wrapperClasses, spanClasses])"
         @click="handleClick"
         v-bind="$attrs"
     >
