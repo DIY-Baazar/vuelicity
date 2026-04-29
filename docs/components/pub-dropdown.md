@@ -195,18 +195,24 @@ The `trigger` slot can be used to customize the dropdown trigger.
 
 ### Properties
 
-| Name           | Type    | Default     | Description                                                | Options                                                                                                     |
-| :------------- | :------ | :---------- | :--------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------- |
-| text           | String  | `''`        | The text to display on the dropdown button.                |                                                                                                             |
-| theme          | String  | `'default'` | The color theme of the dropdown trigger.                   | `'none'`, `'default'`, `'blue'`, `'red'`, `'yellow'`, `'green'`, `'magenta'`, `'cyan'`, `'light'`, `'dark'` |
-| placement      | String  | `'bottom'`  | The placement of the dropdown relative to the trigger.     | `'top'`, `'right'`, `'bottom'`, `'left'`                                                                    |
-| alignToEnd     | Boolean | `false`     | Whether to align the dropdown to the end of the trigger.   |                                                                                                             |
-| offsetDistance | Number  | `0`         | The distance between the trigger and the dropdown.         |                                                                                                             |
-| offsetSkidding | Number  | `0`         | The displacement along the trigger button.                 |                                                                                                             |
-| disabled       | Boolean | `false`     | Whether the dropdown is disabled.                          |                                                                                                             |
-| class          | String  | `''`        | Additional CSS classes to apply to the wrapper.            |                                                                                                             |
-| triggerClass   | String  | `''`        | Additional CSS classes to apply to the trigger button.     |                                                                                                             |
-| dropdownClass  | String  | `''`        | Additional CSS classes to apply to the dropdown container. |                                                                                                             |
+| Name                | Type    | Default     | Description                                                     | Options                                                                                                     |
+| :------------------ | :------ | :---------- | :-------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------- |
+| text                | String  | `''`        | The text to display on the dropdown button.                     |                                                                                                             |
+| theme               | String  | `'default'` | The color theme of the dropdown trigger.                        | `'none'`, `'default'`, `'blue'`, `'red'`, `'yellow'`, `'green'`, `'magenta'`, `'cyan'`, `'light'`, `'dark'` |
+| placement           | String  | `'bottom'`  | The placement of the dropdown relative to the trigger.          | `'top'`, `'right'`, `'bottom'`, `'left'`                                                                    |
+| alignToEnd          | Boolean | `false`     | Whether to align the dropdown to the end of the trigger.        |                                                                                                             |
+| disabled            | Boolean | `false`     | Whether the dropdown is disabled.                               |                                                                                                             |
+| class               | String  | `''`        | Additional CSS classes to apply to the wrapper.                 |                                                                                                             |
+| triggerClass        | String  | `''`        | Additional CSS classes to apply to the trigger button.          |                                                                                                             |
+| triggerWrapperClass | String  | `''`        | Additional CSS classes to apply to the trigger wrapper.         |                                                                                                             |
+| dropdownClass       | String  | `''`        | Additional CSS classes to apply to the dropdown container.      |                                                                                                             |
+| contentWrapperClass | String  | `''`        | Additional CSS classes to apply to the content wrapper.         |                                                                                                             |
+| duration            | Number  | `250`       | The duration of the dropdown animation in milliseconds.         |                                                                                                             |
+| offsetDistance      | Number  | `8`         | The distance between the trigger and the dropdown.              |                                                                                                             |
+| offsetSkidding      | Number  | `0`         | The displacement along the trigger button.                      |                                                                                                             |
+| isActive            | Boolean | `false`     | Whether the dropdown is currently active.                       |                                                                                                             |
+| type                | String  | `'button'`  | The type of the dropdown trigger.                               | `'button'`, `'navlink'`                                                                                     |
+| closeInside         | Boolean | `false`     | Whether to close the dropdown when clicking inside the content. |                                                                                                             |
 
 ### Slots
 

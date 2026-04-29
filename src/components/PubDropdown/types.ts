@@ -3,7 +3,7 @@ import type { ButtonTheme } from "../PubButton/types";
 
 export type DropdownPlacement = 'top' | 'bottom' | 'left' | 'right';
 export type DropdownAlignment = 'horizontal' | 'vertical' | 'horizontal_reverse' | 'vertical_reverse';
-export type DropdownType = 'button' | 'navlink';
+export type DropdownTriggerType = 'button' | 'navlink';
 
 export interface DropdownProps {
     alignToEnd: boolean;
@@ -20,6 +20,6 @@ export interface DropdownProps {
     duration: number;
     offsetDistance: number;
     offsetSkidding: number;
-    type: DropdownType;
+    type: DropdownTriggerType;
     isActive: boolean;
 }
