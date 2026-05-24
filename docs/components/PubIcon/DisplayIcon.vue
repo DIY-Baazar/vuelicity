@@ -1,7 +1,9 @@
 <template>
     <div class="size-16 border border-gray-200 flex flex-col items-center overflow-hidden p-1" @click="onClickCopy">
-        <pub-icon :name="name" class="border border-gray-300" />
-        <p class="text-xs text-center p-1 w-full whitespace-nowrap overflow-hidden text-ellipsis" :title="name">{{ name }}</p>
+        <pub-icon :name="name" :type="type" class="border border-gray-300" />
+        <p class="text-xs text-center p-1 w-full whitespace-nowrap overflow-hidden text-ellipsis" :title="name">
+            {{ name }}
+        </p>
     </div>
 </template>
 
@@ -12,6 +14,10 @@ const props = defineProps({
     name: {
         type: String,
         required: true
+    },
+    type: {
+        type: String,
+        default: "outline"
     }
 });
 
