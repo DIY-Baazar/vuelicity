@@ -1,7 +1,9 @@
 <script lang="ts" setup>
-import { toRefs } from "vue";
+import { computed, normalizeClass, toRefs, useSlots, Comment, Text } from "vue";
 import type { InputProps } from "./types";
 import { useInputClasses } from "./utils";
+import { useMergeClasses } from "@/composables/useMergeClasses";
+import PubIcon from "../PubIcon/PubIcon.vue";
 
 const props = withDefaults(defineProps<InputProps>(), {
     autocomplete: "off",
@@ -14,10 +16,26 @@ const props = withDefaults(defineProps<InputProps>(), {
     size: "md",
     type: "text",
     validationStatus: undefined,
-    wrapperClass: ""
+    wrapperClass: "",
+    prependClass: "",
+    appendClass: ""
 });
 
 const model = defineModel<string | number>({ default: "" });
+
+const slots = useSlots();
+
+const isTextSlot = (name: string) => {
+    const vnodes = slots[name]?.();
+    if (!vnodes?.length) return false;
+    const meaningful = vnodes.filter(v =>
+        v.type !== Comment && !(v.type === Text && !String(v.children).trim()),
+    );
+    return meaningful.length > 0 && meaningful.every(v => v.type === Text || v.type === PubIcon );
+};
+
+const isPrependText = computed(() => isTextSlot('prepend'));
+const isAppendText = computed(() => isTextSlot('append'));
 
 const {
     wrapperClasses,
@@ -25,8 +43,10 @@ const {
     inputWrapperClasses,
     inputClasses,
     validationMessageClasses,
-    helperMessageClasses
-} = useInputClasses(toRefs(props));
+    helperMessageClasses,
+    appendContainerClasses,
+    prependContainerClasses
+} = useInputClasses({ ...toRefs(props), isPrependText, isAppendText });
 </script>
 
 <template>
@@ -35,19 +55,12 @@ const {
             {{ props.label }}
         </label>
         <div :class="inputWrapperClasses">
-            <div v-if="$slots.prepend" class="ms-2 flex shrink-0 items-center">
+            <div v-if="$slots.prepend" :class="prependContainerClasses">
                 <slot name="prepend" />
             </div>
-            <input
-                v-model="model"
-                :type="type"
-                :class="inputClasses"
-                :disabled="disabled"
-                :required="required"
-                :autocomplete="autocomplete"
-                v-bind="$attrs"
-            />
-            <div v-if="$slots.append" class="me-2 flex shrink-0 items-center">
+            <input v-model="model" :type="type" :class="inputClasses" :disabled="disabled" :required="required"
+                :autocomplete="autocomplete" v-bind="$attrs" />
+            <div v-if="$slots.append" :class="appendContainerClasses">
                 <slot name="append" />
             </div>
         </div>

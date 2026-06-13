@@ -6,7 +6,7 @@
     </pub-input>
     <pub-input v-model="username" label="Username" placeholder="Enter your username">
         <template #append>
-            <span class="text-gray-500">@example.com</span>
+            @example.com
         </template>
     </pub-input>
 </template>
