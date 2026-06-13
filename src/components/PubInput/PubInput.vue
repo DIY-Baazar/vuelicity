@@ -1,8 +1,7 @@
 <script lang="ts" setup>
-import { computed, normalizeClass, toRefs, useSlots, Comment, Text } from "vue";
+import { computed, toRefs, useSlots, Comment, Text, useAttrs } from "vue";
 import type { InputProps } from "./types";
 import { useInputClasses } from "./utils";
-import { useMergeClasses } from "@/composables/useMergeClasses";
 import PubIcon from "../PubIcon/PubIcon.vue";
 
 const props = withDefaults(defineProps<InputProps>(), {
@@ -22,8 +21,8 @@ const props = withDefaults(defineProps<InputProps>(), {
 });
 
 const model = defineModel<string | number>({ default: "" });
-
 const slots = useSlots();
+const attrs = useAttrs() as { name?: string; [key: string]: unknown };
 
 const isTextSlot = (name: string) => {
     const vnodes = slots[name]?.();
@@ -51,7 +50,7 @@ const {
 
 <template>
     <div :class="wrapperClasses">
-        <label for="" :class="labelClasses">
+        <label v-if="props.label" :for="attrs.name" :class="labelClasses">
             {{ props.label }}
         </label>
         <div :class="inputWrapperClasses">
@@ -59,7 +58,7 @@ const {
                 <slot name="prepend" />
             </div>
             <input v-model="model" :type="type" :class="inputClasses" :disabled="disabled" :required="required"
-                :autocomplete="autocomplete" v-bind="$attrs" />
+                :autocomplete="autocomplete" v-bind="attrs" />
             <div v-if="$slots.append" :class="appendContainerClasses">
                 <slot name="append" />
             </div>

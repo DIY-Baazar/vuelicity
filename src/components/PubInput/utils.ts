@@ -1,15 +1,15 @@
 import type { ClassRef } from "@/types/global";
 import { computed, normalizeClass, type Ref } from "vue";
-import { validationStatusMap, type InputSize, type ValidationStatus } from "./types";
 import { useMergeClasses } from "@/composables/useMergeClasses";
+import { validationStatusMap, type FormElementSize, type FormElementValidationStatus } from "@/types/form";
 
 interface UseInputClassesProps {
     type: Ref<string>;
-    size: Ref<InputSize>;
+    size: Ref<FormElementSize>;
     class: ClassRef;
     wrapperClass: ClassRef;
     labelClass: ClassRef;
-    validationStatus: Ref<ValidationStatus | undefined>;
+    validationStatus: Ref<FormElementValidationStatus | undefined>;
     disabled: Ref<boolean>;
     inputClass: ClassRef;
     isPrependText: Ref<boolean>;
@@ -42,14 +42,14 @@ const affixDisabledBgClasses = "bg-gray-200";
 const affixSuccessBorderClasses = "border-green-200";
 const affixErrorBorderClasses = "border-red-200";
 const affixDefaultBorderClasses = "border-gray-300";
-const affixSizeClasses: Record<InputSize, string> = {
+const affixSizeClasses: Record<FormElementSize, string> = {
     sm: "px-2.5 text-sm",
     md: "px-3 text-sm",
     lg: "px-3.5 text-base",
     xl: "px-4 text-base"
 };
 
-const inputSizeClasses: Record<InputSize, string> = {
+const inputSizeClasses: Record<FormElementSize, string> = {
     sm: "py-0.5 px-2 text-sm",
     md: "py-1 px-3 text-sm",
     lg: "py-1.5 px-4 text-lg",
