@@ -85,3 +85,28 @@ The `validationMessage` slot is used to display a custom validation message. It 
 </demo-container>
 
 <<< @/form/PubSelect/Validation.vue
+
+## Reference
+
+### Properties
+
+| Name | Type | Default | Description | Options |
+| ---- | ---- | ------- | ----------- | ------- |
+| class | String | '' | Additional classes for the wrapper element. | |
+| wrapperClass | String | '' | Additional classes for the outer wrapper. | |
+| options | Array | [] | Options for the select field. Each option has `name` and `value`. | |
+| disabled | Boolean | false | Disables the select field. | |
+| label | String | '' | Label displayed above the select field. | |
+| labelClass | String | '' | Additional classes for the label element. | |
+| placeholder | String | 'Please select one' | Placeholder shown as the first option. | |
+| size | String | 'md' | Size of the select field. | 'sm', 'md', 'lg', 'xl' |
+| validationStatus | String | undefined | Visual validation state of the select field. | 'Error', 'Success' |
+| underline | Boolean | false | Whether the select field is underlined. | |
+
+### Slots
+
+| Name | Description |
+| ---- | ----------- |
+| validationMessage | Slot for custom validation message. |
+| helper | Slot for helper text displayed below the select field. |
+
