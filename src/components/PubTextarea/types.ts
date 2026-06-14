@@ -14,4 +14,5 @@ export interface TextareaProps {
     wrapperClass?: ClassInput;
     autocomplete?: FormElementAutoFill;
     rows?: number;
+    footerClass?: ClassInput;
 }
