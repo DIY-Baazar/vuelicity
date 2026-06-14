@@ -43,6 +43,6 @@
     </pub-accordion>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { PubAccordion, PubAccordionPanel, PubAccordionHeader, PubAccordionContent } from "vuelicity";
 </script>

@@ -4,7 +4,7 @@
     <pub-button theme="green" disabled>Green</pub-button>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { PubButton } from "vuelicity";
 function onClick() {
     console.log("clicked");

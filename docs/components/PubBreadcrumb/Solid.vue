@@ -6,6 +6,6 @@
     </pub-breadcrumb>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { PubBreadcrumb, PubBreadcrumbItem } from "vuelicity";
 </script>

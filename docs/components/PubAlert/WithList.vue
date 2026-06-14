@@ -23,6 +23,6 @@
     </pub-alert>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { PubAlert } from "vuelicity";
 </script>

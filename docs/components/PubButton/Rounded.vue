@@ -7,6 +7,6 @@
     <pub-button rounded="full">Full</pub-button>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { PubButton } from "vuelicity";
 </script>

@@ -11,6 +11,6 @@
     </pub-card>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { PubCard } from 'vuelicity';
 </script>

@@ -5,7 +5,7 @@
     <pub-button theme="blue" :skeleton="skeletal">Green</pub-button>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { PubButton } from "vuelicity";
 import { ref } from "vue";
 

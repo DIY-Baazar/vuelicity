@@ -1,3 +1,4 @@
+import type { ClassRef } from "@/types/global";
 import type { Ref } from "vue";
 
 export type IconTheme =
@@ -26,4 +27,5 @@ export interface UseIconClassesProps {
     mirror: Ref<boolean | undefined>;
     aschild: Ref<boolean | undefined>;
     strokeWidth: Ref<number>;
+    class: ClassRef;
 };

@@ -9,6 +9,6 @@
     </pub-button>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { PubButton, PubBadge } from "vuelicity";
 </script>

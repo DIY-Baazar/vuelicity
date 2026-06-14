@@ -6,6 +6,6 @@
     <pub-icon name="check" mirror />
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { PubIcon } from "vuelicity";
 </script>

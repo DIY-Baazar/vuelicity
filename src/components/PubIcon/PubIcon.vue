@@ -31,13 +31,13 @@ const props = withDefaults(defineProps<IconProps>(), {
     strokeWidth: 1
 });
 
-const iconClasses = computed(() => useIconClasses(toRefs(props)));
+const { iconClasses } = useIconClasses(toRefs(props));
 
 const iconBody = computed(() => getIconBody(toRefs(props)));
 </script>
 
 <template>
-    <span class="pub-icon" :class="[iconClasses, props.class]" v-bind="$attrs">
+    <span class="pub-icon" :class="iconClasses" v-bind="$attrs">
         <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" v-html="iconBody" />
     </span>
 </template>

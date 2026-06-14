@@ -7,45 +7,25 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 0.5rem;
-
-    // h1,
-    // h2,
-    // h3,
-    // h4,
-    // h5,
-    // h6,
-    // p {
-    //     margin: 0;
-    //     line-height: 1;
-    // }
-
-    // a {
-    //     text-decoration: inherit;
-    //     color: inherit;
-    // }
-
-    // ul,
-    // ol {
-    //     list-style: none;
-    //     margin: 0;
-    //     padding: 0;
-    // }
 }
 </style>
 
 <template>
-    <div :class="`vp-raw flex flex-${flexType} gap-3`">
+    <div :class="useMergeClasses([`vp-raw flex flex-${flexType} gap-3`, props.class])">
         <slot></slot>
     </div>
 </template>
 
-
 <script lang="ts" setup>
+import { useMergeClasses } from "@/composables/useMergeClasses";
+
 interface DCProps {
-    flexType?: 'col' | 'row';
+    flexType?: "col" | "row";
+    class?: string;
 }
 
 const props = withDefaults(defineProps<DCProps>(), {
-    flexType: 'row'
+    flexType: "row",
+    class: ""
 });
 </script>

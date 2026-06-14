@@ -10,6 +10,6 @@
     <pub-badge theme="dark" bordered>Dark</pub-badge>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { PubBadge } from "vuelicity";
 </script>

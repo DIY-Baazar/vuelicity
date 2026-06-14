@@ -10,6 +10,6 @@
     <pub-button theme="dark" outline>Dark</pub-button>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { PubButton } from "vuelicity";
 </script>

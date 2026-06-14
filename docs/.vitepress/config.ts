@@ -1,5 +1,6 @@
 import { resolve } from "path";
 import components from "./components";
+import form from "./form";
 
 
 export default {
@@ -35,6 +36,10 @@ export default {
             {
                 text: "Components",
                 items: components.component_toc
+            },
+            {
+                text: "Form",
+                items: form.component_toc
             }
         ],
         socialLinks: [{ icon: "github", link: "https://github.com/DIY-Baazar/vuelicity" }],
