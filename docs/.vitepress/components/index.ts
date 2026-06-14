@@ -44,10 +44,6 @@ const component_toc = [
         link: "/components/pub-icon"
     },
     {
-        text: "PubInput",
-        link: "/components/pub-input"
-    },
-    {
         text: "PubModal",
         link: "/components/pub-modal"
     },

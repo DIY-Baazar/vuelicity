@@ -8,4 +8,5 @@ export interface CheckBoxProps {
     wrapperClass: ClassInput;
     name: string;
     value: string | number | boolean | object;
+    bordered?: boolean;
 }

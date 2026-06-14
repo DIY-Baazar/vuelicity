@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, toRefs } from "vue";
+import { toRefs } from "vue";
 import { useCheckBoxClasses } from "./utils";
 import type { CheckBoxProps } from "./types";
 
@@ -10,7 +10,8 @@ const props = withDefaults(defineProps<CheckBoxProps>(), {
     class: "",
     wrapperClass: "",
     name: undefined,
-    value: undefined
+    value: undefined,
+    bordered: false
 });
 
 const model = defineModel<boolean>({ default: false });
