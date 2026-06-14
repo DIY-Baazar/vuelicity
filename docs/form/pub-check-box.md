@@ -9,6 +9,8 @@ description: Documentation for the PubCheckBox component.
     import CheckboxLink from './PubCheckBox/CheckboxLink.vue';
     import Bordered from './PubCheckBox/Bordered.vue';
     import BorderedDesc from './PubCheckBox/BorderedDesc.vue';
+    import BorderedIcon from './PubCheckBox/BorderedIcon.vue';
+    import CheckboxGroup from './PubCheckBox/CheckboxGroup.vue';
     import HelperText from './PubCheckBox/HelperText.vue';
     // import Validation from './PubCheckBox/Validation.vue';
 </script>
@@ -64,6 +66,20 @@ The `bordered` prop is used to add a border to the checkbox field. It can be a b
 </demo-container>
 
 <<< @/form/PubCheckBox/BorderedDesc.vue
+
+<!-- ## Bordered with icon
+
+<demo-container flex-type='col' class='items-start'>
+    <BorderedIcon />
+</demo-container>
+
+<<< @/form/PubCheckBox/BorderedIcon.vue -->
+
+## Checkbox group
+
+<demo-container flex-type='col' class='items-start'>
+    <CheckboxGroup />
+</demo-container>
 
 ## Helper Text
 
