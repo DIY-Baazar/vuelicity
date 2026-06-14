@@ -26,15 +26,17 @@ const defaultInputClasses =
     "pub-input block grow w-full p-0 bg-transparent text-inherit ring-offset-0 ring-0 border-0 focus:ring-offset-0 focus:ring-0 focus:border-0 focus:outline-none";
 const defaultHelperClasses = "mt-2 text-sm text-gray-500";
 
+const disabledInputClasses = "cursor-not-allowed text-gray-400";
 const disabledInputWrapperClasses = "bg-gray-100";
-const disabledInputClasses = "cursor-not-allowed";
 
 const successTextClasses = "text-green-700";
 const errorTextClasses = "text-red-700";
-const successInputWrapperClasses = "bg-green-50 border-green-500";
-const errorInputWrapperClasses = "bg-red-50 border-red-500";
-const successInputClasses = "text-green-900 placeholder-green-700";
-const errorInputClasses = "text-red-900 placeholder-red-700";
+const successInputWrapperClasses =
+    "bg-green-50 border-green-200 has-[input:focus]:border-green-500 has-[input:focus]:ring-green-500";
+const errorInputWrapperClasses =
+    "bg-red-50 border-red-200 has-[input:focus]:border-red-500 has-[input:focus]:ring-red-500";
+const successInputClasses = "text-green-900 placeholder:text-green-500";
+const errorInputClasses = "text-red-900 placeholder:text-red-500";
 
 const affixBaseClasses = "self-stretch flex items-center shrink-0 text-gray-500";
 const affixDefaultBgClasses = "bg-gray-100";

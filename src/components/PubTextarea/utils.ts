@@ -21,13 +21,17 @@ const defaultInputWrapperClasses =
 const defaultInputClasses =
     "pub-textarea w-full block bg-transparent border-0 focus:border-0 focus:outline-none ring-0 focus:ring-0 text-inherit placeholder:text-gray-400";
 
-const disabledInputClasses = "cursor-not-allowed";
+const disabledInputClasses = "cursor-not-allowed text-gray-400";
 const disabledInputWrapperClasses = "bg-gray-100";
 
 const successTextClasses = "text-green-700";
 const errorTextClasses = "text-red-700";
-const successInputClasses = "text-green-900 placeholder-green-700";
-const errorInputClasses = "text-red-900 placeholder-red-700";
+const successInputWrapperClasses =
+    "bg-green-50 border-green-200 has-[textarea:focus]:border-green-500 has-[textarea:focus]:ring-green-500";
+const errorInputWrapperClasses =
+    "bg-red-50 border-red-200 has-[textarea:focus]:border-red-500 has-[textarea:focus]:ring-red-500";
+const successInputClasses = "text-green-900 placeholder:text-green-500";
+const errorInputClasses = "text-red-900 placeholder:text-red-500";
 
 const inputSizeClasses: Record<FormElementSize, string> = {
     sm: "px-2.5 py-2 text-sm",
@@ -42,11 +46,27 @@ export function useTextareaClasses(props: UseTextareaClassesProps) {
     );
 
     const labelClasses = computed(() =>
-        useMergeClasses([defaultLabelClasses, normalizeClass(props.labelClass?.value)])
+        useMergeClasses([
+            defaultLabelClasses,
+            normalizeClass(props.labelClass?.value),
+            props.validationStatus.value === validationStatusMap.Success
+                ? successTextClasses
+                : props.validationStatus.value === validationStatusMap.Error
+                  ? errorTextClasses
+                  : ""
+        ])
     );
 
     const inputWrapperClasses = computed(() =>
-        useMergeClasses([defaultInputWrapperClasses, props.disabled.value ? disabledInputWrapperClasses : ""])
+        useMergeClasses([
+            defaultInputWrapperClasses,
+            props.validationStatus.value === validationStatusMap.Success
+                ? successInputWrapperClasses
+                : props.validationStatus.value === validationStatusMap.Error
+                  ? errorInputWrapperClasses
+                  : "",
+            props.disabled.value ? disabledInputWrapperClasses : ""
+        ])
     );
 
     const inputClasses = computed(() =>

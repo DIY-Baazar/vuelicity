@@ -6,5 +6,5 @@
 import { ref } from "vue";
 import { PubInput } from "vuelicity";
 
-const name = ref("");
+const name = ref("Felicia");
 </script>

@@ -14,6 +14,7 @@ description: Documentation for PubInput.
     import Validation from './PubInput/Validation.vue';
     import DropdownInput from './PubInput/DropdownInput.vue';
     import StylingInput from './PubInput/StylingInput.vue';
+    import Readonly from './PubInput/Readonly.vue';
 </script>
 
 # PubInput
@@ -40,16 +41,6 @@ The `size` prop is used to set the size of the input field. It can be one of the
 
 <<< @/form/PubInput/Size.vue
 
-## Disabled
-
-### Prop - `disabled` Usage
-
-The `disabled` prop is used to disable the input field. It can be a boolean value.
-
-<demo-container>
-    <Disabled />
-</demo-container>
-
 ## Required
 
 ### Prop - `required` Usage
@@ -61,6 +52,30 @@ The `required` prop is used to make the input field required. It can be a boolea
 </demo-container>
 
 <<< @/form/PubInput/Required.vue
+
+## Disabled
+
+### Prop - `disabled` Usage
+
+The `disabled` prop is used to disable the input field. It can be a boolean value.
+
+<demo-container>
+    <Disabled />
+</demo-container>
+
+<<< @/form/PubInput/Disabled.vue
+
+## Readonly
+
+### Prop - `readonly` Usage
+
+The `readonly` prop is used to make the input field readonly. It can be a boolean value.
+
+<demo-container>
+    <Readonly />
+</demo-container>
+
+<<< @/form/PubInput/Readonly.vue
 
 ## Validation
 
@@ -128,21 +143,21 @@ The `helperText` slot is used to display helper text below the input field. It c
 
 ### Properties
 
-| Name             | Type    | Default   | Description                                       | Options                                                                                                                                                                                                                                                     |
-| ---------------- | ------- | --------- | ------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| autocomplete     | String  | `'off'`   | Controls the autocomplete attribute of the input. | `'on'`, `'off'`, `'email'`, `'tel'`, `'name'`, `'username'`, `'current-password'`, `'country'`, `'postal-code'`, `'language'`, `'bday'`                                                                                                                     |
-| class            | String  | `''`      | Additional classes for the wrapper element.       |                                                                                                                                                                                                                                                             |
-| disabled         | Boolean | false     | Disables the input field when true.               |                                                                                                                                                                                                                                                             |
-| inputClass       | String  | `''`      | Additional classes for the input element.         |                                                                                                                                                                                                                                                             |
-| label            | String  | `''`      | Text label displayed above the input.             |                                                                                                                                                                                                                                                             |
-| labelClass       | String  | `''`      | Additional classes for the label element.         |                                                                                                                                                                                                                                                             |
-| required         | Boolean | false     | Marks the input as required.                      |                                                                                                                                                                                                                                                             |
-| size             | String  | `'md'`    | Controls the size of the input.                   | `'sm'`, `'md'`, `'lg'`, `'xl'`                                                                                                                                                                                                                              |
-| type             | String  | `'text'`  | HTML input type attribute.                        | `'button'`, `'checkbox'`, `'color'`, `'date'`, `'datetime-local'`, `'email'`, `'file'`, `'hidden'`, `'image'`, `'month'`, `'number'`, `'password'`, `'radio'`, `'range'`, `'reset'`, `'search'`, `'submit'`, `'tel'`, `'text'`, `'time'`, `'url'`, `'week'` |
-| validationStatus | String  | undefined | Visual validation state of the input.             | `'Error'`, `'Success'`                                                                                                                                                                                                                                      |
-| wrapperClass     | String  | `''`      | Additional classes for the outer wrapper.         |                                                                                                                                                                                                                                                             |
+| Name             | Type    | Default   | Description                                           | Options                                                                                                                                                                                                                                                     |
+| ---------------- | ------- | --------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| autocomplete     | String  | `'off'`   | Controls the autocomplete attribute of the input.     | `'on'`, `'off'`, `'email'`, `'tel'`, `'name'`, `'username'`, `'current-password'`, `'country'`, `'postal-code'`, `'language'`, `'bday'`                                                                                                                     |
+| class            | String  | `''`      | Additional classes for the wrapper element.           |                                                                                                                                                                                                                                                             |
+| disabled         | Boolean | false     | Disables the input field when true.                   |                                                                                                                                                                                                                                                             |
+| inputClass       | String  | `''`      | Additional classes for the input element.             |                                                                                                                                                                                                                                                             |
+| label            | String  | `''`      | Text label displayed above the input.                 |                                                                                                                                                                                                                                                             |
+| labelClass       | String  | `''`      | Additional classes for the label element.             |                                                                                                                                                                                                                                                             |
+| required         | Boolean | false     | Marks the input as required.                          |                                                                                                                                                                                                                                                             |
+| size             | String  | `'md'`    | Controls the size of the input.                       | `'sm'`, `'md'`, `'lg'`, `'xl'`                                                                                                                                                                                                                              |
+| type             | String  | `'text'`  | HTML input type attribute.                            | `'button'`, `'checkbox'`, `'color'`, `'date'`, `'datetime-local'`, `'email'`, `'file'`, `'hidden'`, `'image'`, `'month'`, `'number'`, `'password'`, `'radio'`, `'range'`, `'reset'`, `'search'`, `'submit'`, `'tel'`, `'text'`, `'time'`, `'url'`, `'week'` |
+| validationStatus | String  | undefined | Visual validation state of the input.                 | `'Error'`, `'Success'`                                                                                                                                                                                                                                      |
+| wrapperClass     | String  | `''`      | Additional classes for the outer wrapper.             |                                                                                                                                                                                                                                                             |
 | prependClass     | String  | `''`      | Additional classes for the prepend container element. |                                                                                                                                                                                                                                                             |
-| appendClass      | String  | `''`      | Additional classes for the append container element. |                                                                                                                                                                                                                                                             |
+| appendClass      | String  | `''`      | Additional classes for the append container element.  |                                                                                                                                                                                                                                                             |
 
 ### Slots
 
