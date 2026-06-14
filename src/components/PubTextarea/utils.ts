@@ -62,7 +62,6 @@ export function useTextareaClasses(props: UseTextareaClassesProps) {
     const inputWrapperClasses = computed(() =>
         useMergeClasses([
             defaultInputWrapperClasses,
-            inputSizeClasses[props.size.value],
             props.validationStatus.value === validationStatusMap.Success
                 ? successInputWrapperClasses
                 : props.validationStatus.value === validationStatusMap.Error
@@ -75,6 +74,7 @@ export function useTextareaClasses(props: UseTextareaClassesProps) {
     const inputClasses = computed(() =>
         useMergeClasses([
             defaultInputClasses,
+            inputSizeClasses[props.size.value],
             props.validationStatus.value === validationStatusMap.Success
                 ? successInputClasses
                 : props.validationStatus.value === validationStatusMap.Error
