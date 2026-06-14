@@ -6,6 +6,6 @@
     <pub-button size="xl">Extra Large</pub-button>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { PubButton } from "vuelicity";
 </script>

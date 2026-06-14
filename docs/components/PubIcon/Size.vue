@@ -6,6 +6,6 @@
     <pub-icon name="times" size="2xl" title="Double Extra Large"/>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { PubIcon } from "vuelicity";
 </script>

@@ -6,6 +6,6 @@
     <pub-alert show-icon theme="dark"> Dark alert! Change a few things up and try submitting again. </pub-alert>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { PubAlert } from "vuelicity";
 </script>

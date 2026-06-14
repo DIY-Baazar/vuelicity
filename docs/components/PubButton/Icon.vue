@@ -22,6 +22,6 @@
     </pub-button>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { PubButton, PubIcon } from "vuelicity";
 </script>

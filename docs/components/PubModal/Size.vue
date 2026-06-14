@@ -6,6 +6,6 @@
     <default-modal modal-size="5xl" modal-trigger-text="Size:5xl" />
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import DefaultModal from "./DefaultModal.vue";
 </script>

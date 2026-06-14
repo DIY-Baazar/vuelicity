@@ -9,6 +9,6 @@
     <pub-icon name="times" theme="dark" />
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { PubIcon } from "vuelicity";
 </script>

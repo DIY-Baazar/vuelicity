@@ -51,6 +51,6 @@
     </pub-alert>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { PubAlert, PubBadge, PubIcon } from "vuelicity";
 </script>

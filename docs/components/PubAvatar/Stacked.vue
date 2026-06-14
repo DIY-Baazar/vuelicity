@@ -17,6 +17,6 @@
     </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { PubAvatar, PubAvatarStack, PubAvatarStackCounter } from "vuelicity";
 </script>

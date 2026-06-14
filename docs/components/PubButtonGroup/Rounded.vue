@@ -7,6 +7,6 @@
   </pub-button-group>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { PubButtonGroup, PubButton } from 'vuelicity'
 </script>

@@ -3,6 +3,6 @@
     <default-modal focus-trap modal-trigger-text="Modal with focus trap" />
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import DefaultModal from "./DefaultModal.vue";
 </script>

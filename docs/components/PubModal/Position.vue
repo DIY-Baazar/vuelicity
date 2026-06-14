@@ -9,6 +9,6 @@
     <default-modal modal-position="bottom-end" modal-trigger-text="Position:bottom-end" />
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import DefaultModal from "./DefaultModal.vue";
 </script>

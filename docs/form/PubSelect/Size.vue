@@ -4,7 +4,7 @@
     <pub-select v-model="selected" :options="countries" label="Select a country" size="lg" />
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { ref } from 'vue';
 import { PubSelect } from 'vuelicity';
 

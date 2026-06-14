@@ -1,4 +1,4 @@
-<script setup>
+<script lang="ts" setup>
 import { ref, computed } from "vue";
 import DisplayIcon from "./DisplayIcon.vue";
 import { iconsList } from "vuelicity/components/PubIcon/icons.ts";

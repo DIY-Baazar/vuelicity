@@ -11,6 +11,6 @@
     </pub-badge>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { PubBadge, PubIcon } from "vuelicity";
 </script>

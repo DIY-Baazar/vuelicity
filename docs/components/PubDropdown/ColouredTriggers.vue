@@ -65,6 +65,6 @@
     </pub-dropdown>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { PubDropdown } from "vuelicity";
 </script>
