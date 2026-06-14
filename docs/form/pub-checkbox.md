@@ -1,21 +1,21 @@
 ---
-title: PubCheckBox
-description: Documentation for the PubCheckBox component.
+title: PubCheckbox
+description: Documentation for the PubCheckbox component.
 ---
 
 <script setup>
-    import Default from './PubCheckBox/Default.vue';
-    import Disabled from './PubCheckBox/Disabled.vue';
-    import CheckboxLink from './PubCheckBox/CheckboxLink.vue';
-    import Bordered from './PubCheckBox/Bordered.vue';
-    import BorderedDesc from './PubCheckBox/BorderedDesc.vue';
-    import BorderedIcon from './PubCheckBox/BorderedIcon.vue';
-    import CheckboxGroup from './PubCheckBox/CheckboxGroup.vue';
-    import HelperText from './PubCheckBox/HelperText.vue';
-    // import Validation from './PubCheckBox/Validation.vue';
+    import Default from './PubCheckbox/Default.vue';
+    import Disabled from './PubCheckbox/Disabled.vue';
+    import CheckboxLink from './PubCheckbox/CheckboxLink.vue';
+    import Bordered from './PubCheckbox/Bordered.vue';
+    import BorderedDesc from './PubCheckbox/BorderedDesc.vue';
+    import BorderedIcon from './PubCheckbox/BorderedIcon.vue';
+    import CheckboxGroup from './PubCheckbox/CheckboxGroup.vue';
+    import HelperText from './PubCheckbox/HelperText.vue';
+    // import Validation from './PubCheckbox/Validation.vue';
 </script>
 
-# PubCheckBox
+# PubCheckbox
 
 This is a checkbox component. It is used to display a checkbox field to select an option from a list of options.
 
@@ -25,7 +25,7 @@ This is a checkbox component. It is used to display a checkbox field to select a
     <Default />
 </demo-container>
 
-<<< @/form/PubCheckBox/Default.vue
+<<< @/form/PubCheckbox/Default.vue
 
 ## Disabled
 
@@ -37,7 +37,7 @@ The `disabled` prop is used to disable the checkbox field. It can be a boolean v
     <Disabled />
 </demo-container>
 
-<<< @/form/PubCheckBox/Disabled.vue
+<<< @/form/PubCheckbox/Disabled.vue
 
 ## Checkbox link
 
@@ -45,7 +45,7 @@ The `disabled` prop is used to disable the checkbox field. It can be a boolean v
     <CheckboxLink />
 </demo-container>
 
-<<< @/form/PubCheckBox/CheckboxLink.vue
+<<< @/form/PubCheckbox/CheckboxLink.vue
 
 ## Bordered
 
@@ -57,7 +57,7 @@ The `bordered` prop is used to add a border to the checkbox field. It can be a b
     <Bordered />
 </demo-container>
 
-<<< @/form/PubCheckBox/Bordered.vue
+<<< @/form/PubCheckbox/Bordered.vue
 
 ## Bordered with description
 
@@ -65,7 +65,7 @@ The `bordered` prop is used to add a border to the checkbox field. It can be a b
     <BorderedDesc />
 </demo-container>
 
-<<< @/form/PubCheckBox/BorderedDesc.vue
+<<< @/form/PubCheckbox/BorderedDesc.vue
 
 <!-- ## Bordered with icon
 
@@ -73,7 +73,7 @@ The `bordered` prop is used to add a border to the checkbox field. It can be a b
     <BorderedIcon />
 </demo-container>
 
-<<< @/form/PubCheckBox/BorderedIcon.vue -->
+<<< @/form/PubCheckbox/BorderedIcon.vue -->
 
 ## Checkbox group
 
@@ -91,7 +91,7 @@ The `helper` slot is used to display helper text below the checkbox field.
     <HelperText />
 </demo-container>
 
-<<< @/form/PubCheckBox/HelperText.vue
+<<< @/form/PubCheckbox/HelperText.vue
 
 ## Reference
 

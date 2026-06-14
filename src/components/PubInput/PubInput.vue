@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, toRefs, useSlots, Comment, Text, useAttrs } from "vue";
+import { computed, toRefs, useSlots, Comment, Text, useAttrs, useId } from "vue";
 import type { InputProps } from "./types";
 import { useInputClasses } from "./utils";
 import PubIcon from "../PubIcon/PubIcon.vue";
@@ -22,7 +22,8 @@ const props = withDefaults(defineProps<InputProps>(), {
 
 const model = defineModel<string | number>({ default: "" });
 const slots = useSlots();
-const attrs = useAttrs() as { name?: string; [key: string]: unknown };
+const attrs = useAttrs();
+const inputName = computed(() => props.name || 'input-' + useId());
 
 const isTextSlot = (name: string) => {
     const vnodes = slots[name]?.();
@@ -30,7 +31,7 @@ const isTextSlot = (name: string) => {
     const meaningful = vnodes.filter(v =>
         v.type !== Comment && !(v.type === Text && !String(v.children).trim()),
     );
-    return meaningful.length > 0 && meaningful.every(v => v.type === Text || v.type === PubIcon );
+    return meaningful.length > 0 && meaningful.every(v => v.type === Text || v.type === PubIcon);
 };
 
 const isPrependText = computed(() => isTextSlot('prepend'));
@@ -50,7 +51,7 @@ const {
 
 <template>
     <div :class="wrapperClasses">
-        <label v-if="props.label" :for="attrs.name" :class="labelClasses">
+        <label v-if="props.label" :for="inputName" :class="labelClasses">
             {{ props.label }}
         </label>
         <div :class="inputWrapperClasses">
@@ -58,7 +59,7 @@ const {
                 <slot name="prepend" />
             </div>
             <input v-model="model" :type="type" :class="inputClasses" :disabled="disabled" :required="required"
-                :autocomplete="autocomplete" v-bind="attrs" />
+                :name="inputName" :autocomplete="autocomplete" v-bind="attrs" />
             <div v-if="$slots.append" :class="appendContainerClasses">
                 <slot name="append" />
             </div>

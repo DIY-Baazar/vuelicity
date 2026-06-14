@@ -2,7 +2,7 @@
 import { ref, computed } from "vue";
 import DisplayIcon from "./DisplayIcon.vue";
 import { iconsList } from "vuelicity/components/PubIcon/icons.ts";
-import { PubInput, PubIcon, PubCheckBox } from "vuelicity";
+import { PubInput, PubIcon, PubCheckbox } from "vuelicity";
 
 const searchTerm = ref(""),
     isSolid = ref(false);
@@ -25,9 +25,8 @@ const filteredIcons = computed(() => {
                     <pub-icon name="search" type="outline" class="text-gray-700" />
                 </template>
             </pub-input>
-            <pub-check-box
+            <pub-checkbox
                 v-model="isSolid"
-                type="checkbox"
                 name="isSolid"
                 :label="`Show '${isSolid ? 'Outline' : 'Solid'}' Icons`"
                 wrapper-class="mt-2 flex items-center gap-2"

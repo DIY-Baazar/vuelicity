@@ -1,7 +1,7 @@
 const component_toc = [
     {
-        text: "PubCheckBox",
-        link: "/form/pub-check-box"
+        text: "PubCheckbox",
+        link: "/form/pub-checkbox"
     },
     {
         text: "PubInput",
@@ -10,6 +10,10 @@ const component_toc = [
     {
         text: "PubSelect",
         link: "/form/pub-select"
+    },
+    {
+        text: "PubTextarea",
+        link: "/form/pub-textarea"
     }
 ];
 

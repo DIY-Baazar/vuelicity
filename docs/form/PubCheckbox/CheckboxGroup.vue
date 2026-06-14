@@ -1,11 +1,11 @@
 <template>
     <div class="space-y-2">
-        <pub-check-box v-for="(fruit, i) in fruits" :key="i" v-model="selectedFruits" :label="fruit" :value="fruit"
+        <pub-checkbox v-for="(fruit, i) in fruits" :key="i" v-model="selectedFruits" :label="fruit" :value="fruit"
             name="fruits" />
         <p class="mb-4 text-sm text-gray-500">
             Selected fruits: {{ selectedFruits }}
         </p>
-        <pub-check-box v-for="(name, id) in planets" :key="id" v-model="selectedPlanets" :label="name" :value="id"
+        <pub-checkbox v-for="(name, id) in planets" :key="id" v-model="selectedPlanets" :label="name" :value="id"
             name="planets" />
         <p class="text-sm text-gray-500">
             Selected planets: {{ selectedPlanets }}
@@ -15,7 +15,7 @@
 
 <script setup>
 import { ref } from 'vue';
-import { PubCheckBox } from 'vuelicity';
+import { PubCheckbox } from 'vuelicity';
 
 const selectedFruits = ref(['Banana', 'Strawberry']);
 const fruits = [

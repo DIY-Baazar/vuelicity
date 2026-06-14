@@ -6,3 +6,5 @@ export const validationStatusMap = {
 } as const;
 
 export type FormElementValidationStatus = (typeof validationStatusMap)[keyof typeof validationStatusMap];
+
+export type FormElementAutoFill = 'on' | 'off' | 'email' | 'tel' | 'name' | 'username' | 'current-password' | 'country' | 'postal-code' | 'language' | 'bday';

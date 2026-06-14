@@ -1,14 +1,33 @@
-import type { FormElementSize, FormElementValidationStatus } from "@/types/form";
+import type { FormElementAutoFill, FormElementSize, FormElementValidationStatus } from "@/types/form";
 import type { ClassInput } from "@/types/global";
 
-export type InputType = 'button' | 'checkbox' | 'color' | 'date' | 'datetime-local' | 'email' | 'file' | 'hidden' | 'image' | 'month' | 'number' | 'password' | 'radio' | 'range' | 'reset' | 'search' | 'submit' | 'tel' | 'text' | 'time' | 'url' | 'week';
-
-export type CommonAutoFill = 'on' | 'off' | 'email' | 'tel' | 'name' | 'username' | 'current-password' | 'country' | 'postal-code' | 'language' | 'bday';
-
-
+export type InputType =
+    | "button"
+    | "checkbox"
+    | "color"
+    | "date"
+    | "datetime-local"
+    | "email"
+    | "file"
+    | "hidden"
+    | "image"
+    | "month"
+    | "number"
+    | "password"
+    | "radio"
+    | "range"
+    | "reset"
+    | "search"
+    | "submit"
+    | "tel"
+    | "text"
+    | "time"
+    | "url"
+    | "week";
 
 export interface InputProps {
-    autocomplete?: CommonAutoFill;
+    autocomplete?: FormElementAutoFill;
+    name?: string;
     class?: ClassInput;
     disabled?: boolean;
     inputClass?: ClassInput;
