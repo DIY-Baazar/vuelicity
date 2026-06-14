@@ -64,9 +64,11 @@ The `required` prop is used to make the input field required. It can be a boolea
 
 ## Validation
 
-### Prop - `validationStatus` Usage
+### Prop - `validationStatus` and Slot - `validationMessage` Usage
 
 The `validationStatus` prop is used to set the visual validation state of the input. It can be one of the following values: `error`, `success`.
+
+The `validationMessage` slot is used to display a custom validation message. It can be a string value.
 
 <demo-container flex-type='col' class='items-start'>
     <Validation />

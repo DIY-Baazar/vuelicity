@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, toRefs, useAttrs } from "vue";
+import { toRefs, useAttrs } from "vue";
 import type { SelectProps } from "./types";
 import { useSelectClasses } from "./utils";
 

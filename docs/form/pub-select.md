@@ -2,10 +2,14 @@
 title: PubSelect
 description: Documentation for the PubSelect component.
 ---
+
 <script setup>
     import Default from './PubSelect/Default.vue';
     import Size from './PubSelect/Size.vue';
     import Disabled from './PubSelect/Disabled.vue';
+    import Underlined from './PubSelect/Underlined.vue';
+    import HelperText from './PubSelect/HelperText.vue';
+    import Validation from './PubSelect/Validation.vue';
 </script>
 
 # PubSelect
@@ -43,3 +47,41 @@ The `disabled` prop is used to disable the select field. It can be a boolean val
 </demo-container>
 
 <<< @/form/PubSelect/Disabled.vue
+
+## Underlined
+
+### Prop - `underlined` Usage
+
+The `underlined` prop is used to display the select field with an underline. It can be a boolean value.
+
+<demo-container>
+    <Underlined />
+</demo-container>
+
+<<< @/form/PubSelect/Underlined.vue
+
+## Helper text
+
+### Slot - `helperText` Usage
+
+The `helperText` slot is used to display helper text below the select field. It can be a string value.
+
+<demo-container flex-type='col' class='items-start'>
+    <HelperText/>
+</demo-container>
+
+<<< @/form/PubSelect/HelperText.vue
+
+## Validation
+
+### Prop - `validationStatus` and Slot - `validationMessage` Usage
+
+The `validationStatus` prop is used to set the visual validation state of the select field. It can be one of the following values: `error`, `success`.
+
+The `validationMessage` slot is used to display a custom validation message. It can be a string value.
+
+<demo-container flex-type='col' class='items-start'>
+    <Validation />
+</demo-container>
+
+<<< @/form/PubSelect/Validation.vue

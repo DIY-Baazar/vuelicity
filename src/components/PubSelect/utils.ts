@@ -23,6 +23,9 @@ const disabledSelectClasses = "cursor-not-allowed bg-gray-100";
 
 const successTextClasses = "text-green-700";
 const errorTextClasses = "text-red-700";
+const successSelectClasses = "bg-green-50 border-green-500 focus:ring-green-500 focus:border-green-500 text-green-900 placeholder-green-700";
+const errorSelectClasses = "bg-red-50 border-red-500 focus:ring-red-500 focus:border-red-500 text-red-900 placeholder-red-700";
+
 const selectSizeClasses: Record<FormElementSize, string> = {
     sm: "p-2 text-sm",
     md: "p-2.5 text-sm",
@@ -59,6 +62,11 @@ export function useSelectClasses(props: UseSelectClassesProps) {
 
         return useMergeClasses([
             defaultSelectClasses,
+            props.validationStatus.value === validationStatusMap.Success
+                ? successSelectClasses
+                : props.validationStatus.value === validationStatusMap.Error
+                  ? errorSelectClasses
+                  : "",
             selectSizeClasses[props.size.value],
             normalizeClass(props.class?.value),
             props.disabled.value ? disabledSelectClasses : "",
