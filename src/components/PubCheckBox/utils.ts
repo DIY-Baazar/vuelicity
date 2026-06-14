@@ -2,7 +2,7 @@ import { useMergeClasses } from "@/composables/useMergeClasses";
 import type { ClassRef } from "@/types/global";
 import { computed, normalizeClass, type Ref } from "vue";
 
-interface UseCheckBoxClassesProps {
+interface UseCheckboxClassesProps {
     class: ClassRef;
     wrapperClass: ClassRef;
     labelClass: ClassRef;
@@ -17,7 +17,7 @@ const defaultCheckboxClasses =
 const disabledLabelClasses = "text-gray-400";
 const defaultHelperClasses = "ml-6 text-xs font-normal text-gray-500";
 
-export function useCheckBoxClasses(props: UseCheckBoxClassesProps) {
+export function useCheckboxClasses(props: UseCheckboxClassesProps) {
     const wrapperClasses = computed(() =>
         useMergeClasses([
             defaultWrapperClasses,

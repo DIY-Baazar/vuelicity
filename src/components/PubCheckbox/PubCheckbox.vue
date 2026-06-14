@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import { toRefs } from "vue";
-import { useCheckBoxClasses } from "./utils";
-import type { CheckBoxProps } from "./types";
+import { useCheckboxClasses } from "./utils";
+import type { CheckboxProps } from "./types";
 
-const props = withDefaults(defineProps<CheckBoxProps>(), {
+const props = withDefaults(defineProps<CheckboxProps>(), {
     disabled: false,
     label: "",
     labelClass: "",
@@ -16,7 +16,7 @@ const props = withDefaults(defineProps<CheckBoxProps>(), {
 
 const model = defineModel<boolean>({ default: false });
 
-const { wrapperClasses, checkboxClasses, labelClasses, helperMessageClasses } = useCheckBoxClasses(toRefs(props));
+const { wrapperClasses, checkboxClasses, labelClasses, helperMessageClasses } = useCheckboxClasses(toRefs(props));
 </script>
 
 <template>

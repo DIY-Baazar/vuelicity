@@ -1,6 +1,6 @@
 import type { ClassInput } from "@/types/global";
 
-export interface CheckBoxProps {
+export interface CheckboxProps {
     label: string;
     labelClass?: ClassInput;
     disabled?: boolean;
