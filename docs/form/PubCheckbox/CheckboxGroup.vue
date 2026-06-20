@@ -5,7 +5,7 @@
         <p class="mb-4 text-sm text-gray-500">
             Selected fruits: {{ selectedFruits }}
         </p>
-        <pub-checkbox v-for="(name, id) in planets" :key="id" v-model="selectedPlanets" :label="name" :value="id"
+        <pub-checkbox v-for="(name, id) in planets" :key="id" v-model="selectedPlanets" :label="name" :value="parseInt(id)"
             name="planets" />
         <p class="text-sm text-gray-500">
             Selected planets: {{ selectedPlanets }}

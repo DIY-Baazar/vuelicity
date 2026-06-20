@@ -8,3 +8,7 @@ export const validationStatusMap = {
 export type FormElementValidationStatus = (typeof validationStatusMap)[keyof typeof validationStatusMap];
 
 export type FormElementAutoFill = 'on' | 'off' | 'email' | 'tel' | 'name' | 'username' | 'current-password' | 'country' | 'postal-code' | 'language' | 'bday';
+
+export type FormElementValue = string | number | boolean | object;
+
+export type FormElementColor = "red" | "blue" | "yellow" | "green" | "magenta" | "cyan" | "light" | "dark";

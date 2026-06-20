@@ -91,6 +91,8 @@ The `validationMessage` slot is used to display a custom validation message. It 
 
 ### Prop - `class`, `wrapperClass`, `labelClass` Usage
 
+The `class`, `wrapperClass`, and `labelClass` props are used to add additional classes to the wrapper element, outer wrapper, and label element, respectively.
+
 <demo-container>
     <StylingSelect/>
 </demo-container>

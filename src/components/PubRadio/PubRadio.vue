@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import { toRefs, useAttrs } from "vue";
-import { useCheckboxClasses } from "./utils";
-import type { CheckboxProps } from "./types";
+import type { RadioProps } from "./types";
+import { useRadioClasses } from "./utils";
 
-const props = withDefaults(defineProps<CheckboxProps>(), {
+const props = withDefaults(defineProps<RadioProps>(), {
     disabled: false,
     label: "",
     labelClass: "",
@@ -12,21 +12,23 @@ const props = withDefaults(defineProps<CheckboxProps>(), {
     name: undefined,
     value: undefined,
     bordered: false,
-    size: "md"
+    size: "md",
+    color: "blue"
 });
 
 const attrs = useAttrs();
 
 const model = defineModel<boolean>({ default: false });
 
-const { wrapperClasses, checkboxClasses, labelClasses, helperMessageClasses } = useCheckboxClasses(toRefs(props));
+const { wrapperClasses, radioWrapperClasses, radioClasses, labelClasses, helperMessageClasses } = useRadioClasses(toRefs(props));
+
 </script>
 
 <template>
     <div :class="wrapperClasses">
-        <label :for="name" class="flex justify-start items-center select-none">
-            <input v-model="model" :class="checkboxClasses" :disabled="disabled" :name="name" :value="value"
-                type="checkbox" v-bind="attrs" />
+        <label :for="name" :class="radioWrapperClasses">
+            <input v-model="model" :class="radioClasses" :disabled="disabled" :name="name" :value="value" type="radio"
+                v-bind="attrs" />
             <span v-if="label" :class="labelClasses">
                 {{ label }}
             </span>

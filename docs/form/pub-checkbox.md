@@ -13,6 +13,7 @@ description: Documentation for the PubCheckbox component.
     import CheckboxGroup from './PubCheckbox/CheckboxGroup.vue';
     import HelperText from './PubCheckbox/HelperText.vue';
     // import Validation from './PubCheckbox/Validation.vue';
+    import StylingCheckbox from './PubCheckbox/StylingCheckbox.vue';
 </script>
 
 # PubCheckbox
@@ -81,6 +82,8 @@ The `bordered` prop is used to add a border to the checkbox field. It can be a b
     <CheckboxGroup />
 </demo-container>
 
+<<< @/form/PubCheckbox/CheckboxGroup.vue
+
 ## Helper Text
 
 ### Slot - `helper` Usage
@@ -92,6 +95,18 @@ The `helper` slot is used to display helper text below the checkbox field.
 </demo-container>
 
 <<< @/form/PubCheckbox/HelperText.vue
+
+## Styling Checkbox
+
+### Prop - `class`, `wrapperClass`, `labelClass` Usage
+
+The `class`, `wrapperClass`, and `labelClass` props are used to add additional classes to the checkbox field, outer wrapper, and label element, respectively.
+
+<demo-container flex-type='col' class='items-start'>
+    <StylingCheckbox />
+</demo-container>
+
+<<< @/form/PubCheckbox/StylingCheckbox.vue
 
 ## Reference
 
