@@ -10,6 +10,7 @@ description: Documentation for the PubTextarea component.
     import Readonly from './PubTextarea/Readonly.vue';
     import Validation from './PubTextarea/Validation.vue';
     import CommentBox from './PubTextarea/CommentBox.vue';
+    import NativeConst from './PubTextarea/NativeConst.vue';
 </script>
 
 # PubTextarea
@@ -73,6 +74,16 @@ The `validationMessage` slot is used to display a custom validation message. It 
 </demo-container>
 
 <<< @/form/PubTextarea/Validation.vue
+
+## Native Constraints 
+
+The `required`, `minlength`, and `maxlength` attributes are supported natively on the textarea element.
+
+<demo-container>
+    <NativeConst />
+</demo-container>
+
+<<< @/form/PubTextarea/NativeConst.vue
 
 ## Comment box
 
