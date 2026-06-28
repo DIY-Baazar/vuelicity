@@ -23,7 +23,7 @@ const defaultLabelClasses = "pub-input-label block mb-2 text-sm font-medium";
 const defaultInputWrapperClasses =
     "pub-input-wrapper relative flex items-center has-[input:focus]:ring-offset-0 has-[input:focus]:ring-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg has-[input:focus]:ring-blue-500 has-[input:focus]:border-blue-500     ";
 const defaultInputClasses =
-    "pub-input block grow w-full p-0 bg-transparent text-inherit ring-offset-0 ring-0 border-0 focus:ring-offset-0 focus:ring-0 focus:border-0 focus:outline-none";
+    "pub-input block grow w-full bg-transparent text-inherit ring-offset-0 ring-0 border-0 focus:ring-offset-0 focus:ring-0 focus:border-0 focus:outline-none";
 const defaultHelperClasses = "mt-2 text-sm text-gray-500";
 
 const disabledInputClasses = "cursor-not-allowed text-gray-400";
@@ -45,16 +45,16 @@ const affixSuccessBorderClasses = "border-green-200";
 const affixErrorBorderClasses = "border-red-200";
 const affixDefaultBorderClasses = "border-gray-300";
 const affixSizeClasses: Record<FormElementSize, string> = {
-    sm: "px-2.5 text-sm",
-    md: "px-3 text-sm",
-    lg: "px-3.5 text-base",
+    sm: "px-1 text-sm",
+    md: "px-2 text-sm",
+    lg: "px-3 text-base",
     xl: "px-4 text-base"
 };
 
 const inputSizeClasses: Record<FormElementSize, string> = {
-    sm: "py-0.5 px-2 text-sm",
-    md: "py-1 px-3 text-sm",
-    lg: "py-1.5 px-4 text-lg",
+    sm: "py-0.5 px-1 text-sm",
+    md: "py-1 px-2 text-sm",
+    lg: "py-1.5 px-3 text-lg",
     xl: "py-2 px-4 text-lg"
 };
 

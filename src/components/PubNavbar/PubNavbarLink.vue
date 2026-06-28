@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { computed, resolveComponent, toRefs } from "vue";
-import type { NavbarLinkProps } from "./types";
+import { computed, inject, resolveComponent, toRefs } from "vue";
+import type { NavbarLinkProps, NavbarState } from "./types";
 import { useNavbarLinkClasses } from "./utils";
 
 const props = withDefaults(defineProps<NavbarLinkProps>(), {
@@ -12,7 +12,9 @@ const props = withDefaults(defineProps<NavbarLinkProps>(), {
     class: ""
 });
 
-const emit = defineEmits<{ click: [event: Event] }>();
+const { navbarState } = inject<{ navbarState: NavbarState; }>("navbarState")!;
+
+const emit = defineEmits<{ click: [event: Event]; }>();
 
 const componentName = computed(() => {
     return props.as !== "a" ? resolveComponent(props.as) : "a";
@@ -25,17 +27,16 @@ const handleClick = (event: Event) => {
     emit("click", event);
 };
 
-const { linkClasses } = useNavbarLinkClasses(toRefs(props));
+const { linkClasses } = useNavbarLinkClasses({
+    ...toRefs(props),
+    collapseBreakpoint: computed(() => navbarState.collapseBreakpoint)
+});
 </script>
 
 <template>
     <li>
-        <component
-            :is="componentName"
-            :[linkAttr]="link"
-            :class="['pub-navbar-link', linkClasses]"
-            @click="handleClick"
-        >
+        <component :is="componentName" :[linkAttr]="link" :class="['pub-navbar-link', linkClasses]"
+            @click="handleClick">
             <slot />
         </component>
     </li>
