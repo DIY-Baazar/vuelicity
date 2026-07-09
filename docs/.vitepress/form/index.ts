@@ -8,6 +8,10 @@ const component_toc = [
         link: "/form/pub-input"
     },
     {
+        text: "PubPhoneInput",
+        link: "/form/pub-phone-input"
+    },
+    {
         text: "PubRadio",
         link: "/form/pub-radio"
     },

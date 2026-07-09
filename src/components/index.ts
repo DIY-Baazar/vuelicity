@@ -23,6 +23,7 @@ export { default as PubNavbarCollapse } from "./PubNavbar/PubNavbarCollapse.vue"
 export { default as PubNavbarLink } from "./PubNavbar/PubNavbarLink.vue";
 export { default as PubNavbarLogo } from "./PubNavbar/PubNavbarLogo.vue";
 export { default as PubPagination } from "./PubPagination/PubPagination.vue";
+export { default as PubPhoneInput } from "./PubPhoneInput/PubPhoneInput.vue";
 export { default as PubRadio } from "./PubRadio/PubRadio.vue";
 export { default as PubSelect } from "./PubSelect/PubSelect.vue";
 export { default as PubTextarea } from "./PubTextarea/PubTextarea.vue";
