@@ -15,6 +15,7 @@ export { default as PubCard } from "./PubCard/PubCard.vue";
 export { default as PubCarousel } from "./PubCarousel/PubCarousel.vue";
 export { default as PubCheckbox } from "./PubCheckbox/PubCheckbox.vue";
 export { default as PubDropdown } from "./PubDropdown/PubDropdown.vue";
+export { default as PubFileInput } from "./PubFileInput/PubFileInput.vue";
 export { default as PubIcon } from "./PubIcon/PubIcon.vue";
 export { default as PubInput } from "./PubInput/PubInput.vue";
 export { default as PubModal } from "./PubModal/PubModal.vue";
