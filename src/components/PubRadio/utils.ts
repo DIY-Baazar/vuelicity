@@ -23,7 +23,7 @@ const defaultHelperClasses = "ml-6 text-xs font-normal text-gray-500";
 
 const radioSizeClasses: Record<FormElementSize, string> = {
     sm: "py-0.5 px-2 text-sm",
-    md: "py-1 px-3 text-md",
+    md: "py-1 px-3 text-base",
     lg: "py-1.5 px-4 text-lg",
     xl: "py-2 px-4 text-xl"
 };
