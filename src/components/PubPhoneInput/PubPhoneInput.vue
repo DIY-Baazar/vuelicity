@@ -37,12 +37,22 @@ const isTextSlot = (name: string) => {
 const isPrependText = computed(() => isTextSlot('prepend'));
 const isAppendText = computed(() => isTextSlot('append'));
 const hasISDCodes = computed(() => props.isdCodes && props.isdCodes.length > 0);
+const parsedValue = computed(() => {
+    const val = (model.value ?? "").toString();
+    const commaIndex = val.indexOf(",");
+    if (commaIndex === -1) {
+        return { isdCode: "", phoneNo: val };
+    }
+    return {
+        isdCode: val.slice(0, commaIndex),
+        phoneNo: val.slice(commaIndex + 1)
+    };
+});
 
 function changePhoneno (event: Event) {
     const target = event.target as HTMLInputElement;
     if (hasISDCodes.value) {
-        const [isdCode, _] = model.value.toString().split(",");
-        model.value = (isdCode || '') + ',' + target.value;
+        model.value = parsedValue.value.isdCode + ',' + target.value;
     } else {
         model.value = target.value;
     }
@@ -51,15 +61,13 @@ function changePhoneno (event: Event) {
 function changeISD (event: Event) {
     const target = event.target as HTMLInputElement;
     if (hasISDCodes.value) {
-        const [_, phoneNo] = model.value.toString().split(",");
-        model.value = target.value + ',' + (phoneNo || "");
+        model.value = target.value + ',' + parsedValue.value.phoneNo;
     }
 }
 
 const phoneNoValue = computed(() => {
     if (hasISDCodes.value) {
-        const [_, phoneNo] = model.value.toString().split(",");
-        return phoneNo || "";
+        return parsedValue.value.phoneNo;
     } else {
         return model.value;
     }
@@ -67,8 +75,7 @@ const phoneNoValue = computed(() => {
 
 const isdCodeValue = computed(() => {
     if (hasISDCodes.value) {
-        const [isdCode, _] = model.value.toString().split(",");
-        return isdCode || "";
+        return parsedValue.value.isdCode;
     } else {
         return "";
     }
