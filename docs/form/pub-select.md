@@ -10,6 +10,7 @@ description: Documentation for the PubSelect component.
     import Underlined from './PubSelect/Underlined.vue';
     import HelperText from './PubSelect/HelperText.vue';
     import Validation from './PubSelect/Validation.vue';
+    import StylingSelect from './PubSelect/StylingSelect.vue';
 </script>
 
 # PubSelect
@@ -85,6 +86,18 @@ The `validationMessage` slot is used to display a custom validation message. It 
 </demo-container>
 
 <<< @/form/PubSelect/Validation.vue
+
+## Styling select
+
+### Prop - `class`, `wrapperClass`, `labelClass` Usage
+
+The `class`, `wrapperClass`, and `labelClass` props are used to add additional classes to the wrapper element, outer wrapper, and label element, respectively.
+
+<demo-container>
+    <StylingSelect/>
+</demo-container>
+
+<<< @/form/PubSelect/StylingSelect.vue
 
 ## Reference
 

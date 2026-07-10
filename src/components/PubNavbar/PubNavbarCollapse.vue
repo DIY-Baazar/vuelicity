@@ -12,7 +12,8 @@ const { navbarState } = inject<{ navbarState: NavbarState }>("navbarState")!;
 
 const { wrapperClasses, spanClasses } = useNavbarCollapseClasses({
     ...toRefs(props),
-    noToggleButton: computed(() => navbarState.noToggleButton)
+    noToggleButton: computed(() => navbarState.noToggleButton),
+    collapseBreakpoint: computed(() => navbarState.collapseBreakpoint)
 });
 </script>
 

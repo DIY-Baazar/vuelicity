@@ -1,9 +1,14 @@
 import type { FormElementAutoFill, FormElementSize, FormElementValidationStatus } from "@/types/form";
 import type { ClassInput } from "@/types/global";
 
-export interface TextareaProps {
-    class?: ClassInput;
+export interface PhoneInputISDCode {
+    code: string;
+    name: string;
+}
+
+export interface PhoneInputProps {
     name?: string;
+    class?: ClassInput;
     disabled?: boolean;
     inputClass?: ClassInput;
     label?: string;
@@ -12,7 +17,8 @@ export interface TextareaProps {
     size?: FormElementSize;
     validationStatus?: FormElementValidationStatus;
     wrapperClass?: ClassInput;
+    prependClass?: ClassInput;
+    appendClass?: ClassInput;
     autocomplete?: FormElementAutoFill;
-    rows?: number;
-    footerClass?: ClassInput;
+    isdCodes?: PhoneInputISDCode[];
 }

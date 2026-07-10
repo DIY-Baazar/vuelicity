@@ -36,3 +36,21 @@ This is a card component that can be used to display content in a card. It provi
 </demo-container>
 
 <<< @/components/PubCard/Horizontal.vue
+
+## Reference
+
+### Properties
+
+| Name    | Type   | Default     | Description                                      | Options                                |
+| :------ | :----- | :---------- | :----------------------------------------------- | :------------------------------------- |
+| href    | String | `''`        | The URL to navigate to when the card is clicked. |                                        |
+| imgAlt  | String | `''`        | The alternative text for the image.              |                                        |
+| imgSrc  | String | `''`        | The URL of the image.                            |                                        |
+| variant | String | `'default'` | The variant of the card.                         | `'default'`, `'image'`, `'horizontal'` |
+| class   | String | `''`        | Additional CSS classes to apply.                 |                                        |
+
+### Slots
+
+| Name    | Description  |
+| ------- | ------------ |
+| default | Default slot |

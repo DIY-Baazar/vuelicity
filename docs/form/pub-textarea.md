@@ -9,6 +9,8 @@ description: Documentation for the PubTextarea component.
     import Disabled from './PubTextarea/Disabled.vue';
     import Readonly from './PubTextarea/Readonly.vue';
     import Validation from './PubTextarea/Validation.vue';
+    import CommentBox from './PubTextarea/CommentBox.vue';
+    import NativeConst from './PubTextarea/NativeConst.vue';
 </script>
 
 # PubTextarea
@@ -73,6 +75,28 @@ The `validationMessage` slot is used to display a custom validation message. It 
 
 <<< @/form/PubTextarea/Validation.vue
 
+## Native Constraints 
+
+The `required`, `minlength`, and `maxlength` attributes are supported natively on the textarea element.
+
+<demo-container>
+    <NativeConst />
+</demo-container>
+
+<<< @/form/PubTextarea/NativeConst.vue
+
+## Comment box
+
+### Slot - `footer` Usage
+
+The `footer` slot is used to render actions or metadata below the textarea content — commonly used for submit buttons in comment forms.
+
+<demo-container flex-type='col' class='items-start'>
+    <CommentBox />
+</demo-container>
+
+<<< @/form/PubTextarea/CommentBox.vue
+
 ## Reference
 
 ### Properties
@@ -96,3 +120,4 @@ The `validationMessage` slot is used to display a custom validation message. It 
 | ----------------- | -------------------------------------------------- |
 | validationMessage | Slot for custom validation message.                |
 | helper            | Slot for helper text displayed below the textarea. |
+| footer            | Slot for footer content.                           |

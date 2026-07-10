@@ -12,7 +12,7 @@ const breakpoints = {
     "2xl": 1536,
 };
 
-type BreakpointKey = keyof typeof breakpoints;
+export type BreakpointKey = keyof typeof breakpoints;
 
 /**
  * A composable that provides reactive properties based on Tailwind CSS breakpoints.

@@ -63,27 +63,28 @@ description: Documentation for the ${componentName} component.
 );
 
 // Writing into the component file index
-const componentFile = join(__dirname, "..", "docs", ".vitepress", "components", "index.ts");
+// const componentFile = join(__dirname, "..", "docs", ".vitepress", "components", "index.ts");
 
-const componentsContent = fs
-    .readdirSync(componentsDir)
-    .filter((file) => fs.statSync(join(componentsDir, file)).isDirectory())
-    .sort() // Ensure alphabetical order
-    .map(
-        (component) => `{
-        text: "${component}",
-        link: "/components/${toDashConstantCase(component)}"
-    }`,
-    )
-    .join(",\n    ");
-fs.writeFileSync(
-    componentFile,
-    `const component_toc = [
-    ${componentsContent}
-];
-export default { component_toc };
-`,
-);
+// const componentsContent = fs
+//     .readdirSync(componentsDir)
+//     .filter((file) => fs.statSync(join(componentsDir, file)).isDirectory())
+//     .sort() // Ensure alphabetical order
+//     .map(
+//         (component) => `{
+//         text: "${component}",
+//         link: "/components/${toDashConstantCase(component)}"
+//     }`,
+//     )
+//     .join(",\n    ");
+// fs.writeFileSync(
+//     componentFile,
+//     `const component_toc = [
+//     ${componentsContent}
+// ];
+// export default { component_toc };
+// `,
+// );
+
 // Writing into the component export
 const componentExportFile = join(componentsDir, "index.ts");
 const componentExportContent = fs

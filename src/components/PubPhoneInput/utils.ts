@@ -1,42 +1,38 @@
-import type { ClassRef } from "@/types/global";
-import { computed, normalizeClass, type Ref } from "vue";
 import { useMergeClasses } from "@/composables/useMergeClasses";
 import { validationStatusMap, type FormElementSize, type FormElementValidationStatus } from "@/types/form";
+import type { ClassRef } from "@/types/global";
+import { computed, normalizeClass, type Ref } from "vue";
 
-interface UseInputClassesProps {
-    type: Ref<string>;
-    size: Ref<FormElementSize>;
+export interface UsePhoneInputClassesProps {
     class: ClassRef;
     wrapperClass: ClassRef;
-    labelClass: ClassRef;
-    validationStatus: Ref<FormElementValidationStatus | undefined>;
-    disabled: Ref<boolean>;
     inputClass: ClassRef;
-    isPrependText: Ref<boolean>;
-    isAppendText: Ref<boolean>;
+    labelClass: ClassRef;
     prependClass: ClassRef;
     appendClass: ClassRef;
+    size: Ref<FormElementSize>;
+    validationStatus: Ref<FormElementValidationStatus | undefined>;
+    disabled: Ref<boolean>;
+    isPrependText: Ref<boolean>;
+    isAppendText: Ref<boolean>;
 }
 
-const defaultWrapperClasses = "pub-input-container";
-const defaultLabelClasses = "pub-input-label block mb-2 text-sm font-medium";
-const defaultInputWrapperClasses =
-    "pub-input-wrapper relative flex items-center has-[input:focus]:ring-offset-0 has-[input:focus]:ring-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg has-[input:focus]:ring-blue-500 has-[input:focus]:border-blue-500     ";
-const defaultInputClasses =
-    "pub-input block grow w-full bg-transparent text-inherit ring-offset-0 ring-0 border-0 focus:ring-offset-0 focus:ring-0 focus:border-0 focus:outline-none";
+const defaultWrapperClasses = "pub-phone-input-container";
+const defaultLabelClasses = "pub-phone-input-label block mb-2 text-sm font-medium";
+const defaultPhoneInputWrapperClasses =
+    "pub-phone-input-wrapper relative flex items-center has-[input:focus]:ring-offset-0 has-[input:focus]:ring-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg has-[input:focus]:ring-blue-500 has-[input:focus]:border-blue-500     ";
+const defaultPhoneInputClasses =
+    "pub-phone-input block grow w-full bg-transparent text-inherit ring-offset-0 ring-0 border-0 focus:ring-offset-0 focus:ring-0 focus:border-0 focus:outline-none";
 const defaultHelperClasses = "mt-2 text-sm text-gray-500";
 
-const disabledInputClasses = "cursor-not-allowed text-gray-400";
-const disabledInputWrapperClasses = "bg-gray-100";
-
+const successPhoneInputClasses = "text-green-900 placeholder:text-green-500";
+const errorPhoneInputClasses = "text-red-900 placeholder:text-red-500";
+const successPhoneInputWrapperClasses =
+    "bg-green-50 border-green-200 has-[input:focus]:border-green-500 has-[input:focus]:ring-green-500";
+const errorPhoneInputWrapperClasses =
+    "bg-red-50 border-red-200 has-[input:focus]:border-red-500 has-[input:focus]:ring-red-500";
 const successTextClasses = "text-green-700";
 const errorTextClasses = "text-red-700";
-const successInputWrapperClasses =
-    "bg-green-50 border-green-200 has-[input:focus]:border-green-500 has-[input:focus]:ring-green-500";
-const errorInputWrapperClasses =
-    "bg-red-50 border-red-200 has-[input:focus]:border-red-500 has-[input:focus]:ring-red-500";
-const successInputClasses = "text-green-900 placeholder:text-green-500";
-const errorInputClasses = "text-red-900 placeholder:text-red-500";
 
 const affixBaseClasses = "self-stretch flex items-center shrink-0 text-gray-500";
 const affixDefaultBgClasses = "bg-gray-100";
@@ -51,63 +47,57 @@ const affixSizeClasses: Record<FormElementSize, string> = {
     xl: "px-4 text-base"
 };
 
-const inputSizeClasses: Record<FormElementSize, string> = {
+const phoneInputSizeClasses: Record<FormElementSize, string> = {
     sm: "py-0.5 px-1 text-sm",
     md: "py-1 px-2 text-sm",
     lg: "py-1.5 px-3 text-lg",
     xl: "py-2 px-4 text-lg"
 };
 
-export function useInputClasses(props: UseInputClassesProps): {
-    wrapperClasses: Ref<string>;
-    labelClasses: Ref<string>;
-    inputWrapperClasses: Ref<string>;
-    inputClasses: Ref<string>;
-    validationMessageClasses: Ref<string>;
-    helperMessageClasses: Ref<string>;
-    appendContainerClasses: Ref<string>;
-    prependContainerClasses: Ref<string>;
-} {
+export function usePhoneInputClasses(props: UsePhoneInputClassesProps) {
     const wrapperClasses = computed(() =>
         useMergeClasses([defaultWrapperClasses, normalizeClass(props.wrapperClass?.value)])
     );
 
     const labelClasses = computed(() =>
+        useMergeClasses([defaultLabelClasses, normalizeClass(props.labelClass?.value)])
+    );
+
+    const phoneInputWrapperClasses = computed(() =>
         useMergeClasses([
-            defaultLabelClasses,
-            normalizeClass(props.labelClass?.value),
+            defaultPhoneInputWrapperClasses,
             props.validationStatus.value === validationStatusMap.Success
-                ? successTextClasses
+                ? successPhoneInputWrapperClasses
                 : props.validationStatus.value === validationStatusMap.Error
-                  ? errorTextClasses
-                  : ""
+                  ? errorPhoneInputWrapperClasses
+                  : "",
+            normalizeClass(props.class?.value)
         ])
     );
 
-    const inputWrapperClasses = computed(() =>
+    const phoneInputClasses = computed(() =>
         useMergeClasses([
-            defaultInputWrapperClasses,
-            normalizeClass(props.class?.value),
+            defaultPhoneInputClasses,
+            phoneInputSizeClasses[props.size.value],
             props.validationStatus.value === validationStatusMap.Success
-                ? successInputWrapperClasses
+                ? successPhoneInputClasses
                 : props.validationStatus.value === validationStatusMap.Error
-                  ? errorInputWrapperClasses
+                  ? errorPhoneInputClasses
                   : "",
-            props.disabled.value ? disabledInputWrapperClasses : ""
+            normalizeClass(props.inputClass?.value)
         ])
     );
 
-    const inputClasses = computed(() =>
+    const isdcodeInputClasses = computed(() =>
         useMergeClasses([
-            defaultInputClasses,
-            inputSizeClasses[props.size.value],
+            defaultPhoneInputClasses,
+            phoneInputSizeClasses[props.size.value],
             props.validationStatus.value === validationStatusMap.Success
-                ? successInputClasses
+                ? successPhoneInputClasses
                 : props.validationStatus.value === validationStatusMap.Error
-                  ? errorInputClasses
+                  ? errorPhoneInputClasses
                   : "",
-            normalizeClass(props.inputClass.value),
-            props.disabled.value ? disabledInputClasses : ""
+            "max-w-32 border-r border-gray-300",
         ])
     );
 
@@ -123,7 +113,6 @@ export function useInputClasses(props: UseInputClassesProps): {
     );
 
     const helperMessageClasses = computed(() => useMergeClasses([defaultHelperClasses]));
-
     const affixBorderClasses = computed(() =>
         props.validationStatus.value === validationStatusMap.Success
             ? affixSuccessBorderClasses
@@ -162,8 +151,9 @@ export function useInputClasses(props: UseInputClassesProps): {
     return {
         wrapperClasses,
         labelClasses,
-        inputClasses,
-        inputWrapperClasses,
+        phoneInputWrapperClasses,
+        phoneInputClasses,
+        isdcodeInputClasses,
         validationMessageClasses,
         helperMessageClasses,
         appendContainerClasses,

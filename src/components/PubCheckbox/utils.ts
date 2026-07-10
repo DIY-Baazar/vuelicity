@@ -10,7 +10,7 @@ interface UseCheckboxClassesProps {
     bordered: Ref<boolean>;
 }
 
-const defaultWrapperClasses = "pub-checkbox-container";
+const defaultWrapperClasses = "pub-checkbox-container w-full";
 const defaultLabelClasses = "pub-checkbox-label text-sm font-medium text-gray-900 mr-1";
 const defaultCheckboxClasses =
     "mr-2 w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 focus:ring-2";

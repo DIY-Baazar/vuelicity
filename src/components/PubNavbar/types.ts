@@ -1,5 +1,6 @@
 import type { ClassInput } from "@/types/global";
 import type { Ref } from "vue";
+import type { BreakpointKey } from "@/composables/useBreakpoints";
 
 export type NavbarTheme = "default" | "light" | "dark";
 
@@ -11,6 +12,7 @@ interface NavbarProps {
     solid?: boolean;
     theme?: NavbarTheme;
     noToggleButton: boolean;
+    collapseBreakpoint: BreakpointKey;
 }
 
 interface NavbarLogoProps {
@@ -35,7 +37,6 @@ interface NavbarLinkProps {
     class?: ClassInput;
 }
 
-interface NavbarState extends NavbarProps {
-}
+interface NavbarState extends NavbarProps {}
 
 export type { NavbarLogoProps, NavbarProps, NavbarCollapseProps, NavbarLinkProps, NavbarState };
