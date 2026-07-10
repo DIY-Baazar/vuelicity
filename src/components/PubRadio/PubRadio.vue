@@ -18,7 +18,7 @@ const props = withDefaults(defineProps<RadioProps>(), {
 
 const attrs = useAttrs();
 
-const model = defineModel<boolean>({ default: false });
+const model = defineModel<any>();
 
 const { wrapperClasses, radioWrapperClasses, radioClasses, labelClasses, helperMessageClasses } = useRadioClasses(toRefs(props));
 
