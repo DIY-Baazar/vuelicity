@@ -12,7 +12,7 @@ const props = withDefaults(defineProps<NavbarLinkProps>(), {
     class: ""
 });
 
-const { navbarState } = inject<{ navbarState: NavbarState; }>("navbarState")!;
+const navbarStateContext = inject<{ navbarState: NavbarState; }>("navbarState");
 
 const emit = defineEmits<{ click: [event: Event]; }>();
 
@@ -29,7 +29,7 @@ const handleClick = (event: Event) => {
 
 const { linkClasses } = useNavbarLinkClasses({
     ...toRefs(props),
-    collapseBreakpoint: computed(() => navbarState.collapseBreakpoint)
+    collapseBreakpoint: computed(() => navbarStateContext?.navbarState.collapseBreakpoint || "md")
 });
 </script>
 

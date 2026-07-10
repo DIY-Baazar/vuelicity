@@ -24,7 +24,8 @@ const props = withDefaults(defineProps<NavbarProps>(), {
 
 const { wrapperClasses, spanClasses } = useNavbarClasses(toRefs(props));
 
-const isShowMenu = computed(() => (smaller(props.collapseBreakpoint).value ? isShowMobileMenu.value : true));
+const isSmaller = smaller(props.collapseBreakpoint);
+const isShowMenu = computed(() => (isSmaller.value ? isShowMobileMenu.value : true));
 
 const navbarState = reactive(props);
 
