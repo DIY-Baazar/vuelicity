@@ -20,7 +20,7 @@ This is a radio component. It is used to display a radio field to select an opti
     <Default />
 </demo-container>
 
-<<< @/form/PubRadio/Default.vue
+<<< @/components/PubRadio/Default.vue
 
 ## Sizes
 
@@ -32,7 +32,7 @@ The `size` prop is used to set the size of the radio button. It can be one of th
     <Size />
 </demo-container>
 
-<<< @/form/PubRadio/Size.vue
+<<< @/components/PubRadio/Size.vue
 
 ## Disabled
 
@@ -44,7 +44,7 @@ The `disabled` prop is used to disable the radio button.
     <Disabled />
 </demo-container>
 
-<<< @/form/PubRadio/Disabled.vue
+<<< @/components/PubRadio/Disabled.vue
 
 ## Colors
 
@@ -56,7 +56,7 @@ The `color` prop is used to set the color of the radio button. It can be one of 
     <Color />
 </demo-container>
 
-<<< @/form/PubRadio/Color.vue
+<<< @/components/PubRadio/Color.vue
 
 ## Reference
 

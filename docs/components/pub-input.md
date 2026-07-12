@@ -27,7 +27,7 @@ This is a input component. It is used to display an input field and supports var
     <Default />
 </demo-container>
 
-<<< @/form/PubInput/Default.vue
+<<< @/components/PubInput/Default.vue
 
 ## Sizes
 
@@ -39,7 +39,7 @@ The `size` prop is used to set the size of the input field. It can be one of the
     <Size />
 </demo-container>
 
-<<< @/form/PubInput/Size.vue
+<<< @/components/PubInput/Size.vue
 
 ## Required
 
@@ -51,7 +51,7 @@ The `required` prop is used to make the input field required. It can be a boolea
     <Required />
 </demo-container>
 
-<<< @/form/PubInput/Required.vue
+<<< @/components/PubInput/Required.vue
 
 ## Disabled
 
@@ -63,7 +63,7 @@ The `disabled` prop is used to disable the input field. It can be a boolean valu
     <Disabled />
 </demo-container>
 
-<<< @/form/PubInput/Disabled.vue
+<<< @/components/PubInput/Disabled.vue
 
 ## Readonly
 
@@ -75,7 +75,7 @@ The `readonly` prop is used to make the input field readonly. It can be a boolea
     <Readonly />
 </demo-container>
 
-<<< @/form/PubInput/Readonly.vue
+<<< @/components/PubInput/Readonly.vue
 
 ## Validation
 
@@ -89,7 +89,7 @@ The `validationMessage` slot is used to display a custom validation message. It 
     <Validation />
 </demo-container>
 
-<<< @/form/PubInput/Validation.vue
+<<< @/components/PubInput/Validation.vue
 
 ## Input group
 
@@ -101,7 +101,7 @@ The `prepend` and `append` slots are used to display additional content before a
     <InputGroup/>
 </demo-container>
 
-<<< @/form/PubInput/InputGroup.vue
+<<< @/components/PubInput/InputGroup.vue
 
 ## Helper text
 
@@ -113,7 +113,7 @@ The `helperText` slot is used to display helper text below the input field. It c
     <HelperText/>
 </demo-container>
 
-<<< @/form/PubInput/HelperText.vue
+<<< @/components/PubInput/HelperText.vue
 
 ## Styling input
 
@@ -121,7 +121,7 @@ The `helperText` slot is used to display helper text below the input field. It c
     <StylingInput/>
 </demo-container>
 
-<<< @/form/PubInput/StylingInput.vue
+<<< @/components/PubInput/StylingInput.vue
 
 ## Search input
 
@@ -129,7 +129,7 @@ The `helperText` slot is used to display helper text below the input field. It c
     <SearchInput/>
 </demo-container>
 
-<<< @/form/PubInput/SearchInput.vue
+<<< @/components/PubInput/SearchInput.vue
 
 ## Dropdown input
 
@@ -137,7 +137,7 @@ The `helperText` slot is used to display helper text below the input field. It c
     <DropdownInput/>
 </demo-container>
 
-<<< @/form/PubInput/DropdownInput.vue
+<<< @/components/PubInput/DropdownInput.vue
 
 ## Reference
 

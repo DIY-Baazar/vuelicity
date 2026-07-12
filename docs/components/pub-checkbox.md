@@ -26,7 +26,7 @@ This is a checkbox component. It is used to display a checkbox field to select a
     <Default />
 </demo-container>
 
-<<< @/form/PubCheckbox/Default.vue
+<<< @/components/PubCheckbox/Default.vue
 
 ## Disabled
 
@@ -38,7 +38,7 @@ The `disabled` prop is used to disable the checkbox field. It can be a boolean v
     <Disabled />
 </demo-container>
 
-<<< @/form/PubCheckbox/Disabled.vue
+<<< @/components/PubCheckbox/Disabled.vue
 
 ## Checkbox link
 
@@ -46,7 +46,7 @@ The `disabled` prop is used to disable the checkbox field. It can be a boolean v
     <CheckboxLink />
 </demo-container>
 
-<<< @/form/PubCheckbox/CheckboxLink.vue
+<<< @/components/PubCheckbox/CheckboxLink.vue
 
 ## Bordered
 
@@ -58,7 +58,7 @@ The `bordered` prop is used to add a border to the checkbox field. It can be a b
     <Bordered />
 </demo-container>
 
-<<< @/form/PubCheckbox/Bordered.vue
+<<< @/components/PubCheckbox/Bordered.vue
 
 ## Bordered with description
 
@@ -66,7 +66,7 @@ The `bordered` prop is used to add a border to the checkbox field. It can be a b
     <BorderedDesc />
 </demo-container>
 
-<<< @/form/PubCheckbox/BorderedDesc.vue
+<<< @/components/PubCheckbox/BorderedDesc.vue
 
 <!-- ## Bordered with icon
 
@@ -74,7 +74,7 @@ The `bordered` prop is used to add a border to the checkbox field. It can be a b
     <BorderedIcon />
 </demo-container>
 
-<<< @/form/PubCheckbox/BorderedIcon.vue -->
+<<< @/components/PubCheckbox/BorderedIcon.vue -->
 
 ## Checkbox group
 
@@ -82,7 +82,7 @@ The `bordered` prop is used to add a border to the checkbox field. It can be a b
     <CheckboxGroup />
 </demo-container>
 
-<<< @/form/PubCheckbox/CheckboxGroup.vue
+<<< @/components/PubCheckbox/CheckboxGroup.vue
 
 ## Helper Text
 
@@ -94,7 +94,7 @@ The `helper` slot is used to display helper text below the checkbox field.
     <HelperText />
 </demo-container>
 
-<<< @/form/PubCheckbox/HelperText.vue
+<<< @/components/PubCheckbox/HelperText.vue
 
 ## Styling Checkbox
 
@@ -106,7 +106,7 @@ The `class`, `wrapperClass`, and `labelClass` props are used to add additional c
     <StylingCheckbox />
 </demo-container>
 
-<<< @/form/PubCheckbox/StylingCheckbox.vue
+<<< @/components/PubCheckbox/StylingCheckbox.vue
 
 ## Reference
 

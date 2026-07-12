@@ -27,4 +27,5 @@ export { default as PubPagination } from "./PubPagination/PubPagination.vue";
 export { default as PubPhoneInput } from "./PubPhoneInput/PubPhoneInput.vue";
 export { default as PubRadio } from "./PubRadio/PubRadio.vue";
 export { default as PubSelect } from "./PubSelect/PubSelect.vue";
+export { default as PubTable } from "./PubTable/PubTable.vue";
 export { default as PubTextarea } from "./PubTextarea/PubTextarea.vue";
