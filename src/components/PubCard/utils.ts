@@ -9,8 +9,8 @@ interface UseCardClassesProps {
 }
 
 const cardVariantClasses: Record<CardVariant, string> = {
-    "default": "block min-w-sm rounded-lg border border-gray-200 shadow-md",
-    "image": "min-w-sm rounded-lg border border-gray-200 shadow-md",
+    "default": "block min-w-xs rounded-lg border border-gray-200 shadow-md",
+    "image": "min-w-xs rounded-lg border border-gray-200 shadow-md",
     "horizontal": "flex flex-col items-center rounded-lg border shadow-md md:flex-row md:min-w-xl"
 };
 
