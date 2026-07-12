@@ -10,3 +10,12 @@ export interface TableProps {
     hoverable?: boolean;
     theme?: TableTheme;
 }
+
+export interface TableState {
+    class?: ClassInput;
+    wrapperClass?: ClassInput;
+    striped?: boolean;
+    stripedColumns?: boolean;
+    hoverable?: boolean;
+    theme?: TableTheme;
+}

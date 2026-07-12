@@ -1,6 +1,7 @@
 <script lang="ts" setup>
-import { provide, reactive } from "vue";
+import { normalizeClass, provide, reactive } from "vue";
 import type { TableProps } from "./types";
+import { useMergeClasses } from "@/composables/useMergeClasses";
 
 const props = withDefaults(
     defineProps<TableProps>(),
@@ -19,8 +20,9 @@ provide("tableState", { tableState });
 </script>
 
 <template>
-    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-        <table class="w-full text-left text-sm text-gray-500">
+    <div
+        :class="useMergeClasses(['relative overflow-x-auto shadow-md sm:rounded-lg', normalizeClass(props.wrapperClass)])">
+        <table :class="useMergeClasses(['w-full text-left text-sm text-gray-500', normalizeClass(props.class)])">
             <slot />
         </table>
     </div>

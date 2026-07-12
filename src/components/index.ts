@@ -1,3 +1,4 @@
+export { default as PubA } from "./PubA/PubA.vue";
 export { default as PubAccordion } from "./PubAccordion/PubAccordion.vue";
 export { default as PubAccordionContent } from "./PubAccordion/PubAccordionContent.vue";
 export { default as PubAccordionHeader } from "./PubAccordion/PubAccordionHeader.vue";
@@ -28,4 +29,9 @@ export { default as PubPhoneInput } from "./PubPhoneInput/PubPhoneInput.vue";
 export { default as PubRadio } from "./PubRadio/PubRadio.vue";
 export { default as PubSelect } from "./PubSelect/PubSelect.vue";
 export { default as PubTable } from "./PubTable/PubTable.vue";
+export { default as PubTableBody } from "./PubTable/PubTableBody.vue";
+export { default as PubTableCell } from "./PubTable/PubTableCell.vue";
+export { default as PubTableHead } from "./PubTable/PubTableHead.vue";
+export { default as PubTableHeadCell } from "./PubTable/PubTableHeadCell.vue";
+export { default as PubTableRow } from "./PubTable/PubTableRow.vue";
 export { default as PubTextarea } from "./PubTextarea/PubTextarea.vue";
