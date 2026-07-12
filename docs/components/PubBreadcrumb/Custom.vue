@@ -10,13 +10,13 @@
             <template #arrow-icon>
                 <pub-icon name="arrow-right" />
             </template>
-            Projects
+            Profile
         </pub-breadcrumb-item>
         <pub-breadcrumb-item>
             <template #arrow-icon>
                 <pub-icon name="arrow-right" />
             </template>
-            Flowbite
+            Orders
         </pub-breadcrumb-item>
     </pub-breadcrumb>
 </template>
