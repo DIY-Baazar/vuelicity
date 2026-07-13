@@ -3,7 +3,7 @@ import { computed, inject, type Ref } from "vue";
 import type { TableState } from "./types";
 
 const baseCellClasses = "px-6 py-4 first:font-medium first:text-gray-900 first:whitespace-nowrap last:text-right";
-const stripedCellClasses = "even:bg-gray-white odd:bg-gray-50";
+const stripedCellClasses = "even:bg-white odd:bg-gray-50";
 
 const baseRowClasses = "bg-white not-last:border-b";
 const stripedRowClasses = "odd:bg-white even:bg-gray-50";
