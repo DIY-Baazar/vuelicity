@@ -1,6 +1,5 @@
 import { useMergeClasses } from "@/composables/useMergeClasses";
-import { computed, inject, type Ref } from "vue";
-import type { TableState } from "./types";
+import { computed, type Ref } from "vue";
 
 const baseCellClasses = "px-6 py-4 first:font-medium first:text-gray-900 first:whitespace-nowrap last:text-right";
 const stripedCellClasses = "even:bg-white odd:bg-gray-50";
