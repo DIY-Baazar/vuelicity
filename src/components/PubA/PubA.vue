@@ -12,6 +12,6 @@ interface LinkProps {
 
 withDefaults(defineProps<LinkProps>(), {
     href: '',
-    color: 'text-primary-600 dark:text-primary-500',
+    color: 'text-blue-600',
 });
 </script>
