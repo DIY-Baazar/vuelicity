@@ -23,7 +23,7 @@ This is a textarea component. It is used to display a textarea element for comme
     <Default />
 </demo-container>
 
-<<< @/form/PubTextarea/Default.vue
+<<< @/components/PubTextarea/Default.vue
 
 ## Sizes
 
@@ -35,7 +35,7 @@ The `size` prop is used to set the size of the textarea. It can be one of the fo
     <Size />
 </demo-container>
 
-<<< @/form/PubTextarea/Size.vue
+<<< @/components/PubTextarea/Size.vue
 
 ## Disabled
 
@@ -47,7 +47,7 @@ The `disabled` prop is used to disable the textarea. It can be a boolean value.
     <Disabled />
 </demo-container>
 
-<<< @/form/PubTextarea/Disabled.vue
+<<< @/components/PubTextarea/Disabled.vue
 
 ## Readonly
 
@@ -59,7 +59,7 @@ The `readonly` prop is used to make the textarea readonly. It can be a boolean v
     <Readonly />
 </demo-container>
 
-<<< @/form/PubTextarea/Readonly.vue
+<<< @/components/PubTextarea/Readonly.vue
 
 ## Validation
 
@@ -73,7 +73,7 @@ The `validationMessage` slot is used to display a custom validation message. It 
     <Validation />
 </demo-container>
 
-<<< @/form/PubTextarea/Validation.vue
+<<< @/components/PubTextarea/Validation.vue
 
 ## Native Constraints 
 
@@ -83,7 +83,7 @@ The `required`, `minlength`, and `maxlength` attributes are supported natively o
     <NativeConst />
 </demo-container>
 
-<<< @/form/PubTextarea/NativeConst.vue
+<<< @/components/PubTextarea/NativeConst.vue
 
 ## Comment box
 
@@ -95,7 +95,7 @@ The `footer` slot is used to render actions or metadata below the textarea conte
     <CommentBox />
 </demo-container>
 
-<<< @/form/PubTextarea/CommentBox.vue
+<<< @/components/PubTextarea/CommentBox.vue
 
 ## Reference
 

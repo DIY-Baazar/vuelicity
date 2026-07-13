@@ -23,7 +23,7 @@ This is a select component. It is used to display a select field to select an op
     <Default />
 </demo-container>
 
-<<< @/form/PubSelect/Default.vue
+<<< @/components/PubSelect/Default.vue
 
 ## Sizes
 
@@ -35,7 +35,7 @@ The `size` prop is used to set the size of the select field. It can be one of th
     <Size />
 </demo-container>
 
-<<< @/form/PubSelect/Size.vue
+<<< @/components/PubSelect/Size.vue
 
 ## Disabled
 
@@ -47,7 +47,7 @@ The `disabled` prop is used to disable the select field. It can be a boolean val
     <Disabled />
 </demo-container>
 
-<<< @/form/PubSelect/Disabled.vue
+<<< @/components/PubSelect/Disabled.vue
 
 ## Underlined
 
@@ -59,7 +59,7 @@ The `underlined` prop is used to display the select field with an underline. It 
     <Underlined />
 </demo-container>
 
-<<< @/form/PubSelect/Underlined.vue
+<<< @/components/PubSelect/Underlined.vue
 
 ## Helper text
 
@@ -71,7 +71,7 @@ The `helperText` slot is used to display helper text below the select field. It 
     <HelperText/>
 </demo-container>
 
-<<< @/form/PubSelect/HelperText.vue
+<<< @/components/PubSelect/HelperText.vue
 
 ## Validation
 
@@ -85,7 +85,7 @@ The `validationMessage` slot is used to display a custom validation message. It 
     <Validation />
 </demo-container>
 
-<<< @/form/PubSelect/Validation.vue
+<<< @/components/PubSelect/Validation.vue
 
 ## Styling select
 
@@ -97,7 +97,7 @@ The `class`, `wrapperClass`, and `labelClass` props are used to add additional c
     <StylingSelect/>
 </demo-container>
 
-<<< @/form/PubSelect/StylingSelect.vue
+<<< @/components/PubSelect/StylingSelect.vue
 
 ## Reference
 

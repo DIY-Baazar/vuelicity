@@ -17,4 +17,4 @@ This is a input component. It is used to display an input field and supports var
     <Default />
 </demo-container>
 
-<<< @/form/PubPhoneInput/Default.vue
+<<< @/components/PubPhoneInput/Default.vue

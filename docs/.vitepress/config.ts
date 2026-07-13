@@ -1,6 +1,7 @@
 import { resolve } from "path";
 import components from "./components";
 import form from "./form";
+import typography from "./typography";
 
 
 export default {
@@ -32,6 +33,10 @@ export default {
                     { text: "What is Vuelicity?", link: "/" },
                     { text: "Getting Started", link: "/guide/" }
                 ]
+            },
+            {
+                text: "Typography",
+                items: typography.component_toc
             },
             {
                 text: "Components",
