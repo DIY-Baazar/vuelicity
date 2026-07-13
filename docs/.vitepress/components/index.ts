@@ -1,62 +1,62 @@
 const component_toc = [
     {
-        text: "PubAccordion",
+        text: "Accordion",
         link: "/components/pub-accordion"
     },
     {
-        text: "PubAlert",
+        text: "Alert",
         link: "/components/pub-alert"
     },
     {
-        text: "PubAvatar",
+        text: "Avatar",
         link: "/components/pub-avatar"
     },
     {
-        text: "PubBadge",
+        text: "Badge",
         link: "/components/pub-badge"
     },
     {
-        text: "PubBreadcrumb",
+        text: "Breadcrumb",
         link: "/components/pub-breadcrumb"
     },
     {
-        text: "PubButton",
+        text: "Button",
         link: "/components/pub-button"
     },
     {
-        text: "PubButtonGroup",
+        text: "ButtonGroup",
         link: "/components/pub-button-group"
     },
     {
-        text: "PubCard",
+        text: "Card",
         link: "/components/pub-card"
     },
     {
-        text: "PubCarousel",
+        text: "Carousel",
         link: "/components/pub-carousel"
     },
     {
-        text: "PubDropdown",
+        text: "Dropdown",
         link: "/components/pub-dropdown"
     },
     {
-        text: "PubIcon",
+        text: "Icon",
         link: "/components/pub-icon"
     },
     {
-        text: "PubModal",
+        text: "Modal",
         link: "/components/pub-modal"
     },
     {
-        text: "PubNavbar",
+        text: "Navbar",
         link: "/components/pub-navbar"
     },
     {
-        text: "PubPagination",
+        text: "Pagination",
         link: "/components/pub-pagination"
     },
     {
-        text: "PubTable",
+        text: "Table",
         link: "/components/pub-table"
     }
 ];

@@ -1,26 +1,26 @@
 const component_toc = [
     {
-        text: "PubCheckbox",
+        text: "Checkbox",
         link: "/components/pub-checkbox"
     },
     {
-        text: "PubInput",
+        text: "Input",
         link: "/components/pub-input"
     },
     {
-        text: "PubPhoneInput",
+        text: "PhoneInput",
         link: "/components/pub-phone-input"
     },
     {
-        text: "PubRadio",
+        text: "Radio",
         link: "/components/pub-radio"
     },
     {
-        text: "PubSelect",
+        text: "Select",
         link: "/components/pub-select"
     },
     {
-        text: "PubTextarea",
+        text: "Textarea",
         link: "/components/pub-textarea"
     }
 ];
