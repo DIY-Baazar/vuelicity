@@ -34,4 +34,6 @@ export { default as PubTableCell } from "./PubTable/PubTableCell.vue";
 export { default as PubTableHead } from "./PubTable/PubTableHead.vue";
 export { default as PubTableHeadCell } from "./PubTable/PubTableHeadCell.vue";
 export { default as PubTableRow } from "./PubTable/PubTableRow.vue";
+export { default as PubTab } from "./PubTabs/PubTab.vue";
+export { default as PubTabs } from "./PubTabs/PubTabs.vue";
 export { default as PubTextarea } from "./PubTextarea/PubTextarea.vue";
