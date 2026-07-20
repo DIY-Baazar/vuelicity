@@ -17,7 +17,7 @@ const defaultWrapperClasses = "pub-radio-container w-full";
 const defaultLabelClasses = "pub-radio-label font-medium text-gray-900 mr-1";
 const defaultRadioWrapperClasses = "flex justify-start items-center select-none";
 const defaultRadioClasses =
-    "pub-radio mr-2 w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-2";
+    "pub-radio mr-2 w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-2";
 const disabledLabelClasses = "text-gray-400";
 const defaultHelperClasses = "ml-6 text-xs font-normal text-gray-500";
 

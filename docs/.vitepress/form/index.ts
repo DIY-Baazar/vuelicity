@@ -3,12 +3,16 @@ const component_toc = [
         text: "Checkbox",
         link: "/components/pub-checkbox"
     },
+    // {
+    //     text: "File Input",
+    //     link: "/components/pub-file-input"
+    // },
     {
         text: "Input",
         link: "/components/pub-input"
     },
     {
-        text: "PhoneInput",
+        text: "Phone Input",
         link: "/components/pub-phone-input"
     },
     {

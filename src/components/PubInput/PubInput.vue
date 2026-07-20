@@ -22,6 +22,7 @@ const props = withDefaults(defineProps<InputProps>(), {
 
 const model = defineModel<string | number>({ default: "" });
 const slots = useSlots();
+defineOptions({ inheritAttrs: false });
 const attrs = useAttrs();
 const inputName = computed(() => props.name || 'input-' + useId());
 

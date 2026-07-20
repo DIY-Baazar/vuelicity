@@ -13,3 +13,5 @@ export interface RadioProps {
     size?: FormElementSize;
     color?: FormElementColor;
 }
+
+export type RadioElementType = string | number | boolean | null | undefined | (string | number | boolean | object)[];

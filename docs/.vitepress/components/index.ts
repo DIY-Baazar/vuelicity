@@ -24,7 +24,7 @@ const component_toc = [
         link: "/components/pub-button"
     },
     {
-        text: "ButtonGroup",
+        text: "Button Group",
         link: "/components/pub-button-group"
     },
     {

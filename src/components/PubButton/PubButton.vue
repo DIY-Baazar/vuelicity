@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, resolveComponent, toRefs } from "vue";
+import { computed, resolveComponent, toRefs, useAttrs } from "vue";
 import { useMergeClasses } from "@/composables/useMergeClasses";
 
 import type { ButtonProps } from "./types";
@@ -21,6 +21,11 @@ const props = withDefaults(defineProps<ButtonProps>(), {
     linkAttr: "href",
     class: ""
 });
+
+defineOptions({
+    inheritAttrs: false
+});
+const attrs = useAttrs();
 
 const componentName = computed(() => (props.as !== "a" ? resolveComponent(props.as) : "a"));
 
@@ -44,7 +49,7 @@ const { wrapperClasses, spanClasses } = useButtonClasses(toRefs(props));
         :[linkAttr]="to"
         :class="useMergeClasses(['pub-button', wrapperClasses, spanClasses])"
         @click="handleClick"
-        v-bind="$attrs"
+        v-bind="attrs"
     >
         <span class="mr-1 inline-flex items-center" v-if="$slots.prepend">
             <slot name="prepend" />

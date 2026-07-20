@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { toRefs, useAttrs } from "vue";
-import type { RadioProps } from "./types";
+import { computed, toRefs, useAttrs, useId } from "vue";
+import type { RadioElementType, RadioProps } from "./types";
 import { useRadioClasses } from "./utils";
 
 const props = withDefaults(defineProps<RadioProps>(), {
@@ -16,9 +16,11 @@ const props = withDefaults(defineProps<RadioProps>(), {
     color: "blue"
 });
 
+defineOptions({ inheritAttrs: false });
 const attrs = useAttrs();
+const inputName = computed(() => props.name || 'input-' + useId());
 
-const model = defineModel<any>();
+const model = defineModel<RadioElementType>();
 
 const { wrapperClasses, radioWrapperClasses, radioClasses, labelClasses, helperMessageClasses } = useRadioClasses(toRefs(props));
 
@@ -26,8 +28,8 @@ const { wrapperClasses, radioWrapperClasses, radioClasses, labelClasses, helperM
 
 <template>
     <div :class="wrapperClasses">
-        <label :for="name" :class="radioWrapperClasses">
-            <input v-model="model" :class="radioClasses" :disabled="disabled" :name="name" :value="value" type="radio"
+        <label :for="inputName" :class="radioWrapperClasses">
+            <input v-model="model" :class="radioClasses" :disabled="disabled" :name="inputName" :value="value" type="radio"
                 v-bind="attrs" />
             <span v-if="label" :class="labelClasses">
                 {{ label }}
