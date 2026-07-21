@@ -79,7 +79,7 @@ const verticalPillsTabClasses: TabClassMap = {
 };
 
 const tabThemeTextClasses: Record<TabsTheme, string> = {
-  default: "text-dark",
+  default: "text-blue",
   red: "text-red-600",
   blue: "text-blue-600",
   green: "text-green-600",
@@ -103,7 +103,7 @@ const tabThemeBorderClasses: Record<TabsTheme, string> = {
 };
 
 const tabThemeBgClasses: Record<TabsTheme, string> = {
-  default: "",
+  default: "bg-blue-700",
   red: "bg-red-700",
   blue: "bg-blue-700",
   green: "bg-green-700",
@@ -140,14 +140,16 @@ export function useTabsClasses(props: UseTabsClassesProps) {
   };
 }
 
-export function useTabClasses(props: UseTabClassesProps) {
-  const tabClassType: keyof TabClassMap = props.active.value
-    ? "active"
-    : props.disabled.value
-      ? "disabled"
-      : "default";
-
+export function useTabClasses(props: UseTabClassesProps): {
+  tabClasses: Ref<string>;
+} {
   const tabClasses = computed(() => {
+    const tabClassType: keyof TabClassMap = props.active.value
+      ? "active"
+      : props.disabled.value
+        ? "disabled"
+        : "default";
+
     let baseTabClasses = null,
       isActiveThemeClasses = null;
     if (props.variant.value === "pills") {

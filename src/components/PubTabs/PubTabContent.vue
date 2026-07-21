@@ -72,8 +72,8 @@ const handleKeydown = (event: KeyboardEvent) => {
 }
 
 const { tabClasses } = useTabClasses({
-    active: toRef(props.active),
-    disabled: toRef(props.disabled),
+    active: toRef(() => props.active),
+    disabled: toRef(() => props.disabled),
     variant,
     itemClass,
     itemActiveClass,
