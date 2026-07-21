@@ -23,6 +23,7 @@ const props = withDefaults(defineProps<TabsProps>(), {
     iconPosition: "left",
     vertical: false,
     fullWidth: false,
+    theme: 'default'
 });
 
 const emit = defineEmits(["update:modelValue", "click:tab"]);
@@ -35,7 +36,7 @@ const defaultSlot = slots.default;
 const tabsChildren = computed(() => {
     return defaultSlot
         ? flatten(defaultSlot({})).filter((v) => {
-            return v.type;
+            return (v.type as { __PUB_TAB__?: true }).__PUB_TAB__;
         })
         : [];
 });
@@ -56,21 +57,39 @@ const modelValueRef = computed({
     set: (value: string) => emit("update:modelValue", value),
 });
 
-const tabsState = reactive(props);
-provide("tabsState", { tabsState });
+const onActivate = (value: string) => {
+    modelValueRef.value = value
+}
 
-const { tabClasses } = useTabsClasses(toRefs(props));
+const tabsState = reactive(props);
+provide("tabsState", {
+    tabsState, iconSlots, modelValue: modelValueRef, onActivate
+});
+
+const { tabsClasses } = useTabsClasses(toRefs(props));
 </script>
 
 <template>
     <template v-if="!vertical">
-        <ul role="tablist" :class="tabClasses">
+        <ul role="tablist" :class="tabsClasses">
             <pub-tab-content v-for="(item, id) in tabsChildren" :key="id" :active="modelValueRef === item.props?.name"
                 :disabled="item.props?.disabled" :name="item.props?.name" :title="item.props?.title"
                 @click="emit('click:tab')" />
         </ul>
         <div v-bind="attrs">
             <slot />
+        </div>
+    </template>
+    <template v-else>
+        <div class="flex">
+            <ul role="tablist" aria-orientation="vertical" :class="tabsClasses">
+                <pub-tab-content v-for="(item, id) in tabsChildren" :key="id"
+                    :active="modelValueRef === item.props?.name" :disabled="item.props?.disabled"
+                    :name="item.props?.name" :title="item.props?.title" @click="emit('click:tab')" />
+            </ul>
+            <div class="flex-1" v-bind="attrs">
+                <slot />
+            </div>
         </div>
     </template>
 </template>

@@ -22,24 +22,32 @@ This is a tab component.
 
 #### Properties
 
-| Name           | Type    | Default   | Description                                     | Options                                                                         |
-| -------------- | ------- | --------- | ----------------------------------------------- | ------------------------------------------------------------------------------- |
+| Name | Type | Default | Description | Options |
+| ---- | ---- | ------- | ----------- | ------- |
 
 #### Slots
 
-| Name | Description |
-| ---- | ----------- |
-|      |             |
+| Name    | Description                      |
+| ------- | -------------------------------- |
+| default | One or more `PubTab` components. |
+
+### Events
+
+| Name              | Description |
+| ----------------- | ----------- |
+| update:modelValue |             |
+| click:tab         |             |
 
 ### PubTab
 
 #### Properties
 
-| Name           | Type    | Default   | Description                                     | Options                                                                         |
-| -------------- | ------- | --------- | ----------------------------------------------- | ------------------------------------------------------------------------------- |
+| Name | Type | Default | Description | Options |
+| ---- | ---- | ------- | ----------- | ------- |
 
 #### Slots
 
-| Name | Description |
-| ---- | ----------- |
-|      |             |
+| Name    | Description |
+| ------- | ----------- |
+| default |             |
+| icon    |             |

@@ -2,6 +2,16 @@ import type { ClassInput } from "@/types/global";
 
 export type TabsVariant = "default" | "underline" | "pills";
 export type TabsIconPosition = "left" | "right";
+export type TabsTheme =
+  | "default"
+  | "red"
+  | "blue"
+  | "yellow"
+  | "green"
+  | "magenta"
+  | "cyan"
+  | "light"
+  | "dark";
 
 export interface TabsProps {
   variant?: TabsVariant;
@@ -13,4 +23,20 @@ export interface TabsProps {
   iconPosition?: TabsIconPosition;
   vertical?: boolean;
   fullWidth?: boolean;
+  theme?: TabsTheme;
+}
+
+export interface TabsState extends TabsProps {}
+
+export interface TabProps {
+  name: string;
+  title?: string;
+  disabled?: boolean;
+}
+
+export interface TabContentProps {
+  name: string;
+  title: string;
+  disabled: boolean;
+  active: boolean;
 }
