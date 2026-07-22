@@ -50,7 +50,11 @@ const activeTab = ref("profile");
 
 ## Props - `variant` Usage
 
+The `variant` prop can be used to change the behavior of the tabs.
+
 ### Underline Tab
+
+Set `variant="underline"` to display the tabs as an underline.
 
 <demo-container class="gap-0">
     <Underline />
@@ -81,6 +85,8 @@ const activeTab = ref("profile");
 ```
 
 ## Pills Tab
+
+Set `variant="pills"` to display the tabs as pills.
 
 <demo-container class="gap-0">
     <Pills />
@@ -114,6 +120,8 @@ const activeTab = ref("profile");
 
 ### Props - `directive` Usage
 
+The `directive` prop can be used to change the behavior of the tabs.
+
 <demo-container class="gap-0">
     <Directive/>
 </demo-container>
@@ -146,6 +154,8 @@ const activeTab = ref("profile");
 
 ### Slot - `icon` Usage
 
+The `icon` slot can be used to add an icon to the tabs.
+
 <demo-container class="gap-0">
     <WithIcons/>
 </demo-container>
@@ -153,6 +163,8 @@ const activeTab = ref("profile");
 ## Vertical tabs
 
 ### Props - `vertical` Usage
+
+The `vertical` prop can be used to display the tabs vertically.
 
 <demo-container>
     <Vertical/>
@@ -162,6 +174,8 @@ const activeTab = ref("profile");
 
 ### Props - `full-width` Usage
 
+The `full-width` prop can be used to display the tabs in full width.
+
 <demo-container>
     <FullWidth/>
 </demo-container>
@@ -169,6 +183,8 @@ const activeTab = ref("profile");
 ## Styling tabs
 
 ### Props - `tab-class`, `item-class`, `item-active-class`, `class` Usage
+
+The `tab-class`, `item-class`, `item-active-class`, and `class` props can be used to style the tabs.
 
 <demo-container class="gap-0">
     <Styling/>
