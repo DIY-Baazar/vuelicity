@@ -120,7 +120,7 @@ export function useTabsClasses(props: UseTabsClassesProps) {
   const tabsClasses = computed(() =>
     useMergeClasses([
       baseTabsClasses,
-      props.vertical.value ? "flex-col" : "flex-wrap",
+      props.vertical.value ? "flex-col" : "flex-wrap w-full",
       props.variant.value === "default" || props.variant.value === "underline"
         ? props.vertical.value
           ? "border-r border-gray-200"
@@ -131,7 +131,7 @@ export function useTabsClasses(props: UseTabsClassesProps) {
           ? "-mr-px"
           : "-mb-px"
         : "",
-      normalizeClass(props.tabClass),
+      normalizeClass(props.tabClass.value),
     ]),
   );
 
