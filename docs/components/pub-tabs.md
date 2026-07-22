@@ -210,14 +210,14 @@ const activeTab = ref("profile");
 | Name            | Type    | Default     | Description                        | Options                                                                                           |
 | :-------------- | :------ | :---------- | :--------------------------------- | ------------------------------------------------------------------------------------------------- |
 | variant         | String  | `'default'` | The variant of the tabs.           | `'default'`, `'underline'`, `'pills'`                                                             |
-| modelValue      | String  | `Required`  | The active tab.                    |
+| modelValue      | String  | `Required`  | The active tab.                    |                                                                                                   |
 | directive       | String  | `'if'`      | The directive of the tabs.         | `'if'`, `'show'`                                                                                  |
-| tabClass        | String  | `''`        | The class of the tabs.             |
-| itemClass       | String  | `''`        | The class of the tab items.        |
-| itemActiveClass | String  | `''`        | The class of the active tab items. |
+| tabClass        | String  | `''`        | The class of the tabs.             |                                                                                                   |
+| itemClass       | String  | `''`        | The class of the tab items.        |                                                                                                   |
+| itemActiveClass | String  | `''`        | The class of the active tab items. |                                                                                                   |
 | iconPosition    | String  | `'left'`    | The position of the icon.          | `'left'`, `'right'`                                                                               |
-| vertical        | Boolean | `false`     | Whether the tabs are vertical.     | `true`, `false`                                                                                   |
-| fullWidth       | Boolean | `false`     | Whether the tabs are full width.   | `true`, `false`                                                                                   |
+| vertical        | Boolean | `false`     | Whether the tabs are vertical.     |                                                                                                   |
+| fullWidth       | Boolean | `false`     | Whether the tabs are full width.   |                                                                                                   |
 | theme           | String  | `'default'` | The theme of the tabs.             | `'default'`, `'blue'`, `'red'`, `'green'`, `'yellow'`, `'magenta'`, `'cyan'`, `'light'`, `'dark'` |
 
 #### Slots
@@ -226,7 +226,7 @@ const activeTab = ref("profile");
 | :------ | :------------------------------- |
 | default | One or more `PubTab` components. |
 
-### Events
+#### Events
 
 | Name              | Description                          |
 | :---------------- | :----------------------------------- |
@@ -237,11 +237,11 @@ const activeTab = ref("profile");
 
 #### Properties
 
-| Name     | Type    | Default    | Description                  | Options         |
-| -------- | ------- | ---------- | ---------------------------- | --------------- |
-| name     | String  | `Required` | The name of the tab.         |
-| title    | String  | `''`       | The title of the tab.        |
-| disabled | Boolean | `false`    | Whether the tab is disabled. | `true`, `false` |
+| Name     | Type    | Default    | Description                  | Options |
+| -------- | ------- | ---------- | ---------------------------- | ------- |
+| name     | String  | `Required` | The name of the tab.         |         |
+| title    | String  | `''`       | The title of the tab.        |         |
+| disabled | Boolean | `false`    | Whether the tab is disabled. |         |
 
 #### Slots
 
