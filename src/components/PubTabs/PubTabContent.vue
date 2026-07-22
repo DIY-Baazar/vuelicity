@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, inject, toRef, type VNode } from 'vue';
+import { computed, inject, toRef, type Ref, type VNode } from 'vue';
 import { useTabClasses } from './utils';
 import type { TabContentProps, TabsState } from './types';
 
@@ -10,7 +10,7 @@ const props = withDefaults(defineProps<TabContentProps>(), {
 })
 
 const { tabsState, iconSlots: _iconSlots, onActivate } = inject<{
-    tabsState: TabsState, iconSlots: Record<string, (() => VNode[]) | undefined>, onActivate: (name: string) => void
+    tabsState: TabsState, iconSlots: Ref<Record<string, (() => VNode[]) | undefined>>, onActivate: (name: string) => void
 }>("tabsState")!;
 
 const variant = computed(() => tabsState.variant ?? 'default');
@@ -20,7 +20,7 @@ const vertical = computed(() => tabsState.vertical ?? false);
 const fullWidth = computed(() => tabsState.fullWidth ?? false);
 const theme = computed(() => tabsState.theme ?? 'default');
 const iconPosition = computed(() => tabsState.iconPosition ?? 'left');
-const iconSlots = computed(() => _iconSlots ?? {} as Record<string, (() => VNode[]) | undefined>)
+const iconSlots = computed(() => _iconSlots.value ?? {} as Record<string, (() => VNode[]) | undefined>)
 
 const iconSlotFn = computed(() => iconSlots.value[props.name])
 const hasIcon = computed(() => !!iconSlotFn.value)
