@@ -26,25 +26,19 @@ This is a tab component.
 
 ```vue
 <template>
-  <pub-tabs v-model="activeTab" class="p-5">
-    <pub-tab name="profile" title="Profile"> Lorem ipsum dolor sit ... </pub-tab>
-    <pub-tab name="orders" title="Orders"> 
-        ...
-    </pub-tab>
-    <pub-tab name="address" title="Address"> 
-        ...
-    </pub-tab>
-    <pub-tab name="admin" title="Admin" disabled>
-        ...
-    </pub-tab>
-  </pub-tabs>
+    <pub-tabs v-model="activeTab" class="p-5">
+        <pub-tab name="profile" title="Profile"> Lorem ipsum dolor sit ... </pub-tab>
+        <pub-tab name="orders" title="Orders"> ... </pub-tab>
+        <pub-tab name="address" title="Address"> ... </pub-tab>
+        <pub-tab name="admin" title="Admin" disabled> ... </pub-tab>
+    </pub-tabs>
 </template>
 
 <script setup>
-import { ref } from "vue";
-import { PubTab, PubTabs } from "vuelicity";
+    import { ref } from "vue";
+    import { PubTab, PubTabs } from "vuelicity";
 
-const activeTab = ref("profile");
+    const activeTab = ref("profile");
 </script>
 ```
 
@@ -62,25 +56,19 @@ Set `variant="underline"` to display the tabs as an underline.
 
 ```vue
 <template>
-  <pub-tabs v-model="activeTab" class="p-5" variant="underline">
-    <pub-tab name="profile" title="Profile"> Lorem ipsum dolor sit ... </pub-tab>
-    <pub-tab name="orders" title="Orders"> 
-        ...
-    </pub-tab>
-    <pub-tab name="address" title="Address"> 
-        ...
-    </pub-tab>
-    <pub-tab name="admin" title="Admin" disabled>
-        ...
-    </pub-tab>
-  </pub-tabs>
+    <pub-tabs v-model="activeTab" class="p-5" variant="underline">
+        <pub-tab name="profile" title="Profile"> Lorem ipsum dolor sit ... </pub-tab>
+        <pub-tab name="orders" title="Orders"> ... </pub-tab>
+        <pub-tab name="address" title="Address"> ... </pub-tab>
+        <pub-tab name="admin" title="Admin" disabled> ... </pub-tab>
+    </pub-tabs>
 </template>
 
 <script setup>
-import { ref } from "vue";
-import { PubTab, PubTabs } from "vuelicity";
+    import { ref } from "vue";
+    import { PubTab, PubTabs } from "vuelicity";
 
-const activeTab = ref("profile");
+    const activeTab = ref("profile");
 </script>
 ```
 
@@ -94,25 +82,19 @@ Set `variant="pills"` to display the tabs as pills.
 
 ```vue
 <template>
-  <pub-tabs v-model="activeTab" class="p-5" variant="pills">
-    <pub-tab name="profile" title="Profile"> Lorem ipsum dolor sit ... </pub-tab>
-    <pub-tab name="orders" title="Orders"> 
-        ...
-    </pub-tab>
-    <pub-tab name="address" title="Address"> 
-        ...
-    </pub-tab>
-    <pub-tab name="admin" title="Admin" disabled>
-        ...
-    </pub-tab>
-  </pub-tabs>
+    <pub-tabs v-model="activeTab" class="p-5" variant="pills">
+        <pub-tab name="profile" title="Profile"> Lorem ipsum dolor sit ... </pub-tab>
+        <pub-tab name="orders" title="Orders"> ... </pub-tab>
+        <pub-tab name="address" title="Address"> ... </pub-tab>
+        <pub-tab name="admin" title="Admin" disabled> ... </pub-tab>
+    </pub-tabs>
 </template>
 
 <script setup>
-import { ref } from "vue";
-import { PubTab, PubTabs } from "vuelicity";
+    import { ref } from "vue";
+    import { PubTab, PubTabs } from "vuelicity";
 
-const activeTab = ref("profile");
+    const activeTab = ref("profile");
 </script>
 ```
 
@@ -128,25 +110,19 @@ The `directive` prop can be used to change the behavior of the tabs.
 
 ```vue
 <template>
-  <pub-tabs v-model="activeTab" class="p-5">
-    <pub-tab name="profile" title="Profile"> Lorem ipsum dolor sit ... </pub-tab>
-    <pub-tab name="orders" title="Orders"> 
-        ...
-    </pub-tab>
-    <pub-tab name="address" title="Address"> 
-        ...
-    </pub-tab>
-    <pub-tab name="admin" title="Admin" disabled>
-        ...
-    </pub-tab>
-  </pub-tabs>
+    <pub-tabs v-model="activeTab" class="p-5">
+        <pub-tab name="profile" title="Profile"> Lorem ipsum dolor sit ... </pub-tab>
+        <pub-tab name="orders" title="Orders"> ... </pub-tab>
+        <pub-tab name="address" title="Address"> ... </pub-tab>
+        <pub-tab name="admin" title="Admin" disabled> ... </pub-tab>
+    </pub-tabs>
 </template>
 
 <script setup>
-import { ref } from "vue";
-import { PubTab, PubTabs } from "vuelicity";
+    import { ref } from "vue";
+    import { PubTab, PubTabs } from "vuelicity";
 
-const activeTab = ref("profile");
+    const activeTab = ref("profile");
 </script>
 ```
 
@@ -192,30 +168,36 @@ The `tab-class`, `item-class`, `item-active-class`, and `class` props can be use
 
 ```vue
 <template>
-  <pub-tabs v-model="activeTab" tab-class="bg-amber-100 dark:bg-green-900 border-b-2 border-amber-400 dark:border-green-700"
+    <pub-tabs
+        v-model="activeTab"
+        tab-class="bg-amber-100 dark:bg-green-900 border-b-2 border-amber-400 dark:border-green-700"
         item-class="font-bold text-amber-800 dark:text-green-300 hover:bg-amber-300 hover:text-amber-900 dark:hover:bg-green-800 dark:hover:text-green-100"
         item-active-class="bg-amber-400 dark:bg-green-700 text-amber-900 dark:text-green-100"
-        class="bg-amber-50 dark:bg-green-950 p-5 border-amber-400 border-x-2 dark:border-green-700 border-b-2">
-    <pub-tab name="profile" title="Profile"> Lorem ipsum dolor sit ... </pub-tab>
-    <pub-tab name="orders" title="Orders"> 
-        ...
-    </pub-tab>
-    <pub-tab name="address" title="Address"> 
-        ...
-    </pub-tab>
-    <pub-tab name="admin" title="Admin" disabled>
-        ...
-    </pub-tab>
-  </pub-tabs>
+        class="bg-amber-50 dark:bg-green-950 p-5 border-amber-400 border-x-2 dark:border-green-700 border-b-2"
+    >
+        <pub-tab name="profile" title="Profile"> Lorem ipsum dolor sit ... </pub-tab>
+        <pub-tab name="orders" title="Orders"> ... </pub-tab>
+        <pub-tab name="address" title="Address"> ... </pub-tab>
+        <pub-tab name="admin" title="Admin" disabled> ... </pub-tab>
+    </pub-tabs>
 </template>
 
 <script setup>
-import { ref } from "vue";
-import { PubTab, PubTabs } from "vuelicity";
+    import { ref } from "vue";
+    import { PubTab, PubTabs } from "vuelicity";
 
-const activeTab = ref("profile");
+    const activeTab = ref("profile");
 </script>
 ```
+
+## Keyboard Navigation
+
+The tab list follows the ARIA tabs pattern. Once focus is on a tab button, use the keyboard to navigate:
+
+- Pressing the `right` arrow key <kbd>&#8594;</kbd> moves focus to the next tab button.
+- Pressing the `left` arrow key <kbd>&#8592;</kbd> moves focus to the previous tab button.
+- Pressing the `home` key <kbd>&#8962;</kbd> moves focus to the first tab button.
+- Pressing the `end` key <kbd>&#8963;</kbd> moves focus to the last tab button.
 
 ## Reference
 
