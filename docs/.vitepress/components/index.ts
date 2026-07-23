@@ -56,6 +56,10 @@ const component_toc = [
         link: "/components/pub-pagination"
     },
     {
+        text: "Spinner",
+        link: "/components/pub-spinner"
+    },
+    {
         text: "Table",
         link: "/components/pub-table"
     },
