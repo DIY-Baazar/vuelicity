@@ -23,7 +23,7 @@ const props = withDefaults(defineProps<TabsProps>(), {
     iconPosition: "left",
     vertical: false,
     fullWidth: false,
-    theme: 'default'
+    color: 'blue'
 });
 
 const emit = defineEmits(["update:modelValue", "click:tab"]);

@@ -1,7 +1,7 @@
 <template>
     <pub-input v-model="email" label="Email" placeholder="Enter your email">
         <template #prepend>
-            <pub-icon name="envelope" class="text-gray-800" />
+            <pub-icon name="envelope" class="text-grey-800" />
         </template>
     </pub-input>
     <pub-input v-model="username" label="Username" placeholder="Enter your username">

@@ -1,6 +1,6 @@
 <template>
     <a
-        class="relative flex size-10 items-center justify-center rounded-full border-2 border-white bg-gray-700 text-xs font-medium text-white hover:bg-gray-600 dark:border-gray-800"
+        class="relative flex size-10 items-center justify-center rounded-full border-2 border-white bg-grey-700 text-xs font-medium text-white hover:bg-grey-600 dark:border-grey-800"
         :href="href"
         >+{{ total }}</a
     >

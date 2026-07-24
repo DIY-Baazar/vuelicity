@@ -16,15 +16,15 @@ interface UseNavbarClassesProps {
 const navbarThemeClasses = {
     light: {
         true: "bg-light",
-        false: "bg-gray-50"
+        false: "bg-grey-50"
     },
     dark: {
         true: "bg-dark",
-        false: "bg-gray-800"
+        false: "bg-grey-800"
     },
     default: {
         true: "bg-light dark:bg-dark",
-        false: "bg-gray-50 dark:bg-gray-800"
+        false: "bg-grey-50 dark:bg-grey-800"
     }
 };
 
@@ -32,16 +32,16 @@ type NavbarSolid = "true" | "false";
 
 const navbarTextThemeClasses: Record<NavbarTheme, Record<NavbarSolid, string>> = {
     light: {
-        true: "text-gray-700 hover:bg-light",
-        false: "text-gray-700 hover:bg-gray-50"
+        true: "text-grey-700 hover:bg-light",
+        false: "text-grey-700 hover:bg-grey-50"
     },
     dark: {
-        true: "text-gray-200 hover:bg-dark",
-        false: "text-gray-200 hover:bg-gray-800"
+        true: "text-grey-200 hover:bg-dark",
+        false: "text-grey-200 hover:bg-grey-800"
     },
     default: {
-        true: "text-gray-700 hover:bg-light dark:text-gray-200 dark:hover:bg-dark",
-        false: "text-gray-700 hover:bg-gray-50 dark:text-gray-200 dark:hover:bg-gray-800"
+        true: "text-grey-700 hover:bg-light dark:text-grey-200 dark:hover:bg-dark",
+        false: "text-grey-700 hover:bg-grey-50 dark:text-grey-200 dark:hover:bg-grey-800"
     }
 };
 
@@ -59,8 +59,8 @@ export function useNavbarClasses(props: UseNavbarClassesProps): {
 } {
     const wrapperClasses = computed(() =>
         useMergeClasses([
-            "border-gray-200 w-full",
-            props.sticky.value ? "fixed z-20 top-0 left-0 border-b border-gray-200" : "",
+            "border-grey-200 w-full",
+            props.sticky.value ? "fixed z-20 top-0 left-0 border-b border-grey-200" : "",
             props.rounded.value ? "rounded" : "",
             props.solid.value ? "p-3" : "px-2 sm:px-4 py-2.5",
             navbarThemeClasses[props.theme.value][props.solid.value ? "true" : "false"],
@@ -99,7 +99,7 @@ export function useNavbarCollapseClasses(props: UseNavbarCollapseClassesProps): 
     );
     const spanClasses = computed(() =>
         useMergeClasses([
-            "flex flex-col p-4 rounded-lg border border-gray-100",
+            "flex flex-col p-4 rounded-lg border border-grey-100",
             `${collapseBreakpoint}:flex-row ${collapseBreakpoint}:space-x-8 ${collapseBreakpoint}:mt-0 ${collapseBreakpoint}:text-sm ${collapseBreakpoint}:font-medium ${collapseBreakpoint}:border-0`,
             props.noToggleButton.value ? "" : `mt-4 ${collapseBreakpoint}:mt-0`,
             normalizeClass(props.class?.value)

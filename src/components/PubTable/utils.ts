@@ -1,15 +1,15 @@
 import { useMergeClasses } from "@/composables/useMergeClasses";
 import { computed, type Ref } from "vue";
 
-const baseCellClasses = "px-6 py-4 first:font-medium first:text-gray-900 first:whitespace-nowrap last:text-right";
-const stripedCellClasses = "even:bg-white odd:bg-gray-50";
+const baseCellClasses = "px-6 py-4 first:font-medium first:text-grey-900 first:whitespace-nowrap last:text-right";
+const stripedCellClasses = "even:bg-white odd:bg-grey-50";
 
 const baseRowClasses = "bg-white not-last:border-b";
-const stripedRowClasses = "odd:bg-white even:bg-gray-50";
-const hoverableRowClasses = "hover:bg-gray-50";
+const stripedRowClasses = "odd:bg-white even:bg-grey-50";
+const hoverableRowClasses = "hover:bg-grey-50";
 
 const baseHeadCellClasses = "px-6 py-3 text-xs uppercase";
-const stripedHeadCellClasses = "even:bg-white odd:bg-gray-50";
+const stripedHeadCellClasses = "even:bg-white odd:bg-grey-50";
 
 interface UseTableCellClassesProps {
     stripedColumns: Ref<boolean>;

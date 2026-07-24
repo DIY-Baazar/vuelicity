@@ -10,12 +10,12 @@ import type {
 
 const baseAccordionClasses = "w-full";
 const baseAccordionHeaderClasses =
-    "flex w-full items-center justify-between gap-3 font-medium p-5 text-gray-500 rtl:text-right";
-const defaultAccordionHeaderClasses = "border border-gray-200 hover:bg-gray-100 focus:ring-4 focus:ring-gray-200";
-const flushedAccordionHeaderClasses = "border-b border-gray-200 border-x-0 border-b";
+    "flex w-full items-center justify-between gap-3 font-medium p-5 text-grey-500 rtl:text-right";
+const defaultAccordionHeaderClasses = "border border-grey-200 hover:bg-grey-100 focus:ring-4 focus:ring-grey-200";
+const flushedAccordionHeaderClasses = "border-b border-grey-200 border-x-0 border-b";
 const defaultAccordionActionClasses = "ml-auto size-6 shrink-0";
 
-const baseAccordionContentClasses = "p-5 border border-gray-200 bg-white";
+const baseAccordionContentClasses = "p-5 border border-grey-200 bg-white";
 
 export function useAccordionClasses (props: UseAccordionClassesProps) {
     const accordionClasses = computed(() => useMergeClasses([baseAccordionClasses, normalizeClass(props.class.value)]));
@@ -40,8 +40,8 @@ export function useAccordionHeaderClasses (
             (isFirstPanel.value && isFlushed.value) ? 'border-t-0' : '',
             !isLastPanel.value ? "border-b-0" : "",
             isFlushed.value ? flushedAccordionHeaderClasses : defaultAccordionHeaderClasses,
-            isPanelVisible.value ? 'text-gray-900' : 'text-gray-500',
-            (isPanelVisible.value && !isFlushed.value) ? 'bg-gray-100' : '',
+            isPanelVisible.value ? 'text-grey-900' : 'text-grey-500',
+            (isPanelVisible.value && !isFlushed.value) ? 'bg-grey-100' : '',
             isPanelVisible.value ? props.activeClass.value : "",
             normalizeClass(props.class.value)
         ])

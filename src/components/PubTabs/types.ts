@@ -1,17 +1,18 @@
+import type { ThemeColor } from "@/composables/useThemeColor";
 import type { ClassInput } from "@/types/global";
 
 export type TabsVariant = "default" | "underline" | "pills";
 export type TabsIconPosition = "left" | "right";
-export type TabsTheme =
-  | "default"
-  | "red"
-  | "blue"
-  | "yellow"
-  | "green"
-  | "magenta"
-  | "cyan"
-  | "light"
-  | "dark";
+export type TabsColor = ThemeColor;
+// | "default"
+// | "red"
+// | "blue"
+// | "yellow"
+// | "green"
+// | "magenta"
+// | "cyan"
+// | "light"
+// | "dark"
 
 export interface TabsProps {
   variant?: TabsVariant;
@@ -23,7 +24,7 @@ export interface TabsProps {
   iconPosition?: TabsIconPosition;
   vertical?: boolean;
   fullWidth?: boolean;
-  theme?: TabsTheme;
+  color?: TabsColor;
 }
 
 export interface TabsState extends TabsProps {}

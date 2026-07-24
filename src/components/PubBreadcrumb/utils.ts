@@ -17,7 +17,7 @@ export function useBreadcrumbClasses (props: UseBreadcrumbClassesProps) {
     const breadcrumbClasses = computed(() => useMergeClasses([breadcrumbDefaultClasses]));
     const breadcrumbWrapperClasses = computed(() => useMergeClasses([
         "flex",
-        props.solid.value ? "px-5 py-3 text-gray-700 border border-gray-200 rounded-lg bg-gray-50" : ""
+        props.solid.value ? "px-5 py-3 text-grey-700 border border-grey-200 rounded-lg bg-grey-50" : ""
     ]));
 
     return {
@@ -29,7 +29,7 @@ export function useBreadcrumbClasses (props: UseBreadcrumbClassesProps) {
 export function useBreadcrumbItemClasses (props: UseBreadcrumbItemProps) {
     const breadcrumbItemClasses = computed(() => useMergeClasses([
         breadcrumbItemDefaultClasses,
-        props.href?.value ? "text-gray-700" : "text-gray-400 hover:text-gray-700"
+        props.href?.value ? "text-grey-700" : "text-grey-400 hover:text-grey-700"
     ]));
 
     return {

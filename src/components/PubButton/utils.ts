@@ -6,7 +6,7 @@ import type { ClassRef } from "@/types/global";
 export type ButtonClassMap<T extends string> = { hover: Record<T, string>; default: Record<T, string>; };
 
 const defaultSpanButtonClasses = "flex items-center gap-2";
-const skeletonButtonClasses = "animate-pulse bg-gray-200 text-transparent rounded-md cursor-not-allowed";
+const skeletonButtonClasses = "animate-pulse bg-grey-200 text-transparent rounded-md cursor-not-allowed";
 
 const buttonThemeClasses: ButtonClassMap<ButtonTheme> = {
     default: {
@@ -49,16 +49,16 @@ const buttonOutlineThemeClasses: ButtonClassMap<ButtonTheme> = {
         dark: "border-dark focus:ring-dark text-dark"
     },
     hover: {
-        none: "hover:bg-gray-200 hover:text-black",
+        none: "hover:bg-grey-200 hover:text-black",
         default: "hover:bg-grey hover:text-grey-200",
-        blue: "hover:bg-blue-600 hover:text-gray-200",
-        red: "hover:bg-red-600 hover:text-gray-200",
-        yellow: "hover:bg-yellow-600 hover:text-gray-200",
-        green: "hover:bg-green-600 hover:text-gray-200",
-        magenta: "hover:bg-magenta-600 hover:text-gray-200",
-        cyan: "hover:bg-cyan-600 hover:text-gray-200",
-        light: "hover:bg-gray-200 hover:text-gray-800",
-        dark: "hover:bg-gray-800 hover:text-gray-200"
+        blue: "hover:bg-blue-600 hover:text-grey-200",
+        red: "hover:bg-red-600 hover:text-grey-200",
+        yellow: "hover:bg-yellow-600 hover:text-grey-200",
+        green: "hover:bg-green-600 hover:text-grey-200",
+        magenta: "hover:bg-magenta-600 hover:text-grey-200",
+        cyan: "hover:bg-cyan-600 hover:text-grey-200",
+        light: "hover:bg-grey-200 hover:text-grey-800",
+        dark: "hover:bg-grey-800 hover:text-grey-200"
     }
 };
 

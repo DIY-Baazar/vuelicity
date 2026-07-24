@@ -99,7 +99,7 @@ const { wrapperClasses } = useCarouselClasses(toRefs({ ...props, size }));
                 @click.prevent="previousPicture"
             >
                 <span
-                    class="inline-flex size-8 items-center justify-center rounded-full bg-white/30 group-hover:bg-white/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-white dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70 sm:size-10"
+                    class="inline-flex size-8 items-center justify-center rounded-full bg-white/30 group-hover:bg-white/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-white dark:bg-grey-800/30 dark:group-hover:bg-grey-800/60 dark:group-focus:ring-grey-800/70 sm:size-10"
                 >
                     <pub-icon name="chevron-left" aschild />
                     <span class="sr-only">Previous</span>
@@ -111,7 +111,7 @@ const { wrapperClasses } = useCarouselClasses(toRefs({ ...props, size }));
                 @click.prevent="nextPicture"
             >
                 <span
-                    class="inline-flex size-8 items-center justify-center rounded-full bg-white/30 group-hover:bg-white/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-white dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70 sm:size-10"
+                    class="inline-flex size-8 items-center justify-center rounded-full bg-white/30 group-hover:bg-white/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-white dark:bg-grey-800/30 dark:group-hover:bg-grey-800/60 dark:group-focus:ring-grey-800/70 sm:size-10"
                 >
                     <pub-icon name="chevron-right" aschild />
                     <span class="sr-only">Next</span>

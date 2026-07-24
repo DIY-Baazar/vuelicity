@@ -49,7 +49,7 @@ export function useModalClasses(props: UseModalClassesProps): {
 } {
     const wrapperClasses = [
         modalZIndexClasses[props.zIndex.value],
-        props.overlayBlur.value ? "backdrop-blur bg-gray-900/20" : "bg-gray-900/50"
+        props.overlayBlur.value ? "backdrop-blur bg-grey-900/20" : "bg-grey-900/50"
     ].join(" ");
 
     const spanClasses = [

@@ -23,7 +23,7 @@ const sizes: Record<SpinnerSize, string> = {
 
 const colors: Record<SpinnerColor, string> = {
   blue: "fill-blue-600",
-  gray: "fill-gray-600",
+  grey: "fill-grey-600",
   green: "fill-green-500",
   pink: "fill-pink-600",
   purple: "fill-purple-600",
@@ -41,8 +41,6 @@ export function useSpinnerClasses(props: UseSpinnerClassesProps): {
   spinnerClasses: Ref<string>;
   customColor: Ref<string | null>;
 } {
-  const sizeClasses = computed(() => sizes[props.size.value]);
-
   const colorClasses = computed(
     () => colors[props.color.value as SpinnerColor] ?? "",
   );
@@ -50,14 +48,12 @@ export function useSpinnerClasses(props: UseSpinnerClassesProps): {
     colorClasses.value ? null : (props.color.value as string),
   );
 
-  const bgColorClasses = computed(() => "text-gray-200");
-  const animateClasses = computed(() => "animate-spin");
   const spinnerClasses = computed(() =>
     useMergeClasses([
-      animateClasses.value,
-      bgColorClasses.value,
-      colorClasses.value,
-      sizeClasses.value,
+      "animate-spin",
+      "text-grey-200",
+      colors[props.color.value as SpinnerColor] ?? "",
+      sizes[props.size.value],
     ]),
   );
 

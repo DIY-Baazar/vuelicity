@@ -15,16 +15,16 @@ export interface UseTextareaClassesProps {
 }
 
 const defaultLabelClasses = "pub-textarea-label block mb-2 text-sm font-medium";
-const defaultHelperClasses = "mt-2 text-sm text-gray-500";
+const defaultHelperClasses = "mt-2 text-sm text-grey-500";
 const defaultWrapperClasses = "pub-textarea-container w-full";
 const defaultInputWrapperClasses =
-    "relative bg-gray-50 shadow-xs border border-gray-300 has-[textarea:focus]:border-blue-500 rounded-lg has-[textarea:focus]:ring-1 has-[textarea:focus]:ring-blue-500 text-gray-900 ";
+    "relative bg-grey-50 shadow-xs border border-grey-300 has-[textarea:focus]:border-blue-500 rounded-lg has-[textarea:focus]:ring-1 has-[textarea:focus]:ring-blue-500 text-grey-900 ";
 const defaultInputClasses =
-    "pub-textarea w-full block bg-transparent border-0 focus:border-0 focus:outline-none ring-0 focus:ring-0 text-inherit placeholder:text-gray-400";
-const defaultFooterClasses = "px-3.5 py-2 border-gray-300 border-t";
+    "pub-textarea w-full block bg-transparent border-0 focus:border-0 focus:outline-none ring-0 focus:ring-0 text-inherit placeholder:text-grey-400";
+const defaultFooterClasses = "px-3.5 py-2 border-grey-300 border-t";
 
-const disabledInputClasses = "cursor-not-allowed text-gray-400";
-const disabledInputWrapperClasses = "bg-gray-100";
+const disabledInputClasses = "cursor-not-allowed text-grey-400";
+const disabledInputWrapperClasses = "bg-grey-100";
 
 const successTextClasses = "text-green-700";
 const errorTextClasses = "text-red-700";

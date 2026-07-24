@@ -22,7 +22,7 @@ provide("tableState", { tableState });
 <template>
     <div
         :class="useMergeClasses(['relative overflow-x-auto shadow-md sm:rounded-lg', normalizeClass(props.wrapperClass)])">
-        <table :class="useMergeClasses(['w-full text-left text-sm text-gray-500', normalizeClass(props.class)])">
+        <table :class="useMergeClasses(['w-full text-left text-sm text-grey-500', normalizeClass(props.class)])">
             <slot />
         </table>
     </div>

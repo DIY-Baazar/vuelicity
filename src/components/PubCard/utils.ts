@@ -9,8 +9,8 @@ interface UseCardClassesProps {
 }
 
 const cardVariantClasses: Record<CardVariant, string> = {
-    "default": "block min-w-xs rounded-lg border border-gray-200 shadow-md",
-    "image": "min-w-xs rounded-lg border border-gray-200 shadow-md",
+    "default": "block min-w-xs rounded-lg border border-grey-200 shadow-md",
+    "image": "min-w-xs rounded-lg border border-grey-200 shadow-md",
     "horizontal": "flex flex-col items-center rounded-lg border shadow-md md:flex-row md:min-w-xl"
 };
 
@@ -22,7 +22,7 @@ export function useCardClasses (props: UseCardClassesProps): {
         return [
             cardVariantClasses[props.variant.value],
             (!props.class.value || !normalizeClass(props.class.value).includes("bg-")) ? "bg-white" : "",
-            props.href.value && !normalizeClass(props.class.value).includes("hover:") ? "hover:bg-gray-100" : "",
+            props.href.value && !normalizeClass(props.class.value).includes("hover:") ? "hover:bg-grey-100" : "",
         ].join(" ");
     });
 

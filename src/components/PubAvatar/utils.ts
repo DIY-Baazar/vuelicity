@@ -28,14 +28,14 @@ const avatarPlaceholderSizes: Record<AvatarSize, string> = {
     xl: "-bottom-4"
 };
 
-const avatarBorderedClasses = "ring-2 ring-gray-300 p-1";
-const avatarPlaceholderDefaultClasses = "w-full h-full text-gray-400";
+const avatarBorderedClasses = "ring-2 ring-grey-300 p-1";
+const avatarPlaceholderDefaultClasses = "w-full h-full text-grey-400";
 const avatarPlaceholderWrapperDefaultClasses = "flex overflow-hidden relative justify-center items-center";
-const avatarPlaceholderWrapperBackgroundClasses = "bg-gray-100";
+const avatarPlaceholderWrapperBackgroundClasses = "bg-grey-100";
 const avatarPlaceholderDefaultIconClasses = "absolute";
 const avatarStatusDotDefaultClasses = "absolute w-3.5 h-3.5 rounded-full border-2 border-white";
 const avatarStatusDotClasses: Record<AvatarStatus, string> = {
-    away: 'bg-gray-400',
+    away: 'bg-grey-400',
     busy: 'bg-yellow-400',
     offline: 'bg-red-400',
     online: 'bg-green-400',

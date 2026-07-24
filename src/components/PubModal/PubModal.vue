@@ -67,7 +67,7 @@ const spanClasses = computed(() => modalClasses.value.spanClasses);
             <div :class="['relative bg-white shadow max-h-[90vh] flex flex-col', props.class]">
                 <!-- Modal header -->
                 <div
-                    :class="$slots.header ? 'border-b border-gray-200' : ''"
+                    :class="$slots.header ? 'border-b border-grey-200' : ''"
                     class="flex items-center justify-between p-2"
                 >
                     <slot name="header"></slot>
@@ -84,7 +84,7 @@ const spanClasses = computed(() => modalClasses.value.spanClasses);
                     <slot></slot>
                 </div>
                 <!-- Modal footer -->
-                <div v-if="$slots.footer" class="flex items-center justify-end border-t border-gray-200 p-2">
+                <div v-if="$slots.footer" class="flex items-center justify-end border-t border-grey-200 p-2">
                     <slot name="footer"></slot>
                 </div>
             </div>

@@ -20,10 +20,10 @@ export interface UsePhoneInputClassesProps {
 const defaultWrapperClasses = "pub-phone-input-container";
 const defaultLabelClasses = "pub-phone-input-label block mb-2 text-sm font-medium";
 const defaultPhoneInputWrapperClasses =
-    "pub-phone-input-wrapper relative flex items-center has-[input:focus]:ring-offset-0 has-[input:focus]:ring-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg has-[input:focus]:ring-blue-500 has-[input:focus]:border-blue-500     ";
+    "pub-phone-input-wrapper relative flex items-center has-[input:focus]:ring-offset-0 has-[input:focus]:ring-1 bg-grey-50 border border-grey-300 text-grey-900 text-sm rounded-lg has-[input:focus]:ring-blue-500 has-[input:focus]:border-blue-500     ";
 const defaultPhoneInputClasses =
     "pub-phone-input block grow w-full bg-transparent text-inherit ring-offset-0 ring-0 border-0 focus:ring-offset-0 focus:ring-0 focus:border-0 focus:outline-none";
-const defaultHelperClasses = "mt-2 text-sm text-gray-500";
+const defaultHelperClasses = "mt-2 text-sm text-grey-500";
 
 const successPhoneInputClasses = "text-green-900 placeholder:text-green-500";
 const errorPhoneInputClasses = "text-red-900 placeholder:text-red-500";
@@ -34,12 +34,12 @@ const errorPhoneInputWrapperClasses =
 const successTextClasses = "text-green-700";
 const errorTextClasses = "text-red-700";
 
-const affixBaseClasses = "self-stretch flex items-center shrink-0 text-gray-500";
-const affixDefaultBgClasses = "bg-gray-100";
-const affixDisabledBgClasses = "bg-gray-200";
+const affixBaseClasses = "self-stretch flex items-center shrink-0 text-grey-500";
+const affixDefaultBgClasses = "bg-grey-100";
+const affixDisabledBgClasses = "bg-grey-200";
 const affixSuccessBorderClasses = "border-green-200";
 const affixErrorBorderClasses = "border-red-200";
-const affixDefaultBorderClasses = "border-gray-300";
+const affixDefaultBorderClasses = "border-grey-300";
 const affixSizeClasses: Record<FormElementSize, string> = {
     sm: "px-1 text-sm",
     md: "px-2 text-sm",
@@ -97,7 +97,7 @@ export function usePhoneInputClasses(props: UsePhoneInputClassesProps) {
                 : props.validationStatus.value === validationStatusMap.Error
                   ? errorPhoneInputClasses
                   : "",
-            "max-w-32 border-r border-gray-300",
+            "max-w-32 border-r border-grey-300",
         ])
     );
 

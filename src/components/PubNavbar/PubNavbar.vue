@@ -38,7 +38,7 @@ provide("navbarState", { navbarState });
             <slot name="logo" />
 
             <button v-if="!props.noToggleButton" aria-controls="navbar-default" aria-expanded="false"
-                class="ml-3 inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 md:hidden"
+                class="ml-3 inline-flex items-center rounded-lg p-2 text-sm text-grey-500 hover:bg-grey-100 focus:outline-none focus:ring-2 focus:ring-grey-200 dark:text-grey-400 dark:hover:bg-grey-700 dark:focus:ring-grey-600 md:hidden"
                 type="button" @click="toggleMobileMenu()">
                 <span class="sr-only">Open main menu</span>
                 <slot name="menu-icon">

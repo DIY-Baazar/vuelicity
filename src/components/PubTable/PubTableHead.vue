@@ -1,5 +1,5 @@
 <template>
-    <thead class="bg-gray-50 text-xs uppercase text-gray-700">
+    <thead class="bg-grey-50 text-xs uppercase text-grey-700">
         <tr>
             <slot />
         </tr>

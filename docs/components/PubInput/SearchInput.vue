@@ -1,7 +1,7 @@
 <template>
     <pub-input v-model="searchQuery" label="Search" placeholder="Type to search...">
         <template #prepend>
-            <pub-icon name="search" class="text-gray-700" size="sm" type="outline" />
+            <pub-icon name="search" class="text-grey-700" size="sm" type="outline" />
         </template>
         <template #append>
             <pub-button theme="blue" size="xs" rounded="md">

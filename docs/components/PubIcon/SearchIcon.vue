@@ -22,7 +22,7 @@ const filteredIcons = computed(() => {
         <div class="mb-2">
             <pub-input v-model="searchTerm" placeholder="Search for an icon" wrapper-class="w-full">
                 <template #prepend>
-                    <pub-icon name="search" type="outline" class="text-gray-700" />
+                    <pub-icon name="search" type="outline" class="text-grey-700" />
                 </template>
             </pub-input>
             <pub-checkbox

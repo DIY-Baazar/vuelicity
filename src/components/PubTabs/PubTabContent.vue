@@ -18,7 +18,7 @@ const itemClass = computed(() => tabsState.itemClass ?? '');
 const itemActiveClass = computed(() => tabsState.itemActiveClass ?? '');
 const vertical = computed(() => tabsState.vertical ?? false);
 const fullWidth = computed(() => tabsState.fullWidth ?? false);
-const theme = computed(() => tabsState.theme ?? 'default');
+const color = computed(() => tabsState.color ?? 'blue');
 const iconPosition = computed(() => tabsState.iconPosition ?? 'left');
 const iconSlots = computed(() => _iconSlots.value ?? {} as Record<string, (() => VNode[]) | undefined>)
 
@@ -79,7 +79,7 @@ const { tabClasses } = useTabClasses({
     itemActiveClass,
     vertical,
     fullWidth,
-    theme
+    color
 });
 </script>
 

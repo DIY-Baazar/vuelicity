@@ -11,17 +11,17 @@ interface UseCheckboxClassesProps {
 }
 
 const defaultWrapperClasses = "pub-checkbox-container w-full";
-const defaultLabelClasses = "pub-checkbox-label text-sm font-medium text-gray-900 mr-1";
+const defaultLabelClasses = "pub-checkbox-label text-sm font-medium text-grey-900 mr-1";
 const defaultCheckboxClasses =
-    "mr-2 w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 focus:ring-2";
-const disabledLabelClasses = "text-gray-400";
-const defaultHelperClasses = "ml-6 text-xs font-normal text-gray-500";
+    "mr-2 w-4 h-4 text-blue-600 bg-grey-100 border-grey-300 rounded-sm focus:ring-blue-500 focus:ring-2";
+const disabledLabelClasses = "text-grey-400";
+const defaultHelperClasses = "ml-6 text-xs font-normal text-grey-500";
 
 export function useCheckboxClasses(props: UseCheckboxClassesProps) {
     const wrapperClasses = computed(() =>
         useMergeClasses([
             defaultWrapperClasses,
-            props.bordered.value ? "border border-gray-300 rounded shadow-xs p-4" : "",
+            props.bordered.value ? "border border-grey-300 rounded shadow-xs p-4" : "",
             normalizeClass(props.wrapperClass?.value)
         ])
     );

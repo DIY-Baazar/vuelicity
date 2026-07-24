@@ -8,7 +8,7 @@ interface UseKbdProps {
 }
 
 const defaultKbdClasses =
-  "rounded-lg border border-gray-200 bg-gray-100 px-2 py-1.5 text-xs font-semibold text-gray-800 ";
+  "rounded-lg border border-grey-200 bg-grey-100 px-2 py-1.5 text-xs font-semibold text-grey-800 ";
 const iconKbdClasses = "inline-flex items-center";
 
 export function useKbdClasses(props: UseKbdProps) {

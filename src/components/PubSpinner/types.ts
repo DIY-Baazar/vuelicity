@@ -2,7 +2,7 @@ import type { CustomColor } from "@/types/global";
 
 export type SpinnerColor =
   | "blue"
-  | "gray"
+  | "grey"
   | "green"
   | "red"
   | "yellow"

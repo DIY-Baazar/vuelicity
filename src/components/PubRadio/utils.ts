@@ -14,12 +14,12 @@ interface UseRadioClassProps {
 }
 
 const defaultWrapperClasses = "pub-radio-container w-full";
-const defaultLabelClasses = "pub-radio-label font-medium text-gray-900 mr-1";
+const defaultLabelClasses = "pub-radio-label font-medium text-grey-900 mr-1";
 const defaultRadioWrapperClasses = "flex justify-start items-center select-none";
 const defaultRadioClasses =
-    "pub-radio mr-2 w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-2";
-const disabledLabelClasses = "text-gray-400";
-const defaultHelperClasses = "ml-6 text-xs font-normal text-gray-500";
+    "pub-radio mr-2 w-4 h-4 text-blue-600 bg-grey-100 border-grey-300 focus:ring-2";
+const disabledLabelClasses = "text-grey-400";
+const defaultHelperClasses = "ml-6 text-xs font-normal text-grey-500";
 
 const radioSizeClasses: Record<FormElementSize, string> = {
     sm: "py-0.5 px-2 text-sm",
@@ -35,15 +35,15 @@ const radioColorClasses: Record<FormElementColor, string> = {
     yellow: "accent-yellow-500 focus:ring-yellow-500",
     magenta: "accent-magenta-500 focus:ring-magenta-500",
     cyan: "accent-cyan-500 focus:ring-cyan-500",
-    light: "accent-gray-300 focus:ring-light-300",
-    dark: "accent-gray-700 focus:ring-gray-700"
+    light: "accent-grey-300 focus:ring-light-300",
+    dark: "accent-grey-700 focus:ring-grey-700"
 };
 
 export function useRadioClasses(props: UseRadioClassProps) {
     const wrapperClasses = computed(() =>
         useMergeClasses([
             defaultWrapperClasses,
-            props.bordered.value ? "border border-gray-300 rounded shadow-xs p-4" : "",
+            props.bordered.value ? "border border-grey-300 rounded shadow-xs p-4" : "",
             normalizeClass(props.wrapperClass?.value)
         ])
     );

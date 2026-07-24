@@ -52,4 +52,4 @@ The `color` prop is used to set the color of the spinner.
 | Name  | Type   | Default | Description                                    | Options                                                                                   |
 | :---- | :----- | :------ | :--------------------------------------------- | :---------------------------------------------------------------------------------------- |
 | size  | String | `4`     | Size of the spinner                            | `'0'\|'0.5'\|'1'\|'1.5'\|'2'\|'2.5'\|'3'\|'4'\|'5'\|'6'\|'7'\|'8'\|'9'\|'10'\|'11'\|'12'` |
-| color | String | `blue`  | Color of the spinner (also accepts hex string) | `'blue'\|'gray'\|'green'\|'pink'\|'purple'\|'red'\|'white'\|'yellow'\|'#3fb984'`          |
+| color | String | `blue`  | Color of the spinner (also accepts hex string) | `'blue'\|'grey'\|'green'\|'pink'\|'purple'\|'red'\|'white'\|'yellow'\|'#{color_hexcode}'` |

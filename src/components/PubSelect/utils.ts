@@ -15,11 +15,11 @@ interface UseSelectClassesProps {
 
 const defaultLabelClasses = "pub-select-label block mb-2 text-sm font-medium";
 const defaultWrapperClasses = "pub-select-container w-full";
-const defaultHelperClasses = "mt-2 text-sm text-gray-500";
+const defaultHelperClasses = "mt-2 text-sm text-grey-500";
 const defaultSelectClasses =
-    "pub-select w-full text-gray-900 bg-gray-50 focus:ring-primary-500 focus:border-primary-500";
+    "pub-select w-full text-grey-900 bg-grey-50 focus:ring-primary-500 focus:border-primary-500";
 
-const disabledSelectClasses = "cursor-not-allowed bg-gray-100";
+const disabledSelectClasses = "cursor-not-allowed bg-grey-100";
 
 const successTextClasses = "text-green-700";
 const errorTextClasses = "text-red-700";
@@ -33,7 +33,7 @@ const selectSizeClasses: Record<FormElementSize, string> = {
     xl: "p-5 text-base"
 };
 const underlineSelectClasses =
-    "bg-transparent border-b-2 border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-200 peer";
+    "bg-transparent border-b-2 border-grey-200 focus:outline-none focus:ring-0 focus:border-grey-200 peer";
 
 export function useSelectClasses(props: UseSelectClassesProps) {
     const wrapperClasses = computed(() =>
@@ -70,7 +70,7 @@ export function useSelectClasses(props: UseSelectClassesProps) {
             selectSizeClasses[props.size.value],
             normalizeClass(props.class?.value),
             props.disabled.value ? disabledSelectClasses : "",
-            props.underline.value ? underlineSelectClasses : "border border-gray-300 rounded-lg",
+            props.underline.value ? underlineSelectClasses : "border border-grey-300 rounded-lg",
             props.underline.value ? underlineByStatus : ""
         ]);
     });

@@ -3,15 +3,15 @@
 
     <pub-modal :is-open="isModalOpen" @close="closeModal">
         <template #header>
-            <h3 class="text-lg font-semibold text-gray-900">System Update Notice</h3>
+            <h3 class="text-lg font-semibold text-grey-900">System Update Notice</h3>
         </template>
         <template #default>
             <div class="space-y-2">
-                <p class="text-gray-700">
+                <p class="text-grey-700">
                     A new system update is available. It includes performance improvements, minor bug fixes, and
                     enhanced security patches.
                 </p>
-                <p class="text-sm text-gray-500">
+                <p class="text-sm text-grey-500">
                     We recommend updating to version <strong>2.3.4</strong> at your earliest convenience.
                 </p>
             </div>

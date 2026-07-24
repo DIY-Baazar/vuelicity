@@ -1,6 +1,6 @@
 <template>
   <pub-spinner color="blue" />
-  <pub-spinner color="gray" />
+  <pub-spinner color="grey" />
   <pub-spinner color="green" />
   <pub-spinner color="pink" />
   <pub-spinner color="purple" />
