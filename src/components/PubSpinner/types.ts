@@ -1,4 +1,5 @@
-type CustomColor = `#${string}` & {};
+import type { CustomColor } from "@/types/global";
+
 export type SpinnerColor =
   | "blue"
   | "gray"

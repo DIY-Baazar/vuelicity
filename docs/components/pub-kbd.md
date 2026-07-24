@@ -2,6 +2,7 @@
 title: PubKbd
 description: Documentation for the PubKbd component.
 ---
+
 <script setup>
     import Default from './PubKbd/Default.vue';
     import InText from './PubKbd/InText.vue';
@@ -9,6 +10,8 @@ description: Documentation for the PubKbd component.
 </script>
 
 # PubKbd
+
+This is a component for rendering keyboard shortcuts.
 
 ## Default KBD
 
@@ -20,6 +23,8 @@ description: Documentation for the PubKbd component.
 
 ## KBD Inside Text
 
+KBD can be used inside text.
+
 <demo-container>
     <InText/>
 </demo-container>
@@ -27,6 +32,8 @@ description: Documentation for the PubKbd component.
 <<< @/components/PubKbd/InText.vue
 
 ## KBD Inside a Table
+
+KBD can be used inside a table.
 
 <demo-container>
     <InsideTable/>
@@ -38,13 +45,13 @@ description: Documentation for the PubKbd component.
 
 ### Properties
 
-| Name  | Type | Default | Description | Options |
-| :---- | :--- | :------ | :---------- | :------ |
-| class |      |         |             |         |
+| Name  | Type   | Default | Description                      | Options |
+| :---- | :----- | :------ | :------------------------------- | :------ |
+| class | String | `''`    | Additional CSS classes to apply. |
 
 ### Slots
 
-| Name    | Description |
-| ------- | ----------- |
-| default |             |
-| icon    |             |
+| Name    | Description        |
+| ------- | ------------------ |
+| default | Slot for content.  |
+| icon    | Slot for the icon. |

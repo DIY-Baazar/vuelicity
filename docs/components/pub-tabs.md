@@ -12,11 +12,12 @@ description: Documentation for the PubTabs component.
     import Vertical from './PubTabs/Vertical.vue';
     import FullWidth from './PubTabs/FullWidth.vue';
     import Styling from './PubTabs/Styling.vue';
+    import { PubKbd } from 'vuelicity';
 </script>
 
 # PubTabs
 
-This is a tab component.
+This is a tab component that displays a list of tabs and their content which can be used to switch between different views.
 
 ## Default Usage
 
@@ -194,10 +195,10 @@ The `tab-class`, `item-class`, `item-active-class`, and `class` props can be use
 
 The tab list follows the ARIA tabs pattern. Once focus is on a tab button, use the keyboard to navigate:
 
-- Pressing the `right` arrow key <kbd>&#8594;</kbd> moves focus to the next tab button.
-- Pressing the `left` arrow key <kbd>&#8592;</kbd> moves focus to the previous tab button.
-- Pressing the `home` key <kbd>&#8962;</kbd> moves focus to the first tab button.
-- Pressing the `end` key <kbd>&#8963;</kbd> moves focus to the last tab button.
+- Pressing the `right` arrow key <pub-kbd>&#8594;</pub-kbd> moves focus to the next tab button.
+- Pressing the `left` arrow key <pub-kbd>&#8592;</pub-kbd> moves focus to the previous tab button.
+- Pressing the `home` key <pub-kbd>Home</pub-kbd> moves focus to the first tab button.
+- Pressing the `end` key <pub-kbd>End</pub-kbd> moves focus to the last tab button.
 
 ## Reference
 
