@@ -1,15 +1,60 @@
 <template>
-    <pub-button color="default" outline>Default</pub-button>
-    <pub-button color="blue" outline>Blue</pub-button>
-    <pub-button color="red" outline>Red</pub-button>
-    <pub-button color="green" outline>Green</pub-button>
-    <pub-button color="yellow" outline>Yellow</pub-button>
-    <pub-button color="pink" outline>Pink</pub-button>
-    <pub-button color="cyan" outline>Cyan</pub-button>
-    <pub-button color="purple" outline>Purple</pub-button>
-    <pub-button color="grey" outline>Grey</pub-button>
+  <pub-button
+    color="default"
+    outline
+  >
+    Default
+  </pub-button>
+  <pub-button
+    color="blue"
+    outline
+  >
+    Blue
+  </pub-button>
+  <pub-button
+    color="red"
+    outline
+  >
+    Red
+  </pub-button>
+  <pub-button
+    color="green"
+    outline
+  >
+    Green
+  </pub-button>
+  <pub-button
+    color="yellow"
+    outline
+  >
+    Yellow
+  </pub-button>
+  <pub-button
+    color="pink"
+    outline
+  >
+    Pink
+  </pub-button>
+  <pub-button
+    color="cyan"
+    outline
+  >
+    Cyan
+  </pub-button>
+  <pub-button
+    color="purple"
+    outline
+  >
+    Purple
+  </pub-button>
+  <pub-button
+    color="grey"
+    outline
+  >
+    Grey
+  </pub-button>
 </template>
 
 <script lang="ts" setup>
-import { PubButton } from "vuelicity";
+import { PubButton } from 'vuelicity'
 </script>

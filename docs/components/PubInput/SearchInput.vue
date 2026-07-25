@@ -1,19 +1,32 @@
 <template>
-    <pub-input v-model="searchQuery" label="Search" placeholder="Type to search...">
-        <template #prepend>
-            <pub-icon name="search" class="text-grey-700" size="sm" type="outline" />
-        </template>
-        <template #append>
-            <pub-button color="blue" size="xs" rounded="md">
-                Search
-            </pub-button>
-        </template>
-    </pub-input>
+  <pub-input
+    v-model="searchQuery"
+    label="Search"
+    placeholder="Type to search..."
+  >
+    <template #prepend>
+      <pub-icon
+        name="search"
+        class="text-grey-700"
+        size="sm"
+        type="outline"
+      />
+    </template>
+    <template #append>
+      <pub-button
+        color="blue"
+        size="xs"
+        rounded="md"
+      >
+        Search
+      </pub-button>
+    </template>
+  </pub-input>
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
-import { PubInput, PubIcon, PubButton} from "vuelicity";
+import { ref } from 'vue'
+import { PubButton, PubIcon, PubInput } from 'vuelicity'
 
-const searchQuery = ref("");
+const searchQuery = ref('')
 </script>

@@ -1,25 +1,34 @@
+<template>
+  <component
+    :is="componentName"
+    class="pub-navbar-logo flex items-center"
+    :[linkAttr]="link"
+  >
+    <img
+      :src="imageUrl"
+      :alt="alt"
+      class="mr-3 h-6 sm:h-10"
+    >
+    <span class="self-center whitespace-nowrap text-xl font-semibold">
+      <slot />
+    </span>
+  </component>
+</template>
+
 <script lang="ts" setup>
-import { computed, resolveComponent } from "vue";
-import type { NavbarLogoProps } from "./types";
+import { computed, resolveComponent } from 'vue'
+
+import type { NavbarLogoProps } from './types'
 
 const props = withDefaults(defineProps<NavbarLogoProps>(), {
-    link: "/",
-    imageUrl: "/images/logo.png",
-    alt: "Logo",
-    as: "a",
-    linkAttr: "href",
-});
+  link: '/',
+  imageUrl: '/images/logo.png',
+  alt: 'Logo',
+  as: 'a',
+  linkAttr: 'href',
+})
 
 const componentName = computed(() => {
-    return props.as !== "a" ? resolveComponent(props.as) : "a";
-});
+  return props.as !== 'a' ? resolveComponent(props.as) : 'a'
+})
 </script>
-
-<template>
-    <component :is="componentName" class="pub-navbar-logo flex items-center" :[linkAttr]="link">
-        <img :src="imageUrl" :alt="alt" class="mr-3 h-6 sm:h-10" />
-        <span class="self-center whitespace-nowrap text-xl font-semibold">
-            <slot />
-        </span>
-    </component>
-</template>

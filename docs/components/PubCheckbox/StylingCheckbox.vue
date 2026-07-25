@@ -9,8 +9,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import { PubCheckbox } from "vuelicity";
+import { ref } from 'vue'
+import { PubCheckbox } from 'vuelicity'
 
-const check = ref(false);
+const check = ref(false)
 </script>

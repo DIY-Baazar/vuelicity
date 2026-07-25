@@ -153,3 +153,4 @@ yarn-error.log
 .graphify*
 graphify-out
 .claude
+docs/.vitepress/cache

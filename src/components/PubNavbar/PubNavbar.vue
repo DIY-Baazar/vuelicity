@@ -1,56 +1,76 @@
-<script lang="ts" setup>
-import { computed, onMounted, provide, reactive, ref, toRefs, useSlots } from "vue";
-import { useNavbarClasses } from "./utils";
-import type { NavbarProps } from "./types";
-import { useBreakpoints } from "@/composables/useBreakpoints";
-import PubIcon from "@/components/PubIcon/PubIcon.vue";
+<template>
+  <nav
+    aria-label="navbar"
+    :class="['pub-navbar', wrapperClasses]"
+  >
+    <div :class="[spanClasses, props.class]">
+      <slot name="logo" />
 
-const { smaller } = useBreakpoints();
-const isShowMobileMenu = ref(false);
+      <button
+        v-if="!props.noToggleButton"
+        aria-controls="navbar-default"
+        aria-expanded="false"
+        class="ml-3 inline-flex items-center rounded-lg p-2 text-sm text-grey-500 hover:bg-grey-100 focus:outline-none focus:ring-2 focus:ring-grey-200 dark:text-grey-400 dark:hover:bg-grey-700 dark:focus:ring-grey-600 md:hidden"
+        type="button"
+        @click="toggleMobileMenu()"
+      >
+        <span class="sr-only">Open main menu</span>
+        <slot name="menu-icon">
+          <pub-icon
+            size="sm"
+            name="bars"
+          />
+        </slot>
+      </button>
+
+      <slot
+        :is-show-menu="isShowMenu"
+        name="default"
+      />
+
+      <div
+        v-if="slots['right-side']"
+        class="hidden md:order-2 md:flex"
+      >
+        <slot name="right-side" />
+      </div>
+    </div>
+  </nav>
+</template>
+
+<script lang="ts" setup>
+import { computed, provide, reactive, ref, toRefs, useSlots } from 'vue'
+
+import { useNavbarClasses } from './utils'
+
+import type { NavbarProps } from './types'
+
+import PubIcon from '@/components/PubIcon/PubIcon.vue'
+import { useBreakpoints } from '@/composables/useBreakpoints'
+
+const { smaller } = useBreakpoints()
+const isShowMobileMenu = ref(false)
 
 const toggleMobileMenu = () => {
-    isShowMobileMenu.value = !isShowMobileMenu.value;
-};
+  isShowMobileMenu.value = !isShowMobileMenu.value
+}
 
-const slots = useSlots();
+const slots = useSlots()
 
 const props = withDefaults(defineProps<NavbarProps>(), {
-    theme: "default",
-    containerClass: "",
-    class: "",
-    noToggleButton: false,
-    collapseBreakpoint: "md"
-});
+  theme: 'default',
+  containerClass: '',
+  class: '',
+  noToggleButton: false,
+  collapseBreakpoint: 'md',
+})
 
-const { wrapperClasses, spanClasses } = useNavbarClasses(toRefs(props));
+const { wrapperClasses, spanClasses } = useNavbarClasses(toRefs(props))
 
-const isSmaller = smaller(props.collapseBreakpoint);
-const isShowMenu = computed(() => (isSmaller.value ? isShowMobileMenu.value : true));
+const isSmaller = smaller(props.collapseBreakpoint)
+const isShowMenu = computed(() => (isSmaller.value ? isShowMobileMenu.value : true))
 
-const navbarState = reactive(props);
+const navbarState = reactive(props)
 
-provide("navbarState", { navbarState });
+provide('navbarState', { navbarState })
 </script>
-
-<template>
-    <nav aria-label="navbar" :class="['pub-navbar', wrapperClasses]">
-        <div :class="[spanClasses, props.class]">
-            <slot name="logo" />
-
-            <button v-if="!props.noToggleButton" aria-controls="navbar-default" aria-expanded="false"
-                class="ml-3 inline-flex items-center rounded-lg p-2 text-sm text-grey-500 hover:bg-grey-100 focus:outline-none focus:ring-2 focus:ring-grey-200 dark:text-grey-400 dark:hover:bg-grey-700 dark:focus:ring-grey-600 md:hidden"
-                type="button" @click="toggleMobileMenu()">
-                <span class="sr-only">Open main menu</span>
-                <slot name="menu-icon">
-                    <pub-icon size="sm" name="bars" />
-                </slot>
-            </button>
-
-            <slot :is-show-menu="isShowMenu" name="default" />
-
-            <div v-if="slots['right-side']" class="hidden md:order-2 md:flex">
-                <slot name="right-side" />
-            </div>
-        </div>
-    </nav>
-</template>

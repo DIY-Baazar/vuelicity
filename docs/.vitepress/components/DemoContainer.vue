@@ -1,3 +1,23 @@
+<template>
+  <div :class="useMergeClasses([`vp-raw flex flex-${flexType} gap-3`, props.class])">
+    <slot />
+  </div>
+</template>
+
+<script lang="ts" setup>
+import { useMergeClasses } from '@/composables/useMergeClasses'
+
+interface DCProps {
+  flexType?: 'col' | 'row';
+  class?: string;
+}
+
+const props = withDefaults(defineProps<DCProps>(), {
+  flexType: 'row',
+  class: '',
+})
+</script>
+
 <style lang="scss">
 .vp-raw {
     border: 1px solid var(--vp-c-default-2);
@@ -16,23 +36,3 @@
     }
 }
 </style>
-
-<template>
-    <div :class="useMergeClasses([`vp-raw flex flex-${flexType} gap-3`, props.class])">
-        <slot></slot>
-    </div>
-</template>
-
-<script lang="ts" setup>
-import { useMergeClasses } from "@/composables/useMergeClasses";
-
-interface DCProps {
-    flexType?: "col" | "row";
-    class?: string;
-}
-
-const props = withDefaults(defineProps<DCProps>(), {
-    flexType: "row",
-    class: ""
-});
-</script>

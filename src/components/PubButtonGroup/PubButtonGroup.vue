@@ -1,17 +1,21 @@
+<template>
+  <div
+    class="pub-button-group inline-flex"
+    :class="{ 'rounded-md': props.rounded }"
+    role="group"
+  >
+    <slot />
+  </div>
+</template>
+
 <script lang="ts" setup>
-import type { ButtonGroupProps } from "./types";
+import type { ButtonGroupProps } from './types'
 
 const props = withDefaults(defineProps<ButtonGroupProps>(
 ), {
-    rounded: false,
-});
+  rounded: false,
+})
 </script>
-
-<template>
-    <div class="pub-button-group inline-flex" :class="{ 'rounded-md': props.rounded }" role="group">
-        <slot />
-    </div>
-</template>
 
 <style>
 @reference "@/styles/main.css";

@@ -1,8 +1,8 @@
 export interface BreadcrumbProps {
-    solid?: boolean;
+  solid?: boolean;
 }
 
 export interface BreadcrumbItemProps {
-    href?: string | null;
-    home?: boolean;
+  href?: string | null;
+  home?: boolean;
 }

@@ -1,30 +1,44 @@
+<template>
+  <div
+    ref="contentRef"
+    :class="['pub-accordion-content', contentClasses]"
+  >
+    <slot />
+  </div>
+</template>
+
 <script lang="ts" setup>
-import { computed, inject, onMounted, ref, toRefs } from "vue";
-import type { AccordionContentProps, AccordionPanelState, AccordionState } from "./types";
-import { useAccordionContentClasses } from "./utils";
+import { computed, inject, onMounted, ref, toRefs } from 'vue'
+
+import { useAccordionContentClasses } from './utils'
+
+import type { AccordionContentProps, AccordionPanelState, AccordionState } from './types'
 
 const props = withDefaults(defineProps<AccordionContentProps>(), {
-    class: "",
-    activeClass: ""
-});
+  class: '',
+  activeClass: '',
+})
 
-const panelId = inject<string>("panelId")!;
+const panelId = inject<string>('panelId')
 
-const accordionState = ref();
+if (!panelId) {
+  throw new Error('PubAccordion: missing injected value "panelId"')
+}
+
+const accordionState = ref()
 const accordionPanelState = computed(() =>
-    accordionState.value?.panels.find((panel: AccordionPanelState) => panel.id === panelId)
-);
+  accordionState.value?.panels.find((panel: AccordionPanelState) => panel.id === panelId),
+)
 
-const { contentClasses } = useAccordionContentClasses(accordionState, accordionPanelState, toRefs(props));
+const { contentClasses } = useAccordionContentClasses(accordionState, accordionPanelState, toRefs(props))
 
 onMounted(() => {
-    const { accordionState: newAccordionState } = inject<{ accordionState: AccordionState }>("accordionState")!;
-    accordionState.value = newAccordionState;
-});
-</script>
+  const injected = inject<{ accordionState: AccordionState }>('accordionState')
 
-<template>
-    <div :class="['pub-accordion-content', contentClasses]" ref="contentRef">
-        <slot />
-    </div>
-</template>
+  if (!injected) {
+    throw new Error('PubAccordion: missing injected value "accordionState"')
+  }
+  const { accordionState: newAccordionState } = injected
+  accordionState.value = newAccordionState
+})
+</script>

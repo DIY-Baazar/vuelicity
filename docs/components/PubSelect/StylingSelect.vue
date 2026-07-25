@@ -10,12 +10,12 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import { PubSelect } from "vuelicity";
+import { ref } from 'vue'
+import { PubSelect } from 'vuelicity'
 
-const selected = ref("");
+const selected = ref('')
 const options = [
-  { name: "Option 1", value: "1" },
-  { name: "Option 2", value: "2" }
-];
+  { name: 'Option 1', value: '1' },
+  { name: 'Option 2', value: '2' },
+]
 </script>

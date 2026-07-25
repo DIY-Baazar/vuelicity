@@ -1,10 +1,14 @@
 <template>
-    <pub-pagination v-model="currentPage" :slice-size="4" :total-pages="100" />
+  <pub-pagination
+    v-model="currentPage"
+    :slice-size="4"
+    :total-pages="100"
+  />
 </template>
 
 <script lang="ts" setup>
-import { PubPagination } from "vuelicity";
-import { ref } from "vue";
+import { ref } from 'vue'
+import { PubPagination } from 'vuelicity'
 
-const currentPage = ref(5);
+const currentPage = ref(5)
 </script>

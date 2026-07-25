@@ -1,11 +1,12 @@
-import DefaultTheme from 'vitepress/theme';
-import DemoContainer from '../components/DemoContainer.vue';
+import DefaultTheme from 'vitepress/theme'
 
-import './custom.css';
+import DemoContainer from '../components/DemoContainer.vue'
+
+import './custom.css'
 
 export default {
-    ...DefaultTheme,
-    enhanceApp ({ app }) {
-        app.component('DemoContainer', DemoContainer);
-    }
-};
+  ...DefaultTheme,
+  enhanceApp ({ app }) {
+    app.component('DemoContainer', DemoContainer)
+  },
+}

@@ -4,15 +4,15 @@
 // to prevent component style pollution from .vp-doc styles
 
 export default {
-    plugins: {
-        '@tailwindcss/postcss': {},
-        'postcss-prefix-selector': {
-            prefix: ':not(:where(.vp-raw *))',
-            includeFiles: [/vp-doc\.css/],
-            transform (prefix, _selector) {
-                const [selector, pseudo = ''] = _selector.split(/(:\S*)$/);
-                return selector + prefix + pseudo;
-            },
-        },
+  plugins: {
+    '@tailwindcss/postcss': {},
+    'postcss-prefix-selector': {
+      prefix: ':not(:where(.vp-raw *))',
+      includeFiles: [/vp-doc\.css/],
+      transform (prefix, _selector) {
+        const [selector, pseudo = ''] = _selector.split(/(:\S*)$/)
+        return selector + prefix + pseudo
+      },
     },
-};
+  },
+}

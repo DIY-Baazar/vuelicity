@@ -10,6 +10,6 @@
   <pub-spinner color="#3fb984" /> <!-- Custom color -->
 </template>
 
-<script setup>
-import { PubSpinner } from "vuelicity";
+<script setup lang="ts">
+import { PubSpinner } from 'vuelicity'
 </script>

@@ -1,9 +1,9 @@
-import type { ThemeColor } from "@/composables/useThemeColor";
-import type { ClassInput } from "@/types/global";
+import type { ThemeColor } from '@/composables/useThemeColor'
+import type { ClassInput } from '@/types/global'
 
-export type TabsVariant = "default" | "underline" | "pills";
-export type TabsIconPosition = "left" | "right";
-export type TabsColor = ThemeColor;
+export type TabsVariant = 'default' | 'underline' | 'pills'
+export type TabsIconPosition = 'left' | 'right'
+export type TabsColor = ThemeColor
 // | "default"
 // | "red"
 // | "blue"
@@ -17,7 +17,7 @@ export type TabsColor = ThemeColor;
 export interface TabsProps {
   variant?: TabsVariant;
   modelValue?: string;
-  directive?: "if" | "show";
+  directive?: 'if' | 'show';
   tabClass?: ClassInput;
   itemClass?: ClassInput;
   itemActiveClass?: ClassInput;
@@ -27,7 +27,7 @@ export interface TabsProps {
   color?: TabsColor;
 }
 
-export interface TabsState extends TabsProps {}
+export type TabsState = TabsProps
 
 export interface TabProps {
   name: string;

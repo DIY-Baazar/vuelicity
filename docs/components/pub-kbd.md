@@ -4,7 +4,7 @@ description: Documentation for the PubKbd component.
 ---
 
 <script setup>
-    import Default from './PubKbd/Default.vue';
+    import DefaultKbd from './PubKbd/DefaultKbd.vue';
     import InText from './PubKbd/InText.vue';
     import InsideTable from './PubKbd/InsideTable.vue';
 </script>
@@ -16,10 +16,10 @@ This is a component for rendering keyboard shortcuts.
 ## Default KBD
 
 <demo-container>
-    <Default/>
+    <DefaultKbd/>
 </demo-container>
 
-<<< @/components/PubKbd/Default.vue
+<<< @/components/PubKbd/DefaultKbd.vue
 
 ## KBD Inside Text
 

@@ -1,15 +1,57 @@
 <template>
-    <pub-badge rounded>Default</pub-badge>
-    <pub-badge color="blue" rounded>Blue</pub-badge>
-    <pub-badge color="red" rounded>Red</pub-badge>
-    <pub-badge color="green" rounded>Green</pub-badge>
-    <pub-badge color="yellow" rounded>Yellow</pub-badge>
-    <pub-badge color="pink" rounded>Pink</pub-badge>
-    <pub-badge color="cyan" rounded>Cyan</pub-badge>
-    <pub-badge color="purple" rounded>Purple</pub-badge>
-    <pub-badge color="grey" rounded>Grey</pub-badge>
+  <pub-badge rounded>
+    Default
+  </pub-badge>
+  <pub-badge
+    color="blue"
+    rounded
+  >
+    Blue
+  </pub-badge>
+  <pub-badge
+    color="red"
+    rounded
+  >
+    Red
+  </pub-badge>
+  <pub-badge
+    color="green"
+    rounded
+  >
+    Green
+  </pub-badge>
+  <pub-badge
+    color="yellow"
+    rounded
+  >
+    Yellow
+  </pub-badge>
+  <pub-badge
+    color="pink"
+    rounded
+  >
+    Pink
+  </pub-badge>
+  <pub-badge
+    color="cyan"
+    rounded
+  >
+    Cyan
+  </pub-badge>
+  <pub-badge
+    color="purple"
+    rounded
+  >
+    Purple
+  </pub-badge>
+  <pub-badge
+    color="grey"
+    rounded
+  >
+    Grey
+  </pub-badge>
 </template>
 
 <script lang="ts" setup>
-import { PubBadge } from "vuelicity";
+import { PubBadge } from 'vuelicity'
 </script>

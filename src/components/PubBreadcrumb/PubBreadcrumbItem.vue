@@ -1,29 +1,50 @@
+<template>
+  <li class="inline-flex items-center">
+    <slot
+      v-if="!props.home"
+      name="arrow-icon"
+    >
+      <pub-icon
+        name="chevron-right"
+        type="outline"
+        :stroke-width="2"
+        size="xs"
+      />
+    </slot>
+    <component
+      :is="componentName"
+      :class="['pub-breadcrumb-item', breadcrumbItemClasses]"
+      :href="href"
+    >
+      <slot
+        v-if="props.home"
+        name="home-icon"
+      >
+        <pub-icon
+          name="home"
+          size="xs"
+        />
+      </slot>
+      <slot name="default" />
+    </component>
+  </li>
+</template>
+
 <script lang="ts" setup>
-import { computed, toRefs } from "vue";
-import type { BreadcrumbItemProps } from "./types";
-import PubIcon from "@/components/PubIcon/PubIcon.vue";
-import { useBreadcrumbItemClasses } from "./utils";
+import { computed, toRefs } from 'vue'
+
+import { useBreadcrumbItemClasses } from './utils'
+
+import type { BreadcrumbItemProps } from './types'
+
+import PubIcon from '@/components/PubIcon/PubIcon.vue'
 
 const props = withDefaults(defineProps<BreadcrumbItemProps>(), {
-    href: null,
-    home: false
-});
+  href: null,
+  home: false,
+})
 
-const componentName = computed(() => (props.href ? "a" : "span"));
+const componentName = computed(() => (props.href ? 'a' : 'span'))
 
-const { breadcrumbItemClasses } = useBreadcrumbItemClasses(toRefs(props));
+const { breadcrumbItemClasses } = useBreadcrumbItemClasses(toRefs(props))
 </script>
-
-<template>
-    <li class="inline-flex items-center">
-        <slot name="arrow-icon" v-if="!props.home">
-            <pub-icon name="chevron-right" type="outline" :stroke-width="2" size="xs" />
-        </slot>
-        <component :is="componentName" :class="['pub-breadcrumb-item', breadcrumbItemClasses]" :href="href">
-            <slot name="home-icon" v-if="props.home">
-                <pub-icon name="home" size="xs" />
-            </slot>
-            <slot name="default" />
-        </component>
-    </li>
-</template>

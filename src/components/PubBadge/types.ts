@@ -1,16 +1,16 @@
-import type { ThemeColor } from "@/composables/useThemeColor";
+import type { ThemeColor } from '@/composables/useThemeColor'
 
 export type BadgeTheme =
-    | "default"
-    | ThemeColor;
+    | 'default'
+    | ThemeColor
 
-export type BadgeSize = "xs" | "sm" | "md";
+export type BadgeSize = 'xs' | 'sm' | 'md'
 
 export interface BadgeProps {
-    color?: BadgeTheme;
-    size?: BadgeSize;
-    href?: string | null;
-    bordered?: boolean;
-    rounded?: boolean;
-    class?: string;
+  color?: BadgeTheme;
+  size?: BadgeSize;
+  href?: string | null;
+  bordered?: boolean;
+  rounded?: boolean;
+  class?: string;
 };

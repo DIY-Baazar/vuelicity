@@ -1,7 +1,7 @@
 <template>
-    <pub-spinner />
+  <pub-spinner />
 </template>
 
-<script setup>
-import { PubSpinner } from "vuelicity";
+<script setup lang="ts">
+import { PubSpinner } from 'vuelicity'
 </script>

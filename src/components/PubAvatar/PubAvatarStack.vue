@@ -1,9 +1,9 @@
 <template>
-    <div class="flex -space-x-4">
-        <slot name="default" />
-    </div>
+  <div class="flex -space-x-4">
+    <slot name="default" />
+  </div>
 </template>
 
 <script setup lang="ts">
-const props = defineProps({});
+const props = defineProps({})
 </script>

@@ -1,8 +1,6 @@
-<script lang="ts" setup>
-import { computed, toRefs } from "vue";
-</script>
-
 <template>
-<div class="pub-file-input"></div>
+  <div class="pub-file-input" />
 </template>
-    
+
+<script lang="ts" setup>
+</script>

@@ -3,11 +3,11 @@ title: PubCheckbox
 description: Documentation for the PubCheckbox component.
 ---
 
-<script setup>
-    import Default from './PubCheckbox/Default.vue';
-    import Disabled from './PubCheckbox/Disabled.vue';
+<script lang="ts" setup>
+    import DefaultCheckbox from './PubCheckbox/DefaultCheckbox.vue';
+    import DisabledCheckbox from './PubCheckbox/DisabledCheckbox.vue';
     import CheckboxLink from './PubCheckbox/CheckboxLink.vue';
-    import Bordered from './PubCheckbox/Bordered.vue';
+    import BorderedCheckbox from './PubCheckbox/BorderedCheckbox.vue';
     import BorderedDesc from './PubCheckbox/BorderedDesc.vue';
     import BorderedIcon from './PubCheckbox/BorderedIcon.vue';
     import CheckboxGroup from './PubCheckbox/CheckboxGroup.vue';
@@ -23,10 +23,10 @@ This is a checkbox component. It is used to display a checkbox field to select a
 ## Default Usage
 
 <demo-container flex-type='col' class='items-start'>
-    <Default />
+    <DefaultCheckbox />
 </demo-container>
 
-<<< @/components/PubCheckbox/Default.vue
+<<< @/components/PubCheckbox/DefaultCheckbox.vue
 
 ## Disabled
 
@@ -35,10 +35,10 @@ This is a checkbox component. It is used to display a checkbox field to select a
 The `disabled` prop is used to disable the checkbox field. It can be a boolean value.
 
 <demo-container flex-type='col' class='items-start'>
-    <Disabled />
+    <DisabledCheckbox />
 </demo-container>
 
-<<< @/components/PubCheckbox/Disabled.vue
+<<< @/components/PubCheckbox/DisabledCheckbox.vue
 
 ## Checkbox link
 
@@ -55,10 +55,10 @@ The `disabled` prop is used to disable the checkbox field. It can be a boolean v
 The `bordered` prop is used to add a border to the checkbox field. It can be a boolean value.
 
 <demo-container flex-type='col' class='items-start'>
-    <Bordered />
+    <BorderedCheckbox />
 </demo-container>
 
-<<< @/components/PubCheckbox/Bordered.vue
+<<< @/components/PubCheckbox/BorderedCheckbox.vue
 
 ## Bordered with description
 

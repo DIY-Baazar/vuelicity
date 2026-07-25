@@ -1,29 +1,32 @@
 <template>
-    <pub-navbar>
-        <template #logo>
-            <pub-navbar-logo>
-                Vuelicity
-            </pub-navbar-logo>
-        </template>
-        <template #default="{ isShowMenu }">
-            <pub-navbar-collapse :is-show-menu="isShowMenu">
-                <pub-navbar-link is-active link="#">
-                    Home
-                </pub-navbar-link>
-                <pub-navbar-link link="#">
-                    Services
-                </pub-navbar-link>
-                <pub-navbar-link link="#">
-                    Pricing
-                </pub-navbar-link>
-                <pub-navbar-link link="#">
-                    Contact
-                </pub-navbar-link>
-            </pub-navbar-collapse>
-        </template>
-    </pub-navbar>
+  <pub-navbar>
+    <template #logo>
+      <pub-navbar-logo>
+        Vuelicity
+      </pub-navbar-logo>
+    </template>
+    <template #default="{ isShowMenu }">
+      <pub-navbar-collapse :is-show-menu="isShowMenu">
+        <pub-navbar-link
+          is-active
+          link="#"
+        >
+          Home
+        </pub-navbar-link>
+        <pub-navbar-link link="#">
+          Services
+        </pub-navbar-link>
+        <pub-navbar-link link="#">
+          Pricing
+        </pub-navbar-link>
+        <pub-navbar-link link="#">
+          Contact
+        </pub-navbar-link>
+      </pub-navbar-collapse>
+    </template>
+  </pub-navbar>
 </template>
 
 <script lang="ts" setup>
-import { PubNavbar, PubNavbarLogo, PubNavbarCollapse, PubNavbarLink } from "vuelicity"
+import { PubNavbar, PubNavbarCollapse, PubNavbarLink, PubNavbarLogo } from 'vuelicity'
 </script>

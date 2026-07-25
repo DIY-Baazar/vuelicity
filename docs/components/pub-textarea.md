@@ -3,12 +3,12 @@ title: PubTextarea
 description: Documentation for the PubTextarea component.
 ---
 
-<script setup>
-    import Default from './PubTextarea/Default.vue';
-    import Size from './PubTextarea/Size.vue';
-    import Disabled from './PubTextarea/Disabled.vue';
-    import Readonly from './PubTextarea/Readonly.vue';
-    import Validation from './PubTextarea/Validation.vue';
+<script lang="ts" setup>
+    import DefaultTextarea from './PubTextarea/DefaultTextarea.vue';
+    import TextareaSize from './PubTextarea/TextareaSize.vue';
+    import DisabledTextarea from './PubTextarea/DisabledTextarea.vue';
+    import ReadonlyTextarea from './PubTextarea/ReadonlyTextarea.vue';
+    import TextareaValidation from './PubTextarea/TextareaValidation.vue';
     import CommentBox from './PubTextarea/CommentBox.vue';
     import NativeConst from './PubTextarea/NativeConst.vue';
 </script>
@@ -20,10 +20,10 @@ This is a textarea component. It is used to display a textarea element for comme
 ## Default Usage
 
 <demo-container>
-    <Default />
+    <DefaultTextarea />
 </demo-container>
 
-<<< @/components/PubTextarea/Default.vue
+<<< @/components/PubTextarea/DefaultTextarea.vue
 
 ## Sizes
 
@@ -32,10 +32,10 @@ This is a textarea component. It is used to display a textarea element for comme
 The `size` prop is used to set the size of the textarea. It can be one of the following values: `'sm'`, `'md'`, `'lg'`, `'xl'`.
 
 <demo-container flex-type='col' class='items-start'>
-    <Size />
+    <TextareaSize />
 </demo-container>
 
-<<< @/components/PubTextarea/Size.vue
+<<< @/components/PubTextarea/TextareaSize.vue
 
 ## Disabled
 
@@ -44,10 +44,10 @@ The `size` prop is used to set the size of the textarea. It can be one of the fo
 The `disabled` prop is used to disable the textarea. It can be a boolean value.
 
 <demo-container>
-    <Disabled />
+    <DisabledTextarea />
 </demo-container>
 
-<<< @/components/PubTextarea/Disabled.vue
+<<< @/components/PubTextarea/DisabledTextarea.vue
 
 ## Readonly
 
@@ -56,10 +56,10 @@ The `disabled` prop is used to disable the textarea. It can be a boolean value.
 The `readonly` prop is used to make the textarea readonly. It can be a boolean value.
 
 <demo-container>
-    <Readonly />
+    <ReadonlyTextarea />
 </demo-container>
 
-<<< @/components/PubTextarea/Readonly.vue
+<<< @/components/PubTextarea/ReadonlyTextarea.vue
 
 ## Validation
 
@@ -70,10 +70,10 @@ The `validationStatus` prop is used to set the visual validation state of the te
 The `validationMessage` slot is used to display a custom validation message. It can be a string value.
 
 <demo-container flex-type='col' class='items-start'>
-    <Validation />
+    <TextareaValidation />
 </demo-container>
 
-<<< @/components/PubTextarea/Validation.vue
+<<< @/components/PubTextarea/TextareaValidation.vue
 
 ## Native Constraints 
 

@@ -1,28 +1,38 @@
 <template>
-    <div class="size-16 border border-grey-200 flex flex-col items-center overflow-hidden p-1" @click="onClickCopy">
-        <pub-icon :name="name" :type="type" class="border border-grey-300" />
-        <p class="text-xs text-center p-1 w-full whitespace-nowrap overflow-hidden text-ellipsis" :title="name">
-            {{ name }}
-        </p>
-    </div>
+  <div
+    class="size-16 border border-grey-200 flex flex-col items-center overflow-hidden p-1"
+    @click="onClickCopy"
+  >
+    <pub-icon
+      :name="name"
+      :type="type"
+      class="border border-grey-300"
+    />
+    <p
+      class="text-xs text-center p-1 w-full whitespace-nowrap overflow-hidden text-ellipsis"
+      :title="name"
+    >
+      {{ name }}
+    </p>
+  </div>
 </template>
 
 <script lang="ts" setup>
-import { PubIcon } from "vuelicity";
+import { PubIcon } from 'vuelicity'
 
 const props = defineProps({
-    name: {
-        type: String,
-        required: true
-    },
-    type: {
-        type: String,
-        default: "outline"
-    }
-});
+  name: {
+    type: String,
+    required: true,
+  },
+  type: {
+    type: String,
+    default: 'outline',
+  },
+})
 
-function onClickCopy() {
-    navigator.clipboard.writeText(props.name);
-    alert("Copied to clipboard");
+function onClickCopy () {
+  navigator.clipboard.writeText(props.name)
+  alert('Copied to clipboard')
 }
 </script>
