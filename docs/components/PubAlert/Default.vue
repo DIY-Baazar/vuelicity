@@ -3,7 +3,7 @@
     <pub-alert color="yellow"> Warning alert! Change a few things up and try submitting again. </pub-alert>
     <pub-alert color="red"> Danger alert! Change a few things up and try submitting again. </pub-alert>
     <pub-alert color="green"> Success alert! Change a few things up and try submitting again. </pub-alert>
-    <pub-alert color="dark"> Dark alert! Change a few things up and try submitting again. </pub-alert>
+    <pub-alert color="grey"> Dark alert! Change a few things up and try submitting again. </pub-alert>
 </template>
 
 <script lang="ts" setup>

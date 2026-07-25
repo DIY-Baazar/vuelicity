@@ -1,11 +1,11 @@
 <template>
-    <pub-badge color="light">
+    <pub-badge>
         <template #icon>
             <pub-icon name="sun" size="xs" />
         </template>
         Light
     </pub-badge>
-    <pub-badge color="dark">
+    <pub-badge color="grey">
         <template #icon>
             <pub-icon name="moon" type="outline" size="xs" />
         </template>

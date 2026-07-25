@@ -1,9 +1,10 @@
+import type { ThemeColor } from "@/composables/useThemeColor";
 import type { ClassInput } from "@/types/global";
 
-export type AlertTheme = "green" | "blue" | "yellow" | "red" | "dark";
+export type AlertTheme = ThemeColor;
 
 export interface AlertProps {
-    theme: AlertTheme;
+    color: AlertTheme;
     dismissible: boolean;
     bordered: boolean;
     showIcon: boolean;

@@ -23,7 +23,7 @@ This is a button component that can be used to create buttons with various style
 
 ### Prop - `color` Usage
 
-There are a number of theme-colors available for the button, including `'blue'`, `'red'`, `'yellow'`, `'green'`, `'pink'`, `'cyan'`, `'purple'`, `'grey'`. Below is a demo of each theme.
+There are a number of theme-colors available for the button, including `'blue'`, `'red'`, `'yellow'`, `'green'`, `'pink'`, `'cyan'`, `'purple'`, `'grey'`. Below is a demo of each color.
 
 <demo-container>
   <Default/>
@@ -121,7 +121,7 @@ The `loading` prop can be used to display a loading state. The `skeleton` prop c
 
 | Name     | Type    | Default     | Description                                           | Options                                                                                       |
 | :------- | :------ | :---------- | :---------------------------------------------------- | :-------------------------------------------------------------------------------------------- |
-| color    | String  | `'default'` | The color theme of the button.                        | `'none'`, `'default'`, `'blue'`, `'red'`, `'yellow'`, `'green'`, `'pink'`, `'cyan'`, `'grey'` |
+| color    | String  | `'default'` | The color color of the button.                        | `'none'`, `'default'`, `'blue'`, `'red'`, `'yellow'`, `'green'`, `'pink'`, `'cyan'`, `'grey'` |
 | outline  | Boolean | `false`     | Whether to use the outline style.                     |                                                                                               |
 | rounded  | String  | `'none'`    | The border radius of the button.                      | `'none'`, `'sm'`, `'md'`, `'lg'`, `'xl'`, `'full'`                                            |
 | size     | String  | `'md'`      | The size of the button.                               | `'xs'`, `'sm'`, `'md'`, `'lg'`, `'xl'`                                                        |

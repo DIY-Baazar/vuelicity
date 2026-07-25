@@ -6,7 +6,7 @@ import { isThemeColor, useThemeColor, type ThemeColor } from "@/composables/useT
 
 export type ButtonClassMap<T extends string> = { hover: Record<T, string>; default: Record<T, string> };
 
-type NonThemeColor = "none" | "default";
+type NonThemeColor = Exclude<ButtonTheme, ThemeColor>;
 
 const defaultSpanButtonClasses = "flex items-center gap-2";
 const skeletonButtonClasses = "animate-pulse bg-grey-200 text-transparent rounded-md cursor-not-allowed";
@@ -117,7 +117,7 @@ export function useButtonClasses(props: UseButtonClassesProps): {
                 props.outline.value ? "" : theme.backgroundClasses.value,
                 props.outline.value ? theme.textClasses.value : "text-white dark:text-grey-200",
             ]);
-            hoverClasses = useMergeClasses([theme.hoverClasses.value, "hover:text-grey-200"]);
+            hoverClasses = normalizeClass([theme.hoverClasses.value, "hover:text-grey-200"]);
         } else {
             defaultClasses = props.outline.value
                 ? buttonOutlineThemeClasses.default[props.color.value as NonThemeColor]

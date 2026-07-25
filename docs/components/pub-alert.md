@@ -20,9 +20,9 @@ This is an alert component that can be used to display content in an alert. It p
 
 ## Default alerts
 
-### Prop - `theme` Usage
+### Prop - `color` Usage
 
-There are a number of themes available for the alert, including `'blue'`, `'red'`, `'yellow'`, `'green'`, `'dark'`. Below is a demo of each theme.
+There are a number of themes available for the alert, including `'blue'`, `'red'`, `'yellow'`, `'green'`, `'dark'`. Below is a demo of each color.
 
 <demo-container>
     <Default />
@@ -98,13 +98,13 @@ The `bordered` prop can be used to add a border to the alert.
 
 ### Properties
 
-| Name        | Type    | Default  | Description                                | Options                                            |
-| :---------- | :------ | :------- | :----------------------------------------- | :------------------------------------------------- |
-| theme       | String  | `'blue'` | The color theme of the alert.              | `'blue'`, `'red'`, `'yellow'`, `'green'`, `'dark'` |
-| dismissible | Boolean | `false`  | Whether the alert is dismissible.          |                                                    |
-| bordered    | Boolean | `false`  | Whether to add a border to the alert.      |                                                    |
-| showIcon    | Boolean | `false`  | Whether to display an icon in the alert.   |                                                    |
-| duration    | Number  | `5000`   | The duration of the alert in milliseconds. |                                                    |
+| Name        | Type    | Default  | Description                                | Options                                                                  |
+| :---------- | :------ | :------- | :----------------------------------------- | :----------------------------------------------------------------------- |
+| color       | String  | `'blue'` | The color color of the alert.              | `'blue'`, `'red'`, `'yellow'`, `'green'`, `'purple'`, `'pink'`, `'grey'` |
+| dismissible | Boolean | `false`  | Whether the alert is dismissible.          |                                                                          |
+| bordered    | Boolean | `false`  | Whether to add a border to the alert.      |                                                                          |
+| showIcon    | Boolean | `false`  | Whether to display an icon in the alert.   |                                                                          |
+| duration    | Number  | `5000`   | The duration of the alert in milliseconds. |                                                                          |
 
 ### Slots
 

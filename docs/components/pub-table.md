@@ -8,6 +8,7 @@ description: Documentation for the PubTable component.
     import Striped from './PubTable/Striped.vue';
     import StripedColumns from './PubTable/StripedColumns.vue';
     import Hoverable from './PubTable/Hoverable.vue';
+    import Colored from './PubTable/Colored.vue';
 </script>
 
 # PubTable
@@ -23,6 +24,18 @@ Use `PubTable` with `PubTableHead`, `PubTableBody`, `PubTableRow`, `PubTableHead
 </demo-container>
 
 <<< @/components/PubTable/Default.vue
+
+## Colored Table
+
+### Prop - `color` Usage
+
+The `color` prop can be used to change the color of the table.
+
+<demo-container>
+    <Colored />
+</demo-container>
+
+<<< @/components/PubTable/Colored.vue
 
 ## Striped Rows
 
@@ -66,14 +79,14 @@ The `hoverable` prop can be used to add a hover state to the rows of the table.
 
 #### Properties
 
-| Name           | Type    | Default   | Description                                     | Options                                                                         |
-| -------------- | ------- | --------- | ----------------------------------------------- | ------------------------------------------------------------------------------- |
-| class          | String  | `''`      | Additional CSS classes to apply.                |                                                                                 |
-| wrapperClass   | String  | `''`      | Additional CSS classes to apply to the wrapper. |                                                                                 |
-| theme          | String  | `default` | The color theme of the table.                   | `default`, `blue`, `red`, `green`, `yellow`, `magenta`, `cyan`, `light`, `dark` |
-| striped        | Boolean | `false`   | Add a stripe pattern to the rows.               |                                                                                 |
-| stripedColumns | Boolean | `false`   | Add a stripe pattern to the columns.            |                                                                                 |
-| hoverable      | Boolean | `false`   | Add a hover state to the rows.                  |                                                                                 |
+| Name           | Type    | Default   | Description                                     | Options                                                                                         |
+| -------------- | ------- | --------- | ----------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| class          | String  | `''`      | Additional CSS classes to apply.                |                                                                                                 |
+| wrapperClass   | String  | `''`      | Additional CSS classes to apply to the wrapper. |                                                                                                 |
+| color          | String  | `default` | The theme color of the table.                   | `'default'`, `'red'`, `'blue'`, `'green'`, `'yellow'`, `'pink'`, `'cyan'`, `'purple'`, `'grey'` |
+| striped        | Boolean | `false`   | Add a stripe pattern to the rows.               |                                                                                                 |
+| stripedColumns | Boolean | `false`   | Add a stripe pattern to the columns.            |                                                                                                 |
+| hoverable      | Boolean | `false`   | Add a hover state to the rows.                  |                                                                                                 |
 
 #### Slots
 

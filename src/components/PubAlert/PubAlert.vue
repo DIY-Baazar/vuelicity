@@ -6,7 +6,7 @@ import PubIcon from "@/components/PubIcon/PubIcon.vue";
 import PubButton from "@/components/PubButton/PubButton.vue";
 
 const props = withDefaults(defineProps<AlertProps>(), {
-    theme: "blue",
+    color: "blue",
     dismissible: false,
     bordered: false,
     showIcon: false,

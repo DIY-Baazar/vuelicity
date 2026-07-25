@@ -5,7 +5,7 @@ description: Documentation for the PubIcon component.
 
 <script setup>
 import Size from './PubIcon/Size.vue';
-import Theme from './PubIcon/Theme.vue';
+import Colored from './PubIcon/Colored.vue';
 import DisplayIcon from './PubIcon/DisplayIcon.vue';
 import SearchIcon from './PubIcon/SearchIcon.vue';
 import SpinFlip from './PubIcon/SpinFlip.vue';
@@ -25,40 +25,44 @@ The icon can be scaled using the `size` prop.
 
 <<< @/components/PubIcon/Size.vue
 
-### Theme
+## Colored Icons
 
-The icon can be themed using the `theme` prop.
+### Prop - `color` Usage
+
+The icon can be colored using the `color` prop.
 
 <demo-container>
-  <Theme/>
+  <Colored/>
 </demo-container>
 
-<<< @/components/PubIcon/Theme.vue
+<<< @/components/PubIcon/Colored.vue
 
-### Spin, Flip, Rotate, and Mirror
+## Spin, Flip, Rotate, and Mirror
 
-The icon can be animated or transformed.
+### Props - `spin`, `flip`, `rotate`, and `mirror` Usage
+
+The icon can be rotated, flipped, spun, and mirrored using the `spin`, `flip`, `rotate`, and `mirror` props.
+
 <demo-container>
 <SpinFlip/>
 </demo-container>
 
 <<< @/components/PubIcon/SpinFlip.vue
 
-
 ## Reference
 
 ### Properties
 
-| Name   | Type    | Default     | Description                            | Options                                                                                           |
-| :----- | :------ | :---------- | :------------------------------------- | :------------------------------------------------------------------------------------------------ |
-| size   | String  | `'md'`      | The size of the icon.                  | `'xs'`, `'sm'`, `'md'`, `'lg'`, `'xl'`                                                            |
-| theme  | String  | `'default'` | The color theme of the icon.           | `'default'`, `'blue'`, `'red'`, `'yellow'`, `'green'`, `'magenta'`, `'cyan'`, `'light'`, `'dark'` |
-| name   | String  | `''`        | The name of the icon.                  | Refer to the [icon list](#icons) below.                                                           |
-| rotate | Boolean | `false`     | Whether to rotate the icon 90 degrees. |                                                                                    |
-| flip   | Boolean | `false`     | Whether to flip the icon horizontally. |                                                                                    |
-| spin   | Boolean | `false`     | Whether to spin the icon.              |                                                                                    |
-| pulse  | Boolean | `false`     | Whether to pulse the icon.             |                                                                                    |
-| class  | String  | `''`        | Additional CSS classes to apply.       |                                                                                                   |
+| Name   | Type    | Default     | Description                            | Options                                                                                         |
+| :----- | :------ | :---------- | :------------------------------------- | :---------------------------------------------------------------------------------------------- |
+| size   | String  | `'md'`      | The size of the icon.                  | `'xs'`, `'sm'`, `'md'`, `'lg'`, `'xl'`                                                          |
+| color  | String  | `'default'` | The color color of the icon.           | `'default'`, `'blue'`, `'red'`, `'yellow'`, `'green'`, `'grey'`, `'cyan'`, `'pink'`, `'purple'` |
+| name   | String  | `''`        | The name of the icon.                  | Refer to the [icon list](#icons) below.                                                         |
+| rotate | Boolean | `false`     | Whether to rotate the icon 90 degrees. |                                                                                                 |
+| flip   | Boolean | `false`     | Whether to flip the icon horizontally. |                                                                                                 |
+| spin   | Boolean | `false`     | Whether to spin the icon.              |                                                                                                 |
+| pulse  | Boolean | `false`     | Whether to pulse the icon.             |                                                                                                 |
+| class  | String  | `''`        | Additional CSS classes to apply.       |                                                                                                 |
 
 ### Icons
 

@@ -1,18 +1,13 @@
+import type { ThemeColor } from "@/composables/useThemeColor";
+
 export type BadgeTheme =
     | "default"
-    | "blue"
-    | "red"
-    | "yellow"
-    | "green"
-    | "magenta"
-    | "cyan"
-    | "light"
-    | "dark";
+    | ThemeColor;
 
 export type BadgeSize = "xs" | "sm" | "md";
 
 export interface BadgeProps {
-    theme?: BadgeTheme;
+    color?: BadgeTheme;
     size?: BadgeSize;
     href?: string | null;
     bordered?: boolean;

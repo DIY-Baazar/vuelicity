@@ -4,7 +4,7 @@ import type { BadgeProps } from "./types";
 import { useBadgeClasses } from "./utils";
 
 const props = withDefaults(defineProps<BadgeProps>(), {
-    theme: "default",
+    color: "default",
     size: "xs",
     href: null,
     bordered: false,
@@ -12,7 +12,7 @@ const props = withDefaults(defineProps<BadgeProps>(), {
 });
 
 const slots = useSlots();
-const wrapperClasses = computed(() => useBadgeClasses(toRefs(props)));
+const wrapperClasses = useBadgeClasses(toRefs(props));
 const componentName = computed(() => (props.href ? 'a' : 'span'));
 
 </script>

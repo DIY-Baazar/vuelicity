@@ -39,9 +39,9 @@
             <pub-icon name="chevron-right" />
         </div>
     </pub-alert>
-    <pub-alert color="dark" class="p-1 pe-2 rounded-full">
+    <pub-alert color="grey" class="p-1 pe-2 rounded-full">
         <div class="flex items-center gap-2">
-            <pub-badge color="dark">New</pub-badge>
+            <pub-badge color="grey">New</pub-badge>
             <div class="text-sm">
                 Great job! You've acknowledged this
                 <a href="#" class="font-medium underline hover:no-underline">significant</a> alert message.
