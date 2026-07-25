@@ -1,5 +1,7 @@
 import { useMergeClasses } from "@/composables/useMergeClasses";
-import { computed, type Ref } from "vue";
+import { isThemeColor, useThemeColor, type ThemeColor } from "@/composables/useThemeColor";
+import { computed, normalizeClass, type Ref } from "vue";
+import type { TableTheme } from "./types";
 
 const baseCellClasses = "px-6 py-4 first:font-medium first:text-grey-900 first:whitespace-nowrap last:text-right";
 const stripedCellClasses = "even:bg-white odd:bg-grey-50";
@@ -17,6 +19,7 @@ interface UseTableCellClassesProps {
 
 interface UseTableHeadCellClassesProps {
     stripedColumns: Ref<boolean>;
+    color: Ref<TableTheme>;
 }
 
 interface UseTableRowClassesProps {
@@ -36,16 +39,23 @@ export function useTableRowClasses(props: UseTableRowClassesProps) {
         useMergeClasses([
             baseRowClasses,
             props.striped.value ? stripedRowClasses : "",
-            props.hoverable.value ? hoverableRowClasses : "",
+            props.hoverable.value ? hoverableRowClasses : ""
         ])
     );
     return { tableRowClasses };
 }
 
 export function useTableHeadCellClasses(props: UseTableHeadCellClassesProps) {
-    const tableHeadCellClasses = computed(() =>
-        useMergeClasses([baseHeadCellClasses, props.stripedColumns.value ? stripedHeadCellClasses : ""])
-    );
+    const tableHeadCellClasses = computed(() => {
+        let themeClasses = "";
+        console.log(props.color.value);
+        if (isThemeColor(props.color.value)) {
+            const theme = useThemeColor(props.color.value as ThemeColor);
+            themeClasses = normalizeClass(["text-white", theme.backgroundClasses.value]);
+        } else {
+        }
+        return useMergeClasses([baseHeadCellClasses, themeClasses]);
+    });
 
     return { tableHeadCellClasses };
 }

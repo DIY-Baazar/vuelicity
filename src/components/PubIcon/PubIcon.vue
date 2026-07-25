@@ -8,7 +8,7 @@ interface IconProps {
     name: string;
     type?: IconType;
     size?: IconSize;
-    theme?: IconTheme;
+    color?: IconTheme;
     class?: string;
     rotate?: boolean;
     flip?: boolean;

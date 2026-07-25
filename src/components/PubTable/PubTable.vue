@@ -8,7 +8,7 @@ const props = withDefaults(
     {
         class: "",
         wrapperClass: "",
-        theme: "default",
+        color: "default",
         hoverable: false,
         striped: false,
         stripedColumns: false,

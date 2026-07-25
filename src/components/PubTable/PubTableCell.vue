@@ -12,6 +12,6 @@ import { useTableCellClasses } from './utils';
 const { tableState } = inject<{ tableState: TableState; }>("tableState")!;
 
 const { tableCellClasses } = useTableCellClasses({
-    stripedColumns: computed(() => tableState?.stripedColumns ?? false)
+    stripedColumns: computed(() => tableState.stripedColumns ?? false)
 });
 </script>
