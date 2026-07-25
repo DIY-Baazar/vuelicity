@@ -65,7 +65,7 @@ Here's an example of how to use the `PubButton` component:
 
 ```vue
 <template>
-  <PubButton theme="blue" rounded="md">
+  <PubButton color="blue" rounded="md">
     Click me!
   </PubButton>
 </template>

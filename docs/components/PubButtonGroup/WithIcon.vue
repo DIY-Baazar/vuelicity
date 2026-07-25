@@ -1,12 +1,12 @@
 <template>
     <pub-button-group>
-        <pub-button theme="blue" outline>
+        <pub-button color="blue" outline>
             <template #prepend>
                 <pub-icon name="download" />
             </template>
             Download
         </pub-button>
-        <pub-button theme="blue" outline> 456k </pub-button>
+        <pub-button color="blue" outline> 456k </pub-button>
     </pub-button-group>
 </template>
 

@@ -6,7 +6,7 @@ import type { ButtonProps } from "./types";
 import { useButtonClasses } from "./utils";
 
 const props = withDefaults(defineProps<ButtonProps>(), {
-    theme: "default",
+    color: "default",
     type: "button",
     name: "",
     to: "#",

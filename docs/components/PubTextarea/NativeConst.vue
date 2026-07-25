@@ -9,7 +9,7 @@
                 Looks good!
             </template>
         </pub-textarea>
-        <pub-button class="self-start" type="submit" theme="blue" rounded="md">Validate</pub-button>
+        <pub-button class="self-start" type="submit" color="blue" rounded="md">Validate</pub-button>
     </form>
 </template>
 

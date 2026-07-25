@@ -1,9 +1,9 @@
 <template>
-    <pub-alert bordered theme="blue"> Info alert! Change a few things up and try submitting again. </pub-alert>
-    <pub-alert bordered theme="yellow"> Warning alert! Change a few things up and try submitting again. </pub-alert>
-    <pub-alert bordered theme="red"> Danger alert! Change a few things up and try submitting again. </pub-alert>
-    <pub-alert bordered theme="green"> Success alert! Change a few things up and try submitting again. </pub-alert>
-    <pub-alert bordered theme="dark"> Dark alert! Change a few things up and try submitting again. </pub-alert>
+    <pub-alert bordered color="blue"> Info alert! Change a few things up and try submitting again. </pub-alert>
+    <pub-alert bordered color="yellow"> Warning alert! Change a few things up and try submitting again. </pub-alert>
+    <pub-alert bordered color="red"> Danger alert! Change a few things up and try submitting again. </pub-alert>
+    <pub-alert bordered color="green"> Success alert! Change a few things up and try submitting again. </pub-alert>
+    <pub-alert bordered color="dark"> Dark alert! Change a few things up and try submitting again. </pub-alert>
 </template>
 
 <script lang="ts" setup>

@@ -1,13 +1,13 @@
 <template>
     <pub-badge href="#">Default</pub-badge>
-    <pub-badge theme="blue" href="#">Blue</pub-badge>
-    <pub-badge theme="red" href="#">Red</pub-badge>
-    <pub-badge theme="green" href="#">Green</pub-badge>
-    <pub-badge theme="yellow" href="#">Yellow</pub-badge>
-    <pub-badge theme="magenta" href="#">Magenta</pub-badge>
-    <pub-badge theme="cyan" href="#">Cyan</pub-badge>
-    <pub-badge theme="light" href="#">Light</pub-badge>
-    <pub-badge theme="dark" href="#">Dark</pub-badge>
+    <pub-badge color="blue" href="#">Blue</pub-badge>
+    <pub-badge color="red" href="#">Red</pub-badge>
+    <pub-badge color="green" href="#">Green</pub-badge>
+    <pub-badge color="yellow" href="#">Yellow</pub-badge>
+    <pub-badge color="pink" href="#">Pink</pub-badge>
+    <pub-badge color="cyan" href="#">Cyan</pub-badge>
+    <pub-badge color="purple" href="#">Purple</pub-badge>
+    <pub-badge color="grey" href="#">Grey</pub-badge>
 </template>
 
 <script lang="ts" setup>

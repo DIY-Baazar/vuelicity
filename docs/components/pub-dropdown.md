@@ -138,9 +138,9 @@ The `disabled` prop can be used to disable the dropdown.
 
 ## Dropdown - coloured triggers
 
-### Prop - `theme` Usage
+### Prop - `color` Usage
 
-The `theme` prop can be used to change the color of the dropdown trigger.
+The `color` prop can be used to change the color of the dropdown trigger.
 
 <demo-container>
     <ColouredTriggers />
@@ -148,28 +148,22 @@ The `theme` prop can be used to change the color of the dropdown trigger.
 
 ```vue
 <template>
-    <pub-dropdown text="Red" theme="red">
+    <pub-dropdown text="Red" color="red">
         <nav class="py-2 text-sm text-grey-700">...</nav>
     </pub-dropdown>
     <pub-dropdown text="Blue">
         <nav class="py-2 text-sm text-grey-700">...</nav>
     </pub-dropdown>
-    <pub-dropdown text="Green" theme="green">
+    <pub-dropdown text="Green" color="green">
         <nav class="py-2 text-sm text-grey-700">...</nav>
     </pub-dropdown>
-    <pub-dropdown text="Yellow" theme="yellow">
+    <pub-dropdown text="Yellow" color="yellow">
         <nav class="py-2 text-sm text-grey-700">...</nav>
     </pub-dropdown>
-    <pub-dropdown text="Magenta" theme="magenta">
+    <pub-dropdown text="Pink" color="pink">
         <nav class="py-2 text-sm text-grey-700">...</nav>
     </pub-dropdown>
-    <pub-dropdown text="Cyan" theme="cyan">
-        <nav class="py-2 text-sm text-grey-700">...</nav>
-    </pub-dropdown>
-    <pub-dropdown text="Light" theme="light">
-        <nav class="py-2 text-sm text-grey-700">...</nav>
-    </pub-dropdown>
-    <pub-dropdown text="Dark" theme="dark">
+    <pub-dropdown text="Cyan" color="cyan">
         <nav class="py-2 text-sm text-grey-700">...</nav>
     </pub-dropdown>
 </template>
@@ -195,24 +189,24 @@ The `trigger` slot can be used to customize the dropdown trigger.
 
 ### Properties
 
-| Name                | Type    | Default     | Description                                                     | Options                                                                                                     |
-| :------------------ | :------ | :---------- | :-------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------- |
-| text                | String  | `''`        | The text to display on the dropdown button.                     |                                                                                                             |
-| theme               | String  | `'default'` | The color theme of the dropdown trigger.                        | `'none'`, `'default'`, `'blue'`, `'red'`, `'yellow'`, `'green'`, `'magenta'`, `'cyan'`, `'light'`, `'dark'` |
-| placement           | String  | `'bottom'`  | The placement of the dropdown relative to the trigger.          | `'top'`, `'right'`, `'bottom'`, `'left'`                                                                    |
-| alignToEnd          | Boolean | `false`     | Whether to align the dropdown to the end of the trigger.        |                                                                                                             |
-| disabled            | Boolean | `false`     | Whether the dropdown is disabled.                               |                                                                                                             |
-| class               | String  | `''`        | Additional CSS classes to apply to the wrapper.                 |                                                                                                             |
-| triggerClass        | String  | `''`        | Additional CSS classes to apply to the trigger button.          |                                                                                                             |
-| triggerWrapperClass | String  | `''`        | Additional CSS classes to apply to the trigger wrapper.         |                                                                                                             |
-| dropdownClass       | String  | `''`        | Additional CSS classes to apply to the dropdown container.      |                                                                                                             |
-| contentWrapperClass | String  | `''`        | Additional CSS classes to apply to the content wrapper.         |                                                                                                             |
-| duration            | Number  | `250`       | The duration of the dropdown animation in milliseconds.         |                                                                                                             |
-| offsetDistance      | Number  | `8`         | The distance between the trigger and the dropdown.              |                                                                                                             |
-| offsetSkidding      | Number  | `0`         | The displacement along the trigger button.                      |                                                                                                             |
-| isActive            | Boolean | `false`     | Whether the dropdown is currently active.                       |                                                                                                             |
-| type                | String  | `'button'`  | The type of the dropdown trigger.                               | `'button'`, `'navlink'`                                                                                     |
-| closeInside         | Boolean | `false`     | Whether to close the dropdown when clicking inside the content. |                                                                                                             |
+| Name                | Type    | Default     | Description                                                     | Options                                                                                                   |
+| :------------------ | :------ | :---------- | :-------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------- |
+| text                | String  | `''`        | The text to display on the dropdown button.                     |                                                                                                           |
+| color               | String  | `'default'` | The color color of the dropdown trigger.                        | `'none'`, `'default'`, `'blue'`, `'red'`, `'green'`, `'yellow'`, `'pink'`, `'cyan'`, `'purple'`, `'grey'` |
+| placement           | String  | `'bottom'`  | The placement of the dropdown relative to the trigger.          | `'top'`, `'right'`, `'bottom'`, `'left'`                                                                  |
+| alignToEnd          | Boolean | `false`     | Whether to align the dropdown to the end of the trigger.        |                                                                                                           |
+| disabled            | Boolean | `false`     | Whether the dropdown is disabled.                               |                                                                                                           |
+| class               | String  | `''`        | Additional CSS classes to apply to the wrapper.                 |                                                                                                           |
+| triggerClass        | String  | `''`        | Additional CSS classes to apply to the trigger button.          |                                                                                                           |
+| triggerWrapperClass | String  | `''`        | Additional CSS classes to apply to the trigger wrapper.         |                                                                                                           |
+| dropdownClass       | String  | `''`        | Additional CSS classes to apply to the dropdown container.      |                                                                                                           |
+| contentWrapperClass | String  | `''`        | Additional CSS classes to apply to the content wrapper.         |                                                                                                           |
+| duration            | Number  | `250`       | The duration of the dropdown animation in milliseconds.         |                                                                                                           |
+| offsetDistance      | Number  | `8`         | The distance between the trigger and the dropdown.              |                                                                                                           |
+| offsetSkidding      | Number  | `0`         | The displacement along the trigger button.                      |                                                                                                           |
+| isActive            | Boolean | `false`     | Whether the dropdown is currently active.                       |                                                                                                           |
+| type                | String  | `'button'`  | The type of the dropdown trigger.                               | `'button'`, `'navlink'`                                                                                   |
+| closeInside         | Boolean | `false`     | Whether to close the dropdown when clicking inside the content. |                                                                                                           |
 
 ### Slots
 

@@ -19,9 +19,9 @@ This is a badge component can be used to complement other elements such as butto
 
 ## Default badges
 
-### Prop - `theme` Usage
+### Prop - `color` Usage
 
-The `theme` prop can be used to change the color of the badge.
+The `color` prop can be used to change the color of the badge.
 
 <demo-container>
     <Default />
@@ -103,7 +103,7 @@ The `icon` slot can be used to add an icon to the badge.
 
 | Name     | Type    | Default     | Description                                                          | Options                                                                                           |
 | :------- | :------ | :---------- | :------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------ |
-| theme    | String  | `'default'` | The color theme of the badge.                                        | `'default'`, `'blue'`, `'red'`, `'yellow'`, `'green'`, `'magenta'`, `'cyan'`, `'light'`, `'dark'` |
+| color    | String  | `'default'` | The color color of the badge.                                        | `'default'`, `'blue'`, `'red'`, `'yellow'`, `'green'`, `'magenta'`, `'cyan'`, `'light'`, `'dark'` |
 | size     | String  | `'xs'`      | The size of the badge.                                               | `'xs'`, `'sm'`, `'md'`                                                                            |
 | href     | String  | `null`      | The URL to link to. If provided, the badge renders as an anchor tag. |                                                                                                   |
 | bordered | Boolean | `false`     | Whether to add a border to the badge.                                |                                                                                                   |

@@ -9,7 +9,7 @@ export interface DropdownProps {
     alignToEnd: boolean;
     class: ClassInput;
     closeInside: boolean;
-    theme?: ButtonTheme;
+    color?: ButtonTheme;
     contentWrapperClass: ClassInput;
     disabled: boolean;
     placement: DropdownPlacement;

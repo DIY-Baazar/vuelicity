@@ -24,7 +24,7 @@
         </template>
 
         <template #right-side>
-            <pub-button theme="blue">
+            <pub-button color="blue">
                 Get started
             </pub-button>
         </template>

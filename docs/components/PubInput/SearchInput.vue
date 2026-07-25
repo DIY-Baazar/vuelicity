@@ -4,7 +4,7 @@
             <pub-icon name="search" class="text-grey-700" size="sm" type="outline" />
         </template>
         <template #append>
-            <pub-button theme="blue" size="xs" rounded="md">
+            <pub-button color="blue" size="xs" rounded="md">
                 Search
             </pub-button>
         </template>

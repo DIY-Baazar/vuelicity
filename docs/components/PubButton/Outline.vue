@@ -1,13 +1,13 @@
 <template>
-    <pub-button theme="default" outline>Default</pub-button>
-    <pub-button theme="blue" outline>Blue</pub-button>
-    <pub-button theme="red" outline>Red</pub-button>
-    <pub-button theme="green" outline>Green</pub-button>
-    <pub-button theme="yellow" outline>Yellow</pub-button>
-    <pub-button theme="magenta" outline>Magenta</pub-button>
-    <pub-button theme="cyan" outline>Cyan</pub-button>
-    <pub-button theme="light" outline>Light</pub-button>
-    <pub-button theme="dark" outline>Dark</pub-button>
+    <pub-button color="default" outline>Default</pub-button>
+    <pub-button color="blue" outline>Blue</pub-button>
+    <pub-button color="red" outline>Red</pub-button>
+    <pub-button color="green" outline>Green</pub-button>
+    <pub-button color="yellow" outline>Yellow</pub-button>
+    <pub-button color="pink" outline>Pink</pub-button>
+    <pub-button color="cyan" outline>Cyan</pub-button>
+    <pub-button color="purple" outline>Purple</pub-button>
+    <pub-button color="grey" outline>Grey</pub-button>
 </template>
 
 <script lang="ts" setup>

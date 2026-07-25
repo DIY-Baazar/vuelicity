@@ -12,6 +12,7 @@ description: Documentation for the PubTabs component.
     import Vertical from './PubTabs/Vertical.vue';
     import FullWidth from './PubTabs/FullWidth.vue';
     import Styling from './PubTabs/Styling.vue';
+    import Colored from './PubTabs/Colored.vue';
     import { PubKbd } from 'vuelicity';
 </script>
 
@@ -157,6 +158,34 @@ The `full-width` prop can be used to display the tabs in full width.
     <FullWidth/>
 </demo-container>
 
+## Colored tabs
+
+### Props - `color` Usage
+
+The `color` prop can be used to change the color of the tabs.
+
+<demo-container class="gap-0">
+    <Colored/>
+</demo-container>
+
+```vue
+<template>
+    <pub-tabs v-model="activeTab" class="p-5" color="red">
+        <pub-tab name="profile" title="Profile"> Lorem ipsum dolor sit ... </pub-tab>
+        <pub-tab name="orders" title="Orders"> ... </pub-tab>
+        <pub-tab name="address" title="Address"> ... </pub-tab>
+        <pub-tab name="admin" title="Admin" disabled> ... </pub-tab>
+    </pub-tabs>
+</template>
+
+<script setup>
+    import { ref } from "vue";
+    import { PubTab, PubTabs } from "vuelicity";
+
+    const activeTab = ref("profile");
+</script>
+```
+
 ## Styling tabs
 
 ### Props - `tab-class`, `item-class`, `item-active-class`, `class` Usage
@@ -206,18 +235,18 @@ The tab list follows the ARIA tabs pattern. Once focus is on a tab button, use t
 
 #### Properties
 
-| Name            | Type    | Default     | Description                        | Options                                                                                           |
-| :-------------- | :------ | :---------- | :--------------------------------- | ------------------------------------------------------------------------------------------------- |
-| variant         | String  | `'default'` | The variant of the tabs.           | `'default'`, `'underline'`, `'pills'`                                                             |
-| modelValue      | String  | `Required`  | The active tab.                    |                                                                                                   |
-| directive       | String  | `'if'`      | The directive of the tabs.         | `'if'`, `'show'`                                                                                  |
-| tabClass        | String  | `''`        | The class of the tabs.             |                                                                                                   |
-| itemClass       | String  | `''`        | The class of the tab items.        |                                                                                                   |
-| itemActiveClass | String  | `''`        | The class of the active tab items. |                                                                                                   |
-| iconPosition    | String  | `'left'`    | The position of the icon.          | `'left'`, `'right'`                                                                               |
-| vertical        | Boolean | `false`     | Whether the tabs are vertical.     |                                                                                                   |
-| fullWidth       | Boolean | `false`     | Whether the tabs are full width.   |                                                                                                   |
-| theme           | String  | `'default'` | The theme of the tabs.             | `'default'`, `'blue'`, `'red'`, `'green'`, `'yellow'`, `'magenta'`, `'cyan'`, `'light'`, `'dark'` |
+| Name            | Type    | Default     | Description                        | Options                                                       |
+| :-------------- | :------ | :---------- | :--------------------------------- | ------------------------------------------------------------- |
+| variant         | String  | `'default'` | The variant of the tabs.           | `'default'`, `'underline'`, `'pills'`                         |
+| modelValue      | String  | `Required`  | The active tab.                    |                                                               |
+| directive       | String  | `'if'`      | The directive of the tabs.         | `'if'`, `'show'`                                              |
+| tabClass        | String  | `''`        | The class of the tabs.             |                                                               |
+| itemClass       | String  | `''`        | The class of the tab items.        |                                                               |
+| itemActiveClass | String  | `''`        | The class of the active tab items. |                                                               |
+| iconPosition    | String  | `'left'`    | The position of the icon.          | `'left'`, `'right'`                                           |
+| vertical        | Boolean | `false`     | Whether the tabs are vertical.     |                                                               |
+| fullWidth       | Boolean | `false`     | Whether the tabs are full width.   |                                                               |
+| color           | String  | `'blue'`    | The theme of the tabs.             | `'blue', 'grey', 'green', 'pink', 'purple', 'red', 'yellow'` |
 
 #### Slots
 

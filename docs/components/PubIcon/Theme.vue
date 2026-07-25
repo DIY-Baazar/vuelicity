@@ -1,12 +1,12 @@
 <template>
-    <pub-icon name="times" theme="green" />
-    <pub-icon name="times" theme="red" />
-    <pub-icon name="times" theme="blue" />
-    <pub-icon name="times" theme="yellow" />
-    <pub-icon name="times" theme="magenta" />
-    <pub-icon name="times" theme="cyan" />
-    <pub-icon name="times" theme="light" />
-    <pub-icon name="times" theme="dark" />
+    <pub-icon name="times" color="green" />
+    <pub-icon name="times" color="red" />
+    <pub-icon name="times" color="blue" />
+    <pub-icon name="times" color="yellow" />
+    <pub-icon name="times" color="pink" />
+    <pub-icon name="times" color="cyan" />
+    <pub-icon name="times" color="light" />
+    <pub-icon name="times" color="dark" />
 </template>
 
 <script lang="ts" setup>

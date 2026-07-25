@@ -5,7 +5,7 @@
         <template #prepend>
             <pub-dropdown>
                 <template #trigger>
-                    <pub-button theme="none" class="border-e border-grey-200 p-1 gap-0.5">
+                    <pub-button color="none" class="border-e border-grey-200 p-1 gap-0.5">
                         <template #prepend>
                             <pub-icon name="grid" size="xs" type="outline" />
                         </template>
@@ -25,7 +25,7 @@
         </template>
         <template #append>
             <pub-icon name="search" size="sm" type="outline" />
-            <!-- <pub-button theme="blue" size="xs" square rounded="md">
+            <!-- <pub-button color="blue" size="xs" square rounded="md">
             </pub-button> -->
         </template>
     </pub-input>

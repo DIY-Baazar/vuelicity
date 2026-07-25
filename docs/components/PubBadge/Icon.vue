@@ -1,10 +1,10 @@
 <template>
-    <pub-badge theme="blue">
+    <pub-badge color="blue">
         <template #icon>
             <pub-icon name="sun" />
         </template>
     </pub-badge>
-    <pub-badge theme="dark">
+    <pub-badge color="dark">
         <template #icon>
             <pub-icon name="sun" size="xs" />
         </template>

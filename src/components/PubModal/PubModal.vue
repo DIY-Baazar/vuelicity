@@ -71,8 +71,8 @@ const spanClasses = computed(() => modalClasses.value.spanClasses);
                     class="flex items-center justify-between p-2"
                 >
                     <slot name="header"></slot>
-                    <pub-button size="sm" theme="none" @click="emit('close')" aria-label="close">
-                        <pub-icon theme="dark" size="sm" name="close" />
+                    <pub-button size="sm" color="none" @click="emit('close')" aria-label="close">
+                        <pub-icon color="dark" size="sm" name="close" />
                         <span class="sr-only">Close</span>
                     </pub-button>
                 </div>

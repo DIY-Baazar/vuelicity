@@ -1,5 +1,5 @@
 <template>
-    <pub-alert show-icon theme="blue">
+    <pub-alert show-icon color="blue">
         <template #title>
             <p class="font-medium">Check if the password meets the following requirements:</p>
         </template>
@@ -10,7 +10,7 @@
             <li>At least one number</li>
         </ul>
     </pub-alert>
-    <pub-alert show-icon theme="yellow">
+    <pub-alert show-icon color="yellow">
         <template #title>
             <p class="font-medium">Check if the password meets the following requirements:</p>
         </template>

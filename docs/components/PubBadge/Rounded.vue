@@ -1,13 +1,13 @@
 <template>
     <pub-badge rounded>Default</pub-badge>
-    <pub-badge theme="blue" rounded>Blue</pub-badge>
-    <pub-badge theme="red" rounded>Red</pub-badge>
-    <pub-badge theme="green" rounded>Green</pub-badge>
-    <pub-badge theme="yellow" rounded>Yellow</pub-badge>
-    <pub-badge theme="magenta" rounded>Magenta</pub-badge>
-    <pub-badge theme="cyan" rounded>Cyan</pub-badge>
-    <pub-badge theme="light" rounded>Light</pub-badge>
-    <pub-badge theme="dark" rounded>Dark</pub-badge>
+    <pub-badge color="blue" rounded>Blue</pub-badge>
+    <pub-badge color="red" rounded>Red</pub-badge>
+    <pub-badge color="green" rounded>Green</pub-badge>
+    <pub-badge color="yellow" rounded>Yellow</pub-badge>
+    <pub-badge color="magenta" rounded>Magenta</pub-badge>
+    <pub-badge color="cyan" rounded>Cyan</pub-badge>
+    <pub-badge color="light" rounded>Light</pub-badge>
+    <pub-badge color="dark" rounded>Dark</pub-badge>
 </template>
 
 <script lang="ts" setup>

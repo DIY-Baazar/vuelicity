@@ -1,9 +1,9 @@
 <template>
-    <pub-alert dismissible theme="blue"> Info alert! Change a few things up and try submitting again. </pub-alert>
-    <pub-alert dismissible theme="yellow"> Warning alert! Change a few things up and try submitting again. </pub-alert>
-    <pub-alert dismissible theme="red"> Danger alert! Change a few things up and try submitting again. </pub-alert>
-    <pub-alert dismissible theme="green"> Success alert! Change a few things up and try submitting again. </pub-alert>
-    <pub-alert dismissible theme="dark"> Dark alert! Change a few things up and try submitting again. </pub-alert>
+    <pub-alert dismissible color="blue"> Info alert! Change a few things up and try submitting again. </pub-alert>
+    <pub-alert dismissible color="yellow"> Warning alert! Change a few things up and try submitting again. </pub-alert>
+    <pub-alert dismissible color="red"> Danger alert! Change a few things up and try submitting again. </pub-alert>
+    <pub-alert dismissible color="green"> Success alert! Change a few things up and try submitting again. </pub-alert>
+    <pub-alert dismissible color="grey"> Dark alert! Change a few things up and try submitting again. </pub-alert>
 </template>
 
 <script lang="ts" setup>

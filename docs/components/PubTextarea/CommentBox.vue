@@ -2,7 +2,7 @@
     <pub-textarea v-model="message" label="Your message" placeholder="Write your thoughts here...">
         <template #footer>
             <div class="flex items-center justify-between">
-                <pub-button type="submit" theme="blue" rounded="lg">
+                <pub-button type="submit" color="blue" rounded="lg">
                     Post comment
                 </pub-button>
                 <div class="flex gap-2">

@@ -1,7 +1,7 @@
 <template>
     <pub-button-group>
-        <pub-button theme="blue" outline> Save Book </pub-button>
-        <pub-button theme="blue" outline>
+        <pub-button color="blue" outline> Save Book </pub-button>
+        <pub-button color="blue" outline>
             <pub-icon name="bookmark" type="outline" />
         </pub-button>
     </pub-button-group>

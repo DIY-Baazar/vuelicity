@@ -21,9 +21,9 @@ This is a button component that can be used to create buttons with various style
 
 ## Default buttons
 
-### Prop - `theme` Usage
+### Prop - `color` Usage
 
-There are a number of themes available for the button, including `'none'`, `'default'`, `'blue'`, `'red'`, `'yellow'`, `'green'`, `'magenta'`, `'cyan'`, `'light'`, `'dark'`. Below is a demo of each theme.
+There are a number of theme-colors available for the button, including `'blue'`, `'red'`, `'yellow'`, `'green'`, `'pink'`, `'cyan'`, `'purple'`, `'grey'`. Below is a demo of each theme.
 
 <demo-container>
   <Default/>
@@ -32,6 +32,7 @@ There are a number of themes available for the button, including `'none'`, `'def
 <<< @/components/PubButton/Default.vue
 
 ## Outline buttons
+
 ### Prop - `outline` Usage
 
 The `outline` prop can be used to add an outline style to the button.
@@ -43,6 +44,7 @@ The `outline` prop can be used to add an outline style to the button.
 <<< @/components/PubButton/Outline.vue
 
 ## Pill buttons
+
 ### Prop - `rounded` Usage
 
 The `rounded` prop can be used to add rounded corners to the button.
@@ -54,6 +56,7 @@ The `rounded` prop can be used to add rounded corners to the button.
 <<< @/components/PubButton/Rounded.vue
 
 ## Button sizes
+
 ### Prop - `size` Usage
 
 The `size` prop can be used to adjust the size of the button.
@@ -65,6 +68,7 @@ The `size` prop can be used to adjust the size of the button.
 <<< @/components/PubButton/Size.vue
 
 ## Disabled Buttons
+
 ### Prop - `disabled` Usage
 
 The `disabled` prop can be used to disable the button.
@@ -76,6 +80,7 @@ The `disabled` prop can be used to disable the button.
 <<< @/components/PubButton/Disabled.vue
 
 ## Button with loading state
+
 ### Props - `loading` and `skeleton` Usage
 
 The `loading` prop can be used to display a loading state. The `skeleton` prop can be used to display a skeleton loader.
@@ -94,7 +99,7 @@ The `loading` prop can be used to display a loading state. The `skeleton` prop c
 
 <<< @/components/PubButton/WithIcon.vue
 
-## Button with label 
+## Button with label
 
 <demo-container>
     <WithLabel/>
@@ -114,27 +119,27 @@ The `loading` prop can be used to display a loading state. The `skeleton` prop c
 
 ### Properties
 
-| Name | Type | Default | Description | Options |
-| :--- | :--- | :--- | :--- | :--- |
-| theme | String | `'default'` | The color theme of the button. | `'none'`, `'default'`, `'blue'`, `'red'`, `'yellow'`, `'green'`, `'magenta'`, `'cyan'`, `'light'`, `'dark'` |
-| outline | Boolean | `false` | Whether to use the outline style. |  |
-| rounded | String | `'none'` | The border radius of the button. | `'none'`, `'sm'`, `'md'`, `'lg'`, `'xl'`, `'full'` |
-| size | String | `'md'` | The size of the button. | `'xs'`, `'sm'`, `'md'`, `'lg'`, `'xl'` |
-| square | Boolean | `false` | Whether to render the button as a square. | |
-| as | String | `'button'` | The HTML element to render. | `'button'`, `'a'` |
-| class | String | `''` | Additional CSS classes to apply. | |
-| disabled | Boolean | `false` | Whether the button is disabled. |  |
-| loading | Boolean | `false` | Whether the button is in a loading state. |  |
-| name | String | `''` | The name attribute for the button. | |
-| skeleton | Boolean | `false` | Whether to display a skeleton loader. |  |
-| to | String | `'#'` | The href for the link when `as` is `'a'`. | |
-| type | String | `'button'` | The type attribute for the button. | `'button'`, `'submit'`, `'reset'` |
-| linkAttr | String | `'href'` | The attribute to use for the link when `as` is `'a'`. | |
+| Name     | Type    | Default     | Description                                           | Options                                                                                       |
+| :------- | :------ | :---------- | :---------------------------------------------------- | :-------------------------------------------------------------------------------------------- |
+| color    | String  | `'default'` | The color theme of the button.                        | `'none'`, `'default'`, `'blue'`, `'red'`, `'yellow'`, `'green'`, `'pink'`, `'cyan'`, `'grey'` |
+| outline  | Boolean | `false`     | Whether to use the outline style.                     |                                                                                               |
+| rounded  | String  | `'none'`    | The border radius of the button.                      | `'none'`, `'sm'`, `'md'`, `'lg'`, `'xl'`, `'full'`                                            |
+| size     | String  | `'md'`      | The size of the button.                               | `'xs'`, `'sm'`, `'md'`, `'lg'`, `'xl'`                                                        |
+| square   | Boolean | `false`     | Whether to render the button as a square.             |                                                                                               |
+| as       | String  | `'button'`  | The HTML element to render.                           | `'button'`, `'a'`                                                                             |
+| class    | String  | `''`        | Additional CSS classes to apply.                      |                                                                                               |
+| disabled | Boolean | `false`     | Whether the button is disabled.                       |                                                                                               |
+| loading  | Boolean | `false`     | Whether the button is in a loading state.             |                                                                                               |
+| name     | String  | `''`        | The name attribute for the button.                    |                                                                                               |
+| skeleton | Boolean | `false`     | Whether to display a skeleton loader.                 |                                                                                               |
+| to       | String  | `'#'`       | The href for the link when `as` is `'a'`.             |                                                                                               |
+| type     | String  | `'button'`  | The type attribute for the button.                    | `'button'`, `'submit'`, `'reset'`                                                             |
+| linkAttr | String  | `'href'`    | The attribute to use for the link when `as` is `'a'`. |                                                                                               |
 
 ### Slots
 
-| Name | Description |
-| ---- | ----------- |
-| default | Default slot |
+| Name    | Description                              |
+| ------- | ---------------------------------------- |
+| default | Default slot                             |
 | prepend | Slot for content before the default slot |
-| append | Slot for content after the default slot |
+| append  | Slot for content after the default slot  |

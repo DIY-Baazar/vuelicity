@@ -12,7 +12,7 @@ const props = withDefaults(defineProps<DropdownProps>(), {
     class: "",
     closeInside: false,
     type: "button",
-    theme: "blue",
+    color: "blue",
     contentWrapperClass: "",
     disabled: false,
     placement: "bottom",
@@ -110,7 +110,7 @@ const { wrapperClasses, contentWrapperClasses, triggerWrapperClasses, triggerApp
                 <pub-button
                     v-else
                     :aria-expanded="isContentVisible"
-                    :theme="theme"
+                    :color="color"
                     :disabled="disabled"
                     aria-haspopup="true"
                     role="button"

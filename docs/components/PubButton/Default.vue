@@ -1,14 +1,14 @@
 <template>
-    <pub-button theme="none">None</pub-button>
-    <pub-button theme="default">Default</pub-button>
-    <pub-button theme="blue">Blue</pub-button>
-    <pub-button theme="red">Red</pub-button>
-    <pub-button theme="green">Green</pub-button>
-    <pub-button theme="yellow">Yellow</pub-button>
-    <pub-button theme="magenta">Magenta</pub-button>
-    <pub-button theme="cyan">Cyan</pub-button>
-    <pub-button theme="light">Light</pub-button>
-    <pub-button theme="dark">Dark</pub-button>
+    <pub-button color="none">None</pub-button>
+    <pub-button color="default">Default</pub-button>
+    <pub-button color="blue">Blue</pub-button>
+    <pub-button color="red">Red</pub-button>
+    <pub-button color="green">Green</pub-button>
+    <pub-button color="yellow">Yellow</pub-button>
+    <pub-button color="pink">Pink</pub-button>
+    <pub-button color="cyan">Cyan</pub-button>
+    <pub-button color="purple">Purple</pub-button>
+    <pub-button color="grey">Grey</pub-button>
 </template>
 
 <script lang="ts" setup>

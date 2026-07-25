@@ -1,5 +1,5 @@
 <template>
-    <pub-alert show-icon theme="green">
+    <pub-alert show-icon color="green">
         <template #title>
             <p class="font-bold">This is a success alert</p>
         </template>
@@ -9,19 +9,19 @@
                 can see how spacing within an alert works with this kind of content.
             </div>
             <div class="flex gap-2">
-                <pub-button theme="green" size="sm" rounded="md">
+                <pub-button color="green" size="sm" rounded="md">
                     <template #prepend>
                         <pub-icon name="eye" />
                     </template>
                     View More
                 </pub-button>
-                <pub-button theme="green" size="sm" rounded="md" outline aria-label="Close" @click="handleClose">
+                <pub-button color="green" size="sm" rounded="md" outline aria-label="Close" @click="handleClose">
                     Close
                 </pub-button>
             </div>
         </template>
     </pub-alert>
-    <pub-alert show-icon theme="red">
+    <pub-alert show-icon color="red">
         <template #title>
             <p class="font-bold">This is a danger alert</p>
         </template>
@@ -31,13 +31,13 @@
                 can see how spacing within an alert works with this kind of content.
             </div>
             <div class="flex gap-2">
-                <pub-button theme="red" size="sm" rounded="md">
+                <pub-button color="red" size="sm" rounded="md">
                     <template #prepend>
                         <pub-icon name="eye" />
                     </template>
                     View More
                 </pub-button>
-                <pub-button theme="red" size="sm" rounded="md" outline aria-label="Close" @click="handleClose">
+                <pub-button color="red" size="sm" rounded="md" outline aria-label="Close" @click="handleClose">
                     Close
                 </pub-button>
             </div>
