@@ -47,6 +47,7 @@ const props = withDefaults(defineProps<IconProps>(), {
   mirror: false,
   aschild: false,
   strokeWidth: 1,
+  color: 'default',
 })
 
 const { iconClasses } = useIconClasses(toRefs(props))
