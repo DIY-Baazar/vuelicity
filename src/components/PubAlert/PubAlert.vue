@@ -69,10 +69,10 @@ const props = withDefaults(defineProps<AlertProps>(), {
 })
 
 const slots = defineSlots<{
-  'default': any;
-  'close-button': any;
-  'icon': any;
-  'title': any;
+  'default': { handleClose: () => void };
+  'close-button': { handleClose: () => void };
+  'icon': unknown;
+  'title': unknown;
 }>()
 
 const attrs = useAttrs()

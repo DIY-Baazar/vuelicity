@@ -50,7 +50,6 @@ export function useTableRowClasses (props: UseTableRowClassesProps) {
 export function useTableHeadCellClasses (props: UseTableHeadCellClassesProps) {
   const tableHeadCellClasses = computed(() => {
     let themeClasses = ''
-    console.log(props.color.value)
     if (isThemeColor(props.color.value)) {
       const theme = useThemeColor(props.color.value as ThemeColor)
       themeClasses = normalizeClass(['text-white', theme.backgroundClasses.value])

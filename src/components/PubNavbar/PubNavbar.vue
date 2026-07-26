@@ -58,7 +58,7 @@ const toggleMobileMenu = () => {
 const slots = useSlots()
 
 const props = withDefaults(defineProps<NavbarProps>(), {
-  theme: 'default',
+  color: 'default',
   containerClass: '',
   class: '',
   noToggleButton: false,

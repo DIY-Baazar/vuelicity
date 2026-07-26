@@ -119,7 +119,7 @@ export function useButtonClasses (props: UseButtonClassesProps): {
         props.outline.value ? '' : theme.backgroundClasses.value,
         props.outline.value ? theme.textClasses.value : 'text-white dark:text-grey-200',
       ])
-      hoverClasses = normalizeClass([theme.hoverClasses.value, 'hover:text-grey-200'])
+      hoverClasses = normalizeClass([theme.hoverClasses.value, 'hover:text-white dark:hover:text-grey-200'])
     } else {
       defaultClasses = props.outline.value
         ? buttonOutlineThemeClasses.default[props.color.value as NonThemeColor]

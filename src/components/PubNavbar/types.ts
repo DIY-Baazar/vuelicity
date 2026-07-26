@@ -9,7 +9,7 @@ interface NavbarProps {
   sticky?: boolean;
   rounded?: boolean;
   solid?: boolean;
-  theme?: NavbarTheme;
+  color?: NavbarTheme;
   noToggleButton: boolean;
   collapseBreakpoint: BreakpointKey;
 }

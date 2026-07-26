@@ -10,22 +10,22 @@ interface UseNavbarClassesProps {
   sticky: Ref<boolean>;
   rounded: Ref<boolean>;
   solid: Ref<boolean>;
-  theme: Ref<NavbarTheme>;
+  color: Ref<NavbarTheme>;
   containerClass: ClassRef;
   class: ClassRef;
 }
 
 const navbarThemeClasses = {
   light: {
-    true: 'bg-light',
+    true: 'bg-white',
     false: 'bg-grey-50',
   },
   dark: {
-    true: 'bg-dark',
+    true: 'bg-black',
     false: 'bg-grey-800',
   },
   default: {
-    true: 'bg-light dark:bg-dark',
+    true: 'bg-white dark:bg-black',
     false: 'bg-grey-50 dark:bg-grey-800',
   },
 }
@@ -57,8 +57,8 @@ export function useNavbarClasses (props: UseNavbarClassesProps): {
       props.sticky.value ? 'fixed z-20 top-0 left-0 border-b border-grey-200' : '',
       props.rounded.value ? 'rounded' : '',
       props.solid.value ? 'p-3' : 'px-2 sm:px-4 py-2.5',
-      navbarThemeClasses[props.theme.value][props.solid.value ? 'true' : 'false'],
-      navbarTextThemeClasses[props.theme.value][props.solid.value ? 'true' : 'false'],
+      navbarThemeClasses[props.color.value][props.solid.value ? 'true' : 'false'],
+      navbarTextThemeClasses[props.color.value][props.solid.value ? 'true' : 'false'],
       normalizeClass(props.containerClass.value),
     ]),
   )
