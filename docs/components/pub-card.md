@@ -4,9 +4,9 @@ description: Documentation for the PubCard component.
 ---
 
 <script setup>
-import Default from './PubCard/Default.vue';
+import DefaultCard from './PubCard/DefaultCard.vue';
 import WithImage from './PubCard/WithImage.vue';
-import Horizontal from './PubCard/Horizontal.vue';
+import HorizontalCard from './PubCard/HorizontalCard.vue';
 </script>
 
 # PubCard
@@ -16,10 +16,10 @@ This is a card component that can be used to display content in a card. It provi
 ## Default Card
 
 <demo-container>
-    <Default />
+    <DefaultCard />
 </demo-container>
 
-<<< @/components/PubCard/Default.vue
+<<< @/components/PubCard/DefaultCard.vue
 
 ## Card with image
 
@@ -32,10 +32,10 @@ This is a card component that can be used to display content in a card. It provi
 ## Horizontal Card
 
 <demo-container>
-    <Horizontal />
+    <HorizontalCard />
 </demo-container>
 
-<<< @/components/PubCard/Horizontal.vue
+<<< @/components/PubCard/HorizontalCard.vue
 
 ## Reference
 

@@ -4,17 +4,17 @@ description: Documentation for PubInput.
 ---
 
 <script setup>
-    import Default from './PubInput/Default.vue';
-    import Size from './PubInput/Size.vue';
-    import Disabled from './PubInput/Disabled.vue';
-    import Required from './PubInput/Required.vue';
+    import DefaultInput from './PubInput/DefaultInput.vue';
+    import SizeInput from './PubInput/SizeInput.vue';
+    import DisabledInput from './PubInput/DisabledInput.vue';
+    import RequiredInput from './PubInput/RequiredInput.vue';
     import HelperText from './PubInput/HelperText.vue';
     import InputGroup from './PubInput/InputGroup.vue';
     import SearchInput from './PubInput/SearchInput.vue';
-    import Validation from './PubInput/Validation.vue';
+    import ValidationInput from './PubInput/ValidationInput.vue';
     import DropdownInput from './PubInput/DropdownInput.vue';
     import StylingInput from './PubInput/StylingInput.vue';
-    import Readonly from './PubInput/Readonly.vue';
+    import ReadonlyInput from './PubInput/ReadonlyInput.vue';
 </script>
 
 # PubInput
@@ -24,10 +24,10 @@ This is a input component. It is used to display an input field and supports var
 ## Default Usage
 
 <demo-container>
-    <Default />
+    <DefaultInput />
 </demo-container>
 
-<<< @/components/PubInput/Default.vue
+<<< @/components/PubInput/DefaultInput.vue
 
 ## Sizes
 
@@ -36,10 +36,10 @@ This is a input component. It is used to display an input field and supports var
 The `size` prop is used to set the size of the input field. It can be one of the following values: `sm`, `md`, `lg` or `xl`. The default value is `md`.
 
 <demo-container flex-type='col' class='items-start'>
-    <Size />
+    <SizeInput />
 </demo-container>
 
-<<< @/components/PubInput/Size.vue
+<<< @/components/PubInput/SizeInput.vue
 
 ## Required
 
@@ -48,10 +48,10 @@ The `size` prop is used to set the size of the input field. It can be one of the
 The `required` prop is used to make the input field required. It can be a boolean value.
 
 <demo-container>
-    <Required />
+    <RequiredInput />
 </demo-container>
 
-<<< @/components/PubInput/Required.vue
+<<< @/components/PubInput/RequiredInput.vue
 
 ## Disabled
 
@@ -60,10 +60,10 @@ The `required` prop is used to make the input field required. It can be a boolea
 The `disabled` prop is used to disable the input field. It can be a boolean value.
 
 <demo-container>
-    <Disabled />
+    <DisabledInput />
 </demo-container>
 
-<<< @/components/PubInput/Disabled.vue
+<<< @/components/PubInput/DisabledInput.vue
 
 ## Readonly
 
@@ -72,10 +72,10 @@ The `disabled` prop is used to disable the input field. It can be a boolean valu
 The `readonly` prop is used to make the input field readonly. It can be a boolean value.
 
 <demo-container>
-    <Readonly />
+    <ReadonlyInput />
 </demo-container>
 
-<<< @/components/PubInput/Readonly.vue
+<<< @/components/PubInput/ReadonlyInput.vue
 
 ## Validation
 
@@ -86,10 +86,10 @@ The `validationStatus` prop is used to set the visual validation state of the in
 The `validationMessage` slot is used to display a custom validation message. It can be a string value.
 
 <demo-container flex-type='col' class='items-start'>
-    <Validation />
+    <ValidationInput />
 </demo-container>
 
-<<< @/components/PubInput/Validation.vue
+<<< @/components/PubInput/ValidationInput.vue
 
 ## Input group
 

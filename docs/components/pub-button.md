@@ -4,15 +4,15 @@ description: Documentation for the PubButton component.
 ---
 
 <script setup>
-import Default from './PubButton/Default.vue';
-import Outline from './PubButton/Outline.vue';
-import Rounded from './PubButton/Rounded.vue';
-import Size from './PubButton/Size.vue';
-import Disabled from './PubButton/Disabled.vue';
+import DefaultButton from './PubButton/DefaultButton.vue';
+import OutlineButton from './PubButton/OutlineButton.vue';
+import RoundedButton from './PubButton/RoundedButton.vue';
+import SizeButton from './PubButton/SizeButton.vue';
+import DisabledButton from './PubButton/DisabledButton.vue';
 import LoadingSkeleton from './PubButton/LoadingSkeleton.vue';
 import WithIcon from './PubButton/WithIcon.vue';
 import WithLabel from './PubButton/WithLabel.vue';
-import Icon from './PubButton/Icon.vue';
+import IconButton from './PubButton/IconButton.vue';
 </script>
 
 # PubButton
@@ -26,10 +26,10 @@ This is a button component that can be used to create buttons with various style
 There are a number of theme-colors available for the button, including `'blue'`, `'red'`, `'yellow'`, `'green'`, `'pink'`, `'cyan'`, `'purple'`, `'grey'`. Below is a demo of each color.
 
 <demo-container>
-  <Default/>
+  <DefaultButton/>
 </demo-container>
 
-<<< @/components/PubButton/Default.vue
+<<< @/components/PubButton/DefaultButton.vue
 
 ## Outline buttons
 
@@ -38,10 +38,10 @@ There are a number of theme-colors available for the button, including `'blue'`,
 The `outline` prop can be used to add an outline style to the button.
 
 <demo-container>
-  <Outline/>
+  <OutlineButton/>
 </demo-container>
 
-<<< @/components/PubButton/Outline.vue
+<<< @/components/PubButton/OutlineButton.vue
 
 ## Pill buttons
 
@@ -50,10 +50,10 @@ The `outline` prop can be used to add an outline style to the button.
 The `rounded` prop can be used to add rounded corners to the button.
 
 <demo-container>
-  <Rounded/>
+  <RoundedButton/>
 </demo-container>
 
-<<< @/components/PubButton/Rounded.vue
+<<< @/components/PubButton/RoundedButton.vue
 
 ## Button sizes
 
@@ -62,10 +62,10 @@ The `rounded` prop can be used to add rounded corners to the button.
 The `size` prop can be used to adjust the size of the button.
 
 <demo-container>
-  <Size/>
+  <SizeButton/>
 </demo-container>
 
-<<< @/components/PubButton/Size.vue
+<<< @/components/PubButton/SizeButton.vue
 
 ## Disabled Buttons
 
@@ -74,10 +74,10 @@ The `size` prop can be used to adjust the size of the button.
 The `disabled` prop can be used to disable the button.
 
 <demo-container>
-  <Disabled/>
+  <DisabledButton/>
 </demo-container>
 
-<<< @/components/PubButton/Disabled.vue
+<<< @/components/PubButton/DisabledButton.vue
 
 ## Button with loading state
 
@@ -110,10 +110,10 @@ The `loading` prop can be used to display a loading state. The `skeleton` prop c
 ## Icon buttons
 
 <demo-container>
-    <Icon/>
+    <IconButton/>
 </demo-container>
 
-<<< @/components/PubButton/Icon.vue
+<<< @/components/PubButton/IconButton.vue
 
 ## Reference
 

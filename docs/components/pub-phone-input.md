@@ -4,7 +4,7 @@ description: Documentation for PubPhoneInput.
 ---
 
 <script setup>
-import Default from "./PubPhoneInput/Default.vue";
+import DefaultPhoneInput from "./PubPhoneInput/DefaultPhoneInput.vue";
 </script>
 
 # PubPhoneInput
@@ -14,7 +14,7 @@ This is a input component. It is used to display an input field and supports var
 ## Default Usage
 
 <demo-container class="w-full">
-    <Default />
+    <DefaultPhoneInput />
 </demo-container>
 
-<<< @/components/PubPhoneInput/Default.vue
+<<< @/components/PubPhoneInput/DefaultPhoneInput.vue

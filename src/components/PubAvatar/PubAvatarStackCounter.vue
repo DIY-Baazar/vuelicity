@@ -8,7 +8,7 @@
 <script setup lang="ts">
 import type { AvatarStackCounterProps } from './types'
 
-const props = withDefaults(defineProps<AvatarStackCounterProps>(), {
+withDefaults(defineProps<AvatarStackCounterProps>(), {
   total: 1,
   href: '#',
 })

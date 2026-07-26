@@ -4,12 +4,12 @@ description: Documentation for the PubCarousel component.
 ---
 
 <script setup>
-    import Default from './PubCarousel/Default.vue';
+    import DefaultCarousel from './PubCarousel/DefaultCarousel.vue';
     import WithoutControls from './PubCarousel/WithoutControls.vue';
     import WithoutIndicators from './PubCarousel/WithoutIndicators.vue';
     import SlideAnim from './PubCarousel/SlideAnim.vue';
     import SlideInterval from './PubCarousel/SlideInterval.vue';
-    import Static from './PubCarousel/Static.vue';
+    import StaticCarousel from './PubCarousel/StaticCarousel.vue';
 </script>
 
 # PubCarousel
@@ -19,10 +19,10 @@ This is a component for displaying a carousel of items. It provides a list of it
 ## Default carousel
 
 <demo-container>
-    <Default />
+    <DefaultCarousel />
 </demo-container>
 
-<<< @/components/PubCarousel/Default.vue
+<<< @/components/PubCarousel/DefaultCarousel.vue
 
 ## Carousel without controls
 
@@ -77,7 +77,7 @@ The `slide` prop can be used to enable slide animation. The `interval` prop can 
 The `isStatic` prop can be used to disable animation.
 
 <demo-container>
-    <Static />
+    <StaticCarousel />
 </demo-container>
 
 ## Reference

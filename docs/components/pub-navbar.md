@@ -4,8 +4,8 @@ description: Documentation for the PubNavbar component.
 ---
 
 <script setup>
-import Default from './PubNavbar/Default.vue';
-import Solid from './PubNavbar/Solid.vue';
+import DefaultNavbar from './PubNavbar/DefaultNavbar.vue';
+import SolidNavbar from './PubNavbar/SolidNavbar.vue';
 import WithCTA from './PubNavbar/WithCTA.vue';
 import WithDropdown from './PubNavbar/WithDropdown.vue';
 </script>
@@ -17,18 +17,18 @@ This is a navbar component which can be used to display a navigation menu in a h
 ## Default Usage
 
 <demo-container>
-  <Default/>
+  <DefaultNavbar/>
 </demo-container>
 
-<<< @/components/PubNavbar/Default.vue
+<<< @/components/PubNavbar/DefaultNavbar.vue
 
 ## Solid background
 
 <demo-container>
-  <Solid/>
+  <SolidNavbar/>
 </demo-container>
 
-<<< @/components/PubNavbar/Solid.vue
+<<< @/components/PubNavbar/SolidNavbar.vue
 
 ## Navbar with dropdown
 

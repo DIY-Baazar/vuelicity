@@ -4,9 +4,9 @@ description: Documentation for the PubModal component.
 ---
 
 <script setup>
-import Default from './PubModal/Default.vue';
-import Size from './PubModal/Size.vue';
-import Position from './PubModal/Position.vue';
+import ModalDefault from './PubModal/ModalDefault.vue';
+import ModalSize from './PubModal/ModalSize.vue';
+import ModalPosition from './PubModal/ModalPosition.vue';
 import FocusTrap from './PubModal/FocusTrap.vue';
 </script>
 
@@ -17,17 +17,17 @@ This is a modal component that can be used to display content in a modal dialog.
 ## Default Usage
 
 <demo-container>
-  <Default/>
+  <ModalDefault/>
 </demo-container>
 
-<<< @/components/PubModal/Default.vue
+<<< @/components/PubModal/ModalDefault.vue
 
 ## Props - `size` Usage
 
 The `size` prop can be used to adjust the size of the modal.
 
 <demo-container>
-  <Size/>
+  <ModalSize/>
 </demo-container>
 
 ```vue
@@ -49,7 +49,7 @@ import { PubModal } from "vuelicity";
 The `position` prop can be used to adjust the position of the modal.
 
 <demo-container>
-  <Position/>
+  <ModalPosition/>
 </demo-container>
 
 ```vue

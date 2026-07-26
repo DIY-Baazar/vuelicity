@@ -4,8 +4,8 @@ description: Documentation for the PubIcon component.
 ---
 
 <script setup>
-import Size from './PubIcon/Size.vue';
-import Colored from './PubIcon/Colored.vue';
+import SizeIcon from './PubIcon/SizeIcon.vue';
+import ColoredIcon from './PubIcon/ColoredIcon.vue';
 import DisplayIcon from './PubIcon/DisplayIcon.vue';
 import SearchIcon from './PubIcon/SearchIcon.vue';
 import SpinFlip from './PubIcon/SpinFlip.vue';
@@ -20,10 +20,10 @@ This is a icon component that displays a vector graphic icon.
 The icon can be scaled using the `size` prop.
 
 <demo-container>
-  <Size/>
+  <SizeIcon/>
 </demo-container>
 
-<<< @/components/PubIcon/Size.vue
+<<< @/components/PubIcon/SizeIcon.vue
 
 ## Colored Icons
 
@@ -32,10 +32,10 @@ The icon can be scaled using the `size` prop.
 The icon can be colored using the `color` prop.
 
 <demo-container>
-  <Colored/>
+  <ColoredIcon/>
 </demo-container>
 
-<<< @/components/PubIcon/Colored.vue
+<<< @/components/PubIcon/ColoredIcon.vue
 
 ## Spin, Flip, Rotate, and Mirror
 

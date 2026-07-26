@@ -4,12 +4,12 @@ description: Documentation for the PubDropdown component.
 ---
 
 <script setup>
-    import Default from "./PubDropdown/Default.vue";
-    import Placement from "./PubDropdown/Placement.vue";
-    import Alignment from "./PubDropdown/Alignment.vue";
+    import DefaultDropdown from "./PubDropdown/DefaultDropdown.vue";
+    import PlacementDropdown from "./PubDropdown/PlacementDropdown.vue";
+    import AlignmentDropdown from "./PubDropdown/AlignmentDropdown.vue";
     import OffsetDistance from "./PubDropdown/OffsetDistance.vue";
     import OffsetSkidding from "./PubDropdown/OffsetSkidding.vue";
-    import Disabled from "./PubDropdown/Disabled.vue";
+    import DisabledDropdown from "./PubDropdown/DisabledDropdown.vue";
     import ColouredTriggers from "./PubDropdown/ColouredTriggers.vue";
     import CustomTrigger from "./PubDropdown/CustomTrigger.vue";
 </script>
@@ -19,10 +19,10 @@ description: Documentation for the PubDropdown component.
 ## Default Dropdown
 
 <demo-container>
-    <Default/>
+    <DefaultDropdown/>
 </demo-container>
 
-<<< @/components/PubDropdown/Default.vue
+<<< @/components/PubDropdown/DefaultDropdown.vue
 
 ## Dropdown Placement
 
@@ -31,7 +31,7 @@ description: Documentation for the PubDropdown component.
 The `placement` prop is used to specify the placement of the dropdown relative to the button.
 
 <demo-container>
-    <Placement />
+    <PlacementDropdown />
 </demo-container>
 
 ```vue
@@ -70,7 +70,7 @@ The `placement` prop is used to specify the placement of the dropdown relative t
 The `alignToEnd` prop is used to align the dropdown to the end of the button.
 
 <demo-container>
-    <Alignment />
+    <AlignmentDropdown />
 </demo-container>
 
 ```vue
@@ -131,10 +131,10 @@ The `offset-skidding` prop is used to specify the skidding between the button an
 The `disabled` prop can be used to disable the dropdown.
 
 <demo-container>
-    <Disabled />
+    <DisabledDropdown />
 </demo-container>
 
-<<< @/components/PubDropdown/Disabled.vue
+<<< @/components/PubDropdown/DisabledDropdown.vue
 
 ## Dropdown - coloured triggers
 
