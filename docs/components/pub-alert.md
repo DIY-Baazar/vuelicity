@@ -4,14 +4,14 @@ description: Documentation for the PubAlert component.
 ---
 
 <script setup>
-    import Default from './PubAlert/Default.vue';
+    import DefaultAlert from './PubAlert/DefaultAlert.vue';
     import WithIcon from './PubAlert/WithIcon.vue';
-    import Bordered from './PubAlert/Bordered.vue';
+    import BorderedAlert from './PubAlert/BorderedAlert.vue';
     import WithList from './PubAlert/WithList.vue';
-    import Accented from './PubAlert/Accented.vue';
-    import Dismissible from './PubAlert/Dismissible.vue';
-    import Additional from './PubAlert/Additional.vue';
-    import Announcement from './PubAlert/Announcement.vue';
+    import AccentedAlert from './PubAlert/AccentedAlert.vue';
+    import DismissibleAlert from './PubAlert/DismissibleAlert.vue';
+    import AdditionalAlert from './PubAlert/AdditionalAlert.vue';
+    import AnnouncementAlert from './PubAlert/AnnouncementAlert.vue';
 </script>
 
 # PubAlert
@@ -25,10 +25,10 @@ This is an alert component that can be used to display content in an alert. It p
 There are a number of themes available for the alert, including `'blue'`, `'red'`, `'yellow'`, `'green'`, `'dark'`. Below is a demo of each color.
 
 <demo-container>
-    <Default />
+    <DefaultAlert />
 </demo-container>
 
-<<< @/components/PubAlert/Default.vue
+<<< @/components/PubAlert/DefaultAlert.vue
 
 ## Alerts with icon
 
@@ -49,10 +49,10 @@ The `showIcon` prop can be used to display an icon in the alert.
 The `bordered` prop can be used to add a border to the alert.
 
 <demo-container>
-    <Bordered />
+    <BorderedAlert />
 </demo-container>
 
-<<< @/components/PubAlert/Bordered.vue
+<<< @/components/PubAlert/BorderedAlert.vue
 
 ## Alerts with list
 
@@ -65,34 +65,34 @@ The `bordered` prop can be used to add a border to the alert.
 ## Border accent
 
 <demo-container>
-    <Accented />
+    <AccentedAlert />
 </demo-container>
 
-<<< @/components/PubAlert/Accented.vue
+<<< @/components/PubAlert/AccentedAlert.vue
 
 ## Dismissible alerts
 
 <demo-container>
-    <Dismissible />
+    <DismissibleAlert />
 </demo-container>
 
-<<< @/components/PubAlert/Dismissible.vue
+<<< @/components/PubAlert/DismissibleAlert.vue
 
 ## Additional content
 
 <demo-container>
-    <Additional />
+    <AdditionalAlert />
 </demo-container>
 
-<<< @/components/PubAlert/Additional.vue
+<<< @/components/PubAlert/AdditionalAlert.vue
 
 ## Announcements alerts
 
 <demo-container>
-    <Announcement />
+    <AnnouncementAlert />
 </demo-container>
 
-<<< @/components/PubAlert/Announcement.vue
+<<< @/components/PubAlert/AnnouncementAlert.vue
 
 ## Reference
 

@@ -4,15 +4,15 @@ description: Documentation for the PubAvatar component.
 ---
 
 <script setup>
-    import Default from './PubAvatar/Default.vue';
-    import Bordered from './PubAvatar/Bordered.vue';
+    import DefaultAvatar from './PubAvatar/DefaultAvatar.vue';
+    import BorderedAvatar from './PubAvatar/BorderedAvatar.vue';
     import PlaceholderIcon from './PubAvatar/PlaceholderIcon.vue';
     import PlaceholderInitials from './PubAvatar/PlaceholderInitials.vue';
     import AltPlaceholder from './PubAvatar/AltPlaceholder.vue';
     import DotStatus from './PubAvatar/DotStatus.vue';
     import DotStatusPos from './PubAvatar/DotStatusPos.vue';
-    import Size from './PubAvatar/Size.vue';
-    import Stacked from './PubAvatar/Stacked.vue';
+    import SizeAvatar from './PubAvatar/SizeAvatar.vue';
+    import StackedAvatar from './PubAvatar/StackedAvatar.vue';
     import AltText from './PubAvatar/AltText.vue';
 </script>
 
@@ -23,10 +23,10 @@ This is an avatar component that can be used to display a user's profile picture
 ## Default avatar
 
 <demo-container flex-type='col'>
-    <Default />
+    <DefaultAvatar />
 </demo-container>
 
-<<< @/components/PubAvatar/Default.vue
+<<< @/components/PubAvatar/DefaultAvatar.vue
 
 ## Bordered avatar
 
@@ -35,10 +35,10 @@ This is an avatar component that can be used to display a user's profile picture
 The `bordered` prop can be used to add a border to the avatar.
 
 <demo-container flex-type='col'>
-    <Bordered />
+    <BorderedAvatar />
 </demo-container>
 
-<<< @/components/PubAvatar/Bordered.vue
+<<< @/components/PubAvatar/BorderedAvatar.vue
 
 ## Placeholder icon
 
@@ -101,10 +101,10 @@ The `statusPosition` prop can be used to adjust the position of the dot indicato
 The `size` prop can be used to adjust the size of the avatar.
 
 <demo-container flex-type='col'>
-    <Size />
+    <SizeAvatar />
 </demo-container>
 
-<<< @/components/PubAvatar/Size.vue
+<<< @/components/PubAvatar/SizeAvatar.vue
 
 ## Stacked avatars
 
@@ -113,10 +113,10 @@ The `size` prop can be used to adjust the size of the avatar.
 The `stacked` prop can be used to stack multiple avatars together.
 
 <demo-container flex-type='col'>
-    <Stacked />
+    <StackedAvatar />
 </demo-container>
 
-<<< @/components/PubAvatar/Stacked.vue
+<<< @/components/PubAvatar/StackedAvatar.vue
 
 ## Alternative text
 

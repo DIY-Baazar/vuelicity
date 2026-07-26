@@ -4,10 +4,10 @@ description: Documentation for the PubRadio component.
 ---
 
 <script setup>
-    import Default from './PubRadio/Default.vue';
-    import Size from './PubRadio/Size.vue';
-    import Disabled from './PubRadio/Disabled.vue';
-    import Color from './PubRadio/Color.vue';
+    import DefaultRadio from './PubRadio/DefaultRadio.vue';
+    import SizeRadio from './PubRadio/SizeRadio.vue';
+    import DisabledRadio from './PubRadio/DisabledRadio.vue';
+    import ColorRadio from './PubRadio/ColorRadio.vue';
 </script>
 
 # PubRadio
@@ -17,10 +17,10 @@ This is a radio component. It is used to display a radio field to select an opti
 ## Default Usage
 
 <demo-container flex-type='col' class='items-start'>
-    <Default />
+    <DefaultRadio />
 </demo-container>
 
-<<< @/components/PubRadio/Default.vue
+<<< @/components/PubRadio/DefaultRadio.vue
 
 ## Sizes
 
@@ -29,10 +29,10 @@ This is a radio component. It is used to display a radio field to select an opti
 The `size` prop is used to set the size of the radio button. It can be one of the following values: `sm`, `md`, `lg`, `xl`.
 
 <demo-container flex-type='col' class='items-start'>
-    <Size />
+    <SizeRadio />
 </demo-container>
 
-<<< @/components/PubRadio/Size.vue
+<<< @/components/PubRadio/SizeRadio.vue
 
 ## Disabled
 
@@ -41,10 +41,10 @@ The `size` prop is used to set the size of the radio button. It can be one of th
 The `disabled` prop is used to disable the radio button.
 
 <demo-container flex-type='col' class='items-start'>
-    <Disabled />
+    <DisabledRadio />
 </demo-container>
 
-<<< @/components/PubRadio/Disabled.vue
+<<< @/components/PubRadio/DisabledRadio.vue
 
 ## Colors
 
@@ -53,10 +53,10 @@ The `disabled` prop is used to disable the radio button.
 The `color` prop is used to set the color of the radio button. It can be one of the following values: `red`, `yellow`, `green`, `blue`, `magenta`, `cyan`, `light`, `dark`.
 
 <demo-container>
-    <Color />
+    <ColorRadio />
 </demo-container>
 
-<<< @/components/PubRadio/Color.vue
+<<< @/components/PubRadio/ColorRadio.vue
 
 ## Reference
 

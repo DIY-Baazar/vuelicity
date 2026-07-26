@@ -4,9 +4,9 @@ description: Documentation for the PubBreadcrumb component.
 ---
 
 <script setup>
-    import Default from './PubBreadcrumb/Default.vue';
-    import Solid from './PubBreadcrumb/Solid.vue';
-    import Custom from './PubBreadcrumb/Custom.vue';
+    import DefaultBreadcrumb from './PubBreadcrumb/DefaultBreadcrumb.vue';
+    import SolidBreadcrumb from './PubBreadcrumb/SolidBreadcrumb.vue';
+    import CustomBreadcrumb from './PubBreadcrumb/CustomBreadcrumb.vue';
 </script>
 
 # PubBreadcrumb
@@ -16,10 +16,10 @@ This is a component for displaying a breadcrumb navigation. It provides a list o
 ## Default breadcrumb
 
 <demo-container>
-    <Default />
+    <DefaultBreadcrumb />
 </demo-container>
 
-<<< @/components/PubBreadcrumb/Default.vue
+<<< @/components/PubBreadcrumb/DefaultBreadcrumb.vue
 
 ## Solid breadcrumb
 
@@ -28,10 +28,10 @@ This is a component for displaying a breadcrumb navigation. It provides a list o
 The `solid` prop can be used to change the background color of the breadcrumb.
 
 <demo-container>
-    <Solid />
+    <SolidBreadcrumb />
 </demo-container>
 
-<<< @/components/PubBreadcrumb/Solid.vue
+<<< @/components/PubBreadcrumb/SolidBreadcrumb.vue
 
 ## Custom Icons
 
@@ -40,10 +40,10 @@ The `solid` prop can be used to change the background color of the breadcrumb.
 The `arrow-icon` and `home-icon` slots can be used to customize the icons used in the breadcrumb.
 
 <demo-container>
-    <Custom />
+    <CustomBreadcrumb />
 </demo-container>
 
-<<< @/components/PubBreadcrumb/Custom.vue
+<<< @/components/PubBreadcrumb/CustomBreadcrumb.vue
 
 ## Reference
 

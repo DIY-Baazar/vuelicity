@@ -4,11 +4,11 @@ description: Documentation for the PubAccordion component.
 ---
 
 <script setup>
-import Default from './PubAccordion/Default.vue';
-import Persistent from './PubAccordion/Persistent.vue';
-import Flushed from './PubAccordion/Flushed.vue';
-import Collapsed from './PubAccordion/Collapsed.vue';
-import Coloured from './PubAccordion/Coloured.vue';
+import DefaultAccordion from './PubAccordion/DefaultAccordion.vue';
+import PersistentAccordion from './PubAccordion/PersistentAccordion.vue';
+import FlushedAccordion from './PubAccordion/FlushedAccordion.vue';
+import CollapsedAccordion from './PubAccordion/CollapsedAccordion.vue';
+import ColouredAccordion from './PubAccordion/ColouredAccordion.vue';
 </script>
 
 # PubAccordion
@@ -18,10 +18,10 @@ This is an accordion component that can be used to display content in an accordi
 ## Default accordion
 
 <demo-container>
-    <Default />
+    <DefaultAccordion />
 </demo-container>
 
-<<< @/components/PubAccordion/Default.vue
+<<< @/components/PubAccordion/DefaultAccordion.vue
 
 ## Persistent accordion
 
@@ -30,10 +30,10 @@ This is an accordion component that can be used to display content in an accordi
 The `persistent` prop can be used to keep the items open when another item is clicked.
 
 <demo-container>
-    <Persistent />
+    <PersistentAccordion />
 </demo-container>
 
-<<< @/components/PubAccordion/Persistent.vue
+<<< @/components/PubAccordion/PersistentAccordion.vue
 
 ## Flushed accordion
 
@@ -42,10 +42,10 @@ The `persistent` prop can be used to keep the items open when another item is cl
 The `flushed` prop can be used to remove the default background-color and rounded corners.
 
 <demo-container>
-    <Flushed />
+    <FlushedAccordion />
 </demo-container>
 
-<<< @/components/PubAccordion/Flushed.vue
+<<< @/components/PubAccordion/FlushedAccordion.vue
 
 ## Initially collapsed
 
@@ -54,18 +54,18 @@ The `flushed` prop can be used to remove the default background-color and rounde
 The `collapsed` prop can be used to collapse the accordion to the first open item.
 
 <demo-container>
-    <Collapsed />
+    <CollapsedAccordion />
 </demo-container>
 
-<<< @/components/PubAccordion/Collapsed.vue
+<<< @/components/PubAccordion/CollapsedAccordion.vue
 
 ## Colouring Options
 
 <demo-container>
-    <Coloured />
+    <ColouredAccordion />
 </demo-container>
 
-<<< @/components/PubAccordion/Coloured.vue
+<<< @/components/PubAccordion/ColouredAccordion.vue
 
 ## Reference
 

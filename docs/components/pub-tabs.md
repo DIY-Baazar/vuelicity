@@ -4,15 +4,15 @@ description: Documentation for the PubTabs component.
 ---
 
 <script setup>
-    import Default from './PubTabs/Default.vue';
-    import Underline from './PubTabs/Underline.vue';
-    import Pills from './PubTabs/Pills.vue';
-    import Directive from './PubTabs/Directive.vue';
+    import DefaultTabs from './PubTabs/DefaultTabs.vue';
+    import UnderlineTabs from './PubTabs/UnderlineTabs.vue';
+    import PillsTabs from './PubTabs/PillsTabs.vue';
+    import DirectiveTabs from './PubTabs/DirectiveTabs.vue';
     import WithIcons from './PubTabs/WithIcons.vue';
-    import Vertical from './PubTabs/Vertical.vue';
+    import VerticalTabs from './PubTabs/VerticalTabs.vue';
     import FullWidth from './PubTabs/FullWidth.vue';
-    import Styling from './PubTabs/Styling.vue';
-    import Colored from './PubTabs/Colored.vue';
+    import StylingTabs from './PubTabs/StylingTabs.vue';
+    import ColoredTabs from './PubTabs/ColoredTabs.vue';
     import { PubKbd } from 'vuelicity';
 </script>
 
@@ -23,7 +23,7 @@ This is a tab component that displays a list of tabs and their content which can
 ## Default Usage
 
 <demo-container class="gap-0">
-    <Default />
+    <DefaultTabs />
 </demo-container>
 
 ```vue
@@ -53,7 +53,7 @@ The `variant` prop can be used to change the behavior of the tabs.
 Set `variant="underline"` to display the tabs as an underline.
 
 <demo-container class="gap-0">
-    <Underline />
+    <UnderlineTabs />
 </demo-container>
 
 ```vue
@@ -79,7 +79,7 @@ Set `variant="underline"` to display the tabs as an underline.
 Set `variant="pills"` to display the tabs as pills.
 
 <demo-container class="gap-0">
-    <Pills />
+    <PillsTabs />
 </demo-container>
 
 ```vue
@@ -107,7 +107,7 @@ Set `variant="pills"` to display the tabs as pills.
 The `directive` prop can be used to change the behavior of the tabs.
 
 <demo-container class="gap-0">
-    <Directive/>
+    <DirectiveTabs/>
 </demo-container>
 
 ```vue
@@ -145,7 +145,7 @@ The `icon` slot can be used to add an icon to the tabs.
 The `vertical` prop can be used to display the tabs vertically.
 
 <demo-container>
-    <Vertical/>
+    <VerticalTabs/>
 </demo-container>
 
 ## Full Width tabs
@@ -165,7 +165,7 @@ The `full-width` prop can be used to display the tabs in full width.
 The `color` prop can be used to change the color of the tabs.
 
 <demo-container class="gap-0">
-    <Colored/>
+    <ColoredTabs/>
 </demo-container>
 
 ```vue
@@ -193,7 +193,7 @@ The `color` prop can be used to change the color of the tabs.
 The `tab-class`, `item-class`, `item-active-class`, and `class` props can be used to style the tabs.
 
 <demo-container class="gap-0">
-    <Styling/>
+    <StylingTabs/>
 </demo-container>
 
 ```vue

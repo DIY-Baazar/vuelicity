@@ -4,11 +4,11 @@ description: Documentation for the PubTable component.
 ---
 
 <script setup>
-    import Default from './PubTable/Default.vue';
-    import Striped from './PubTable/Striped.vue';
+    import DefaultTable from './PubTable/DefaultTable.vue';
+    import StripedTable from './PubTable/StripedTable.vue';
     import StripedColumns from './PubTable/StripedColumns.vue';
-    import Hoverable from './PubTable/Hoverable.vue';
-    import Colored from './PubTable/Colored.vue';
+    import HoverableTable from './PubTable/HoverableTable.vue';
+    import ColoredTable from './PubTable/ColoredTable.vue';
 </script>
 
 # PubTable
@@ -20,10 +20,10 @@ This is a table component. It is used to display a table and supports various ta
 Use `PubTable` with `PubTableHead`, `PubTableBody`, `PubTableRow`, `PubTableHeadCell`, and `PubTableCell` to compose a structured data table.
 
 <demo-container>
-    <Default />
+    <DefaultTable />
 </demo-container>
 
-<<< @/components/PubTable/Default.vue
+<<< @/components/PubTable/DefaultTable.vue
 
 ## Colored Table
 
@@ -32,10 +32,10 @@ Use `PubTable` with `PubTableHead`, `PubTableBody`, `PubTableRow`, `PubTableHead
 The `color` prop can be used to change the color of the table.
 
 <demo-container>
-    <Colored />
+    <ColoredTable />
 </demo-container>
 
-<<< @/components/PubTable/Colored.vue
+<<< @/components/PubTable/ColoredTable.vue
 
 ## Striped Rows
 
@@ -44,10 +44,10 @@ The `color` prop can be used to change the color of the table.
 The `striped` prop can be used to add a stripe pattern to the rows of the table.
 
 <demo-container>
-    <Striped />
+    <StripedTable />
 </demo-container>
 
-<<< @/components/PubTable/Striped.vue
+<<< @/components/PubTable/StripedTable.vue
 
 ## Striped Columns
 
@@ -68,10 +68,10 @@ The `striped-columns` prop can be used to add a stripe pattern to the columns of
 The `hoverable` prop can be used to add a hover state to the rows of the table.
 
 <demo-container>
-    <Hoverable />
+    <HoverableTable />
 </demo-container>
 
-<<< @/components/PubTable/Hoverable.vue
+<<< @/components/PubTable/HoverableTable.vue
 
 ## Reference
 

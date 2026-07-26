@@ -4,9 +4,9 @@ description: Documentation for the PubSpinner component.
 ---
 
 <script setup>
-    import Default from "./PubSpinner/Default.vue"
-    import Sizes from "./PubSpinner/Sizes.vue"
-    import Colors from "./PubSpinner/Colors.vue"
+    import DefaultSpinner from "./PubSpinner/DefaultSpinner.vue"
+    import SizesSpinner from "./PubSpinner/SizesSpinner.vue"
+    import ColorsSpinner from "./PubSpinner/ColorsSpinner.vue"
 </script>
 
 # PubSpinner
@@ -16,10 +16,10 @@ This is a component for rendering spinners that can be used to show loading indi
 ## Default Usage
 
 <demo-container>
-    <Default/>
+    <DefaultSpinner/>
 </demo-container>
 
-<<< @/components/PubSpinner/Default.vue
+<<< @/components/PubSpinner/DefaultSpinner.vue
 
 ## Spinner Sizes
 
@@ -28,10 +28,10 @@ This is a component for rendering spinners that can be used to show loading indi
 The `size` prop is used to set the size of the spinner. It's value is similar to Tailwind spacing unit (`4`= 1rem, `8` = 2rem).
 
 <demo-container>
-    <Sizes/>
+    <SizesSpinner/>
 </demo-container>
 
-<<< @/components/PubSpinner/Sizes.vue
+<<< @/components/PubSpinner/SizesSpinner.vue
 
 ## Colored Spinners
 
@@ -40,10 +40,10 @@ The `size` prop is used to set the size of the spinner. It's value is similar to
 The `color` prop is used to set the color of the spinner.
 
 <demo-container>
-    <Colors/>
+    <ColorsSpinner/>
 </demo-container>
 
-<<< @/components/PubSpinner/Colors.vue
+<<< @/components/PubSpinner/ColorsSpinner.vue
 
 ## Reference
 

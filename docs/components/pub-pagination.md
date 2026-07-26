@@ -4,13 +4,13 @@ description: Documentation for PubPagination.
 ---
 
 <script setup>
-import Default from './PubPagination/Default.vue';
+import DefaultPagination from './PubPagination/DefaultPagination.vue';
 import WithIcons from './PubPagination/WithIcons.vue';
 import CustomLen from './PubPagination/CustomLen.vue';
 import PrevNext from './PubPagination/PrevNext.vue';
 import PrevNextIcon from './PubPagination/PrevNextIcon.vue';
 import FirstLast from './PubPagination/FirstLast.vue';
-import Table from './PubPagination/Table.vue';
+import TablePagination from './PubPagination/TablePagination.vue';
 import CustomLabel from './PubPagination/CustomLabel.vue';
 </script>
 
@@ -21,10 +21,10 @@ This is a pagination component which can be used to paginate through a list of i
 ## Default Usage
 
 <demo-container flex-type='col'>
-    <Default/>
+    <DefaultPagination/>
 </demo-container>
 
-<<< @/components/PubPagination/Default.vue
+<<< @/components/PubPagination/DefaultPagination.vue
 
 ## Pagination with icons
 
@@ -69,10 +69,10 @@ This is a pagination component which can be used to paginate through a list of i
 ## Table data pagination
 
 <demo-container flex-type='col'>
-    <Table/>
+    <TablePagination/>
 </demo-container>
 
-<<< @/components/PubPagination/Table.vue
+<<< @/components/PubPagination/TablePagination.vue
 
 ## Pagination with custom labels
 

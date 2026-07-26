@@ -4,12 +4,12 @@ description: Documentation for the PubSelect component.
 ---
 
 <script setup>
-    import Default from './PubSelect/Default.vue';
-    import Size from './PubSelect/Size.vue';
-    import Disabled from './PubSelect/Disabled.vue';
-    import Underlined from './PubSelect/Underlined.vue';
+    import DefaultSelect from './PubSelect/DefaultSelect.vue';
+    import SizeSelect from './PubSelect/SizeSelect.vue';
+    import DisabledSelect from './PubSelect/DisabledSelect.vue';
+    import UnderlinedSelect from './PubSelect/UnderlinedSelect.vue';
     import HelperText from './PubSelect/HelperText.vue';
-    import Validation from './PubSelect/Validation.vue';
+    import ValidationSelect from './PubSelect/ValidationSelect.vue';
     import StylingSelect from './PubSelect/StylingSelect.vue';
 </script>
 
@@ -20,10 +20,10 @@ This is a select component. It is used to display a select field to select an op
 ## Default Usage
 
 <demo-container>
-    <Default />
+    <DefaultSelect />
 </demo-container>
 
-<<< @/components/PubSelect/Default.vue
+<<< @/components/PubSelect/DefaultSelect.vue
 
 ## Sizes
 
@@ -32,10 +32,10 @@ This is a select component. It is used to display a select field to select an op
 The `size` prop is used to set the size of the select field. It can be one of the following values: `'sm'`, `'md'`, `'lg'`, `'xl'`.
 
 <demo-container flex-type='col' class='items-start'>
-    <Size />
+    <SizeSelect />
 </demo-container>
 
-<<< @/components/PubSelect/Size.vue
+<<< @/components/PubSelect/SizeSelect.vue
 
 ## Disabled
 
@@ -44,10 +44,10 @@ The `size` prop is used to set the size of the select field. It can be one of th
 The `disabled` prop is used to disable the select field. It can be a boolean value.
 
 <demo-container>
-    <Disabled />
+    <DisabledSelect />
 </demo-container>
 
-<<< @/components/PubSelect/Disabled.vue
+<<< @/components/PubSelect/DisabledSelect.vue
 
 ## Underlined
 
@@ -56,10 +56,10 @@ The `disabled` prop is used to disable the select field. It can be a boolean val
 The `underlined` prop is used to display the select field with an underline. It can be a boolean value.
 
 <demo-container>
-    <Underlined />
+    <UnderlinedSelect />
 </demo-container>
 
-<<< @/components/PubSelect/Underlined.vue
+<<< @/components/PubSelect/UnderlinedSelect.vue
 
 ## Helper text
 
@@ -82,10 +82,10 @@ The `validationStatus` prop is used to set the visual validation state of the se
 The `validationMessage` slot is used to display a custom validation message. It can be a string value.
 
 <demo-container flex-type='col' class='items-start'>
-    <Validation />
+    <ValidationSelect />
 </demo-container>
 
-<<< @/components/PubSelect/Validation.vue
+<<< @/components/PubSelect/ValidationSelect.vue
 
 ## Styling select
 
