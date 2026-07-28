@@ -346,18 +346,18 @@ describe('PubButton', () => {
 
     describe('link / navigation', () => {
         it('renders as an anchor when href is provided', () => {
-            const wrapper = mount(PubButton, { props: { to: '/page' } })
+            const wrapper = mount(PubButton, { props: { href: '/page' } })
             expect(wrapper.element.tagName).toBe('A')
             expect(wrapper.attributes('href')).toBe('/page')
         })
 
         it('does not set type attribute on an anchor', () => {
-            const wrapper = mount(PubButton, { props: { to: '/page' } })
+            const wrapper = mount(PubButton, { props: { href: '/page' } })
             expect(wrapper.attributes('type')).toBeUndefined()
         })
 
         it('passes extra attributes (e.g. target) through to the anchor', () => {
-            const wrapper = mount(PubButton, { props: { to: '/page', target: '_blank', rel: 'noopener' } })
+            const wrapper = mount(PubButton, { props: { href: '/page', target: '_blank', rel: 'noopener' } })
             expect(wrapper.attributes('target')).toBe('_blank')
             expect(wrapper.attributes('href')).toBe('/page')
             expect(wrapper.attributes('rel')).toBe('noopener')

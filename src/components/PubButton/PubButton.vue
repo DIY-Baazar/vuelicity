@@ -1,7 +1,7 @@
 <template>
   <component
     :is="componentName"
-    :[linkAttr]="to"
+    :href="componentName === 'a' ? href : undefined"
     :type="componentName === 'button' ? type : undefined"
     :class="useMergeClasses(['pub-button', wrapperClasses, spanClasses])"
     v-bind="attrs"
@@ -38,7 +38,6 @@ const props = withDefaults(defineProps<ButtonProps>(), {
     color: 'default',
     type: 'button',
     name: '',
-    to: undefined,
     disabled: false,
     outline: false,
     skeleton: false,
@@ -47,8 +46,8 @@ const props = withDefaults(defineProps<ButtonProps>(), {
     size: 'md',
     rounded: 'none',
     as: 'button',
-    linkAttr: 'href',
     class: '',
+    href: undefined,
 })
 
 defineOptions({
@@ -56,7 +55,13 @@ defineOptions({
 })
 const attrs = useAttrs()
 
-const componentName = computed(() => (props.as !== 'a' && !props.to ? resolveComponent(props.as) : 'a'))
+const componentName = computed(() => {
+    if (props.as === 'a' || props.href) {
+        return 'a'
+    }
+
+    return resolveComponent(props.as)
+})
 
 const emit = defineEmits<{ click: [event: Event]; }>()
 

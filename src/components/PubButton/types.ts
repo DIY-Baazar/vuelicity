@@ -9,7 +9,6 @@ export interface ButtonProps {
     color?: ButtonTheme;
     type?: ButtonType;
     name?: string;
-    to?: string | undefined;
     disabled?: boolean;
     class?: ClassInput;
     outline?: boolean;
@@ -19,5 +18,5 @@ export interface ButtonProps {
     rounded?: ButtonRounded;
     square?: boolean;
     as?: 'button' | 'a';
-    linkAttr?: string;
+    href?: string | undefined;
 }
