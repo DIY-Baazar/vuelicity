@@ -1,13 +1,13 @@
 export type PictureItem = {
-  alt?: string;
-  src: string;
+    alt?: string;
+    src: string;
 }
 
 export interface CarouselProps {
-  pictures: PictureItem[];
-  hideIndicators: boolean;
-  hideControls: boolean;
-  slide: boolean;
-  interval: number;
-  isStatic: boolean;
+    pictures: PictureItem[];
+    hideIndicators: boolean;
+    hideControls: boolean;
+    slide: boolean;
+    interval: number;
+    isStatic: boolean;
 }

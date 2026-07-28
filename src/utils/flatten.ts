@@ -1,49 +1,49 @@
 import {
-  Comment,
-  createTextVNode,
-  Fragment,
-  type VNode,
-  type VNodeChild,
+    Comment,
+    createTextVNode,
+    Fragment,
+    type VNode,
+    type VNodeChild,
 } from 'vue'
 
 // o(n) flatten
 export function flatten (
-  vNodes: VNodeChild[],
-  filterCommentNode = true,
-  result: VNode[] = [],
+    vNodes: VNodeChild[],
+    filterCommentNode = true,
+    result: VNode[] = [],
 ): VNode[] {
-  vNodes.forEach((vNode) => {
-    if (vNode === null) {
-      return
-    }
+    vNodes.forEach((vNode) => {
+        if (vNode === null) {
+            return
+        }
 
-    if (typeof vNode !== 'object') {
-      if (typeof vNode === 'string' || typeof vNode === 'number') {
-        result.push(createTextVNode(String(vNode)))
-      }
+        if (typeof vNode !== 'object') {
+            if (typeof vNode === 'string' || typeof vNode === 'number') {
+                result.push(createTextVNode(String(vNode)))
+            }
 
-      return
-    }
+            return
+        }
 
-    if (Array.isArray(vNode)) {
-      flatten(vNode, filterCommentNode, result)
+        if (Array.isArray(vNode)) {
+            flatten(vNode, filterCommentNode, result)
 
-      return
-    }
+            return
+        }
 
-    if (vNode.type === Fragment) {
-      if (vNode.children === null) {
-        return
-      }
+        if (vNode.type === Fragment) {
+            if (vNode.children === null) {
+                return
+            }
 
-      if (Array.isArray(vNode.children)) {
-        flatten(vNode.children, filterCommentNode, result)
-      }
-      // rawSlot
-    } else if (vNode.type !== Comment) {
-      result.push(vNode)
-    }
-  })
+            if (Array.isArray(vNode.children)) {
+                flatten(vNode.children, filterCommentNode, result)
+            }
+            // rawSlot
+        } else if (vNode.type !== Comment) {
+            result.push(vNode)
+        }
+    })
 
-  return result
+    return result
 }

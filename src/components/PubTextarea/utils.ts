@@ -6,14 +6,14 @@ import { useMergeClasses } from '@/composables/useMergeClasses'
 import { type FormElementSize, type FormElementValidationStatus, validationStatusMap } from '@/types/form'
 
 export interface UseTextareaClassesProps {
-  disabled: Ref<boolean>;
-  class: ClassRef;
-  labelClass: ClassRef;
-  inputClass: ClassRef;
-  wrapperClass: ClassRef;
-  size: Ref<FormElementSize>;
-  validationStatus: Ref<FormElementValidationStatus | undefined>;
-  footerClass: ClassRef;
+    disabled: Ref<boolean>;
+    class: ClassRef;
+    labelClass: ClassRef;
+    inputClass: ClassRef;
+    wrapperClass: ClassRef;
+    size: Ref<FormElementSize>;
+    validationStatus: Ref<FormElementValidationStatus | undefined>;
+    footerClass: ClassRef;
 }
 
 const defaultLabelClasses = 'pub-textarea-label block mb-2 text-sm font-medium'
@@ -38,80 +38,80 @@ const successInputClasses = 'text-green-900 placeholder:text-green-500'
 const errorInputClasses = 'text-red-900 placeholder:text-red-500'
 
 const inputSizeClasses: Record<FormElementSize, string> = {
-  sm: 'px-2.5 py-2 text-sm',
-  md: 'px-3 py-2.5 text-sm',
-  lg: 'px-3.5 py-3 text-base',
-  xl: 'px-4 py-3.5 text-base',
+    sm: 'px-2.5 py-2 text-sm',
+    md: 'px-3 py-2.5 text-sm',
+    lg: 'px-3.5 py-3 text-base',
+    xl: 'px-4 py-3.5 text-base',
 }
 
 export function useTextareaClasses (props: UseTextareaClassesProps) {
-  const wrapperClasses = computed(() =>
-    useMergeClasses([defaultWrapperClasses, normalizeClass(props.wrapperClass?.value)]),
-  )
+    const wrapperClasses = computed(() =>
+        useMergeClasses([defaultWrapperClasses, normalizeClass(props.wrapperClass?.value)]),
+    )
 
-  const labelClasses = computed(() =>
-    useMergeClasses([
-      defaultLabelClasses,
-      normalizeClass(props.labelClass?.value),
-      props.validationStatus.value === validationStatusMap.Success
-        ? successTextClasses
-        : props.validationStatus.value === validationStatusMap.Error
-          ? errorTextClasses
-          : '',
-    ]),
-  )
+    const labelClasses = computed(() =>
+        useMergeClasses([
+            defaultLabelClasses,
+            normalizeClass(props.labelClass?.value),
+            props.validationStatus.value === validationStatusMap.Success
+                ? successTextClasses
+                : props.validationStatus.value === validationStatusMap.Error
+                    ? errorTextClasses
+                    : '',
+        ]),
+    )
 
-  const inputWrapperClasses = computed(() =>
-    useMergeClasses([
-      defaultInputWrapperClasses,
-      props.validationStatus.value === validationStatusMap.Success
-        ? successInputWrapperClasses
-        : props.validationStatus.value === validationStatusMap.Error
-          ? errorInputWrapperClasses
-          : '',
-      props.disabled.value ? disabledInputWrapperClasses : '',
-    ]),
-  )
+    const inputWrapperClasses = computed(() =>
+        useMergeClasses([
+            defaultInputWrapperClasses,
+            props.validationStatus.value === validationStatusMap.Success
+                ? successInputWrapperClasses
+                : props.validationStatus.value === validationStatusMap.Error
+                    ? errorInputWrapperClasses
+                    : '',
+            props.disabled.value ? disabledInputWrapperClasses : '',
+        ]),
+    )
 
-  const inputClasses = computed(() =>
-    useMergeClasses([
-      defaultInputClasses,
-      inputSizeClasses[props.size.value],
-      props.validationStatus.value === validationStatusMap.Success
-        ? successInputClasses
-        : props.validationStatus.value === validationStatusMap.Error
-          ? errorInputClasses
-          : '',
-      normalizeClass(props.inputClass?.value),
-      props.disabled.value ? disabledInputClasses : '',
-    ]),
-  )
+    const inputClasses = computed(() =>
+        useMergeClasses([
+            defaultInputClasses,
+            inputSizeClasses[props.size.value],
+            props.validationStatus.value === validationStatusMap.Success
+                ? successInputClasses
+                : props.validationStatus.value === validationStatusMap.Error
+                    ? errorInputClasses
+                    : '',
+            normalizeClass(props.inputClass?.value),
+            props.disabled.value ? disabledInputClasses : '',
+        ]),
+    )
 
-  const validationMessageClasses = computed(() =>
-    useMergeClasses([
-      defaultHelperClasses,
-      props.validationStatus.value === validationStatusMap.Success
-        ? successTextClasses
-        : props.validationStatus.value === validationStatusMap.Error
-          ? errorTextClasses
-          : '',
-    ]),
-  )
+    const validationMessageClasses = computed(() =>
+        useMergeClasses([
+            defaultHelperClasses,
+            props.validationStatus.value === validationStatusMap.Success
+                ? successTextClasses
+                : props.validationStatus.value === validationStatusMap.Error
+                    ? errorTextClasses
+                    : '',
+        ]),
+    )
 
-  const footerClasses = computed(() => useMergeClasses([
-    defaultFooterClasses,
-    normalizeClass(props.footerClass?.value),
-  ]))
+    const footerClasses = computed(() => useMergeClasses([
+        defaultFooterClasses,
+        normalizeClass(props.footerClass?.value),
+    ]))
 
-  const helperMessageClasses = computed(() => useMergeClasses([defaultHelperClasses]))
+    const helperMessageClasses = computed(() => useMergeClasses([defaultHelperClasses]))
 
-  return {
-    wrapperClasses,
-    labelClasses,
-    inputWrapperClasses,
-    inputClasses,
-    validationMessageClasses,
-    helperMessageClasses,
-    footerClasses,
-  }
+    return {
+        wrapperClasses,
+        labelClasses,
+        inputWrapperClasses,
+        inputClasses,
+        validationMessageClasses,
+        helperMessageClasses,
+        footerClasses,
+    }
 }

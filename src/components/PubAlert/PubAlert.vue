@@ -60,19 +60,19 @@ import PubButton from '@/components/PubButton/PubButton.vue'
 import PubIcon from '@/components/PubIcon/PubIcon.vue'
 
 const props = withDefaults(defineProps<AlertProps>(), {
-  color: 'blue',
-  dismissible: false,
-  bordered: false,
-  showIcon: false,
-  duration: 300,
-  class: '',
+    color: 'blue',
+    dismissible: false,
+    bordered: false,
+    showIcon: false,
+    duration: 300,
+    class: '',
 })
 
 const slots = defineSlots<{
-  'default': { handleClose: () => void };
-  'close-button': { handleClose: () => void };
-  'icon': unknown;
-  'title': unknown;
+    'default': { handleClose: () => void };
+    'close-button': { handleClose: () => void };
+    'icon': unknown;
+    'title': unknown;
 }>()
 
 const attrs = useAttrs()
@@ -84,8 +84,8 @@ const emit = defineEmits(['close'])
 const { wrapperClasses, closeButtonClasses } = useAlertClasses(toRefs(props))
 
 function handleClose () {
-  emit('close')
-  visible.value = false
+    emit('close')
+    visible.value = false
 }
 </script>
 

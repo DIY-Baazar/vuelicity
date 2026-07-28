@@ -13,11 +13,11 @@ import { reactive } from 'vue'
 import { PubPhoneInput } from 'vuelicity'
 
 const isdCodes = [
-  { code: '+1', name: 'US 🇺🇸' },
-  { code: '+44', name: 'UK 🇬🇧' },
-  { code: '+91', name: 'IND 🇮🇳' },
+    { code: '+1', name: 'US 🇺🇸' },
+    { code: '+44', name: 'UK 🇬🇧' },
+    { code: '+91', name: 'IND 🇮🇳' },
 ]
 const formData = reactive({
-  phone: '',
+    phone: '',
 })
 </script>

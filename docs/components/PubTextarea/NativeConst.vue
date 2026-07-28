@@ -43,7 +43,7 @@ const message = ref('')
 const submitted = ref(false)
 
 const validationStatus = computed(() => {
-  if (!submitted.value) return undefined
-  return message.value.length >= 10 ? 'success' : 'error'
+    if (!submitted.value) return undefined
+    return message.value.length >= 10 ? 'success' : 'error'
 })
 </script>

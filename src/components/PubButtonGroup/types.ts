@@ -1,3 +1,3 @@
 export interface ButtonGroupProps {
-  rounded?: boolean;
+    rounded?: boolean;
 }

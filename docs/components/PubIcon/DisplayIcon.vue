@@ -21,18 +21,18 @@
 import { PubIcon } from 'vuelicity'
 
 const props = defineProps({
-  name: {
-    type: String,
-    required: true,
-  },
-  type: {
-    type: String,
-    default: 'outline',
-  },
+    name: {
+        type: String,
+        required: true,
+    },
+    type: {
+        type: String,
+        default: 'outline',
+    },
 })
 
 function onClickCopy () {
-  navigator.clipboard.writeText(props.name)
-  alert('Copied to clipboard')
+    navigator.clipboard.writeText(props.name)
+    alert('Copied to clipboard')
 }
 </script>

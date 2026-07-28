@@ -24,11 +24,11 @@ import { useCardClasses } from './utils'
 import type { CardProps } from './types'
 
 const props = withDefaults(defineProps<CardProps>(), {
-  href: '',
-  imgAlt: '',
-  imgSrc: '',
-  variant: 'default',
-  class: '',
+    href: '',
+    imgAlt: '',
+    imgSrc: '',
+    variant: 'default',
+    class: '',
 })
 
 const componentName = computed(() => (props.href ? 'a' : 'div'))

@@ -8,13 +8,13 @@
 import { useMergeClasses } from '@/composables/useMergeClasses'
 
 interface DCProps {
-  flexType?: 'col' | 'row';
-  class?: string;
+    flexType?: 'col' | 'row';
+    class?: string;
 }
 
 const props = withDefaults(defineProps<DCProps>(), {
-  flexType: 'row',
-  class: '',
+    flexType: 'row',
+    class: '',
 })
 </script>
 

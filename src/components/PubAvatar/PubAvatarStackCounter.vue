@@ -9,7 +9,7 @@
 import type { AvatarStackCounterProps } from './types'
 
 withDefaults(defineProps<AvatarStackCounterProps>(), {
-  total: 1,
-  href: '#',
+    total: 1,
+    href: '#',
 })
 </script>

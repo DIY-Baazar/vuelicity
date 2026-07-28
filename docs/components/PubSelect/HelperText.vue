@@ -20,8 +20,8 @@ import { PubSelect } from 'vuelicity'
 
 const selected = ref('')
 const countries = [
-  { value: 'us', name: 'United States' },
-  { value: 'ca', name: 'Canada' },
-  { value: 'fr', name: 'France' },
+    { value: 'us', name: 'United States' },
+    { value: 'ca', name: 'Canada' },
+    { value: 'fr', name: 'France' },
 ]
 </script>

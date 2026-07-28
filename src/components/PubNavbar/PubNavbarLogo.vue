@@ -21,14 +21,14 @@ import { computed, resolveComponent } from 'vue'
 import type { NavbarLogoProps } from './types'
 
 const props = withDefaults(defineProps<NavbarLogoProps>(), {
-  link: '/',
-  imageUrl: '/images/logo.png',
-  alt: 'Logo',
-  as: 'a',
-  linkAttr: 'href',
+    link: '/',
+    imageUrl: '/images/logo.png',
+    alt: 'Logo',
+    as: 'a',
+    linkAttr: 'href',
 })
 
 const componentName = computed(() => {
-  return props.as !== 'a' ? resolveComponent(props.as) : 'a'
+    return props.as !== 'a' ? resolveComponent(props.as) : 'a'
 })
 </script>

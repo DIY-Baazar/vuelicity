@@ -5,8 +5,8 @@ import type { ClassRef } from '@/types/global'
 import { useMergeClasses } from '@/composables/useMergeClasses'
 
 interface UseKbdProps {
-  hasIcon: Ref<boolean>;
-  class: ClassRef;
+    hasIcon: Ref<boolean>;
+    class: ClassRef;
 }
 
 const defaultKbdClasses =
@@ -14,13 +14,13 @@ const defaultKbdClasses =
 const iconKbdClasses = 'inline-flex items-center'
 
 export function useKbdClasses (props: UseKbdProps) {
-  const kbdClasses = useMergeClasses([
-    defaultKbdClasses,
-    props.hasIcon.value ? iconKbdClasses : '',
-    normalizeClass(props.class.value),
-  ])
+    const kbdClasses = useMergeClasses([
+        defaultKbdClasses,
+        props.hasIcon.value ? iconKbdClasses : '',
+        normalizeClass(props.class.value),
+    ])
 
-  return {
-    kbdClasses,
-  }
+    return {
+        kbdClasses,
+    }
 }

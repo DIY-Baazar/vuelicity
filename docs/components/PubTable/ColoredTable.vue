@@ -51,12 +51,12 @@
 
 <script lang="ts" setup>
 import {
-  PubA,
-  PubTable,
-  PubTableBody,
-  PubTableCell,
-  PubTableHead,
-  PubTableHeadCell,
-  PubTableRow,
+    PubA,
+    PubTable,
+    PubTableBody,
+    PubTableCell,
+    PubTableHead,
+    PubTableHeadCell,
+    PubTableRow,
 } from 'vuelicity'
 </script>

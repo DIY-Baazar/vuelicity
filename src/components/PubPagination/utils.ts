@@ -5,8 +5,8 @@ import type { PaginationLayout, PaginationSize } from './types'
 import { useMergeClasses } from '@/composables/useMergeClasses'
 
 interface UsePaginationClassProps {
-  layout: PaginationLayout;
-  size: PaginationSize;
+    layout: PaginationLayout;
+    size: PaginationSize;
 }
 
 const baseNavigationButtonClasses = 'items-center justify-center '
@@ -16,15 +16,15 @@ const basePaginationButtonClasses =
 const tableLayoutClasses = 'rounded-none first:rounded-l last:rounded-r'
 
 export function UsePaginationButtonClasses (props: UsePaginationClassProps) {
-  return computed(() => useMergeClasses([
-    basePaginationButtonClasses,
-  ]))
+    return computed(() => useMergeClasses([
+        basePaginationButtonClasses,
+    ]))
 }
 
 export function UseNavigationButtonClasses (props: UsePaginationClassProps) {
-  return computed(() => useMergeClasses([
-    baseNavigationButtonClasses,
-    props.layout === 'table' ? tableLayoutClasses : '',
-    props.layout === 'navigation' ? 'not-last:mr-3 rounded-lg' : 'not-last:border-r-0',
-  ]))
+    return computed(() => useMergeClasses([
+        baseNavigationButtonClasses,
+        props.layout === 'table' ? tableLayoutClasses : '',
+        props.layout === 'navigation' ? 'not-last:mr-3 rounded-lg' : 'not-last:border-r-0',
+    ]))
 }

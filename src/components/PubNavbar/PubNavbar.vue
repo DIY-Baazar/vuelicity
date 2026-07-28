@@ -52,17 +52,17 @@ const { smaller } = useBreakpoints()
 const isShowMobileMenu = ref(false)
 
 const toggleMobileMenu = () => {
-  isShowMobileMenu.value = !isShowMobileMenu.value
+    isShowMobileMenu.value = !isShowMobileMenu.value
 }
 
 const slots = useSlots()
 
 const props = withDefaults(defineProps<NavbarProps>(), {
-  color: 'default',
-  containerClass: '',
-  class: '',
-  noToggleButton: false,
-  collapseBreakpoint: 'md',
+    color: 'default',
+    containerClass: '',
+    class: '',
+    noToggleButton: false,
+    collapseBreakpoint: 'md',
 })
 
 const { wrapperClasses, spanClasses } = useNavbarClasses(toRefs(props))

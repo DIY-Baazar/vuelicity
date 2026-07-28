@@ -78,22 +78,22 @@ import PubButton from '@/components/PubButton/PubButton.vue'
 import PubIcon from '@/components/PubIcon/PubIcon.vue'
 
 const props = withDefaults(defineProps<DropdownProps>(), {
-  alignToEnd: false,
-  class: '',
-  closeInside: false,
-  type: 'button',
-  color: 'blue',
-  contentWrapperClass: '',
-  disabled: false,
-  placement: 'bottom',
-  text: 'Dropdown',
-  transition: '',
-  triggerClass: '',
-  triggerWrapperClass: '',
-  duration: 250,
-  offsetDistance: 8,
-  offsetSkidding: 0,
-  isActive: false,
+    alignToEnd: false,
+    class: '',
+    closeInside: false,
+    type: 'button',
+    color: 'blue',
+    contentWrapperClass: '',
+    disabled: false,
+    placement: 'bottom',
+    text: 'Dropdown',
+    transition: '',
+    triggerClass: '',
+    triggerWrapperClass: '',
+    duration: 250,
+    offsetDistance: 8,
+    offsetSkidding: 0,
+    isActive: false,
 })
 
 const isContentVisible = ref(false)
@@ -103,60 +103,60 @@ const contentWrapper = ref<HTMLDivElement>()
 const contentStyles = ref('')
 
 const placementCalculator: Record<DropdownPlacement, (contentRect: DOMRect, triggerRect: DOMRect) => string> = {
-  bottom: (contentRect: DOMRect, triggerRect: DOMRect): string =>
+    bottom: (contentRect: DOMRect, triggerRect: DOMRect): string =>
         `bottom: -${contentRect.height + props.offsetDistance}px;` +
         (props.offsetSkidding > 0 ? `transform: translateX(${triggerRect.width + props.offsetSkidding}px);` : ''),
-  left: (contentRect: DOMRect, triggerRect: DOMRect): string =>
+    left: (contentRect: DOMRect, triggerRect: DOMRect): string =>
         `left: -${contentRect.width + props.offsetDistance}px;` +
         (props.offsetSkidding > 0 ? `transform: translateY(${triggerRect.height + props.offsetSkidding}px);` : ''),
-  right: (contentRect: DOMRect, triggerRect: DOMRect): string =>
+    right: (contentRect: DOMRect, triggerRect: DOMRect): string =>
         `right: -${contentRect.width + props.offsetDistance}px;` +
         (props.offsetSkidding > 0 ? `transform: translateY(${triggerRect.height + props.offsetSkidding}px);` : ''),
-  top: (contentRect: DOMRect, triggerRect: DOMRect): string =>
+    top: (contentRect: DOMRect, triggerRect: DOMRect): string =>
         `top: -${contentRect.height + props.offsetDistance}px;` +
         (props.offsetSkidding > 0 ? `transform: translateX(${triggerRect.width + props.offsetSkidding}px);` : ''),
 }
 
 const handleToggle = () => {
-  if (props.disabled) return
-  isContentVisible.value = !isContentVisible.value
+    if (props.disabled) return
+    isContentVisible.value = !isContentVisible.value
 }
 const handleHide = (event: MouseEvent) => {
-  if (props.closeInside) {
-    const target = event.target as HTMLElement
-    if (contentWrapper.value && contentWrapper.value.contains(target)) {
-      isContentVisible.value = false
+    if (props.closeInside) {
+        const target = event.target as HTMLElement
+        if (contentWrapper.value && contentWrapper.value.contains(target)) {
+            isContentVisible.value = false
+        }
     }
-  }
 }
 onClickOutside(dropdownWrapper, () => isContentVisible.value && (isContentVisible.value = false))
 
 const calcPlacement = () => {
-  const contentRect = contentWrapper.value?.getBoundingClientRect()
-  const triggerRect = triggerWrapper.value?.getBoundingClientRect()
-  contentStyles.value =
+    const contentRect = contentWrapper.value?.getBoundingClientRect()
+    const triggerRect = triggerWrapper.value?.getBoundingClientRect()
+    contentStyles.value =
         contentRect && triggerRect ? placementCalculator[props.placement](contentRect, triggerRect) : ''
 }
 
 const emit = defineEmits<{
-  show: [];
-  hide: [];
+    show: [];
+    hide: [];
 }>()
 
 watch(isContentVisible, (value: boolean) => {
-  if (value) {
-    emit('show')
-    nextTick(() => calcPlacement())
-  } else {
-    emit('hide')
-  }
+    if (value) {
+        emit('show')
+        nextTick(() => calcPlacement())
+    } else {
+        emit('hide')
+    }
 })
 
 const transitionName = computed(() => (!props.transition ? `to-${props.placement}` : props.transition))
 
 const { wrapperClasses, contentWrapperClasses, triggerWrapperClasses, triggerAppendClass } = useDropdownClasses({
-  ...toRefs(props),
-  isContentVisible,
+    ...toRefs(props),
+    isContentVisible,
 })
 </script>
 

@@ -50,10 +50,10 @@ import { PubButton, PubModal } from 'vuelicity'
 const isModalOpen = ref(false)
 
 const openModal = () => {
-  isModalOpen.value = true
+    isModalOpen.value = true
 }
 
 const closeModal = () => {
-  isModalOpen.value = false
+    isModalOpen.value = false
 }
 </script>

@@ -30,6 +30,6 @@ export type SpinnerSize =
   | '12'
 
 export interface SpinnerProps {
-  color?: SpinnerColor;
-  size?: SpinnerSize;
+    color?: SpinnerColor;
+    size?: SpinnerSize;
 }

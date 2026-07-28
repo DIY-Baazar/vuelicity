@@ -6,13 +6,13 @@ import { useMergeClasses } from '@/composables/useMergeClasses'
 import { type FormElementSize, type FormElementValidationStatus, validationStatusMap } from '@/types/form'
 
 interface UseSelectClassesProps {
-  disabled: Ref<boolean>;
-  validationStatus: Ref<FormElementValidationStatus | undefined>;
-  labelClass?: ClassRef;
-  class?: ClassRef;
-  size: Ref<FormElementSize>;
-  underline: Ref<boolean>;
-  wrapperClass?: ClassRef;
+    disabled: Ref<boolean>;
+    validationStatus: Ref<FormElementValidationStatus | undefined>;
+    labelClass?: ClassRef;
+    class?: ClassRef;
+    size: Ref<FormElementSize>;
+    underline: Ref<boolean>;
+    wrapperClass?: ClassRef;
 }
 
 const defaultLabelClasses = 'pub-select-label block mb-2 text-sm font-medium'
@@ -29,72 +29,72 @@ const successSelectClasses = 'bg-green-50 border-green-500 focus:ring-green-500 
 const errorSelectClasses = 'bg-red-50 border-red-500 focus:ring-red-500 focus:border-red-500 text-red-900 placeholder-red-700'
 
 const selectSizeClasses: Record<FormElementSize, string> = {
-  sm: 'p-2 text-sm',
-  md: 'p-2.5 text-sm',
-  lg: 'p-4',
-  xl: 'p-5 text-base',
+    sm: 'p-2 text-sm',
+    md: 'p-2.5 text-sm',
+    lg: 'p-4',
+    xl: 'p-5 text-base',
 }
 const underlineSelectClasses =
     'bg-transparent border-b-2 border-grey-200 focus:outline-none focus:ring-0 focus:border-grey-200 peer'
 
 export function useSelectClasses (props: UseSelectClassesProps) {
-  const wrapperClasses = computed(() =>
-    useMergeClasses([defaultWrapperClasses, normalizeClass(props.wrapperClass?.value)]),
-  )
+    const wrapperClasses = computed(() =>
+        useMergeClasses([defaultWrapperClasses, normalizeClass(props.wrapperClass?.value)]),
+    )
 
-  const labelClasses = computed(() =>
-    useMergeClasses([
-      defaultLabelClasses,
-      normalizeClass(props.labelClass?.value),
-      props.validationStatus.value === validationStatusMap.Success
-        ? successTextClasses
-        : props.validationStatus.value === validationStatusMap.Error
-          ? errorTextClasses
-          : '',
-    ]),
-  )
-
-  const selectClasses = computed(() => {
-    const underlineByStatus =
+    const labelClasses = computed(() =>
+        useMergeClasses([
+            defaultLabelClasses,
+            normalizeClass(props.labelClass?.value),
             props.validationStatus.value === validationStatusMap.Success
-              ? 'focus:border-green-500'
-              : props.validationStatus.value === validationStatusMap.Error
-                ? 'focus:border-red-500'
-                : ''
+                ? successTextClasses
+                : props.validationStatus.value === validationStatusMap.Error
+                    ? errorTextClasses
+                    : '',
+        ]),
+    )
 
-    return useMergeClasses([
-      defaultSelectClasses,
-      props.validationStatus.value === validationStatusMap.Success
-        ? successSelectClasses
-        : props.validationStatus.value === validationStatusMap.Error
-          ? errorSelectClasses
-          : '',
-      selectSizeClasses[props.size.value],
-      normalizeClass(props.class?.value),
-      props.disabled.value ? disabledSelectClasses : '',
-      props.underline.value ? underlineSelectClasses : 'border border-grey-300 rounded-lg',
-      props.underline.value ? underlineByStatus : '',
-    ])
-  })
+    const selectClasses = computed(() => {
+        const underlineByStatus =
+            props.validationStatus.value === validationStatusMap.Success
+                ? 'focus:border-green-500'
+                : props.validationStatus.value === validationStatusMap.Error
+                    ? 'focus:border-red-500'
+                    : ''
 
-  const validationMessageClasses = computed(() =>
-    useMergeClasses([
-      defaultHelperClasses,
-      props.validationStatus.value === validationStatusMap.Success
-        ? successTextClasses
-        : props.validationStatus.value === validationStatusMap.Error
-          ? errorTextClasses
-          : '',
-    ]),
-  )
+        return useMergeClasses([
+            defaultSelectClasses,
+            props.validationStatus.value === validationStatusMap.Success
+                ? successSelectClasses
+                : props.validationStatus.value === validationStatusMap.Error
+                    ? errorSelectClasses
+                    : '',
+            selectSizeClasses[props.size.value],
+            normalizeClass(props.class?.value),
+            props.disabled.value ? disabledSelectClasses : '',
+            props.underline.value ? underlineSelectClasses : 'border border-grey-300 rounded-lg',
+            props.underline.value ? underlineByStatus : '',
+        ])
+    })
 
-  const helperMessageClasses = computed(() => useMergeClasses([defaultHelperClasses]))
+    const validationMessageClasses = computed(() =>
+        useMergeClasses([
+            defaultHelperClasses,
+            props.validationStatus.value === validationStatusMap.Success
+                ? successTextClasses
+                : props.validationStatus.value === validationStatusMap.Error
+                    ? errorTextClasses
+                    : '',
+        ]),
+    )
 
-  return {
-    wrapperClasses,
-    labelClasses,
-    selectClasses,
-    validationMessageClasses,
-    helperMessageClasses,
-  }
+    const helperMessageClasses = computed(() => useMergeClasses([defaultHelperClasses]))
+
+    return {
+        wrapperClasses,
+        labelClasses,
+        selectClasses,
+        validationMessageClasses,
+        helperMessageClasses,
+    }
 }

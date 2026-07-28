@@ -7,10 +7,10 @@ export type BadgeTheme =
 export type BadgeSize = 'xs' | 'sm' | 'md'
 
 export interface BadgeProps {
-  color?: BadgeTheme;
-  size?: BadgeSize;
-  href?: string | null;
-  bordered?: boolean;
-  rounded?: boolean;
-  class?: string;
+    color?: BadgeTheme;
+    size?: BadgeSize;
+    href?: string | null;
+    bordered?: boolean;
+    rounded?: boolean;
+    class?: string;
 };

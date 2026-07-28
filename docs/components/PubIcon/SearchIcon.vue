@@ -42,12 +42,12 @@ import DisplayIcon from './DisplayIcon.vue'
 const searchTerm = ref('')
 const isSolid = ref(false)
 const filteredIcons = computed(() => {
-  const searchTermLowerCase = searchTerm.value.toLowerCase().trim()
+    const searchTermLowerCase = searchTerm.value.toLowerCase().trim()
 
-  if (searchTermLowerCase === '') return iconsList
+    if (searchTermLowerCase === '') return iconsList
 
-  return iconsList.filter((icon) => {
-    return icon.toLowerCase().includes(searchTermLowerCase)
-  })
+    return iconsList.filter((icon) => {
+        return icon.toLowerCase().includes(searchTermLowerCase)
+    })
 })
 </script>

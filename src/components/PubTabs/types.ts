@@ -15,29 +15,29 @@ export type TabsColor = ThemeColor
 // | "dark"
 
 export interface TabsProps {
-  variant?: TabsVariant;
-  modelValue?: string;
-  directive?: 'if' | 'show';
-  tabClass?: ClassInput;
-  itemClass?: ClassInput;
-  itemActiveClass?: ClassInput;
-  iconPosition?: TabsIconPosition;
-  vertical?: boolean;
-  fullWidth?: boolean;
-  color?: TabsColor;
+    variant?: TabsVariant;
+    modelValue?: string;
+    directive?: 'if' | 'show';
+    tabClass?: ClassInput;
+    itemClass?: ClassInput;
+    itemActiveClass?: ClassInput;
+    iconPosition?: TabsIconPosition;
+    vertical?: boolean;
+    fullWidth?: boolean;
+    color?: TabsColor;
 }
 
 export type TabsState = TabsProps
 
 export interface TabProps {
-  name: string;
-  title?: string;
-  disabled?: boolean;
+    name: string;
+    title?: string;
+    disabled?: boolean;
 }
 
 export interface TabContentProps {
-  name: string;
-  title: string;
-  disabled: boolean;
-  active: boolean;
+    name: string;
+    title: string;
+    disabled: boolean;
+    active: boolean;
 }

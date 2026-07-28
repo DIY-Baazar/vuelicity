@@ -14,21 +14,21 @@ import { useNavbarCollapseClasses } from './utils'
 import type { NavbarCollapseProps, NavbarState } from './types'
 
 const props = withDefaults(defineProps<NavbarCollapseProps>(), {
-  isShowMenu: false,
-  class: '',
+    isShowMenu: false,
+    class: '',
 })
 
 const injected = inject<{ navbarState: NavbarState }>('navbarState')
 
 if (!injected) {
-  throw new Error('PubNavbar: missing injected value "navbarState"')
+    throw new Error('PubNavbar: missing injected value "navbarState"')
 }
 
 const { navbarState } = injected
 
 const { wrapperClasses, spanClasses } = useNavbarCollapseClasses({
-  ...toRefs(props),
-  noToggleButton: computed(() => navbarState.noToggleButton),
-  collapseBreakpoint: computed(() => navbarState.collapseBreakpoint),
+    ...toRefs(props),
+    noToggleButton: computed(() => navbarState.noToggleButton),
+    collapseBreakpoint: computed(() => navbarState.collapseBreakpoint),
 })
 </script>

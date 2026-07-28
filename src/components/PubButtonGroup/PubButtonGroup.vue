@@ -13,7 +13,7 @@ import type { ButtonGroupProps } from './types'
 
 const props = withDefaults(defineProps<ButtonGroupProps>(
 ), {
-  rounded: false,
+    rounded: false,
 })
 </script>
 

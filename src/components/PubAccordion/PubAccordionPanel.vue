@@ -13,16 +13,16 @@ import { computed, inject, onMounted, provide, useId, watch } from 'vue'
 import type { AccordionPanel, AccordionPanelProps, AccordionPanelState, AccordionState } from './types'
 
 const props = withDefaults(defineProps<AccordionPanelProps>(), {
-  activeClass: '',
+    activeClass: '',
 })
 
 const injected = inject<{
-  accordionState: AccordionState;
-  registerPanel: (panel: AccordionPanelState) => void;
+    accordionState: AccordionState;
+    registerPanel: (panel: AccordionPanelState) => void;
 }>('accordionState')
 
 if (!injected) {
-  throw new Error('PubAccordion: missing injected value "accordionState"')
+    throw new Error('PubAccordion: missing injected value "accordionState"')
 }
 
 const { accordionState, registerPanel } = injected
@@ -31,34 +31,34 @@ const panelId = useId()
 provide('panelId', panelId)
 
 const accordionPanelState = computed(() =>
-  accordionState.panels.find((panel: AccordionPanelState) => panel.id === panelId),
+    accordionState.panels.find((panel: AccordionPanelState) => panel.id === panelId),
 )
 
 const isVisible = computed(() => accordionPanelState.value?.isVisible)
 
 const emit = defineEmits<{
-  show: [];
-  hide: [];
+    show: [];
+    hide: [];
 }>()
 
 watch(isVisible, (value) => {
-  if (value) {
-    emit('show')
-  } else {
-    emit('hide')
-  }
+    if (value) {
+        emit('show')
+    } else {
+        emit('hide')
+    }
 })
 
 onMounted(() => {
-  const panelOrder = accordionState.panels.length
+    const panelOrder = accordionState.panels.length
 
-  const panel: AccordionPanel = {
-    ...props,
-    id: panelId,
-    isVisible: (panelOrder === 0 && !accordionState.collapsed) || false,
-    order: panelOrder,
-  }
+    const panel: AccordionPanel = {
+        ...props,
+        id: panelId,
+        isVisible: (panelOrder === 0 && !accordionState.collapsed) || false,
+        order: panelOrder,
+    }
 
-  registerPanel(panel)
+    registerPanel(panel)
 })
 </script>

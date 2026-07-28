@@ -4,21 +4,21 @@ export type AvatarStatusPosition = 'top-right' | 'top-left' | 'bottom-right' | '
 export type AvatarType = 'rounded' | 'default'
 
 export interface AvatarProps {
-  size?: AvatarSize;
-  src?: string | null;
-  rounded?: boolean;
-  bordered?: boolean;
-  class?: string;
-  alt?: string;
-  status?: AvatarStatus | null;
-  statusPosition?: AvatarStatusPosition | null;
-  initials?: string | null;
-  stacked?: boolean;
+    size?: AvatarSize;
+    src?: string | null;
+    rounded?: boolean;
+    bordered?: boolean;
+    class?: string;
+    alt?: string;
+    status?: AvatarStatus | null;
+    statusPosition?: AvatarStatusPosition | null;
+    initials?: string | null;
+    stacked?: boolean;
 }
 
 export interface AvatarStackCounterProps {
-  total: number;
-  href: string;
+    total: number;
+    href: string;
 }
 
 export type AvatarDotIndicatorPositionClasses = `${AvatarStatusPosition}-${AvatarType}`

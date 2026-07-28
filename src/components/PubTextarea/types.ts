@@ -2,17 +2,17 @@ import type { FormElementAutoFill, FormElementSize, FormElementValidationStatus 
 import type { ClassInput } from '@/types/global'
 
 export interface TextareaProps {
-  class?: ClassInput;
-  name?: string;
-  disabled?: boolean;
-  inputClass?: ClassInput;
-  label?: string;
-  labelClass?: ClassInput;
-  required?: boolean;
-  size?: FormElementSize;
-  validationStatus?: FormElementValidationStatus;
-  wrapperClass?: ClassInput;
-  autocomplete?: FormElementAutoFill;
-  rows?: number;
-  footerClass?: ClassInput;
+    class?: ClassInput;
+    name?: string;
+    disabled?: boolean;
+    inputClass?: ClassInput;
+    label?: string;
+    labelClass?: ClassInput;
+    required?: boolean;
+    size?: FormElementSize;
+    validationStatus?: FormElementValidationStatus;
+    wrapperClass?: ClassInput;
+    autocomplete?: FormElementAutoFill;
+    rows?: number;
+    footerClass?: ClassInput;
 }

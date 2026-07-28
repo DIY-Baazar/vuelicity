@@ -9,23 +9,23 @@ const __dirname = dirname(__filename)
 const prefix = 'Pub'
 
 function createDir (path) {
-  if (!fs.existsSync(path)) {
-    fs.mkdirSync(path, { recursive: true })
-  }
+    if (!fs.existsSync(path)) {
+        fs.mkdirSync(path, { recursive: true })
+    }
 }
 
 function toDashConstantCase (string) {
-  return string
-    .replace(/([a-z0-9])([A-Z])/g, '$1-$2') // Insert dash between lowercase/number and uppercase
-    .toLowerCase()
+    return string
+        .replace(/([a-z0-9])([A-Z])/g, '$1-$2') // Insert dash between lowercase/number and uppercase
+        .toLowerCase()
 }
 
 const rl = readline.createInterface({ input, output })
 let componentName = await rl.question('Enter the component name (without Pub prefix): ')
 
 if (!componentName) {
-  console.error('Component name is required')
-  process.exit(1)
+    console.error('Component name is required')
+    process.exit(1)
 }
 rl.close()
 
@@ -36,7 +36,7 @@ const componentDir = join(componentsDir, componentName)
 createDir(componentDir)
 
 fs.writeFileSync(
-  join(componentDir, `${componentName}.vue`),
+    join(componentDir, `${componentName}.vue`),
     `<script lang="ts" setup>
 import { computed, toRefs } from "vue";
 </script>
@@ -50,7 +50,7 @@ import { computed, toRefs } from "vue";
 fs.writeFileSync(join(componentDir, 'types.ts'), '')
 fs.writeFileSync(join(componentDir, 'utils.ts'), '')
 fs.writeFileSync(
-  join(__dirname, '..', 'docs', 'components', `${toDashConstantCase(componentName)}.md`),
+    join(__dirname, '..', 'docs', 'components', `${toDashConstantCase(componentName)}.md`),
     `---
 title: ${componentName}
 description: Documentation for the ${componentName} component.
@@ -88,14 +88,14 @@ description: Documentation for the ${componentName} component.
 // Writing into the component export
 const componentExportFile = join(componentsDir, 'index.ts')
 const componentExportContent = fs
-  .readdirSync(componentsDir, { recursive: true })
-  .filter((file) => file.endsWith('.vue') && !file.startsWith('_'))
-  .sort() // Ensure alphabetical order
-  .map((file) => {
-    return { file: file.replace(/\\/g, '/'), component: file.replace('.vue', '').replace(/\\/g, '/').split('/').pop() }
-  })
-  .map(({ file, component }) => `export { default as ${component} } from "./${file}";`)
-  .join('\n')
+    .readdirSync(componentsDir, { recursive: true })
+    .filter((file) => file.endsWith('.vue') && !file.startsWith('_'))
+    .sort() // Ensure alphabetical order
+    .map((file) => {
+        return { file: file.replace(/\\/g, '/'), component: file.replace('.vue', '').replace(/\\/g, '/').split('/').pop() }
+    })
+    .map(({ file, component }) => `export { default as ${component} } from "./${file}";`)
+    .join('\n')
 
 fs.writeFileSync(componentExportFile, componentExportContent)
 

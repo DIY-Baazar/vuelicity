@@ -40,16 +40,16 @@ import { useRadioClasses } from './utils'
 import type { RadioElementType, RadioProps } from './types'
 
 const props = withDefaults(defineProps<RadioProps>(), {
-  disabled: false,
-  label: '',
-  labelClass: '',
-  class: '',
-  wrapperClass: '',
-  name: undefined,
-  value: undefined,
-  bordered: false,
-  size: 'md',
-  color: 'blue',
+    disabled: false,
+    label: '',
+    labelClass: '',
+    class: '',
+    wrapperClass: '',
+    name: undefined,
+    value: undefined,
+    bordered: false,
+    size: 'md',
+    color: 'blue',
 })
 
 defineOptions({ inheritAttrs: false })

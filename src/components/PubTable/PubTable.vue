@@ -16,15 +16,15 @@ import type { TableProps } from './types'
 import { useMergeClasses } from '@/composables/useMergeClasses'
 
 const props = withDefaults(
-  defineProps<TableProps>(),
-  {
-    class: '',
-    wrapperClass: '',
-    color: 'default',
-    hoverable: false,
-    striped: false,
-    stripedColumns: false,
-  },
+    defineProps<TableProps>(),
+    {
+        class: '',
+        wrapperClass: '',
+        color: 'default',
+        hoverable: false,
+        striped: false,
+        stripedColumns: false,
+    },
 )
 
 const tableState = reactive(props)

@@ -5,11 +5,11 @@ import type { ClassRef } from '@/types/global'
 import { useMergeClasses } from '@/composables/useMergeClasses'
 
 interface UseCheckboxClassesProps {
-  class: ClassRef;
-  wrapperClass: ClassRef;
-  labelClass: ClassRef;
-  disabled: Ref<boolean>;
-  bordered: Ref<boolean>;
+    class: ClassRef;
+    wrapperClass: ClassRef;
+    labelClass: ClassRef;
+    disabled: Ref<boolean>;
+    bordered: Ref<boolean>;
 }
 
 const defaultWrapperClasses = 'pub-checkbox-container w-full'
@@ -20,32 +20,32 @@ const disabledLabelClasses = 'text-grey-400'
 const defaultHelperClasses = 'ml-6 text-xs font-normal text-grey-500'
 
 export function useCheckboxClasses (props: UseCheckboxClassesProps) {
-  const wrapperClasses = computed(() =>
-    useMergeClasses([
-      defaultWrapperClasses,
-      props.bordered.value ? 'border border-grey-300 rounded shadow-xs p-4' : '',
-      normalizeClass(props.wrapperClass?.value),
-    ]),
-  )
+    const wrapperClasses = computed(() =>
+        useMergeClasses([
+            defaultWrapperClasses,
+            props.bordered.value ? 'border border-grey-300 rounded shadow-xs p-4' : '',
+            normalizeClass(props.wrapperClass?.value),
+        ]),
+    )
 
-  const checkboxClasses = computed(() =>
-    useMergeClasses([defaultCheckboxClasses, normalizeClass(props.class?.value)]),
-  )
+    const checkboxClasses = computed(() =>
+        useMergeClasses([defaultCheckboxClasses, normalizeClass(props.class?.value)]),
+    )
 
-  const labelClasses = computed(() =>
-    useMergeClasses([
-      defaultLabelClasses,
-      props.disabled.value ? disabledLabelClasses : '',
-      normalizeClass(props.labelClass?.value),
-    ]),
-  )
+    const labelClasses = computed(() =>
+        useMergeClasses([
+            defaultLabelClasses,
+            props.disabled.value ? disabledLabelClasses : '',
+            normalizeClass(props.labelClass?.value),
+        ]),
+    )
 
-  const helperMessageClasses = computed(() => useMergeClasses([defaultHelperClasses]))
+    const helperMessageClasses = computed(() => useMergeClasses([defaultHelperClasses]))
 
-  return {
-    wrapperClasses,
-    checkboxClasses,
-    labelClasses,
-    helperMessageClasses,
-  }
+    return {
+        wrapperClasses,
+        checkboxClasses,
+        labelClasses,
+        helperMessageClasses,
+    }
 }

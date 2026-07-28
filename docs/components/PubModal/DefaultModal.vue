@@ -53,29 +53,29 @@ import { PubButton, PubModal } from 'vuelicity'
 const isModalOpen = ref(false)
 
 defineProps({
-  modalTriggerText: {
-    type: String,
-    default: 'Default Modal',
-  },
-  modalSize: {
-    type: String,
-    default: 'md',
-  },
-  modalPosition: {
-    type: String,
-    default: 'center',
-  },
-  focusTrap: {
-    type: Boolean,
-    default: true,
-  },
+    modalTriggerText: {
+        type: String,
+        default: 'Default Modal',
+    },
+    modalSize: {
+        type: String,
+        default: 'md',
+    },
+    modalPosition: {
+        type: String,
+        default: 'center',
+    },
+    focusTrap: {
+        type: Boolean,
+        default: true,
+    },
 })
 
 const openModal = () => {
-  isModalOpen.value = true
+    isModalOpen.value = true
 }
 
 const closeModal = () => {
-  isModalOpen.value = false
+    isModalOpen.value = false
 }
 </script>

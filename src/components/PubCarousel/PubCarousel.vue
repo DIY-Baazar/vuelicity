@@ -80,11 +80,11 @@ import type { CarouselProps } from './types'
 import PubIcon from '@/components/PubIcon/PubIcon.vue'
 
 const props = withDefaults(defineProps<CarouselProps>(), {
-  hideIndicators: false,
-  hideControls: false,
-  slide: false,
-  interval: 3000,
-  isStatic: false,
+    hideIndicators: false,
+    hideControls: false,
+    slide: false,
+    interval: 3000,
+    isStatic: false,
 })
 
 const currentPicture = ref(0)
@@ -93,41 +93,41 @@ const interval = ref()
 const size = ref(56)
 
 const automaticSlide = () => {
-  if (!props.isStatic) {
-    interval.value = setInterval(() => {
-      nextPicture()
-    }, props.interval)
-  }
+    if (!props.isStatic) {
+        interval.value = setInterval(() => {
+            nextPicture()
+        }, props.interval)
+    }
 }
 
 const resetInterval = () => {
-  clearInterval(interval.value)
-  automaticSlide()
+    clearInterval(interval.value)
+    automaticSlide()
 }
 
 const slideTo = (index: number) => {
-  currentPicture.value = index
-  resetInterval()
+    currentPicture.value = index
+    resetInterval()
 }
 
 const nextPicture = () => {
-  currentPicture.value = props.pictures.length > 0 ? (currentPicture.value + 1) % props.pictures.length : 0
-  direction.value = 'right'
-  resetInterval()
+    currentPicture.value = props.pictures.length > 0 ? (currentPicture.value + 1) % props.pictures.length : 0
+    direction.value = 'right'
+    resetInterval()
 }
 
 const previousPicture = () => {
-  currentPicture.value = (currentPicture.value + props.pictures.length - 1) % props.pictures.length
-  direction.value = 'left'
-  resetInterval()
+    currentPicture.value = (currentPicture.value + props.pictures.length - 1) % props.pictures.length
+    direction.value = 'left'
+    resetInterval()
 }
 
 onMounted(() => {
-  automaticSlide()
+    automaticSlide()
 })
 
 onUnmounted(() => {
-  clearInterval(interval.value)
+    clearInterval(interval.value)
 })
 
 const { wrapperClasses } = useCarouselClasses(toRefs({ ...props, size }))

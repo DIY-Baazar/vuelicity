@@ -47,13 +47,13 @@
 
 <script lang="ts" setup>
 import {
-  computed,
-  provide,
-  reactive,
-  toRefs,
-  useAttrs,
-  useSlots,
-  type VNode,
+    computed,
+    provide,
+    reactive,
+    toRefs,
+    useAttrs,
+    useSlots,
+    type VNode,
 } from 'vue'
 
 import PubTabContent from './PubTabContent.vue'
@@ -64,16 +64,16 @@ import type { TabsProps } from './types'
 import { flatten } from '@/utils/flatten'
 
 const props = withDefaults(defineProps<TabsProps>(), {
-  variant: 'default',
-  modelValue: '',
-  directive: 'if',
-  tabClass: '',
-  itemClass: '',
-  itemActiveClass: '',
-  iconPosition: 'left',
-  vertical: false,
-  fullWidth: false,
-  color: 'blue',
+    variant: 'default',
+    modelValue: '',
+    directive: 'if',
+    tabClass: '',
+    itemClass: '',
+    itemActiveClass: '',
+    iconPosition: 'left',
+    vertical: false,
+    fullWidth: false,
+    color: 'blue',
 })
 
 const emit = defineEmits(['update:modelValue', 'click:tab'])
@@ -84,36 +84,36 @@ const attrs = useAttrs()
 const slots = useSlots()
 const defaultSlot = slots.default
 const tabsChildren = computed(() => {
-  return defaultSlot
-    ? flatten(defaultSlot({})).filter((v) => {
-      return (v.type as { __PUB_TAB__?: true }).__PUB_TAB__
-    })
-    : []
+    return defaultSlot
+        ? flatten(defaultSlot({})).filter((v) => {
+            return (v.type as { __PUB_TAB__?: true }).__PUB_TAB__
+        })
+        : []
 })
 
 const iconSlots = computed(() => {
-  const map: Record<string, (() => VNode[]) | undefined> = {}
-  for (const item of tabsChildren.value) {
-    const name = item.props?.name as string | undefined
-    if (name) {
-      map[name] = (item.children as { icon?: () => VNode[] } | null)?.icon
+    const map: Record<string, (() => VNode[]) | undefined> = {}
+    for (const item of tabsChildren.value) {
+        const name = item.props?.name as string | undefined
+        if (name) {
+            map[name] = (item.children as { icon?: () => VNode[] } | null)?.icon
+        }
     }
-  }
-  return map
+    return map
 })
 
 const modelValueRef = computed({
-  get: () => props.modelValue,
-  set: (value: string) => emit('update:modelValue', value),
+    get: () => props.modelValue,
+    set: (value: string) => emit('update:modelValue', value),
 })
 
 const onActivate = (value: string) => {
-  modelValueRef.value = value
+    modelValueRef.value = value
 }
 
 const tabsState = reactive(props)
 provide('tabsState', {
-  tabsState, iconSlots, modelValue: modelValueRef, onActivate,
+    tabsState, iconSlots, modelValue: modelValueRef, onActivate,
 })
 
 const { tabsClasses } = useTabsClasses(toRefs(props))

@@ -16,7 +16,7 @@ const slots = useSlots()
 const hasIcon = computed(() => !!slots.icon)
 
 const props = withDefaults(defineProps<KbdProps>(), {
-  class: '',
+    class: '',
 })
 
 const { kbdClasses } = useKbdClasses({ hasIcon, ...toRefs(props) })

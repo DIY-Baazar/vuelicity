@@ -56,19 +56,19 @@ import { useInputClasses } from './utils'
 import type { InputProps } from './types'
 
 const props = withDefaults(defineProps<InputProps>(), {
-  autocomplete: 'off',
-  class: '',
-  disabled: false,
-  inputClass: '',
-  label: '',
-  labelClass: '',
-  required: false,
-  size: 'md',
-  type: 'text',
-  validationStatus: undefined,
-  wrapperClass: '',
-  prependClass: '',
-  appendClass: '',
+    autocomplete: 'off',
+    class: '',
+    disabled: false,
+    inputClass: '',
+    label: '',
+    labelClass: '',
+    required: false,
+    size: 'md',
+    type: 'text',
+    validationStatus: undefined,
+    wrapperClass: '',
+    prependClass: '',
+    appendClass: '',
 })
 
 const model = defineModel<string | number>({ default: '' })
@@ -78,25 +78,25 @@ const attrs = useAttrs()
 const inputName = computed(() => props.name || 'input-' + useId())
 
 const isTextSlot = (name: string) => {
-  const vnodes = slots[name]?.()
-  if (!vnodes?.length) return false
-  const meaningful = vnodes.filter(v =>
-    v.type !== Comment && !(v.type === Text && !String(v.children).trim()),
-  )
-  return meaningful.length > 0 && meaningful.every(v => v.type === Text || v.type === PubIcon)
+    const vnodes = slots[name]?.()
+    if (!vnodes?.length) return false
+    const meaningful = vnodes.filter(v =>
+        v.type !== Comment && !(v.type === Text && !String(v.children).trim()),
+    )
+    return meaningful.length > 0 && meaningful.every(v => v.type === Text || v.type === PubIcon)
 }
 
 const isPrependText = computed(() => isTextSlot('prepend'))
 const isAppendText = computed(() => isTextSlot('append'))
 
 const {
-  wrapperClasses,
-  labelClasses,
-  inputWrapperClasses,
-  inputClasses,
-  validationMessageClasses,
-  helperMessageClasses,
-  appendContainerClasses,
-  prependContainerClasses,
+    wrapperClasses,
+    labelClasses,
+    inputWrapperClasses,
+    inputClasses,
+    validationMessageClasses,
+    helperMessageClasses,
+    appendContainerClasses,
+    prependContainerClasses,
 } = useInputClasses({ ...toRefs(props), isPrependText, isAppendText })
 </script>

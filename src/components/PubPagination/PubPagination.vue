@@ -149,27 +149,27 @@ import PubButton from '@/components/PubButton/PubButton.vue'
 import PubIcon from '@/components/PubIcon/PubIcon.vue'
 
 const emit = defineEmits<{
-  'update:model-value': [page: number];
-  'page-changed': [page: number];
+    'update:model-value': [page: number];
+    'page-changed': [page: number];
 }>()
 
 const props = withDefaults(defineProps<PaginationProps>(), {
-  modelValue: 1,
-  totalPages: undefined,
-  sliceSize: 2,
-  pageSize: 10,
-  totalItems: 10,
-  showIcons: false,
-  showFirstLast: false,
-  hidePrev: false,
-  hideNext: false,
-  hideLabels: false,
-  prevLabel: 'Previous',
-  nextLabel: 'Next',
-  firstLabel: 'First',
-  lastLabel: 'Last',
-  size: 'sm',
-  layout: 'pagination',
+    modelValue: 1,
+    totalPages: undefined,
+    sliceSize: 2,
+    pageSize: 10,
+    totalItems: 10,
+    showIcons: false,
+    showFirstLast: false,
+    hidePrev: false,
+    hideNext: false,
+    hideLabels: false,
+    prevLabel: 'Previous',
+    nextLabel: 'Next',
+    firstLabel: 'First',
+    lastLabel: 'Last',
+    size: 'sm',
+    layout: 'pagination',
 })
 
 const pageButtonClasses = UsePaginationButtonClasses(props)
@@ -177,84 +177,84 @@ const navButtonClasses = UseNavigationButtonClasses(props)
 
 // Custom Functions
 function setPage (index: number) {
-  emit('update:model-value', index)
-  emit('page-changed', index)
+    emit('update:model-value', index)
+    emit('page-changed', index)
 }
 
 function decreasePage () {
-  emit('update:model-value', props.modelValue - 1)
-  emit('page-changed', props.modelValue - 1)
+    emit('update:model-value', props.modelValue - 1)
+    emit('page-changed', props.modelValue - 1)
 }
 
 function increasePage () {
-  emit('update:model-value', props.modelValue + 1)
-  emit('page-changed', props.modelValue + 1)
+    emit('update:model-value', props.modelValue + 1)
+    emit('page-changed', props.modelValue + 1)
 }
 
 function goToFirstPage () {
-  emit('update:model-value', 1)
-  emit('page-changed', 1)
+    emit('update:model-value', 1)
+    emit('page-changed', 1)
 }
 
 function goToLastPage () {
-  emit('update:model-value', computedTotalPages.value)
-  emit('page-changed', computedTotalPages.value)
+    emit('update:model-value', computedTotalPages.value)
+    emit('page-changed', computedTotalPages.value)
 }
 
 // Computed properties
 const isFirstPage = computed(() => {
-  return props.modelValue === 1
+    return props.modelValue === 1
 })
 
 const isLastPage = computed(() => {
-  return props.modelValue === computedTotalPages.value
+    return props.modelValue === computedTotalPages.value
 })
 
 const computedTotalPages = computed(() => props.totalPages ? props.totalPages : Math.ceil(props.totalItems / props.pageSize))
 
 const pagesToDisplay = computed(() => {
-  if (props.layout !== 'pagination') return []
+    if (props.layout !== 'pagination') return []
 
-  const total = computedTotalPages.value
-  const current = props.modelValue
-  const slice = props.sliceSize
-  const range = []
+    const total = computedTotalPages.value
+    const current = props.modelValue
+    const slice = props.sliceSize
+    const range = []
 
-  if (total <= (slice * 2) + 1) {
-    for (let i = 1; i <= total; i++) {
-      range.push(i)
+    if (total <= (slice * 2) + 1) {
+        for (let i = 1; i <= total; i++) {
+            range.push(i)
+        }
+        return range
+    }
+
+    let startPage = Math.max(1, current - slice)
+    let endPage = Math.min(total, current + slice)
+
+    if (current - slice <= 1) {
+        endPage = Math.min(total, (slice * 2) + 1)
+    }
+
+    if (current + slice >= total) {
+        startPage = Math.max(1, total - (slice * 2))
+    }
+
+    for (let i = startPage; i <= endPage; i++) {
+        range.push(i)
     }
     return range
-  }
-
-  let startPage = Math.max(1, current - slice)
-  let endPage = Math.min(total, current + slice)
-
-  if (current - slice <= 1) {
-    endPage = Math.min(total, (slice * 2) + 1)
-  }
-
-  if (current + slice >= total) {
-    startPage = Math.max(1, total - (slice * 2))
-  }
-
-  for (let i = startPage; i <= endPage; i++) {
-    range.push(i)
-  }
-  return range
 })
 
 const startCount = computed(() => {
-  return (props.modelValue - 1) * props.pageSize + 1
+    return (props.modelValue - 1) * props.pageSize + 1
 })
 const endCount = computed(() => {
-  return Math.min(props.modelValue * props.pageSize, props.totalItems)
+    return Math.min(props.modelValue * props.pageSize, props.totalItems)
 })
 const totalCount = computed(() => {
-  if (props.totalPages) {
-    return computedTotalPages.value * props.pageSize
-  }
-  return props.totalItems
+    if (props.totalPages) {
+        return computedTotalPages.value * props.pageSize
+    }
+    return props.totalItems
 })
 
 </script>

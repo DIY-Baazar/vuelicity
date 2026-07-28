@@ -26,8 +26,8 @@ import { useSpinnerClasses } from './utils'
 import type { SpinnerProps } from './types'
 
 const props = withDefaults(defineProps<SpinnerProps>(), {
-  color: 'blue',
-  size: '4',
+    color: 'blue',
+    size: '4',
 })
 
 const { spinnerClasses, customColor } = useSpinnerClasses(toRefs(props))

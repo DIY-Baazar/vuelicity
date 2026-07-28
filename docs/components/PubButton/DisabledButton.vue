@@ -17,6 +17,6 @@
 <script lang="ts" setup>
 import { PubButton } from 'vuelicity'
 function onClick () {
-  console.log('clicked')
+    console.log('clicked')
 }
 </script>

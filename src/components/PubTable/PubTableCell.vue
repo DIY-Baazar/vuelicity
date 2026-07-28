@@ -14,12 +14,12 @@ import type { TableState } from './types'
 const injected = inject<{ tableState: TableState; }>('tableState')
 
 if (!injected) {
-  throw new Error('PubTable: missing injected value "tableState"')
+    throw new Error('PubTable: missing injected value "tableState"')
 }
 
 const { tableState } = injected
 
 const { tableCellClasses } = useTableCellClasses({
-  stripedColumns: computed(() => tableState.stripedColumns ?? false),
+    stripedColumns: computed(() => tableState.stripedColumns ?? false),
 })
 </script>

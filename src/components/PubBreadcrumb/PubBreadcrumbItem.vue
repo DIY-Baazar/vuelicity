@@ -40,8 +40,8 @@ import type { BreadcrumbItemProps } from './types'
 import PubIcon from '@/components/PubIcon/PubIcon.vue'
 
 const props = withDefaults(defineProps<BreadcrumbItemProps>(), {
-  href: null,
-  home: false,
+    href: null,
+    home: false,
 })
 
 const componentName = computed(() => (props.href ? 'a' : 'span'))

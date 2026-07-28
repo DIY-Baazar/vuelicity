@@ -24,49 +24,49 @@ import type { AccordionHeaderProps, AccordionPanel, AccordionState } from './typ
 import PubIcon from '@/components/PubIcon/PubIcon.vue'
 
 const props = withDefaults(defineProps<AccordionHeaderProps>(), {
-  activeClass: '',
-  class: '',
+    activeClass: '',
+    class: '',
 })
 
 const panelId = inject<string>('panelId')
 
 if (!panelId) {
-  throw new Error('PubAccordion: missing injected value "panelId"')
+    throw new Error('PubAccordion: missing injected value "panelId"')
 }
 
 const accordionState = ref()
 
 const accordionPanelState = computed(() =>
-  accordionState.value?.panels.find((panel: AccordionPanel) => panel.id === panelId),
+    accordionState.value?.panels.find((panel: AccordionPanel) => panel.id === panelId),
 )
 
 const { wrapperClasses, actionClasses } = useAccordionHeaderClasses(accordionState, accordionPanelState, toRefs(props))
 
 onMounted(() => {
-  const injected = inject<{ accordionState: AccordionState }>('accordionState')
+    const injected = inject<{ accordionState: AccordionState }>('accordionState')
 
-  if (!injected) {
-    throw new Error('PubAccordion: missing injected value "accordionState"')
-  }
-  const { accordionState: newAccordionState } = injected
-  accordionState.value = newAccordionState
+    if (!injected) {
+        throw new Error('PubAccordion: missing injected value "accordionState"')
+    }
+    const { accordionState: newAccordionState } = injected
+    accordionState.value = newAccordionState
 })
 
 const togglePanel = () => {
-  if (!accordionPanelState.value) return
+    if (!accordionPanelState.value) return
 
-  if (accordionState.value.persistent) {
-    accordionPanelState.value.isVisible = !accordionPanelState.value.isVisible
-    return
-  }
-
-  const currentPanelVisibility = accordionPanelState.value.isVisible
-  accordionState.value.panels.forEach((panel: AccordionPanel) => {
-    if (panel.id === panelId) {
-      panel.isVisible = !currentPanelVisibility
-    } else {
-      panel.isVisible = false
+    if (accordionState.value.persistent) {
+        accordionPanelState.value.isVisible = !accordionPanelState.value.isVisible
+        return
     }
-  })
+
+    const currentPanelVisibility = accordionPanelState.value.isVisible
+    accordionState.value.panels.forEach((panel: AccordionPanel) => {
+        if (panel.id === panelId) {
+            panel.isVisible = !currentPanelVisibility
+        } else {
+            panel.isVisible = false
+        }
+    })
 }
 </script>

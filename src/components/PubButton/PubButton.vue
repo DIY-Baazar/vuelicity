@@ -2,8 +2,11 @@
   <component
     :is="componentName"
     :[linkAttr]="to"
+    :type="componentName === 'button' ? type : undefined"
     :class="useMergeClasses(['pub-button', wrapperClasses, spanClasses])"
     v-bind="attrs"
+    :disabled="(componentName === 'button' && isDisabled) || undefined"
+    :aria-busy="loading || undefined"
     @click="handleClick"
   >
     <span
@@ -32,38 +35,38 @@ import type { ButtonProps } from './types'
 import { useMergeClasses } from '@/composables/useMergeClasses'
 
 const props = withDefaults(defineProps<ButtonProps>(), {
-  color: 'default',
-  type: 'button',
-  name: '',
-  to: '#',
-  disabled: false,
-  outline: false,
-  skeleton: false,
-  loading: false,
-  square: false,
-  size: 'md',
-  rounded: 'none',
-  as: 'button',
-  linkAttr: 'href',
-  class: '',
+    color: 'default',
+    type: 'button',
+    name: '',
+    to: undefined,
+    disabled: false,
+    outline: false,
+    skeleton: false,
+    loading: false,
+    square: false,
+    size: 'md',
+    rounded: 'none',
+    as: 'button',
+    linkAttr: 'href',
+    class: '',
 })
 
 defineOptions({
-  inheritAttrs: false,
+    inheritAttrs: false,
 })
 const attrs = useAttrs()
 
-const componentName = computed(() => (props.as !== 'a' ? resolveComponent(props.as) : 'a'))
+const componentName = computed(() => (props.as !== 'a' && !props.to ? resolveComponent(props.as) : 'a'))
 
-const emit = defineEmits<{ click: [event: Event] }>()
+const emit = defineEmits<{ click: [event: Event]; }>()
 
 const isDisabled = computed(() => props.disabled || props.loading || props.skeleton)
 
 const handleClick = (event: Event) => {
-  if (isDisabled.value) {
-    return
-  }
-  emit('click', event)
+    if (isDisabled.value) {
+        return
+    }
+    emit('click', event)
 }
 
 const { wrapperClasses, spanClasses } = useButtonClasses(toRefs(props))

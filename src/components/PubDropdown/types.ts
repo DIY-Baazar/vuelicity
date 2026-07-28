@@ -6,20 +6,20 @@ export type DropdownAlignment = 'horizontal' | 'vertical' | 'horizontal_reverse'
 export type DropdownTriggerType = 'button' | 'navlink'
 
 export interface DropdownProps {
-  alignToEnd: boolean;
-  class: ClassInput;
-  closeInside: boolean;
-  color?: ButtonTheme;
-  contentWrapperClass: ClassInput;
-  disabled: boolean;
-  placement: DropdownPlacement;
-  text: string;
-  transition: string;
-  triggerClass: ClassInput;
-  triggerWrapperClass: ClassInput;
-  duration: number;
-  offsetDistance: number;
-  offsetSkidding: number;
-  type: DropdownTriggerType;
-  isActive: boolean;
+    alignToEnd: boolean;
+    class: ClassInput;
+    closeInside: boolean;
+    color?: ButtonTheme;
+    contentWrapperClass: ClassInput;
+    disabled: boolean;
+    placement: DropdownPlacement;
+    text: string;
+    transition: string;
+    triggerClass: ClassInput;
+    triggerWrapperClass: ClassInput;
+    duration: number;
+    offsetDistance: number;
+    offsetSkidding: number;
+    type: DropdownTriggerType;
+    isActive: boolean;
 }

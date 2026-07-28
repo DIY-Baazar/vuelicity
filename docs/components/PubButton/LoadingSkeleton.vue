@@ -27,9 +27,9 @@ const loading = ref(false)
 // });
 
 function clickProcess () {
-  loading.value = !loading.value
-  setTimeout(() => {
     loading.value = !loading.value
-  }, 2000)
+    setTimeout(() => {
+        loading.value = !loading.value
+    }, 2000)
 }
 </script>

@@ -63,39 +63,39 @@ import { useModalClasses } from './utils'
 import type { ModalProps } from './types'
 
 const props = withDefaults(defineProps<ModalProps>(), {
-  position: 'center',
-  size: 'md',
-  isOpen: false,
-  zIndex: 40,
-  class: '',
-  persistent: false,
-  notEscapeClose: false,
-  notClickClose: false,
-  overlayBlur: false,
-  scrollable: false,
-  focusTrap: false,
+    position: 'center',
+    size: 'md',
+    isOpen: false,
+    zIndex: 40,
+    class: '',
+    persistent: false,
+    notEscapeClose: false,
+    notClickClose: false,
+    overlayBlur: false,
+    scrollable: false,
+    focusTrap: false,
 })
 
 const closeWithEsc = () => {
-  if (!props.persistent && !props.notEscapeClose) {
-    emit('close')
-  }
+    if (!props.persistent && !props.notEscapeClose) {
+        emit('close')
+    }
 }
 
 const clickOutside = () => {
-  if (!props.persistent && !props.notClickClose) {
-    emit('close')
-  }
+    if (!props.persistent && !props.notClickClose) {
+        emit('close')
+    }
 }
 
 onMounted(() => {
-  if (props.focusTrap) {
-    const focusEle: HTMLElement | null = modalRef.value?.querySelector('button[aria-label="close"]') || modalRef.value
+    if (props.focusTrap) {
+        const focusEle: HTMLElement | null = modalRef.value?.querySelector('button[aria-label="close"]') || modalRef.value
 
-    if (focusEle) {
-      focusEle.focus()
+        if (focusEle) {
+            focusEle.focus()
+        }
     }
-  }
 })
 
 const emit = defineEmits(['close'])

@@ -9,15 +9,15 @@ export type IconSize = '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' 
 export type IconType = 'solid' | 'outline' | 'duotone'
 
 export interface UseIconClassesProps {
-  name: Ref<string | undefined>;
-  size: Ref<IconSize | undefined>;
-  type: Ref<IconType | undefined>;
-  color: Ref<IconTheme | undefined>;
-  rotate: Ref<boolean | undefined>;
-  flip: Ref<boolean | undefined>;
-  spin: Ref<boolean | undefined>;
-  mirror: Ref<boolean | undefined>;
-  aschild: Ref<boolean | undefined>;
-  strokeWidth: Ref<number>;
-  class: ClassRef;
+    name: Ref<string | undefined>;
+    size: Ref<IconSize | undefined>;
+    type: Ref<IconType | undefined>;
+    color: Ref<IconTheme | undefined>;
+    rotate: Ref<boolean | undefined>;
+    flip: Ref<boolean | undefined>;
+    spin: Ref<boolean | undefined>;
+    mirror: Ref<boolean | undefined>;
+    aschild: Ref<boolean | undefined>;
+    strokeWidth: Ref<number>;
+    class: ClassRef;
 }

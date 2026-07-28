@@ -19,12 +19,12 @@ import { useNavbarLinkClasses } from './utils'
 import type { NavbarLinkProps, NavbarState } from './types'
 
 const props = withDefaults(defineProps<NavbarLinkProps>(), {
-  link: '/',
-  isActive: false,
-  as: 'a',
-  linkAttr: 'href',
-  disabled: false,
-  class: '',
+    link: '/',
+    isActive: false,
+    as: 'a',
+    linkAttr: 'href',
+    disabled: false,
+    class: '',
 })
 
 const navbarStateContext = inject<{ navbarState: NavbarState; }>('navbarState')
@@ -32,18 +32,18 @@ const navbarStateContext = inject<{ navbarState: NavbarState; }>('navbarState')
 const emit = defineEmits<{ click: [event: Event]; }>()
 
 const componentName = computed(() => {
-  return props.as !== 'a' ? resolveComponent(props.as) : 'a'
+    return props.as !== 'a' ? resolveComponent(props.as) : 'a'
 })
 
 const handleClick = (event: Event) => {
-  if (props.disabled) {
-    return
-  }
-  emit('click', event)
+    if (props.disabled) {
+        return
+    }
+    emit('click', event)
 }
 
 const { linkClasses } = useNavbarLinkClasses({
-  ...toRefs(props),
-  collapseBreakpoint: computed(() => navbarStateContext?.navbarState.collapseBreakpoint || 'md'),
+    ...toRefs(props),
+    collapseBreakpoint: computed(() => navbarStateContext?.navbarState.collapseBreakpoint || 'md'),
 })
 </script>

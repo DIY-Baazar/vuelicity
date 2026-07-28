@@ -28,18 +28,18 @@ import { computed, inject, type Ref } from 'vue'
 import type { TabProps, TabsState } from './types'
 
 defineOptions({
-  __PUB_TAB__: true,
+    __PUB_TAB__: true,
 })
 
 withDefaults(defineProps<TabProps>(), {
-  title: '',
-  disabled: false,
+    title: '',
+    disabled: false,
 })
 
 const injected = inject<{ modelValue: Ref<string>, tabsState: TabsState }>('tabsState')
 
 if (!injected) {
-  throw new Error('PubTabs: missing injected value "tabsState"')
+    throw new Error('PubTabs: missing injected value "tabsState"')
 }
 
 const { modelValue, tabsState } = injected

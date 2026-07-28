@@ -5,63 +5,63 @@ import form from './form'
 import typography from './typography'
 
 export default {
-  lang: 'en-IN',
-  base: '/',
-  title: 'Vuelicity',
-  description: 'Vuelicity is a collection of UI components for Vue 3 using Tailwind CSS 4.',
-  head: [['link', { rel: 'icon', href: '/images/favicon.ico' }]],
-  themeConfig: {
-    logo: '/images/logo.png',
-    editLink: {
-      pattern: 'https://github.com/DIY-Baazar/vuelicity/edit/main/docs/:path',
-    },
-    lastUpdated: {
-      text: 'Last updated',
-      formatOptions: {
-        dateStyle: 'medium',
-        timeStyle: 'medium',
-      },
-    },
-    search: {
-      provider: 'local',
-    },
-    repo: 'https://github.com/DIY-Baazar/vuelicity',
-    sidebar: [
-      {
-        text: 'Introduction',
-        items: [
-          { text: 'What is Vuelicity?', link: '/' },
-          { text: 'Getting Started', link: '/guide/' },
+    lang: 'en-IN',
+    base: '/',
+    title: 'Vuelicity',
+    description: 'Vuelicity is a collection of UI components for Vue 3 using Tailwind CSS 4.',
+    head: [['link', { rel: 'icon', href: '/images/favicon.ico' }]],
+    themeConfig: {
+        logo: '/images/logo.png',
+        editLink: {
+            pattern: 'https://github.com/DIY-Baazar/vuelicity/edit/main/docs/:path',
+        },
+        lastUpdated: {
+            text: 'Last updated',
+            formatOptions: {
+                dateStyle: 'medium',
+                timeStyle: 'medium',
+            },
+        },
+        search: {
+            provider: 'local',
+        },
+        repo: 'https://github.com/DIY-Baazar/vuelicity',
+        sidebar: [
+            {
+                text: 'Introduction',
+                items: [
+                    { text: 'What is Vuelicity?', link: '/' },
+                    { text: 'Getting Started', link: '/guide/' },
+                ],
+            },
+            {
+                text: 'Typography',
+                items: typography.componentToc,
+            },
+            {
+                text: 'Components',
+                items: components.componentToc,
+            },
+            {
+                text: 'Form',
+                items: form.componentToc,
+            },
         ],
-      },
-      {
-        text: 'Typography',
-        items: typography.componentToc,
-      },
-      {
-        text: 'Components',
-        items: components.componentToc,
-      },
-      {
-        text: 'Form',
-        items: form.componentToc,
-      },
-    ],
-    socialLinks: [{ icon: 'github', link: 'https://github.com/DIY-Baazar/vuelicity' }],
-    footer: {
-      message: 'Released under the MIT License.',
-      copyright: `Copyright © ${new Date().getFullYear()} DIY Baazar.`,
+        socialLinks: [{ icon: 'github', link: 'https://github.com/DIY-Baazar/vuelicity' }],
+        footer: {
+            message: 'Released under the MIT License.',
+            copyright: `Copyright © ${new Date().getFullYear()} DIY Baazar.`,
+        },
     },
-  },
-  vite: {
-    resolve: {
-      alias: {
-        vuelicity: resolve(__dirname, '../../src'),
-      },
-      dedupe: ['vue'], // avoid error when using dependencies that also use Vue
+    vite: {
+        resolve: {
+            alias: {
+                vuelicity: resolve(__dirname, '../../src'),
+            },
+            dedupe: ['vue'], // avoid error when using dependencies that also use Vue
+        },
+        server: {
+            port: 5051,
+        },
     },
-    server: {
-      port: 5051,
-    },
-  },
 }

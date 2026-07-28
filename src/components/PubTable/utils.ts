@@ -16,46 +16,46 @@ const baseHeadCellClasses = 'px-6 py-3 text-xs uppercase'
 // const stripedHeadCellClasses = 'even:bg-white odd:bg-grey-50'
 
 interface UseTableCellClassesProps {
-  stripedColumns: Ref<boolean>;
+    stripedColumns: Ref<boolean>;
 }
 
 interface UseTableHeadCellClassesProps {
-  stripedColumns: Ref<boolean>;
-  color: Ref<TableTheme>;
+    stripedColumns: Ref<boolean>;
+    color: Ref<TableTheme>;
 }
 
 interface UseTableRowClassesProps {
-  striped: Ref<boolean>;
-  hoverable: Ref<boolean>;
+    striped: Ref<boolean>;
+    hoverable: Ref<boolean>;
 }
 
 export function useTableCellClasses (props: UseTableCellClassesProps) {
-  const tableCellClasses = computed(() =>
-    useMergeClasses([baseCellClasses, props.stripedColumns.value ? stripedCellClasses : '']),
-  )
-  return { tableCellClasses }
+    const tableCellClasses = computed(() =>
+        useMergeClasses([baseCellClasses, props.stripedColumns.value ? stripedCellClasses : '']),
+    )
+    return { tableCellClasses }
 }
 
 export function useTableRowClasses (props: UseTableRowClassesProps) {
-  const tableRowClasses = computed(() =>
-    useMergeClasses([
-      baseRowClasses,
-      props.striped.value ? stripedRowClasses : '',
-      props.hoverable.value ? hoverableRowClasses : '',
-    ]),
-  )
-  return { tableRowClasses }
+    const tableRowClasses = computed(() =>
+        useMergeClasses([
+            baseRowClasses,
+            props.striped.value ? stripedRowClasses : '',
+            props.hoverable.value ? hoverableRowClasses : '',
+        ]),
+    )
+    return { tableRowClasses }
 }
 
 export function useTableHeadCellClasses (props: UseTableHeadCellClassesProps) {
-  const tableHeadCellClasses = computed(() => {
-    let themeClasses = ''
-    if (isThemeColor(props.color.value)) {
-      const theme = useThemeColor(props.color.value as ThemeColor)
-      themeClasses = normalizeClass(['text-white', theme.backgroundClasses.value])
-    }
-    return useMergeClasses([baseHeadCellClasses, themeClasses])
-  })
+    const tableHeadCellClasses = computed(() => {
+        let themeClasses = ''
+        if (isThemeColor(props.color.value)) {
+            const theme = useThemeColor(props.color.value as ThemeColor)
+            themeClasses = normalizeClass(['text-white', theme.backgroundClasses.value])
+        }
+        return useMergeClasses([baseHeadCellClasses, themeClasses])
+    })
 
-  return { tableHeadCellClasses }
+    return { tableHeadCellClasses }
 }

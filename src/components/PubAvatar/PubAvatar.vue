@@ -50,16 +50,16 @@ import type { AvatarProps } from './types'
 import PubIcon from '@/components/PubIcon/PubIcon.vue'
 
 const props = withDefaults(defineProps<AvatarProps>(), {
-  size: 'md',
-  rounded: false,
-  bordered: false,
-  alt: 'My Avatar',
-  class: '',
-  status: null,
-  statusPosition: 'top-right',
-  initials: null,
-  stacked: false,
-  src: null,
+    size: 'md',
+    rounded: false,
+    bordered: false,
+    alt: 'My Avatar',
+    class: '',
+    status: null,
+    statusPosition: 'top-right',
+    initials: null,
+    stacked: false,
+    src: null,
 })
 
 const imageErr = ref(false)
@@ -68,15 +68,15 @@ const slots = useSlots()
 const hasPlaceholder = computed(() => slots.placeholder)
 
 function setImageError () {
-  imageErr.value = true
+    imageErr.value = true
 }
 
 const {
-  avatarClasses,
-  avatarPlaceholderClasses,
-  avatarPlaceholderIconClasses,
-  avatarPlaceholderWrapperClasses,
-  avatarPlaceholderInitialsClasses,
-  avatarDotClasses,
+    avatarClasses,
+    avatarPlaceholderClasses,
+    avatarPlaceholderIconClasses,
+    avatarPlaceholderWrapperClasses,
+    avatarPlaceholderInitialsClasses,
+    avatarDotClasses,
 } = useAvatarClasses(toRefs(props))
 </script>

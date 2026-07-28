@@ -81,19 +81,19 @@ import { usePhoneInputClasses } from './utils'
 import type { PhoneInputProps } from './types'
 
 const props = withDefaults(defineProps<PhoneInputProps>(), {
-  autocomplete: 'off',
-  class: '',
-  disabled: false,
-  inputClass: '',
-  label: '',
-  labelClass: '',
-  required: false,
-  size: 'md',
-  validationStatus: undefined,
-  wrapperClass: '',
-  prependClass: '',
-  appendClass: '',
-  isdCodes: undefined,
+    autocomplete: 'off',
+    class: '',
+    disabled: false,
+    inputClass: '',
+    label: '',
+    labelClass: '',
+    required: false,
+    size: 'md',
+    validationStatus: undefined,
+    wrapperClass: '',
+    prependClass: '',
+    appendClass: '',
+    isdCodes: undefined,
 })
 
 const model = defineModel<string | number>({ default: '' })
@@ -103,70 +103,70 @@ const attrs = useAttrs()
 const inputName = computed(() => props.name || 'input-' + useId())
 
 const isTextSlot = (name: string) => {
-  const vnodes = slots[name]?.()
-  if (!vnodes?.length) return false
-  const meaningful = vnodes.filter(v =>
-    v.type !== Comment && !(v.type === Text && !String(v.children).trim()),
-  )
-  return meaningful.length > 0 && meaningful.every(v => v.type === Text || v.type === PubIcon)
+    const vnodes = slots[name]?.()
+    if (!vnodes?.length) return false
+    const meaningful = vnodes.filter(v =>
+        v.type !== Comment && !(v.type === Text && !String(v.children).trim()),
+    )
+    return meaningful.length > 0 && meaningful.every(v => v.type === Text || v.type === PubIcon)
 }
 
 const isPrependText = computed(() => isTextSlot('prepend'))
 const isAppendText = computed(() => isTextSlot('append'))
 const hasISDCodes = computed(() => props.isdCodes && props.isdCodes.length > 0)
 const parsedValue = computed(() => {
-  const val = (model.value ?? '').toString()
-  const commaIndex = val.indexOf(',')
-  if (commaIndex === -1) {
-    return { isdCode: '', phoneNo: val }
-  }
-  return {
-    isdCode: val.slice(0, commaIndex),
-    phoneNo: val.slice(commaIndex + 1),
-  }
+    const val = (model.value ?? '').toString()
+    const commaIndex = val.indexOf(',')
+    if (commaIndex === -1) {
+        return { isdCode: '', phoneNo: val }
+    }
+    return {
+        isdCode: val.slice(0, commaIndex),
+        phoneNo: val.slice(commaIndex + 1),
+    }
 })
 
 function changePhoneno (event: Event) {
-  const target = event.target as HTMLInputElement
-  if (hasISDCodes.value) {
-    model.value = parsedValue.value.isdCode + ',' + target.value
-  } else {
-    model.value = target.value
-  }
+    const target = event.target as HTMLInputElement
+    if (hasISDCodes.value) {
+        model.value = parsedValue.value.isdCode + ',' + target.value
+    } else {
+        model.value = target.value
+    }
 }
 
 function changeISD (event: Event) {
-  const target = event.target as HTMLInputElement
-  if (hasISDCodes.value) {
-    model.value = target.value + ',' + parsedValue.value.phoneNo
-  }
+    const target = event.target as HTMLInputElement
+    if (hasISDCodes.value) {
+        model.value = target.value + ',' + parsedValue.value.phoneNo
+    }
 }
 
 const phoneNoValue = computed(() => {
-  if (hasISDCodes.value) {
-    return parsedValue.value.phoneNo
-  } else {
-    return model.value
-  }
+    if (hasISDCodes.value) {
+        return parsedValue.value.phoneNo
+    } else {
+        return model.value
+    }
 })
 
 const isdCodeValue = computed(() => {
-  if (hasISDCodes.value) {
-    return parsedValue.value.isdCode
-  } else {
-    return ''
-  }
+    if (hasISDCodes.value) {
+        return parsedValue.value.isdCode
+    } else {
+        return ''
+    }
 })
 
 const {
-  wrapperClasses,
-  labelClasses,
-  phoneInputWrapperClasses,
-  phoneInputClasses,
-  isdcodeInputClasses,
-  validationMessageClasses,
-  helperMessageClasses,
-  appendContainerClasses,
-  prependContainerClasses,
+    wrapperClasses,
+    labelClasses,
+    phoneInputWrapperClasses,
+    phoneInputClasses,
+    isdcodeInputClasses,
+    validationMessageClasses,
+    helperMessageClasses,
+    appendContainerClasses,
+    prependContainerClasses,
 } = usePhoneInputClasses({ ...toRefs(props), isPrependText, isAppendText })
 </script>

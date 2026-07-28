@@ -72,14 +72,14 @@ import { reactive } from 'vue'
 import { PubButton, PubInput } from 'vuelicity'
 
 const formData = reactive({
-  first_name: '',
-  last_name: '',
-  company: '',
-  phone: '',
-  email: '',
-  website: '',
-  visitors: 0,
-  password: '',
-  confirm_password: '',
+    first_name: '',
+    last_name: '',
+    company: '',
+    phone: '',
+    email: '',
+    website: '',
+    visitors: 0,
+    password: '',
+    confirm_password: '',
 })
 </script>

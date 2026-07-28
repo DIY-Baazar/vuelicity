@@ -17,7 +17,7 @@ import { useBreadcrumbClasses } from './utils'
 import type { BreadcrumbProps } from './types'
 
 const props = withDefaults(defineProps<BreadcrumbProps>(), {
-  solid: false,
+    solid: false,
 })
 
 const { breadcrumbClasses, breadcrumbWrapperClasses } = useBreadcrumbClasses(toRefs(props))

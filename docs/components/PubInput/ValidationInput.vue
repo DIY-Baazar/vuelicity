@@ -30,7 +30,7 @@ import { reactive } from 'vue'
 import { PubInput } from 'vuelicity'
 
 const formData = reactive({
-  username: '',
-  password: '',
+    username: '',
+    password: '',
 })
 </script>

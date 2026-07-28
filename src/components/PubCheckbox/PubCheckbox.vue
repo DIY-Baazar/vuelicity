@@ -40,15 +40,15 @@ import { useCheckboxClasses } from './utils'
 import type { CheckboxProps } from './types'
 
 const props = withDefaults(defineProps<CheckboxProps>(), {
-  disabled: false,
-  label: '',
-  labelClass: '',
-  class: '',
-  wrapperClass: '',
-  name: undefined,
-  value: undefined,
-  bordered: false,
-  size: 'md',
+    disabled: false,
+    label: '',
+    labelClass: '',
+    class: '',
+    wrapperClass: '',
+    name: undefined,
+    value: undefined,
+    bordered: false,
+    size: 'md',
 })
 
 const attrs = useAttrs()

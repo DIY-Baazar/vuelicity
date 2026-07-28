@@ -50,30 +50,30 @@ import { useSelectClasses } from './utils'
 import type { SelectProps } from './types'
 
 const props = withDefaults(
-  defineProps<SelectProps>(),
-  {
-    class: '',
-    wrapperClass: '',
-    options: () => [],
-    label: '',
-    labelClass: '',
-    placeholder: 'Please select one',
-    validationStatus: undefined,
-    size: 'md',
-    disabled: false,
-    underline: false,
-  },
+    defineProps<SelectProps>(),
+    {
+        class: '',
+        wrapperClass: '',
+        options: () => [],
+        label: '',
+        labelClass: '',
+        placeholder: 'Please select one',
+        validationStatus: undefined,
+        size: 'md',
+        disabled: false,
+        underline: false,
+    },
 )
 
 const model = defineModel<string | number>({ default: '' })
 const attrs = useAttrs() as { name?: string;[key: string]: unknown; }
 
 const {
-  wrapperClasses,
-  labelClasses,
-  selectClasses,
-  validationMessageClasses,
-  helperMessageClasses,
+    wrapperClasses,
+    labelClasses,
+    selectClasses,
+    validationMessageClasses,
+    helperMessageClasses,
 } = useSelectClasses(toRefs(props))
 
 </script>

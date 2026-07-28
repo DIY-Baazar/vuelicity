@@ -17,11 +17,11 @@ import { useBadgeClasses } from './utils'
 import type { BadgeProps } from './types'
 
 const props = withDefaults(defineProps<BadgeProps>(), {
-  color: 'default',
-  size: 'xs',
-  href: null,
-  bordered: false,
-  rounded: false,
+    color: 'default',
+    size: 'xs',
+    href: null,
+    bordered: false,
+    rounded: false,
 })
 
 const wrapperClasses = useBadgeClasses(toRefs(props))

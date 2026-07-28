@@ -4,36 +4,36 @@ import type { ClassInput } from '@/types/global'
 export type NavbarTheme = 'default' | 'light' | 'dark'
 
 interface NavbarProps {
-  class?: ClassInput;
-  containerClass?: ClassInput;
-  sticky?: boolean;
-  rounded?: boolean;
-  solid?: boolean;
-  color?: NavbarTheme;
-  noToggleButton: boolean;
-  collapseBreakpoint: BreakpointKey;
+    class?: ClassInput;
+    containerClass?: ClassInput;
+    sticky?: boolean;
+    rounded?: boolean;
+    solid?: boolean;
+    color?: NavbarTheme;
+    noToggleButton: boolean;
+    collapseBreakpoint: BreakpointKey;
 }
 
 interface NavbarLogoProps {
-  link?: string;
-  imageUrl?: string;
-  alt?: string;
-  as?: string;
-  linkAttr?: string;
+    link?: string;
+    imageUrl?: string;
+    alt?: string;
+    as?: string;
+    linkAttr?: string;
 }
 
 interface NavbarCollapseProps {
-  isShowMenu: boolean;
-  class: ClassInput;
+    isShowMenu: boolean;
+    class: ClassInput;
 }
 
 interface NavbarLinkProps {
-  link?: string;
-  isActive?: boolean;
-  as?: string;
-  linkAttr?: string;
-  disabled?: boolean;
-  class?: ClassInput;
+    link?: string;
+    isActive?: boolean;
+    as?: string;
+    linkAttr?: string;
+    disabled?: boolean;
+    class?: ClassInput;
 }
 
 // interface NavbarState extends NavbarProps {}

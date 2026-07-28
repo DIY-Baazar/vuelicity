@@ -8,37 +8,37 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
 const themeColors = {
-  blue: '#3457d5',
-  red: '#ed2939',
-  green: '#32cd32',
-  yellow: '#ffd700',
-  cyan: '#00CCCC',
-  magenta: '#8B008B',
-  grey: '#666666',
+    blue: '#3457d5',
+    red: '#ed2939',
+    green: '#32cd32',
+    yellow: '#ffd700',
+    cyan: '#00CCCC',
+    magenta: '#8B008B',
+    grey: '#666666',
 }
 
 function generateScale (hex) {
-  // target lightness values for 100..900 (tuned)
-  const lightness = [97, 90, 80, 70, 60, 50, 40, 30, 20]
-  // Use LCH to preserve hue/chroma better across shades
-  const c = chroma(hex).lch()
-  const chromaVal = c[1] // Don't fallback to 50
-  const hue = c[2] // Use LCH hue directly
+    // target lightness values for 100..900 (tuned)
+    const lightness = [97, 90, 80, 70, 60, 50, 40, 30, 20]
+    // Use LCH to preserve hue/chroma better across shades
+    const c = chroma(hex).lch()
+    const chromaVal = c[1] // Don't fallback to 50
+    const hue = c[2] // Use LCH hue directly
 
-  return lightness.map((L) => {
-    let col = chroma.lch(L, chromaVal, hue)
-    // If the color is out of sRGB gamut, get the closest in-gamut color
-    if (col.clipped()) {
-      col = chroma.lch(L, chromaVal * 0.9, hue)
-    }
-    return col.hex()
-  })
+    return lightness.map((L) => {
+        let col = chroma.lch(L, chromaVal, hue)
+        // If the color is out of sRGB gamut, get the closest in-gamut color
+        if (col.clipped()) {
+            col = chroma.lch(L, chromaVal * 0.9, hue)
+        }
+        return col.hex()
+    })
 }
 
 let result = ''
 for (const [name, hex] of Object.entries(themeColors)) {
-  const shades = generateScale(hex)
-  result += `
+    const shades = generateScale(hex)
+    result += `
     /* ${name} shades */
     --color-${name}-100: ${shades[0]};
     --color-${name}-200: ${shades[1]};
