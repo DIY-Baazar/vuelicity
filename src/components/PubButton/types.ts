@@ -17,6 +17,6 @@ export interface ButtonProps {
     size?: ButtonSize;
     rounded?: ButtonRounded;
     square?: boolean;
-    as?: 'button' | 'a';
+    as?: 'button' | 'a' | 'router-link';
     href?: string | undefined;
 }

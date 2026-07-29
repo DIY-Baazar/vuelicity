@@ -139,10 +139,10 @@ describe('PubButton', () => {
             ],
             [
                 'grey',
-                'border-gray-600',
-                'bg-gray-600',
-                'hover:bg-gray-700',
-                'dark:hover:bg-gray-600',
+                'border-grey-600',
+                'bg-grey-600',
+                'hover:bg-grey-700',
+                'dark:hover:bg-grey-600',
                 'text-white',
                 'dark:text-grey-200',
             ],
@@ -184,7 +184,7 @@ describe('PubButton', () => {
             ['yellow', 'border-yellow-600', 'hover:bg-yellow-700', 'text-yellow-500', 'dark:hover:bg-yellow-600'],
             ['cyan', 'border-cyan-600', 'hover:bg-cyan-700', 'text-cyan-500', 'dark:hover:bg-cyan-600'],
             ['pink', 'border-pink-600', 'hover:bg-pink-700', 'text-pink-500', 'dark:hover:bg-pink-600'],
-            ['grey', 'border-gray-600', 'hover:bg-gray-700', 'text-gray-500', 'dark:hover:bg-gray-600'],
+            ['grey', 'border-grey-600', 'hover:bg-grey-700', 'text-grey-500', 'dark:hover:bg-grey-600'],
             ['purple', 'border-purple-600', 'hover:bg-purple-700', 'text-purple-500', 'dark:hover:bg-purple-600'],
         ])('applies %s outline color classes', (color, borderClass, hoverBgClass, textClass, darkHoverBgClass) => {
             const wrapper = mount(PubButton, {
@@ -366,10 +366,26 @@ describe('PubButton', () => {
         it('renders as router-link when to prop is provided', () => {
             const route = { name: 'product', params: { id: 101 } }
             const wrapper = mount(PubButton, {
-                props: { to: '/page' },
+                props: { to: route },
                 global: { stubs: { 'router-link': RouterLinkStub } },
             })
             expect(wrapper.findComponent(RouterLinkStub).props('to')).toEqual(route)
+        })
+
+        it('prioritises to over href', () => {
+            const wrapper = mount(PubButton, {
+                props: { to: '/primary', href: '/fallback' },
+                global: { stubs: { 'router-link': RouterLinkStub } },
+            })
+            expect(wrapper.findComponent(RouterLinkStub).props('to')).toBe('/primary')
+        })
+
+        it('uses a custom tag component when tag and href are both set', () => {
+            const wrapper = mount(PubButton, {
+                props: { as: 'router-link', href: '/custom' },
+                global: { stubs: { 'router-link': RouterLinkStub } },
+            })
+            expect(wrapper.findComponent(RouterLinkStub).exists()).toBe(true)
         })
     })
 

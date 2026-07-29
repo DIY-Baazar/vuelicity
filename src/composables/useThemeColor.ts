@@ -101,16 +101,16 @@ const themeClasses: Themes<ThemeColor> = {
     },
 
     grey: {
-        background: 'bg-gray-600 dark:bg-gray-500',
-        backgroundLight: 'bg-gray-200 dark:bg-gray-800',
-        backgroundLighter: 'bg-gray-100 dark:bg-gray-900',
-        border: 'border-gray-600 dark:border-gray-500',
+        background: 'bg-grey-600 dark:bg-grey-500',
+        backgroundLight: 'bg-grey-200 dark:bg-grey-800',
+        backgroundLighter: 'bg-grey-100 dark:bg-grey-900',
+        border: 'border-grey-600 dark:border-grey-500',
         disabled: '',
-        focus: 'focus:ring-gray-300 dark:focus:ring-gray-800',
-        hover: 'hover:bg-gray-700 dark:hover:bg-gray-600',
-        text: 'text-gray-500 dark:text-gray-400',
-        textDark: 'text-gray-800 dark:text-gray-200',
-        fill: 'fill-gray-600 dark:fill-gray-500',
+        focus: 'focus:ring-grey-300 dark:focus:ring-grey-800',
+        hover: 'hover:bg-grey-700 dark:hover:bg-grey-600',
+        text: 'text-grey-500 dark:text-grey-400',
+        textDark: 'text-grey-800 dark:text-grey-200',
+        fill: 'fill-grey-600 dark:fill-grey-500',
     },
 
     purple: {

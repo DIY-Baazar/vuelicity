@@ -59,6 +59,9 @@ const componentName = computed(() => {
     if (props.as === 'a' || props.href) {
         return 'a'
     }
+    if (props.as === 'button') {
+        return 'button'
+    }
 
     return resolveComponent(props.as)
 })

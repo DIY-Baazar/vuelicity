@@ -11,14 +11,6 @@ type NonThemeColor = Exclude<BadgeTheme, ThemeColor>
 
 const badgeThemeClasses: Record<NonThemeColor, string> = {
     default: 'bg-light text-grey-800',
-    // red: "bg-red-100 text-red-800",
-    // blue: "bg-blue-100 text-blue-800",
-    // yellow: "bg-yellow-100 text-yellow-800",
-    // green: "bg-green-100 text-green-800",
-    // magenta: "bg-magenta-100 text-magenta-800",
-    // cyan: "bg-cyan-100 text-cyan-800",
-    // light: "bg-grey-100 text-grey-800",
-    // dark: "bg-grey-800 text-grey-100"
 }
 
 const badgeSizeClasses: Record<BadgeSize, string> = {
@@ -29,14 +21,6 @@ const badgeSizeClasses: Record<BadgeSize, string> = {
 
 const badgeBorderedClasses: Record<NonThemeColor, string> = {
     default: 'border-grey-800',
-    // red: "border-red-800",
-    // blue: "border-blue-800",
-    // yellow: "border-yellow-800",
-    // green: "border-green-800",
-    // magenta: "border-magenta-800",
-    // cyan: "border-cyan-800",
-    // light: "border-grey-800",
-    // dark: "border-grey-100"
 }
 
 interface UseBadgeClassesProps {
