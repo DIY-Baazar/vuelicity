@@ -28,6 +28,7 @@ interface UseBadgeClassesProps {
     size: Ref<BadgeSize>;
     bordered: Ref<boolean>;
     rounded: Ref<boolean>;
+    hasIconOnly: Ref<boolean>;
 }
 
 export function useBadgeClasses (props: UseBadgeClassesProps) {
@@ -48,7 +49,7 @@ export function useBadgeClasses (props: UseBadgeClassesProps) {
             themeClasses,
             badgeSizeClasses[props.size.value],
             props.bordered.value ? 'border ' + borderClasses : '',
-            props.rounded.value ? 'rounded-full' : '',
+            props.rounded.value || props.hasIconOnly.value ? 'rounded-full' : '',
         ])
     })
 }

@@ -94,7 +94,6 @@ describe('PubBadge', () => {
                     default: 'Badge',
                 },
             })
-            console.log(`Classes for ${color}:`, Array.from(wrapper.classes()))
             expect(wrapper.classes()).toContain(bgClass)
             expect(wrapper.classes()).toContain(textClass)
         })
@@ -114,11 +113,8 @@ describe('PubBadge', () => {
             expect(wrapper.classes()).toContain('border-grey-800')
         })
 
-        it('does not add border when bordered is false', () => {
+        it('does not add border by default', () => {
             const wrapper = mount(PubBadge, {
-                props: {
-                    bordered: false,
-                },
                 slots: {
                     default: 'Badge',
                 },
@@ -141,11 +137,8 @@ describe('PubBadge', () => {
             expect(wrapper.classes()).toContain('rounded-full')
         })
 
-        it('does not add rounded-full when rounded is false', () => {
+        it('does not add rounded-full by default', () => {
             const wrapper = mount(PubBadge, {
-                props: {
-                    rounded: false,
-                },
                 slots: {
                     default: 'Badge',
                 },
@@ -170,24 +163,39 @@ describe('PubBadge', () => {
         })
     })
 
-    describe('slots', () => {
-        it('renders icon slot', () => {
-            const wrapper = mount(PubBadge, {
-                slots: {
-                    icon: '<i class="icon">Icon</i>',
-                    default: 'Badge',
-                },
-            })
-            expect(wrapper.html()).toContain('<i class="icon">Icon</i>')
+    describe('dismissable', () => {
+        it('renders a dismiss button when dismissable is true', () => {
+            const wrapper = mount(PubBadge, { props: { dismissable: true }, slots: { default: 'Tag' } })
+            expect(wrapper.find('button').exists()).toBe(true)
         })
 
-        it('renders default slot', () => {
+        it('does not render a dismiss button by default', () => {
+            const wrapper = mount(PubBadge, { slots: { default: 'Tag' } })
+            expect(wrapper.find('button').exists()).toBe(false)
+        })
+
+        it('emits dismiss when the button is clicked', async () => {
+            const wrapper = mount(PubBadge, { props: { dismissable: true }, slots: { default: 'Tag' } })
+            await wrapper.find('button').trigger('click')
+            expect(wrapper.emitted('dismiss')).toHaveLength(1)
+        })
+    })
+
+    describe('slots', () => {
+        it('applies rounded-full for icon-only badges', () => {
             const wrapper = mount(PubBadge, {
                 slots: {
-                    default: 'Badge Content',
+                    icon: '<svg />',
                 },
             })
-            expect(wrapper.text()).toContain('Badge Content')
+            expect(wrapper.html()).toContain('<svg></svg>')
+            expect(wrapper.classes()).toContain('rounded-full')
+            expect(wrapper.classes()).toContain('bg-light')
+        })
+
+        it('applies type color classes for icon-only badges with a non-default type', () => {
+            const wrapper = mount(PubBadge, { props: { color: 'green' }, slots: { icon: '<svg />' } })
+            expect(wrapper.classes()).toContain('bg-green-100')
         })
     })
 })

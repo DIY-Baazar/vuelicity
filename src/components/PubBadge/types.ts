@@ -13,4 +13,5 @@ export interface BadgeProps {
     bordered?: boolean;
     rounded?: boolean;
     class?: string;
+    dismissable?: boolean;
 };

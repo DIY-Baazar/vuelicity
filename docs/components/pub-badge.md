@@ -5,6 +5,7 @@ description: Documentation for the PubBadge component.
 
 <script setup>
 import DefaultBadge from './PubBadge/DefaultBadge.vue';
+import DimissableBadge from './PubBadge/DimissableBadge.vue';
 import SizeBadge from './PubBadge/SizeBadge.vue';
 import BorderedBadge from './PubBadge/BorderedBadge.vue';
 import RoundedBadge from './PubBadge/RoundedBadge.vue';
@@ -52,6 +53,18 @@ The `bordered` prop can be used to add a border to the badge.
 </demo-container>
 
 <<< @/components/PubBadge/BorderedBadge.vue
+
+## Dismissable badges (chips)
+
+### Prop - `dismissable` Usage
+
+The `dismissable` prop can be used to make the badge dismissable.
+
+<demo-container>
+    <DimissableBadge />
+</demo-container>
+
+<<< @/components/PubBadge/DimissableBadge.vue
 
 ## Rounded badges
 

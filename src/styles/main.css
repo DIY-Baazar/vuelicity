@@ -103,8 +103,8 @@
     /* White */
     --color-white: #fffffa;
 
-    --color-light: #fefefa;
-    --color-dark: #333333;
+    --color-light: var(--color-gray-50);
+    --color-dark: var(--color-black);
 
     --font-sans: "Open Sans", sans-serif;
     --font-serif: "Montserrat", serif;
