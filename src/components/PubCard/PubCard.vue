@@ -1,6 +1,7 @@
 <template>
   <component
     :is="componentName"
+    :href="componentName === 'a' ? href : undefined"
     :class="['pub-card', cardClasses, props.class]"
   >
     <img
