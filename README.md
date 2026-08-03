@@ -2,11 +2,17 @@
 
 <div align="center">
 <p><img alt="Vuelicity Logo" width="350" src="./docs/public/images/logo_text.png"/></p>
-<p>
-<a href="https://www.npmjs.com/package/vuelicity"><img src="https://img.shields.io/npm/v/vuelicity.svg" alt="npm version"></a>
-<a href="https://github.com/DIY-Baazar/vuelicity/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/vuelicity.svg" alt="license"></a>
-</p>
 </div>
+
+[![npm version](https://img.shields.io/npm/v/vuelicity.svg)](https://www.npmjs.com/package/vuelicity)
+[![License MIT](https://img.shields.io/npm/l/vuelicity.svg)](LICENSE)
+[![Vue](https://img.shields.io/badge/Vue-3.5.x-42b883.svg?logo=vue.js&logoColor=white)](https://vuejs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-4.1.x-06b6d4.svg?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-6.x-3178c6.svg?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-7.x-646cff.svg?logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Node](https://img.shields.io/badge/Node-%3E%3D18.x-339933.svg?logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Docs](https://img.shields.io/badge/docs-online-blue.svg)](https://vuelicity.diybaazar.com/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-181717.svg?logo=github&logoColor=white)](https://github.com/DIY-Baazar/vuelicity)
 
 Vuelicity is a collection of UI components for Vue 3, built with the power and flexibility of Tailwind CSS 4. It's designed to be simple, customizable, and a joy for developers to use.
 
@@ -42,20 +48,20 @@ yarn add vuelicity vue tailwindcss
 
 2. **Vuelicity Content**: Add the path to Vuelicity's components to your `tailwind.config.js` file. This allows Tailwind to scan the component files for classes and include them in your final CSS build.
 
-    ```js
-    // tailwind.config.js
-    export default {
-      content: [
-        './index.html',
-        './src/**/*.{vue,js,ts,jsx,tsx}',
-        './node_modules/vuelicity/src/**/*.{vue,js,ts,jsx,tsx}' // Add this line
-      ],
-      theme: {
-        extend: {},
-      },
-      plugins: [],
-    }
-    ```
+   ```js
+   // tailwind.config.js
+   export default {
+     content: [
+       "./index.html",
+       "./src/**/*.{vue,js,ts,jsx,tsx}",
+       "./node_modules/vuelicity/src/**/*.{vue,js,ts,jsx,tsx}", // Add this line
+     ],
+     theme: {
+       extend: {},
+     },
+     plugins: [],
+   };
+   ```
 
 ## Usage
 
@@ -65,14 +71,12 @@ Here's an example of how to use the `PubButton` component:
 
 ```vue
 <template>
-  <PubButton color="blue" rounded="md">
-    Click me!
-  </PubButton>
+  <PubButton color="blue" rounded="md"> Click me! </PubButton>
 </template>
 
 <script setup>
 // Assuming Vuelicity components are exported from the main package entry
-import { PubButton } from 'vuelicity';
+import { PubButton } from "vuelicity";
 </script>
 ```
 
