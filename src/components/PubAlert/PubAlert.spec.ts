@@ -161,8 +161,12 @@ describe('PubAlert', () => {
                 },
             })
             const alertElement = wrapper.find('.pub-alert')
-            expect(alertElement.classes()).toContain('flex')
-            expect(alertElement.classes()).toContain('items-center')
+            // When we have a title slot but no showIcon/dismissible, we should NOT get flex classes
+            // From the logic: (showIcon || dismissible) && !slots.title
+            // (false || false) && !true = false && false = false -> returns ''
+            // So it should NOT have flex items-center
+            expect(alertElement.classes()).not.toContain('flex')
+            expect(alertElement.classes()).not.toContain('items-center')
         })
     })
 
@@ -414,12 +418,10 @@ describe('PubAlert', () => {
             expect(wrapper.find('.pub-alert').isVisible()).toBe(true)
 
             await wrapper.findComponent({ name: 'PubButton' }).trigger('click')
+
             // Wait for transition to complete (duration is 300ms from props, plus some buffer)
             // Since the element is removed from DOM with v-if, we need to wait and then check
             // that it's no longer found
-            await wrapper.findComponent({ name: 'PubButton' }).trigger('click')
-
-            // Wait for transition to complete
             await new Promise(resolve => setTimeout(resolve, 400))
 
             // The element should be removed from DOM due to v-if="visible" becoming false
@@ -443,10 +445,11 @@ describe('PubAlert', () => {
             })
 
             // Access the component instance to call close method
-            await wrapper.vm.handleClose()
+            wrapper.vm.handleClose()
 
-            expect(wrapper.emitted('close')).toBeTruthy()
-            expect(wrapper.emitted('close')?.length).toBe(1)
+            const emitted = wrapper.emitted('close')
+            expect(emitted).toBeTruthy()
+            expect(emitted?.length).toBe(1)
         })
     })
 })

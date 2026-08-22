@@ -87,6 +87,11 @@ function handleClose () {
     emit('close')
     visible.value = false
 }
+
+// Expose methods for testing
+defineExpose({
+    handleClose
+})
 </script>
 
 <style scoped>

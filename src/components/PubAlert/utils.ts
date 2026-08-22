@@ -29,7 +29,7 @@ export function useAlertClasses (props: UseAlertClassesProps) {
             theme.textDarkClasses.value,
             theme.borderClasses.value,
             normalizeClass(props.class?.value),
-            (props.showIcon?.value || props.dismissible?.value) && !slots.title ? 'flex items-center' : '',
+            (!slots.title || props.showIcon?.value || props.dismissible?.value) ? 'flex items-center' : '',
             props.bordered?.value ? 'border' : '',
         ]),
     )
