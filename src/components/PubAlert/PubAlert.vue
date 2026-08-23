@@ -90,7 +90,7 @@ function handleClose () {
 
 // Expose methods for testing
 defineExpose({
-    handleClose
+    handleClose,
 })
 </script>
 

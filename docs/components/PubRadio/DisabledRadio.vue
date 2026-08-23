@@ -1,14 +1,14 @@
 <template>
   <pub-radio
     v-model="picked"
-    name="radio"
+    name="disabled"
     label="Default radio"
     disabled
     value="one"
   />
   <pub-radio
     v-model="picked"
-    name="radio"
+    name="disabled"
     label="Checked state"
     disabled
     value="two"

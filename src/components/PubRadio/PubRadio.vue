@@ -1,7 +1,6 @@
 <template>
   <div :class="wrapperClasses">
     <label
-      :for="inputName"
       :class="radioWrapperClasses"
     >
       <input
@@ -19,10 +18,19 @@
       >
         {{ label }}
       </span>
-      <span :class="labelClasses">
+      <span
+        v-if="$slots.default"
+        :class="labelClasses"
+      >
         <slot />
       </span>
     </label>
+    <p
+      v-if="$slots.validationMessage"
+      :class="validationMessageClasses"
+    >
+      <slot name="validationMessage" />
+    </p>
     <p
       v-if="$slots.helper"
       :class="helperMessageClasses"
@@ -50,6 +58,7 @@ const props = withDefaults(defineProps<RadioProps>(), {
     bordered: false,
     size: 'md',
     color: 'blue',
+    validationStatus: undefined,
 })
 
 defineOptions({ inheritAttrs: false })
@@ -58,6 +67,6 @@ const inputName = computed(() => props.name || 'input-' + useId())
 
 const model = defineModel<RadioElementType>()
 
-const { wrapperClasses, radioWrapperClasses, radioClasses, labelClasses, helperMessageClasses } = useRadioClasses(toRefs(props))
+const { wrapperClasses, radioWrapperClasses, radioClasses, labelClasses, helperMessageClasses, validationMessageClasses } = useRadioClasses(toRefs(props))
 
 </script>

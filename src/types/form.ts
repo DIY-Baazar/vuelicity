@@ -1,3 +1,5 @@
+import type { ThemeColor } from '@/composables/useThemeColor'
+
 export type FormElementSize = 'sm' | 'md' | 'lg' | 'xl'
 
 export const validationStatusMap = {
@@ -11,4 +13,4 @@ export type FormElementAutoFill = 'on' | 'off' | 'email' | 'tel' | 'name' | 'use
 
 export type FormElementValue = string | number | boolean | object
 
-export type FormElementColor = 'red' | 'blue' | 'yellow' | 'green' | 'magenta' | 'cyan' | 'light' | 'dark'
+export type FormElementColor = ThemeColor | 'black'
