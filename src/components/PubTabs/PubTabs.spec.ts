@@ -6,6 +6,7 @@ import PubTab from './PubTab.vue'
 import PubTabs from './PubTabs.vue'
 
 import type { TabsVariant } from './types'
+import type { ThemeColor } from '@/composables/useThemeColor.js'
 
 const TabsHarness = defineComponent({
     name: 'TabsHarness',
@@ -30,7 +31,7 @@ const TabsHarness = defineComponent({
                     'vertical': props.vertical,
                     'fullWidth': props.fullWidth,
                     'directive': props.directive as 'if' | 'show',
-                    'color': props.color,
+                    'color': props.color as ThemeColor,
                     'class': attrs.class,
                     'onUpdate:modelValue': (value: string) => emit('update:modelValue', value),
                     'onClick:tab': () => emit('click:tab'),

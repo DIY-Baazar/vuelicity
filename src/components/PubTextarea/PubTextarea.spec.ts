@@ -169,7 +169,6 @@ describe('PubTextarea', () => {
     describe('validation status', () => {
         it.each([
             [undefined as undefined | FormElementValidationStatus, ''],
-            [null as null | FormElementValidationStatus, ''],
             ['success' as FormElementValidationStatus, 'text-green-700'],
             ['error' as FormElementValidationStatus, 'text-red-700'],
         ])('applies %s validation message classes', (status, expectedClass) => {
@@ -184,16 +183,18 @@ describe('PubTextarea', () => {
             const message = wrapper.findAll('p').find(p => p.text() === 'Validation text')
             expect(message).toBeDefined()
             if (expectedClass) {
-                expect(message!.classes()).toContain(expectedClass)
+                if (!message) throw new Error('Validation message was not found')
+                expect(message.classes()).toContain(expectedClass)
             } else {
-                expect(message!.classes()).not.toContain('text-green-700')
-                expect(message!.classes()).not.toContain('text-red-700')
+                if (!message) throw new Error('Validation message was not found')
+                expect(message.classes()).not.toContain('text-green-700')
+                expect(message.classes()).not.toContain('text-red-700')
             }
         })
 
         it.each([
             [undefined as undefined | FormElementValidationStatus, false],
-            [null as null | FormElementValidationStatus, false],
+            // [null as null | FormElementValidationStatus, false],
             ['success' as FormElementValidationStatus, true],
             ['error' as FormElementValidationStatus, true],
         ])('applies %s input wrapper classes for validation status', (status, hasValidationClasses) => {

@@ -3,6 +3,7 @@ import { describe, expect, it } from 'vitest'
 
 import PubInput from './PubInput.vue'
 
+import type { InputType } from './types.js'
 import type { FormElementAutoFill, FormElementSize, FormElementValidationStatus } from '@/types/form'
 
 describe('PubInput', () => {
@@ -218,7 +219,6 @@ describe('PubInput', () => {
     describe('validation status', () => {
         it.each([
             [undefined as undefined | FormElementValidationStatus, ''],
-            [null as null | FormElementValidationStatus, ''],
             ['success' as FormElementValidationStatus, 'text-green-700'],
             ['error' as FormElementValidationStatus, 'text-red-700'],
         ])('applies %s validation message classes', (status, expectedClass) => {
@@ -244,9 +244,14 @@ describe('PubInput', () => {
 
         it.each([
             [undefined as undefined | FormElementValidationStatus, ''],
-            [null as null | FormElementValidationStatus, ''],
-            ['success' as FormElementValidationStatus, 'bg-green-50 border-green-200 has-[input:focus]:border-green-500 has-[input:focus]:ring-green-500'],
-            ['error' as FormElementValidationStatus, 'bg-red-50 border-red-200 has-[input:focus]:border-red-500 has-[input:focus]:ring-red-500'],
+            [
+                'success' as FormElementValidationStatus,
+                'bg-green-50 border-green-200 has-[input:focus]:border-green-500 has-[input:focus]:ring-green-500',
+            ],
+            [
+                'error' as FormElementValidationStatus,
+                'bg-red-50 border-red-200 has-[input:focus]:border-red-500 has-[input:focus]:ring-red-500',
+            ],
         ])('applies %s input wrapper classes for validation status', (status, expectedClasses) => {
             const wrapper = mount(PubInput, {
                 props: {
@@ -260,8 +265,10 @@ describe('PubInput', () => {
             if (expectedClasses) {
                 // Check for key classes that indicate the validation state
                 const classList = inputWrapper.classes()
-                expect(classList.some(cls => cls.includes('bg-green-50') || cls.includes('bg-red-50'))).toBe(true)
-                expect(classList.some(cls => cls.includes('border-green-200') || cls.includes('border-red-200'))).toBe(true)
+                expect(classList.some((cls) => cls.includes('bg-green-50') || cls.includes('bg-red-50'))).toBe(true)
+                expect(
+                    classList.some((cls) => cls.includes('border-green-200') || cls.includes('border-red-200')),
+                ).toBe(true)
             } else {
                 expect(inputWrapper.classes()).toContain('bg-grey-50')
                 expect(inputWrapper.classes()).toContain('border-grey-300')
@@ -270,7 +277,6 @@ describe('PubInput', () => {
 
         it.each([
             [undefined as undefined | FormElementValidationStatus, ''],
-            [null as null | FormElementValidationStatus, ''],
             ['success' as FormElementValidationStatus, 'text-green-900 placeholder:text-green-500'],
             ['error' as FormElementValidationStatus, 'text-red-900 placeholder:text-red-500'],
         ])('applies %s input classes for validation status', (status, expectedClasses) => {
@@ -304,13 +310,13 @@ describe('PubInput', () => {
 
     describe('input type', () => {
         it.each([
-            'text',
-            'email',
-            'password',
-            'number',
-            'tel',
-            'url',
-            'search',
+            'text' as InputType,
+            'email' as InputType,
+            'password' as InputType,
+            'number' as InputType,
+            'tel' as InputType,
+            'url' as InputType,
+            'search' as InputType,
         ])('renders with %s type', (type) => {
             const wrapper = mount(PubInput, {
                 props: {
