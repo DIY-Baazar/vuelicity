@@ -1,15 +1,27 @@
 import type { ThemeColor } from '@/composables/useThemeColor'
 
-export type FormElementSize = 'sm' | 'md' | 'lg' | 'xl'
+export type FormElementSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 
 export const validationStatusMap = {
     Error: 'error',
     Success: 'success',
 } as const
 
-export type FormElementValidationStatus = (typeof validationStatusMap)[keyof typeof validationStatusMap]
+export type FormElementValidationStatus =
+  (typeof validationStatusMap)[keyof typeof validationStatusMap]
 
-export type FormElementAutoFill = 'on' | 'off' | 'email' | 'tel' | 'name' | 'username' | 'current-password' | 'country' | 'postal-code' | 'language' | 'bday'
+export type FormElementAutoFill =
+  | 'on'
+  | 'off'
+  | 'email'
+  | 'tel'
+  | 'name'
+  | 'username'
+  | 'current-password'
+  | 'country'
+  | 'postal-code'
+  | 'language'
+  | 'bday'
 
 export type FormElementValue = string | number | boolean | object
 

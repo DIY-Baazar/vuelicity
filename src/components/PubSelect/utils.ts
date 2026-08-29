@@ -29,6 +29,7 @@ const successSelectClasses = 'bg-green-50 border-green-500 focus:ring-green-500 
 const errorSelectClasses = 'bg-red-50 border-red-500 focus:ring-red-500 focus:border-red-500 text-red-900 placeholder-red-700'
 
 const selectSizeClasses: Record<FormElementSize, string> = {
+    xs: 'p-1 text-xs',
     sm: 'p-2 text-sm',
     md: 'p-2.5 text-sm',
     lg: 'p-4',
