@@ -1,8 +1,8 @@
 import { resolve } from 'path'
 
-import components from './components'
-import form from './form'
-import typography from './typography'
+import components from './components/index.ts'
+import form from './form/index.ts'
+import typography from './typography/index.ts'
 
 export default {
     lang: 'en-IN',
@@ -56,7 +56,7 @@ export default {
     vite: {
         resolve: {
             alias: {
-                vuelicity: resolve(__dirname, '../../src'),
+                vuelicity: resolve(import.meta.dirname, '../../src'),
             },
             dedupe: ['vue'], // avoid error when using dependencies that also use Vue
         },

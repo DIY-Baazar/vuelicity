@@ -8,7 +8,7 @@ export default defineConfig({
     plugins: [tailwindcss()],
     resolve: {
         alias: {
-            '@': resolve(__dirname, '../src'), // to resolve @ inside docs
+            '@': resolve(import.meta.dirname, '../src'), // to resolve @ inside docs
         },
     },
 })

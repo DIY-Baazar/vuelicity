@@ -4,13 +4,20 @@
     :class="iconClasses"
     v-bind="$attrs"
   >
-    <svg
+    <!-- <svg
       xmlns="http://www.w3.org/2000/svg"
       width="100%"
       height="100%"
       viewBox="0 0 24 24"
       v-html="iconBody"
-    />
+    /> -->
+    <svg
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <component :is="iconBody" />
+    </svg>
   </span>
 </template>
 
@@ -52,107 +59,108 @@ const props = withDefaults(defineProps<IconProps>(), {
 
 const { iconClasses } = useIconClasses(toRefs(props))
 
-const sanitizeSvg = (rawSvg: string) => {
-    const parser = new DOMParser()
-    const document = parser.parseFromString(`<svg>${rawSvg}</svg>`, 'image/svg+xml')
-    const root = document.documentElement
+// const sanitizeSvg = (rawSvg: string) => {
+//     const parser = new DOMParser()
+//     const document = parser.parseFromString(`<svg>${rawSvg}</svg>`, 'image/svg+xml')
+//     const root = document.documentElement
 
-    const allowedTags = new Set([
-        'svg',
-        'g',
-        'path',
-        'circle',
-        'rect',
-        'line',
-        'polyline',
-        'polygon',
-        'ellipse',
-        'title',
-        'desc',
-        'defs',
-        'use',
-        'mask',
-        'pattern',
-        'clipPath',
-        'linearGradient',
-        'radialGradient',
-        'stop',
-        'filter',
-        'feGaussianBlur',
-        'feOffset',
-        'feBlend',
-        'feColorMatrix',
-    ])
+//     const allowedTags = new Set([
+//         'svg',
+//         'g',
+//         'path',
+//         'circle',
+//         'rect',
+//         'line',
+//         'polyline',
+//         'polygon',
+//         'ellipse',
+//         'title',
+//         'desc',
+//         'defs',
+//         'use',
+//         'mask',
+//         'pattern',
+//         'clipPath',
+//         'linearGradient',
+//         'radialGradient',
+//         'stop',
+//         'filter',
+//         'feGaussianBlur',
+//         'feOffset',
+//         'feBlend',
+//         'feColorMatrix',
+//     ])
 
-    const allowedAttrs = new Set([
-        'd',
-        'fill',
-        'stroke',
-        'stroke-width',
-        'stroke-linecap',
-        'stroke-linejoin',
-        'fill-rule',
-        'clip-rule',
-        'opacity',
-        'transform',
-        'x',
-        'y',
-        'x1',
-        'y1',
-        'x2',
-        'y2',
-        'cx',
-        'cy',
-        'r',
-        'rx',
-        'ry',
-        'points',
-        'viewBox',
-        'width',
-        'height',
-        'xmlns',
-        'preserveAspectRatio',
-        'offset',
-        'stop-color',
-        'stop-opacity',
-        'gradientUnits',
-        'gradientTransform',
-        'xlink:href',
-        'href',
-        'id',
-        'class',
-    ])
+//     const allowedAttrs = new Set([
+//         'd',
+//         'fill',
+//         'stroke',
+//         'stroke-width',
+//         'stroke-linecap',
+//         'stroke-linejoin',
+//         'fill-rule',
+//         'clip-rule',
+//         'opacity',
+//         'transform',
+//         'x',
+//         'y',
+//         'x1',
+//         'y1',
+//         'x2',
+//         'y2',
+//         'cx',
+//         'cy',
+//         'r',
+//         'rx',
+//         'ry',
+//         'points',
+//         'viewBox',
+//         'width',
+//         'height',
+//         'xmlns',
+//         'preserveAspectRatio',
+//         'offset',
+//         'stop-color',
+//         'stop-opacity',
+//         'gradientUnits',
+//         'gradientTransform',
+//         'xlink:href',
+//         'href',
+//         'id',
+//         'class',
+//     ])
 
-    const sanitizeNode = (node: Node) => {
-        if (node.nodeType === Node.ELEMENT_NODE) {
-            const element = node as Element
-            const tagName = element.tagName.toLowerCase()
+//     const sanitizeNode = (node: Node) => {
+//         if (node.nodeType === Node.ELEMENT_NODE) {
+//             const element = node as Element
+//             const tagName = element.tagName.toLowerCase()
 
-            if (!allowedTags.has(tagName)) {
-                element.parentNode?.removeChild(element)
-                return
-            }
+//             if (!allowedTags.has(tagName)) {
+//                 element.parentNode?.removeChild(element)
+//                 return
+//             }
 
-            const attrs = Array.from(element.attributes)
-            for (const attr of attrs) {
-                const name = attr.name.toLowerCase()
-                const value = attr.value.trim().toLowerCase()
+//             const attrs = Array.from(element.attributes)
+//             for (const attr of attrs) {
+//                 const name = attr.name.toLowerCase()
+//                 const value = attr.value.trim().toLowerCase()
 
-                if (name.startsWith('on') || name === 'style' || value.startsWith('javascript:') || !allowedAttrs.has(name)) {
-                    element.removeAttribute(attr.name)
-                }
-            }
-        }
+//                 if (name.startsWith('on') || name === 'style' || value.startsWith('javascript:') || !allowedAttrs.has(name)) {
+//                     element.removeAttribute(attr.name)
+//                 }
+//             }
+//         }
 
-        const children = Array.from(node.childNodes)
-        for (const child of children) {
-            sanitizeNode(child)
-        }
-    }
+//         const children = Array.from(node.childNodes)
+//         for (const child of children) {
+//             sanitizeNode(child)
+//         }
+//     }
 
-    sanitizeNode(root)
-    return root.innerHTML || ''
-}
+//     sanitizeNode(root)
+//     return root.innerHTML || ''
+// }
 
-const iconBody = computed(() => sanitizeSvg(getIconBody(toRefs(props))))
+// const iconBody = computed(() => sanitizeSvg(getIconBody(toRefs(props))))
+const iconBody = computed(() => getIconBody(toRefs(props)))
 </script>
