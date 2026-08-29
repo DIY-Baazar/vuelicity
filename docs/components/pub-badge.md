@@ -12,6 +12,7 @@ import RoundedBadge from './PubBadge/RoundedBadge.vue';
 import AsLink from './PubBadge/AsLink.vue';
 import WithIcon from './PubBadge/WithIcon.vue';
 import IconBadge from './PubBadge/IconBadge.vue';
+import NotificationBadge from './PubBadge/NotificationBadge.vue';
 </script>
 
 # PubBadge
@@ -109,6 +110,14 @@ The `icon` slot can be used to add an icon to the badge.
 </demo-container>
 
 <<< @/components/PubBadge/IconBadge.vue
+
+## Notification Badge
+
+<demo-container>
+    <NotificationBadge />
+</demo-container>
+
+<<< @/components/PubBadge/NotificationBadge.vue
 
 ## Reference
 
