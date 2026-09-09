@@ -48,8 +48,10 @@ export function useIconClasses (props: UseIconClassesProps): {
         if (props.color.value && isThemeColor(props.color.value)) {
             const theme = useThemeColor(props.color.value as ThemeColor)
             themeClasses = theme.textClasses.value
-        } else {
+        } else if ((props.color.value as NonThemeColor) in iconThemeClasses) {
             themeClasses = iconThemeClasses[props.color.value as NonThemeColor]
+        } else {
+            themeClasses = normalizeClass(props.color.value)
         }
         return useMergeClasses([
             'inline-block',

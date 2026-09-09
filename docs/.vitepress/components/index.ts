@@ -60,6 +60,10 @@ const componentToc = [
         link: '/components/pub-spinner',
     },
     {
+        text: 'Rating',
+        link: '/components/pub-rating',
+    },
+    {
         text: 'Table',
         link: '/components/pub-table',
     },
