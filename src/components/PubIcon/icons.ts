@@ -1,3 +1,5 @@
+import { h, type VNode } from 'vue'
+
 import type { UseIconClassesProps } from './types'
 
 type IconPath = string | string[]
@@ -273,7 +275,7 @@ const iconAliasMap: Record<string, string> = {
 
 export const iconsList = Object.keys(iconPathMap)
 
-export function getIconBody (props: UseIconClassesProps): string {
+export function getIconBody (props: UseIconClassesProps): VNode | null {
     let iconName = ''
 
     if (props.name.value) {
@@ -291,39 +293,50 @@ export function getIconBody (props: UseIconClassesProps): string {
     const iconDefinition = iconPathMap[iconName]
 
     if (!iconDefinition) {
-        return ''
+        return null
     }
 
-    const iconPath = (Array.isArray(iconDefinition) || typeof iconDefinition === 'string')
-        ? iconDefinition
-        : props.type.value === 'solid'
-            ? iconDefinition?.solid
-            : iconDefinition?.outline
+    const iconPath =
+        Array.isArray(iconDefinition) || typeof iconDefinition === 'string'
+            ? iconDefinition
+            : props.type.value === 'solid'
+                ? iconDefinition.solid
+                : iconDefinition.outline
 
     const isSolid = props.type.value === 'solid'
     const strokeWidth = props.strokeWidth?.value || 1
 
-    const renderPath = (path: string) =>
-        isSolid
-            ? `<path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="${path}"/>`
-            : `<path fill="none" stroke="currentColor" stroke-width="${strokeWidth}" fill-rule="evenodd" clip-rule="evenodd" d="${path}"/>`
+    const renderPath = (path: string): VNode =>
+        h('path', {
+            'd': path,
+            'fill': isSolid ? 'currentColor' : 'none',
+            'stroke': isSolid ? undefined : 'currentColor',
+            'stroke-width': isSolid ? undefined : strokeWidth,
+            'fill-rule': 'evenodd',
+            'clip-rule': 'evenodd',
+        })
 
     if (Array.isArray(iconPath)) {
-        const paths = iconPath
-            .map((p) => {
+        return h(
+            'g',
+            null,
+            iconPath.map((p) => {
                 if (p.startsWith('circle:')) {
                     const [, cx, cy, r] = p.split(':')
 
-                    return isSolid
-                        ? `<circle cx="${cx}" cy="${cy}" r="${r}" fill="currentColor"/>`
-                        : `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="currentColor" stroke-width="${strokeWidth}"/>`
+                    return h('circle', {
+                        cx,
+                        cy,
+                        r,
+                        'fill': isSolid ? 'currentColor' : 'none',
+                        'stroke': isSolid ? undefined : 'currentColor',
+                        'stroke-width': isSolid ? undefined : strokeWidth,
+                    })
                 }
 
                 return renderPath(p)
-            })
-            .join('')
-
-        return `<g>${paths}</g>`
+            }),
+        )
     }
 
     return renderPath(iconPath)
