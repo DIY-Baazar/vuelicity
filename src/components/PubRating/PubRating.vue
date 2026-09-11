@@ -4,10 +4,24 @@
       v-for="index in props.scale"
       :key="index"
       name="star"
-      :type="props.rating > index ? 'solid' : 'outline'"
+      :type="props.rating >= index ? 'solid' : 'outline'"
       :size="props.size"
-      :color="props.rating > index && props.color ? props.color : 'text-grey-300'"
+      :color="props.rating >= index && props.color ? props.color : 'text-grey-300'"
     />
+
+    <!-- text -->
+    <slot name="besideText" />
+
+    <!-- review link -->
+    <template v-if="(reviewText && reviewLink)">
+      <span class="mx-1.5 size-1 rounded-full bg-gray-500 dark:bg-gray-400" />
+      <a
+        :href="reviewLink"
+        class="text-sm font-medium text-gray-900 underline hover:no-underline dark:text-white"
+      >
+        {{ reviewText }}
+      </a>
+    </template>
   </div>
 </template>
 

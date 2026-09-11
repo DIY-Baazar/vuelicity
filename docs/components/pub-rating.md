@@ -6,6 +6,8 @@ description: Documentation for the PubRating component.
     import DefaultRating from './PubRating/DefaultRating.vue';
     import SizeRating from './PubRating/SizeRating.vue';
     import ColorRating from './PubRating/ColorRating.vue';
+    import WithTextRating from './PubRating/WithTextRating.vue';
+    import RatingCount from './PubRating/RatingCount.vue';
 </script>
 
 # PubRating
@@ -20,7 +22,27 @@ description: Documentation for the PubRating component.
 
 ## Rating with Text
 
+### Slot - `besideText` Usage
+
+The `besideText` slot is used to display text beside the rating stars. You can use this slot to show additional information, such as the number of reviews or a custom message.
+
+<demo-container>
+    <WithTextRating />
+</demo-container>
+
+<<< @/components/PubRating/WithTextRating.vue
+
 ## Rating Count
+
+### Props - `reviewLink` & `reviewText` Usage
+
+The `reviewLink` prop is used to set the URL for the review link, and the `reviewText` prop is used to set the text for the review link.
+
+<demo-container>
+    <RatingCount />
+</demo-container>
+
+<<< @/components/PubRating/RatingCount.vue
 
 ## Star Sizes
 
@@ -45,3 +67,22 @@ The `color` prop is used to set the color of the rating stars. It can be one of 
 </demo-container>
 
 <<< @/components/PubRating/ColorRating.vue
+
+## Reference
+
+### Props
+
+| Name       | Type           | Default  | Description                       | Options                                                    |
+| ---------- | -------------- | -------- | --------------------------------- | ---------------------------------------------------------- |
+| rating     | Number         | 0        | The rating value to be displayed. |                                                            |
+| reviewLink | String         | ''       | The URL for the review link.      |                                                            |
+| reviewText | String         | ''       | The text for the review link.     |                                                            |
+| scale      | Number         | 5        | The maximum rating value.         |                                                            |
+| size       | String         | 'md'     | The size of the rating stars.     | 'sm', 'md', 'lg', 'xl'                                     |
+| color      | String / Class | 'yellow' | The color of the rating stars.    | 'blue', 'red', 'green', 'yellow', 'purple', 'pink', 'grey' |
+
+### Slots
+
+| Name       | Description                                       |
+| ---------- | ------------------------------------------------- |
+| besideText | Slot for displaying text beside the rating stars. |
