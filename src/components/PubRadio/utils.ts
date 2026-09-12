@@ -39,6 +39,7 @@ const successRadioClasses = 'text-green-900'
 const errorRadioClasses = 'text-red-900'
 
 const radioSizeClasses: Record<FormElementSize, string> = {
+    xs: 'py-0.25 px-1 text-xs',
     sm: 'py-0.5 px-2 text-sm',
     md: 'py-1 px-3 text-base',
     lg: 'py-1.5 px-4 text-lg',
