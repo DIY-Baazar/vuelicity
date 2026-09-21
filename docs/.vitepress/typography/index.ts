@@ -1,4 +1,5 @@
 const componentToc = [
+    { text: 'Heading', link: '/components/pub-heading' },
     { text: 'Link', link: '/components/pub-a' },
     {
         text: 'KBD',
