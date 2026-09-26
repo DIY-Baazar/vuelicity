@@ -8,6 +8,7 @@ export { default as PubAvatar } from "./PubAvatar/PubAvatar.vue";
 export { default as PubAvatarStack } from "./PubAvatar/PubAvatarStack.vue";
 export { default as PubAvatarStackCounter } from "./PubAvatar/PubAvatarStackCounter.vue";
 export { default as PubBadge } from "./PubBadge/PubBadge.vue";
+export { default as PubBlockquote } from "./PubBlockquote/PubBlockquote.vue";
 export { default as PubBreadcrumb } from "./PubBreadcrumb/PubBreadcrumb.vue";
 export { default as PubBreadcrumbItem } from "./PubBreadcrumb/PubBreadcrumbItem.vue";
 export { default as PubButtonGroup } from "./PubButtonGroup/PubButtonGroup.vue";

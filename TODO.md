@@ -2,98 +2,17 @@
 
 ## Components
 
-### PubIcon
+### PubA
 
-- [X] Scale
-- [X] Theme
-- [X] Spin, Flip, Rotate, and Mirror
-- [ ] Variant (Lined, Circled, Squared, Bold, Solid, Outline, Duotone)
-
-### PubNavbar
-
-- [X] Default Navbar
-- [X] Solid background
-- [X] Navbar with dropdown
-- [ ] Multi-level dropdown
-- [ ] Sticky navbar
-- [ ] Navbar with submenu
-- [ ] Navbar with search
-- [X] Navbar with action button
-- [ ] Language dropdown
-- [ ] User menu dropdown
-
-### PubPagination
-
-- [X] Default Pagination
-- [X] Pagination with icons
-- [X] Custom length pagination
-- [X] Previous and next
-- [X] Previous and next with icons
-
-### PubButton
-
-- [X] Default buttons
-  - [X] Prop - theme Usage
-- [X] Outline buttons
-  - [X] Prop - outline Usage
-- [X] Pill Button
-  - [X] Prop - rounded Usage
-- [X] Button sizes
-  - [X] Prop - size Usage
-- [X] Disabled Buttons
-  - [X] Prop - disabled Usage
-- [X] Button with loading state
-  - [X] Props - loading and skeleton
-- [X] Buttons with icon
-- [ ] Button with label
-- [X] Icon buttons
-- [ ] Button with spinners
-- [ ] Button with links
-
-### PubButtonGroup
-
-- [X] Default example
-- [X] Rounded Button Group
-- [X] Button Group Icon Action
-- [X] Button group icons
-- [ ] Button group dropdown
-- [ ] Button group
-
-### PubBadge
-
-- [X] Default badges
-  - [X] Props \- theme usage
-- [X] Bordered badges
-  - [X] Props bordered usage
-- [X] Large badges
-  - [X] Props \- size usage
-- [ ] Large bordered badges
-- [ ] Pill bordered badges
-- [X] Pill badges
-  - [X] Props rounded usage
-- [X] Badges as links
-  - [X] Props href usage
-- [X] Badges with icon
-  - [X] Slot icon usage
-- [X] Badges with only icon
-- [ ] Badges with loader
-- [X] Dismissable Badges(chips)
-- [ ] Chips with avatar
-- [X] Notification Badge
-
-### PubCard
-
-- [X] Default card (Props )
-- [ ] Card with button
-- [ ] Card with link
-- [X] Card with image
-- [ ] Card with description
-- [X] Horizontal card
-- [ ] User profile card
-- [ ] Card with form inputs
-- [ ] E-commerce card
-- [ ] Call to action card
-- [ ] Card with nav tabs
+- [X] Default link
+- [ ] Button
+- [X] Paragraph
+- [ ] Icon link
+- [ ] CTA link
+- [ ] Card link
+- [ ] Image link
+- [ ] Card inner link
+- [X] Styling link
 
 ### PubAccordion
 
@@ -132,6 +51,33 @@
 - [ ] Avatar text
 - [ ] User dropdown
 
+### PubBadge
+
+- [X] Default badges
+  - [X] Props - theme usage
+- [X] Bordered badges
+  - [X] Props bordered usage
+- [X] Large badges
+  - [X] Props - size usage
+- [ ] Large bordered badges
+- [ ] Pill bordered badges
+- [X] Pill badges
+  - [X] Props rounded usage
+- [X] Badges as links
+  - [X] Props href usage
+- [X] Badges with icon
+  - [X] Slot icon usage
+- [X] Badges with only icon
+- [ ] Badges with loader
+- [X] Dismissable Badges (chips)
+- [ ] Chips with avatar
+- [X] Notification Badge
+
+### PubBlockquote
+
+* [ ] Default
+* [ ] 
+
 ### PubBreadcrumb
 
 - [X] Default Breadcrumb
@@ -142,6 +88,49 @@
 - [ ] Breadcrumb with Button
 - [ ] Breadcrumb with Navigation
 
+### PubButton
+
+- [X] Default buttons
+  - [X] Prop - theme Usage
+- [X] Outline buttons
+  - [X] Prop - outline Usage
+- [X] Pill Button
+  - [X] Prop - rounded Usage
+- [X] Button sizes
+  - [X] Prop - size Usage
+- [X] Disabled Buttons
+  - [X] Prop - disabled Usage
+- [X] Button with loading state
+  - [X] Props - loading and skeleton
+- [X] Buttons with icon
+- [ ] Button with label
+- [X] Icon buttons
+- [ ] Button with spinners
+- [ ] Button with links
+
+### PubButtonGroup
+
+- [X] Default example
+- [X] Rounded Button Group
+- [X] Button Group Icon Action
+- [X] Button group icons
+- [ ] Button group dropdown
+- [ ] Button group
+
+### PubCard
+
+- [X] Default card (Props)
+- [ ] Card with button
+- [ ] Card with link
+- [X] Card with image
+- [ ] Card with description
+- [X] Horizontal card
+- [ ] User profile card
+- [ ] Card with form inputs
+- [ ] E-commerce card
+- [ ] Call to action card
+- [ ] Card with nav tabs
+
 ### PubCarousel
 
 - [X] Default Carousel
@@ -149,6 +138,24 @@
 - [X] Carousel without indicators
 - [X] Carousel with slide animation
 - [X] Carousel with slide and custom interval
+
+### PubCheckbox
+
+- [X] Default
+- [X] Disabled
+- [X] Checkbox link
+- [X] Helper text
+- [X] Bordered
+- [X] Bordered with description
+- [ ] Bordered with icon
+- [X] Checkbox group
+- [X] Styling checkbox
+- [ ] Checkbox list group
+- [ ] Horizontal list group
+- [ ] Checkbox dropdown
+- [ ] Inline layout
+- [ ] Colors
+- [ ] Advanced layout
 
 ### PubDropdown
 
@@ -182,6 +189,34 @@
 - [ ] Dropdown navbar
 - [ ] Dropdown datepicker
 
+### PubHeading
+
+- [X] Default heading
+- [X] Styling heading
+- [X] Sizes
+- [ ] Highlighted heading
+- [ ] Heading mark
+- [ ] Heading gradient
+- [ ] Heading underline
+- [ ] Breadcrumb context
+- [ ] Badge context
+- [ ] Secondary text
+
+### PubHr
+
+- [ ] Default HR
+- [ ] Trimmed
+- [ ] Icon HR
+- [ ] HR with text
+- [ ] HR shape
+
+### PubIcon
+
+- [X] Scale
+- [X] Theme
+- [X] Spin, Flip, Rotate, and Mirror
+- [ ] Variant (Lined, Circled, Squared, Bold, Solid, Outline, Duotone)
+
 ### PubInput
 
 - [X] Input Fields
@@ -194,49 +229,64 @@
 - [X] Dropdown Input
 - [X] Styling Input
 
-### PubSelect
+### PubJumbotron
 
-- [X] Default
-- [X] Sizes
-- [X] Disabled
-- [X] Underline
-- [ ] Select with dropdown
-- [ ] Multiple
-- [ ] Multiple size
-- [X] Helper Text
-- [X] Validation
-- [X] Styling select
+- [ ] Default
 
-### PubCheckbox
+### PubKbd
 
-- [X] Default
-- [X] Disabled
-- [X] Checkbox link
-- [X] Helper text
-- [X] Bordered
-- [X] Bordered with description
-- [ ] Bordered with icon
-- [X] Checkbox group
-- [X] Styling checkbox
-- [ ] Checkbox list group
-- [ ] Horizontal list group
-- [ ] Checkbox dropdown
-- [ ] Inline layout
-- [ ] Colors
-- [ ] Advanced layout
+- [X] Default KBD
+- [X] KBD inside text
+- [X] KBD inside table
+- [ ] Arrow keys
+- [ ] Letter keys
+- [ ] Number keys
+- [ ] Function keys
 
-### PubTextArea
+### PubListGroup
 
-- [X] Default
-- [X] Sizes
-- [X] Disabled / Readonly
-- [X] Validation
-- [ ] Helper text
-- [ ] WYSIWYG Editor
-- [X] Comment box
-- [ ] Chatroom input
-- [ ] Native Constraints
-- [ ] Styling Textarea
+- [ ] Default
+
+### PubNavbar
+
+- [X] Default Navbar
+- [X] Solid background
+- [X] Navbar with dropdown
+- [ ] Multi-level dropdown
+- [ ] Sticky navbar
+- [ ] Navbar with submenu
+- [ ] Navbar with search
+- [X] Navbar with action button
+- [ ] Language dropdown
+- [ ] User menu dropdown
+
+### PubPagination
+
+- [X] Default Pagination
+- [X] Pagination with icons
+- [X] Custom length pagination
+- [X] Previous and next
+- [X] Previous and next with icons
+
+### PubParagraph
+
+- [ ] Default paragraph
+- [ ] Leading paragraph
+- [ ] First letter
+- [ ] Paragraph link
+- [ ] Paragraph bold
+- [ ] Paragraph underline
+- [ ] Paragraph italic
+- [ ] Paragraph popover
+- [ ] Layout
+  - [ ] One column
+  - [ ] Two columns even
+  - [ ] Three columns even
+  - [ ] Two columns uneven
+- [ ] Text alignment
+  - [ ] Left
+  - [ ] Center
+  - [ ] Right
 
 ### PubRadio
 
@@ -254,27 +304,30 @@
 - [ ] Advanced Layout
 - [ ] Advanced layout with icons
 
-### PubToggle
+### PubRating
 
-- [ ] Default
-- [ ] Sizes
-- [ ] Colors
-- [ ] Checked
-- [ ] Disabled
-- [ ] Validation
-- [ ] Double Labelled
-- [ ] Toggle with icons
-- [ ] Toggle Card
-- [ ] Toggle Card with Icon
-- [ ] Styling Toggle
+- [X] Default rating
+- [X] Rating with text
+- [X] Rating count
+- [X] Star sizes
+- [X] Star colors
+- [ ] Advanced rating
+- [ ] Score rating
+- [ ] Rating comment
+- [ ] Review content
 
-### PubJumbotron
+### PubSelect
 
-- [ ] Default
-
-### PubListGroup
-
-- [ ] Default
+- [X] Default
+- [X] Sizes
+- [X] Disabled
+- [X] Underline
+- [ ] Select with dropdown
+- [ ] Multiple
+- [ ] Multiple size
+- [X] Helper Text
+- [X] Validation
+- [X] Styling select
 
 ### PubTable
 
@@ -302,57 +355,28 @@
 - [ ] Striped rows color
 - [ ] Striped columns color
 
-### PubA
+### PubTextArea
 
-- [X] Default link
-- [ ] Button
-- [X] Paragraph
-- [ ] Icon link
-- [ ] CTA link
-- [ ] Card link
-- [ ] Image link
-- [ ] Card inner link
-- [X] Styling link
-
-### PubKbd
-
-- [X] Default KBD
-- [X] KBD inside text
-- [X] KBD inside table
-- [ ] Arrow keys
-- [ ] Letter keys
-- [ ] Number keys
-- [ ] Function keys
-
-### PubHeading
-
-- [X] Default heading
-- [X] Styling heading
+- [X] Default
 - [X] Sizes
-- [ ] Highlighted heading
-- [ ] Heading mark
-- [ ] Heading gradient
-- [ ] Heading underline
-- [ ] Breadcrumb context
-- [ ] Badge context
-- [ ] Secondary text
+- [X] Disabled / Readonly
+- [X] Validation
+- [ ] Helper text
+- [ ] WYSIWYG Editor
+- [X] Comment box
+- [ ] Chatroom input
+- [ ] Native Constraints
+- [ ] Styling Textarea
 
-### PubHr
+### PubToggle
 
-- [ ] Default HR
-- [ ] Trimmed
-- [ ] Icon HR
-- [ ] HR with text
-- [ ] HR shape
-
-### PubRating
-
-- [X] Default rating
-- [X] Rating with text
-- [X] Rating count
-- [X] Star sizes
-- [X] Star colors
-- [ ] Advanced rating
-- [ ] Score rating
-- [ ] Rating comment
-- [ ] Review content
+- [ ] Default
+- [ ] Sizes
+- [ ] Colors
+- [ ] Checked
+- [ ] Disabled
+- [ ] Validation
+- [ ] Double Labelled
+- [ ] Toggle with icons
+- [ ] Toggle Card
+- [ ] Toggle

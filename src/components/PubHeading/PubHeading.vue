@@ -1,12 +1,10 @@
 <template>
-  <div class="pub-heading">
-    <component
-      :is="`h${level}`"
-      :class="spanClasses"
-    >
-      <slot />
-    </component>
-  </div>
+  <component
+    :is="`h${level}`"
+    :class="spanClasses"
+  >
+    <slot />
+  </component>
 </template>
 
 <script lang="ts" setup>

@@ -31,6 +31,7 @@ export function useHeadingClasses (props:UseHeadingClassesProps) {
             themeClasses = normalizeClass([props.color.value])
         }
         return useMergeClasses([
+            'pub-heading',
             textSizes[props.level.value],
             themeClasses,
             normalizeClass(props.class.value),
