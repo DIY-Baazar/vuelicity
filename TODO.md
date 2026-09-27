@@ -75,8 +75,20 @@
 
 ### PubBlockquote
 
-* [ ] Default
-* [ ] 
+- [ ] Default
+- [ ] Solid Background
+- [ ] Blockquote Icon
+- [ ] Paragraph Context
+- [ ] User Testimonial
+- [ ] User Review
+- [ ] Alignment
+  - [ ] Left
+  - [ ] Centre
+  - [ ] Right
+- [ ] Sizes
+  - [ ] Small
+  - [ ] Medium
+  - [ ] Large
 
 ### PubBreadcrumb
 

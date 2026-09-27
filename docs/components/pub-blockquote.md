@@ -6,3 +6,5 @@ description: Documentation for the PubBlockquote component.
 </script>
 
 # PubBlockquote
+
+This is a blockquote component 
