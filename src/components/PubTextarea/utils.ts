@@ -38,6 +38,7 @@ const successInputClasses = 'text-green-900 placeholder:text-green-500'
 const errorInputClasses = 'text-red-900 placeholder:text-red-500'
 
 const inputSizeClasses: Record<FormElementSize, string> = {
+    xs: 'px-1 py-0.5 text-xs',
     sm: 'px-2.5 py-2 text-sm',
     md: 'px-3 py-2.5 text-sm',
     lg: 'px-3.5 py-3 text-base',
