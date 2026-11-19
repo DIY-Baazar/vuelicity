@@ -1,6 +1,6 @@
 # Vuelicity
 
-## Components
+## Typography
 
 ### PubA
 
@@ -13,6 +13,56 @@
 - [ ] Image link
 - [ ] Card inner link
 - [X] Styling link
+
+### PubBlockquote
+
+- [x] Default
+- [x] Solid Background
+- [ ] Blockquote Icon
+- [ ] Paragraph Context
+- [ ] User Testimonial
+- [ ] User Review
+- [x] Alignment
+  - [x] Left
+  - [x] Centre
+  - [x] Right
+- [x] Sizes
+  - [x] Small
+  - [x] Medium
+  - [x] Large
+
+### PubKbd
+
+- [X] Default KBD
+- [X] KBD inside text
+- [X] KBD inside table
+- [ ] Arrow keys
+- [ ] Letter keys
+- [ ] Number keys
+- [ ] Function keys
+
+### PubParagraph
+
+- [x] Default paragraph
+- [ ] Leading paragraph
+- [ ] First letter
+- [ ] Paragraph link
+- [ ] Paragraph bold
+- [ ] Paragraph underline
+- [ ] Paragraph italic
+- [ ] Paragraph popover
+- [x] Styling paragraph
+- [ ] Layout
+  - [ ] One column
+  - [ ] Two columns even
+  - [ ] Three columns even
+  - [ ] Two columns uneven
+- [ ] Text alignment
+  - [ ] Left
+  - [ ] Center
+  - [ ] Right
+
+## Components
 
 ### PubAccordion
 
@@ -72,23 +122,6 @@
 - [X] Dismissable Badges (chips)
 - [ ] Chips with avatar
 - [X] Notification Badge
-
-### PubBlockquote
-
-- [ ] Default
-- [ ] Solid Background
-- [ ] Blockquote Icon
-- [ ] Paragraph Context
-- [ ] User Testimonial
-- [ ] User Review
-- [ ] Alignment
-  - [ ] Left
-  - [ ] Centre
-  - [ ] Right
-- [ ] Sizes
-  - [ ] Small
-  - [ ] Medium
-  - [ ] Large
 
 ### PubBreadcrumb
 
@@ -245,16 +278,6 @@
 
 - [ ] Default
 
-### PubKbd
-
-- [X] Default KBD
-- [X] KBD inside text
-- [X] KBD inside table
-- [ ] Arrow keys
-- [ ] Letter keys
-- [ ] Number keys
-- [ ] Function keys
-
 ### PubListGroup
 
 - [ ] Default
@@ -279,26 +302,6 @@
 - [X] Custom length pagination
 - [X] Previous and next
 - [X] Previous and next with icons
-
-### PubParagraph
-
-- [ ] Default paragraph
-- [ ] Leading paragraph
-- [ ] First letter
-- [ ] Paragraph link
-- [ ] Paragraph bold
-- [ ] Paragraph underline
-- [ ] Paragraph italic
-- [ ] Paragraph popover
-- [ ] Layout
-  - [ ] One column
-  - [ ] Two columns even
-  - [ ] Three columns even
-  - [ ] Two columns uneven
-- [ ] Text alignment
-  - [ ] Left
-  - [ ] Center
-  - [ ] Right
 
 ### PubRadio
 
