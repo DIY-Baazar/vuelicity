@@ -1,8 +1,8 @@
 import type { ThemeColor } from '@/composables/useThemeColor'
-import type { ClassRef } from '@/types/global'
+import type { ClassInput, ClassRef } from '@/types/global'
 import type { Ref } from 'vue'
 
-export type IconTheme = 'default' | ThemeColor
+export type IconTheme = 'default' | ThemeColor | ClassInput
 
 export type IconSize = '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl'
 

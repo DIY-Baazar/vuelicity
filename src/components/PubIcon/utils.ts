@@ -1,6 +1,7 @@
 import { computed, normalizeClass, type Ref } from 'vue'
 
 import type { IconSize, IconTheme, IconType, UseIconClassesProps } from './types'
+import type { ClassInput } from '@/types/global'
 
 import { useMergeClasses } from '@/composables/useMergeClasses'
 import { isThemeColor, type ThemeColor, useThemeColor } from '@/composables/useThemeColor'
@@ -20,7 +21,7 @@ const iconSizeClasses: Record<IconSize, string> = {
     '7xl': 'w-36 h-36',
 }
 
-type NonThemeColor = Exclude<IconTheme, ThemeColor>
+type NonThemeColor = Exclude<IconTheme, ThemeColor | ClassInput>
 
 const iconThemeClasses: Record<NonThemeColor, string> = {
     default: 'text-inherit',
@@ -45,11 +46,13 @@ export function useIconClasses (props: UseIconClassesProps): {
 } {
     const iconClasses = computed(() => {
         let themeClasses = ''
-        if (props.color.value && isThemeColor(props.color.value)) {
+        if (typeof props.color.value === 'string' && isThemeColor(props.color.value)) {
             const theme = useThemeColor(props.color.value as ThemeColor)
             themeClasses = theme.textClasses.value
-        } else {
+        } else if ((props.color.value as NonThemeColor) in iconThemeClasses) {
             themeClasses = iconThemeClasses[props.color.value as NonThemeColor]
+        } else {
+            themeClasses = normalizeClass(props.color.value)
         }
         return useMergeClasses([
             'inline-block',
