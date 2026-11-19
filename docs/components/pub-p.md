@@ -6,6 +6,11 @@ description: Documentation for the PubP component.
 <script setup>
     import DefaultParagraph from './PubP/DefaultParagraph.vue';
     import StylingParagraph from './PubP/StylingParagraph.vue';
+    import LeadingParagraph from './PubP/LeadingParagraph.vue';
+    import FirstLetterParagraph from './PubP/FirstLetterParagraph.vue';
+    import ParagraphLink from './PubP/ParagraphLink.vue';
+    import ParagraphBold from './PubP/ParagraphBold.vue';
+    import ParagraphUnderline from './PubP/ParagraphUnderline.vue';
 </script>
 
 # PubP
@@ -19,6 +24,46 @@ This is a paragraph component which can be used to display text content. It supp
 </demo-container>
 
 <<< @/components/PubP/DefaultParagraph.vue
+
+## Leading Paragraph
+
+<demo-container>
+  <LeadingParagraph/>
+</demo-container>
+
+<<< @/components/PubP/LeadingParagraph.vue
+
+## First letter
+
+<demo-container>
+  <FirstLetterParagraph/>
+</demo-container>
+
+<<< @/components/PubP/FirstLetterParagraph.vue
+
+## Paragraph link
+
+<demo-container>
+  <ParagraphLink/>
+</demo-container>
+
+<<< @/components/PubP/ParagraphLink.vue
+
+## Paragraph bold
+
+<demo-container>
+  <ParagraphBold/>
+</demo-container>
+
+<<< @/components/PubP/ParagraphBold.vue
+
+## Paragraph underline
+
+<demo-container>
+  <ParagraphUnderline/>
+</demo-container>
+
+<<< @/components/PubP/ParagraphUnderline.vue
 
 ## Custom Classes
 

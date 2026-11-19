@@ -43,6 +43,7 @@ const affixSuccessBorderClasses = 'border-green-200'
 const affixErrorBorderClasses = 'border-red-200'
 const affixDefaultBorderClasses = 'border-grey-300'
 const affixSizeClasses: Record<FormElementSize, string> = {
+    xs: 'px-0.5 text-xs',
     sm: 'px-1 text-sm',
     md: 'px-2 text-sm',
     lg: 'px-3 text-base',
@@ -50,6 +51,7 @@ const affixSizeClasses: Record<FormElementSize, string> = {
 }
 
 const phoneInputSizeClasses: Record<FormElementSize, string> = {
+    xs: 'py-0.5 px-1 text-xs',
     sm: 'py-0.5 px-1 text-sm',
     md: 'py-1 px-2 text-sm',
     lg: 'py-1.5 px-3 text-lg',

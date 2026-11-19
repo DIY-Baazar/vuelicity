@@ -13,7 +13,7 @@ interface UseParagraphClassesProps {
 export function useParagraphClasses (props: UseParagraphClassesProps) {
     const spanClasses = computed(() => {
         return useMergeClasses([
-            'pub-p',
+            'pub-p text-body',
             normalizeClass(props.color.value),
             normalizeClass(props.class.value),
         ])

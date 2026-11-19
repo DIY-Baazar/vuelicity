@@ -44,8 +44,8 @@
 ### PubParagraph
 
 - [x] Default paragraph
-- [ ] Leading paragraph
-- [ ] First letter
+- [x] Leading paragraph
+- [x] First letter
 - [ ] Paragraph link
 - [ ] Paragraph bold
 - [ ] Paragraph underline

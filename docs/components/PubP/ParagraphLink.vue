@@ -1,0 +1,13 @@
+<template>
+  <pub-p>
+    Track work across the enterprise through an open, collaborative platform.
+    <pub-a href="#"> Link issues across Jira </pub-a>
+    and ingest data from other software development tools, so your IT support
+    and operations teams have richer contextual information to rapidly respond
+    to requests, incidents, and changes.
+  </pub-p>
+</template>
+
+<script setup lang="ts">
+import { PubP, PubA } from "vuelicity";
+</script>
